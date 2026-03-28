@@ -1,0 +1,15 @@
+{
+  "eval_id": 0,
+  "eval_name": "reading-tracker",
+  "prompt": "I want to build a tool that helps me track my reading habits",
+  "assertions": [
+    "Questions are clearly delineated with one concept per question, not walls of text",
+    "At least 2 questions surface topics the initial prompt did not mention",
+    "Later questions reference or build on earlier answers",
+    "At least 1 question challenges an assumption or pushes back on the idea",
+    "The interview explicitly addresses what is NOT in scope",
+    "Final spec has clear sections including problem, scope, and success criteria",
+    "Key decisions are documented with rationale, not just listed",
+    "Spec identifies risks or open questions that remain unresolved"
+  ]
+}

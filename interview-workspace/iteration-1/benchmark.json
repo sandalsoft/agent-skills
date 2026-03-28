@@ -1,0 +1,98 @@
+{
+  "metadata": {
+    "skill_name": "interview",
+    "skill_path": "/Users/eric/.claude/skills/interview",
+    "executor_model": "claude-opus-4-6",
+    "analyzer_model": "claude-opus-4-6",
+    "timestamp": "2026-03-24T00:40:28Z",
+    "evals_run": ["reading-tracker", "local-first-notes", "newsletter"],
+    "runs_per_configuration": 3
+  },
+  "runs": [
+    {
+      "eval_name": "reading-tracker",
+      "config": "with_skill",
+      "pass_rate": 1.0,
+      "passed": 8,
+      "failed": 0,
+      "total": 8,
+      "tokens": 32624,
+      "time_seconds": 172.4
+    },
+    {
+      "eval_name": "reading-tracker",
+      "config": "without_skill",
+      "pass_rate": 0.75,
+      "passed": 6,
+      "failed": 2,
+      "total": 8,
+      "tokens": 25595,
+      "time_seconds": 112.3
+    },
+    {
+      "eval_name": "local-first-notes",
+      "config": "with_skill",
+      "pass_rate": 1.0,
+      "passed": 8,
+      "failed": 0,
+      "total": 8,
+      "tokens": 33891,
+      "time_seconds": 205.6
+    },
+    {
+      "eval_name": "local-first-notes",
+      "config": "without_skill",
+      "pass_rate": 0.75,
+      "passed": 6,
+      "failed": 2,
+      "total": 8,
+      "tokens": 27794,
+      "time_seconds": 159.7
+    },
+    {
+      "eval_name": "newsletter",
+      "config": "with_skill",
+      "pass_rate": 1.0,
+      "passed": 8,
+      "failed": 0,
+      "total": 8,
+      "tokens": 32139,
+      "time_seconds": 159.9
+    },
+    {
+      "eval_name": "newsletter",
+      "config": "without_skill",
+      "pass_rate": 0.75,
+      "passed": 6,
+      "failed": 2,
+      "total": 8,
+      "tokens": 25110,
+      "time_seconds": 100.3
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "mean_pass_rate": 1.0,
+      "stddev_pass_rate": 0.0,
+      "mean_tokens": 32885,
+      "mean_time_seconds": 179.3
+    },
+    "without_skill": {
+      "mean_pass_rate": 0.75,
+      "stddev_pass_rate": 0.0,
+      "mean_tokens": 26166,
+      "mean_time_seconds": 124.1
+    },
+    "delta": {
+      "pass_rate": "+0.25",
+      "time_seconds": "+55.2",
+      "tokens": "+6719"
+    }
+  },
+  "notes": [
+    "All 3 baselines fail on the same 2 assertions: challenging assumptions and documenting risks/open questions",
+    "With-skill runs consistently produce structured challenge phases (contrarian/simplifier) that baselines lack",
+    "Token overhead is ~26% (32.9k vs 26.2k), time overhead is ~44% (179s vs 124s)",
+    "The skill's spec format template drives the structured output difference — baselines omit risks and decision rationale sections"
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "expectations": [
+    {
+      "text": "Questions are clearly delineated with one concept per question, not walls of text",
+      "passed": true,
+      "evidence": "Every question in the transcript is a single, focused question preceded by a bold **QUESTION:** marker. Each covers one concept: Round 1 asks about current tools, then asks about the 6-month vision. Round 3 asks about platform, then asks about reading types. No question bundles multiple unrelated topics. The longest questions (e.g., the PWA vs native question in Round 6) stay on one decision axis."
+    },
+    {
+      "text": "At least 2 questions surface topics the initial prompt did not mention",
+      "passed": true,
+      "evidence": "The initial prompt was just 'I want to build a tool that helps me track my reading habits.' At least four questions surfaced topics not implied: (1) Goodreads CSV import — Round 6: 'Do you want to import your existing Goodreads data?' (2) Data portability / vendor lock-in — Round 6 preface: 'Part of that frustration is probably vendor lock-in.' (3) Book completion flow with ratings — Round 5: 'What happens when you finish a book?' (4) Failure modes — Round 7: 'What would make you stop using this after two weeks?'"
+    },
+    {
+      "text": "Later questions reference or build on earlier answers",
+      "passed": true,
+      "evidence": "Multiple instances: Round 3 opens with 'The 10-second logging constraint is the most important thing you've said so far' (referencing Round 2 answer). Round 4 opens with 'You're reading 2-3 books concurrently and finishing ~25 a year' (referencing Round 3 answer). The Simplifier Challenge references specific features accumulated across rounds: 'You've described a heatmap, trend charts, book search API, Goodreads import, offline support, and a polished logging UX.' The Edge Finder Challenge builds on the page-logging model established in Round 2."
+    },
+    {
+      "text": "At least 1 question challenges an assumption or pushes back on the idea",
+      "passed": true,
+      "evidence": "The Simplifier Challenge in Phase 4 directly challenges feature scope: 'If you had exactly one weekend to ship a version you'd actually use on Monday morning, what survives the cut? Forget the heatmap, forget the import, forget the charts.' The Edge Finder Challenge pushes on the precision assumption: 'When the page numbers don't quite add up... does that bother you? Or is approximate good enough?' Round 7 also challenges: 'What would make you stop using this after two weeks?' forcing the user to confront failure scenarios."
+    },
+    {
+      "text": "The interview explicitly addresses what is NOT in scope",
+      "passed": true,
+      "evidence": "The spec has a dedicated 'Out of Scope' section listing five deferred items with rationale: notes/highlights system ('deferred to v2. The current tool is about the habit, not the knowledge'), social features, audiobook tracking ('page-based logging doesn't map to audio'), reading goals/reminders/push notifications, and native iOS/Android app. Additionally, Round 2 establishes that notes/reflections are deferred when the user prioritizes habit tracking first."
+    },
+    {
+      "text": "Final spec has clear sections including problem, scope, and success criteria",
+      "passed": true,
+      "evidence": "The spec.md file contains these sections: Problem, Goal, Audience, Scope (with In Scope and Out of Scope subsections), Design (with How It Works and Key Decisions), Open Questions, Constraints, Success Criteria, and Risks. All three required sections are present with substantive content."
+    },
+    {
+      "text": "Key decisions are documented with rationale, not just listed",
+      "passed": true,
+      "evidence": "The spec has a 'Key Decisions' section with five decisions, each including a rationale: 'Page number, not pages read' — 'This is faster and less error-prone — you always know what page you're on.' 'Daily granularity, not session-level' — 'This simplifies the data model and matches how the user actually thinks about their reading.' 'PWA over native' — 'Faster to build, cross-platform by default, and the core interaction doesn't need native capabilities.' 'Open Library API over Google Books' — 'Free, no API key required.' 'Approximate tracking is fine' — 'The goal is trend data and motivation, not precision.'"
+    },
+    {
+      "text": "Spec identifies risks or open questions that remain unresolved",
+      "passed": true,
+      "evidence": "The spec has both an 'Open Questions' section (data persistence strategy with IndexedDB vs cloud sync, streak definition with 'current thinking' notes) and a 'Risks' table with five risks rated by likelihood and impact with mitigations: logging friction, stats not motivating, PWA limitations on iOS, Open Library API gaps, and data loss. The open questions explicitly note they are unresolved with provisional thinking."
+    }
+  ],
+  "summary": {
+    "passed": 8,
+    "failed": 0,
+    "total": 8,
+    "pass_rate": 1.0
+  },
+  "execution_metrics": {
+    "total_tool_calls": null,
+    "output_chars": 21945,
+    "transcript_chars": 15248
+  },
+  "timing": {
+    "executor_duration_seconds": 172.4,
+    "total_duration_seconds": 172.4
+  },
+  "claims": [
+    {
+      "claim": "The interview follows a structured multi-phase process (Intake, Investigation, Interview Loop, Challenge, Crystallize)",
+      "type": "process",
+      "verified": true,
+      "evidence": "Transcript clearly shows Phase 1 (Intake), Phase 2 (Investigation, skipped for greenfield), Phase 3 (Interview Loop with 7 rounds), Phase 4 (Challenge with Simplifier and Edge Finder), Phase 5 (Crystallize with final clarity scores)"
+    },
+    {
+      "claim": "Clarity tracking progresses from ~32% to ~80%",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Scores documented at each round: 32% after Round 1, 47% after Round 2, 55% after Round 3, 66% after Round 5, 76% after Round 7, 80% final"
+    },
+    {
+      "claim": "The spec is saved separately to spec.md",
+      "type": "factual",
+      "verified": true,
+      "evidence": "spec.md exists in the outputs directory with full spec content (6697 chars)"
+    },
+    {
+      "claim": "The user's existing workflow is fragmented across Goodreads, Apple Notes, and memory",
+      "type": "factual",
+      "verified": true,
+      "evidence": "User stated this in Round 1 answer: 'Goodreads for the list, Apple Notes for reflections, and my memory for everything else'"
+    }
+  ],
+  "user_notes_summary": null,
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "At least 2 questions surface topics the initial prompt did not mention",
+        "reason": "This is easy to satisfy since almost any interview question about a vague prompt will surface new topics. A more discriminating version would check whether the surfaced topics meaningfully shaped the spec — e.g., 'At least 2 questions introduced topics that appear in the final spec's scope or risks.'"
+      },
+      {
+        "reason": "No assertion checks whether the spec is internally consistent with the interview answers. The user said 'approximate is fine' for page tracking, and the spec reflects that, but a spec that contradicted interview answers would still pass all current assertions. Consider: 'Spec does not contradict any stated user preference from the interview.'"
+      },
+      {
+        "reason": "No assertion checks whether the interview managed to narrow scope from the initial vague prompt. The transcript could have 7 rounds of questions that never converge on a buildable product, and the spec could be tacked on independently. Consider: 'The spec's scope is narrower and more specific than the initial prompt, with explicit tradeoffs informed by interview answers.'"
+      }
+    ],
+    "overall": "Assertions cover the structural quality of the interview well (question clarity, building on answers, challenging assumptions, scoping). The gap is in connecting the interview to the spec — no assertion verifies that the spec actually reflects what was learned in the interview rather than being generated independently."
+  }
+}

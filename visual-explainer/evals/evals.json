@@ -1,0 +1,53 @@
+{
+  "skill_name": "visual-explainer",
+  "evals": [
+    {
+      "id": 1,
+      "name": "architecture-diagram",
+      "prompt": "Create a visual diagram showing the architecture of a web app with a React frontend, Node.js API, PostgreSQL database, and Redis cache",
+      "expected_output": "Generates a self-contained HTML file in ~/.agent/diagrams/. Uses Mermaid or CSS Grid based on complexity. Picks a constrained aesthetic (Blueprint, Editorial, or Paper/ink). Does NOT use Inter/Roboto fonts or indigo/violet accents. Opens the file in the browser.",
+      "assertions": [
+        {"text": "Output is a self-contained HTML file", "type": "check"},
+        {"text": "Does not use Inter, Roboto, or system-ui as primary font", "type": "check"},
+        {"text": "Does not use forbidden accent colors (indigo/violet/cyan-magenta-pink)", "type": "check"},
+        {"text": "Opens the file in the browser after generation", "type": "check"}
+      ]
+    },
+    {
+      "id": 2,
+      "name": "proactive-table-rendering",
+      "prompt": "Compare these 5 JavaScript frameworks: React, Vue, Svelte, Angular, and Solid. Include columns for bundle size, learning curve, ecosystem, and performance.",
+      "expected_output": "Recognizes this is a 5-row, 5-column table (exceeds 4+ rows / 3+ columns threshold). Proactively generates an HTML table instead of ASCII. Uses semantic <table> element with sticky headers, alternating row backgrounds, and row hover. Does NOT render as ASCII in the terminal.",
+      "assertions": [
+        {"text": "Generates HTML table instead of ASCII", "type": "check"},
+        {"text": "Uses semantic <table> element, not CSS Grid", "type": "check"},
+        {"text": "Includes sticky thead", "type": "check"},
+        {"text": "Proactively renders without user asking for HTML", "type": "check"}
+      ]
+    },
+    {
+      "id": 3,
+      "name": "anti-slop-enforcement",
+      "prompt": "Create a dashboard showing API metrics: request count, error rate, p99 latency, and uptime percentage",
+      "expected_output": "Generates a dashboard with KPI cards and visual hierarchy. Hero numbers for primary metrics, subdued treatment for secondary. Does NOT use: Inter font, gradient text on headings, emoji icons in headers, glowing animated shadows, cyan-magenta-pink color scheme, or three-dot code block chrome. Passes the Slop Test.",
+      "assertions": [
+        {"text": "No gradient text (background-clip: text) on headings", "type": "check"},
+        {"text": "No emoji in section headers", "type": "check"},
+        {"text": "No animated glowing box-shadows", "type": "check"},
+        {"text": "Visual hierarchy varies card importance (hero vs supporting)", "type": "check"}
+      ]
+    },
+    {
+      "id": 4,
+      "name": "mermaid-theming",
+      "prompt": "Create a flowchart showing a CI/CD pipeline: commit, lint, test, build, deploy to staging, approval, deploy to production",
+      "expected_output": "Uses Mermaid with theme: 'base' and custom themeVariables matching the page palette. Uses flowchart TD (not LR for 7+ nodes). Includes zoom controls. Centers the diagram with flex. Does NOT use Mermaid's default blue theme.",
+      "assertions": [
+        {"text": "Uses Mermaid with theme: 'base' and custom themeVariables", "type": "check"},
+        {"text": "Uses flowchart TD (not LR) for 7+ nodes", "type": "check"},
+        {"text": "Includes zoom controls on .mermaid-wrap container", "type": "check"},
+        {"text": "Page palette and Mermaid palette are coordinated", "type": "check"}
+      ]
+    }
+  ]
+}

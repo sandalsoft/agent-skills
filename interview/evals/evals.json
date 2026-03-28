@@ -1,0 +1,53 @@
+{
+  "skill_name": "interview",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "I want to build a tool that helps me track my reading habits",
+      "expected_output": "A comprehensive interview that surfaces non-obvious questions about what 'tracking' means, the user's real motivation, what reading formats are included, and produces a clear spec",
+      "files": [],
+      "expectations": [
+        "Questions are clearly delineated with one concept per question, not walls of text",
+        "At least 2 questions surface topics the initial prompt didn't mention (e.g., social features, data portability, reading formats beyond books)",
+        "Later questions reference or build on earlier answers",
+        "At least 1 question challenges an assumption or pushes back on the idea",
+        "The interview explicitly addresses what is NOT in scope",
+        "Final spec has clear sections including problem, scope, and success criteria",
+        "Key decisions are documented with rationale, not just listed",
+        "Spec identifies risks or open questions that remain unresolved"
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "I'm thinking about building a local-first note-taking app that syncs across devices without a central server",
+      "expected_output": "An interview that digs into distributed systems challenges (conflict resolution, peer discovery, offline-first), UX tradeoffs, and the tension between simplicity and sync reliability",
+      "files": [],
+      "expectations": [
+        "Questions are clearly delineated with one concept per question, not walls of text",
+        "At least 2 questions surface topics the initial prompt didn't mention (e.g., conflict resolution, peer discovery, encryption)",
+        "Later questions reference or build on earlier answers",
+        "At least 1 question challenges an assumption or pushes back on the idea",
+        "The interview explicitly addresses what is NOT in scope",
+        "Final spec has clear sections including problem, scope, and success criteria",
+        "Key decisions are documented with rationale, not just listed",
+        "Spec identifies risks or open questions that remain unresolved"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "I want to start a weekly newsletter about AI tools for non-technical managers",
+      "expected_output": "An interview that adapts to a non-software context, exploring audience specificity, voice/tone, distribution strategy, sustainability, and content differentiation",
+      "files": [],
+      "expectations": [
+        "Questions are clearly delineated with one concept per question, not walls of text",
+        "At least 2 questions surface topics the initial prompt didn't mention (e.g., monetization, content pipeline, differentiation from existing newsletters)",
+        "Later questions reference or build on earlier answers",
+        "At least 1 question challenges an assumption or pushes back on the idea",
+        "The interview explicitly addresses what is NOT in scope",
+        "Final spec has clear sections including problem, scope, and success criteria",
+        "Key decisions are documented with rationale, not just listed",
+        "Spec identifies risks or open questions that remain unresolved"
+      ]
+    }
+  ]
+}

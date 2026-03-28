@@ -1,0 +1,824 @@
+charge_id,fail_id,charge_date,charge_type,charge_amount,charge_currency,charged_party,payment_status,calculation_method,created_at
+0a95f683-9a91-4d19-9247-18322f264b31,98207e05-f664-406c-82a8-c638600c4185,2024-02-09,daily_fail_fee,16970.34,USD,seller,paid,"Daily fail fee: 46,414,186.76 × 3.66 bps",2024-02-09T18:47:00
+4296d624-e961-4d2f-9500-78f61b918585,2800530e-a53f-4e3f-95be-e23b0a62b05f,2025-01-01,daily_fail_fee,41.88,USD,seller,pending,"Daily fail fee: 100,692.34 × 4.16 bps",2025-01-01T17:01:00
+5ae3ec12-4e48-4b90-85ad-ecef2d5c6fe5,2800530e-a53f-4e3f-95be-e23b0a62b05f,2025-01-02,daily_fail_fee,32.6,USD,seller,pending,"Daily fail fee: 100,692.34 × 3.24 bps",2025-01-02T11:52:00
+5d6454d4-5eea-43f1-bd99-8b75b7c4e3fd,2800530e-a53f-4e3f-95be-e23b0a62b05f,2025-01-03,daily_fail_fee,15.84,USD,seller,paid,"Daily fail fee: 100,692.34 × 1.57 bps",2025-01-03T14:41:00
+dfc3a345-bb8e-407e-ae53-1e74c64aaa55,2800530e-a53f-4e3f-95be-e23b0a62b05f,2025-01-04,daily_fail_fee,18.24,USD,seller,pending,"Daily fail fee: 100,692.34 × 1.81 bps",2025-01-04T18:44:00
+9012bd2c-9692-43f7-a7d4-c83d4f1f106b,2800530e-a53f-4e3f-95be-e23b0a62b05f,2025-01-05,daily_fail_fee,39.29,USD,seller,disputed,"Daily fail fee: 100,692.34 × 3.90 bps",2025-01-05T13:57:00
+36609e8e-04e2-4a5e-ad0b-4e7ecdc980df,2800530e-a53f-4e3f-95be-e23b0a62b05f,2025-01-06,daily_fail_fee,27.02,USD,seller,paid,"Daily fail fee: 100,692.34 × 2.68 bps",2025-01-06T11:24:00
+e90f2886-aa56-429e-a35f-a0f5338672f0,2800530e-a53f-4e3f-95be-e23b0a62b05f,2025-01-07,daily_fail_fee,34.17,USD,seller,paid,"Daily fail fee: 100,692.34 × 3.39 bps",2025-01-07T11:51:00
+a72191ad-f89b-4dd3-bfb8-14fac38fde58,2800530e-a53f-4e3f-95be-e23b0a62b05f,2025-01-08,daily_fail_fee,10.59,USD,seller,disputed,"Daily fail fee: 100,692.34 × 1.05 bps",2025-01-08T08:46:00
+8e9e8089-5bb6-4a43-b57f-319e6fb11c86,2800530e-a53f-4e3f-95be-e23b0a62b05f,2025-01-09,daily_fail_fee,11.59,USD,seller,pending,"Daily fail fee: 100,692.34 × 1.15 bps",2025-01-09T17:37:00
+8f148fee-7c51-4019-a40c-4bd86a0d2da6,2800530e-a53f-4e3f-95be-e23b0a62b05f,2025-01-10,daily_fail_fee,19.53,USD,seller,paid,"Daily fail fee: 100,692.34 × 1.94 bps",2025-01-10T16:07:00
+90371bb0-7664-45b3-a02b-0a0117bfb6b9,2800530e-a53f-4e3f-95be-e23b0a62b05f,2025-01-13,interest_charge,95.9,USD,seller,paid,"Interest charge: 100,692.34 × 9.52 bps",2025-01-13T16:02:00
+13da6442-a852-4113-9e63-c6e884f39596,2800530e-a53f-4e3f-95be-e23b0a62b05f,2025-01-10,administrative_fee,339.66,USD,seller,disputed,Administrative processing fee for aged fail,2025-01-10T13:44:00
+42cd2dc3-7478-487b-87e9-21076bb4990a,2800530e-a53f-4e3f-95be-e23b0a62b05f,2025-01-02,interest_charge,47.13,USD,seller,paid,"Interest charge: 100,692.34 × 4.68 bps",2025-01-02T17:48:00
+876c0fdd-454f-431b-b075-30f82da479fa,b732a907-80ae-4419-9a34-5b0b2a2a943a,2024-04-18,daily_fail_fee,0.83,CHF,seller,paid,"Daily fail fee: 4,827.16 × 1.72 bps",2024-04-18T17:47:00
+9e83a3f8-2cd1-49a0-b6b8-8850546c9b1a,b732a907-80ae-4419-9a34-5b0b2a2a943a,2024-04-19,daily_fail_fee,0.93,CHF,seller,disputed,"Daily fail fee: 4,827.16 × 1.92 bps",2024-04-19T11:40:00
+06246654-7170-4ed5-889f-23019a67987e,b732a907-80ae-4419-9a34-5b0b2a2a943a,2024-04-20,daily_fail_fee,1.34,CHF,seller,paid,"Daily fail fee: 4,827.16 × 2.77 bps",2024-04-20T11:49:00
+2c5377b1-0b4e-452f-a6cb-0a8ab5dfa34a,628f2317-0647-4812-bbcf-fe91f21721a9,2024-06-11,daily_fail_fee,5.49,USD,buyer,pending,"Daily fail fee: 20,553.64 × 2.67 bps",2024-06-11T18:01:00
+a160db62-cabe-4426-a21b-c7f48e833471,27cebf74-5c87-44b0-b344-76648d3b7c13,2024-02-07,daily_fail_fee,3.46,GBP,buyer,paid,"Daily fail fee: 11,341.58 × 3.05 bps",2024-02-07T10:08:00
+52aa4579-92d9-4541-b471-954a1144eef4,541055cc-3e48-4179-a4b0-c8f79785b134,2024-09-21,daily_fail_fee,11.0,USD,buyer,paid,"Daily fail fee: 29,742.10 × 3.70 bps",2024-09-21T09:22:00
+c9bda412-3ac9-46af-a253-d5804f9383a3,541055cc-3e48-4179-a4b0-c8f79785b134,2024-09-22,daily_fail_fee,13.12,USD,buyer,disputed,"Daily fail fee: 29,742.10 × 4.41 bps",2024-09-22T17:19:00
+b0b575a6-fa34-48d7-ac4f-aefbb9ee9cf5,69b7b0ef-4f92-4a0f-a733-25ef4a6a3f2d,2024-06-21,daily_fail_fee,9.81,USD,seller,disputed,"Daily fail fee: 23,820.57 × 4.12 bps",2024-06-21T12:49:00
+7f80c20d-1e51-47ce-af4d-9461a5b94796,69b7b0ef-4f92-4a0f-a733-25ef4a6a3f2d,2024-06-22,daily_fail_fee,6.75,USD,seller,paid,"Daily fail fee: 23,820.57 × 2.83 bps",2024-06-22T13:58:00
+f4761b35-d21f-46c2-a78d-20c20ae75ac3,cbde22f5-4e96-4863-b81e-6e6b014a4ba8,2024-04-23,daily_fail_fee,3.61,USD,buyer,pending,"Daily fail fee: 9,331.29 × 3.87 bps",2024-04-23T09:02:00
+05a9cb83-67f0-42f2-95e9-ac66d3845046,cbde22f5-4e96-4863-b81e-6e6b014a4ba8,2024-04-24,daily_fail_fee,4.59,USD,buyer,paid,"Daily fail fee: 9,331.29 × 4.92 bps",2024-04-24T11:43:00
+b57c8cf9-252e-4273-90a5-47437146463a,cbde22f5-4e96-4863-b81e-6e6b014a4ba8,2024-04-25,daily_fail_fee,3.84,USD,buyer,pending,"Daily fail fee: 9,331.29 × 4.12 bps",2024-04-25T17:27:00
+e48cd4e0-e687-4129-b9da-f47c6f639c1e,5bfa0291-3178-490c-9656-e3ae685b59a6,2024-11-02,daily_fail_fee,2601.77,CHF,buyer,paid,"Daily fail fee: 5,512,837.87 × 4.72 bps",2024-11-02T17:32:00
+a003f231-e2c2-4439-bbb6-fb58642ed969,5bfa0291-3178-490c-9656-e3ae685b59a6,2024-11-03,daily_fail_fee,1191.25,CHF,buyer,paid,"Daily fail fee: 5,512,837.87 × 2.16 bps",2024-11-03T16:37:00
+a42dd1b1-ae52-4127-827a-f6cd0acd4e98,5bfa0291-3178-490c-9656-e3ae685b59a6,2024-11-04,daily_fail_fee,2728.71,CHF,buyer,paid,"Daily fail fee: 5,512,837.87 × 4.95 bps",2024-11-04T10:42:00
+75410ca4-367b-4a5e-9e47-3fa4ebac9f58,5bfa0291-3178-490c-9656-e3ae685b59a6,2024-11-05,daily_fail_fee,1482.27,CHF,buyer,paid,"Daily fail fee: 5,512,837.87 × 2.69 bps",2024-11-05T14:46:00
+b6a20a92-0de6-4515-ae14-deecf4a3a15f,5bfa0291-3178-490c-9656-e3ae685b59a6,2024-11-06,daily_fail_fee,2455.45,CHF,buyer,paid,"Daily fail fee: 5,512,837.87 × 4.45 bps",2024-11-06T09:25:00
+c98109b4-d8e1-4487-abe5-70e3f3c2bb78,5bfa0291-3178-490c-9656-e3ae685b59a6,2024-11-07,daily_fail_fee,2342.5,CHF,buyer,paid,"Daily fail fee: 5,512,837.87 × 4.25 bps",2024-11-07T09:32:00
+88c3c06b-ce8d-4390-ac4c-873e01248779,5bfa0291-3178-490c-9656-e3ae685b59a6,2024-11-08,daily_fail_fee,1643.35,CHF,buyer,paid,"Daily fail fee: 5,512,837.87 × 2.98 bps",2024-11-08T10:42:00
+a1d85dc4-e459-47c1-9670-d4c0b6068761,5bfa0291-3178-490c-9656-e3ae685b59a6,2024-11-09,daily_fail_fee,1721.7,CHF,buyer,paid,"Daily fail fee: 5,512,837.87 × 3.12 bps",2024-11-09T11:26:00
+7344be41-29fa-43b5-a101-d24c8d342246,5bfa0291-3178-490c-9656-e3ae685b59a6,2024-11-10,daily_fail_fee,2595.08,CHF,buyer,paid,"Daily fail fee: 5,512,837.87 × 4.71 bps",2024-11-10T16:57:00
+5da42002-ec76-4735-9788-3f57ee4b2423,5bfa0291-3178-490c-9656-e3ae685b59a6,2024-11-07,interest_charge,1210.95,CHF,buyer,paid,"Interest charge: 5,512,837.87 × 2.20 bps",2024-11-07T14:56:00
+98cb8197-5331-4263-a2bf-89d622b43897,5bfa0291-3178-490c-9656-e3ae685b59a6,2024-11-04,interest_charge,3130.81,CHF,buyer,paid,"Interest charge: 5,512,837.87 × 5.68 bps",2024-11-04T17:10:00
+2f4753f4-587e-44d0-bcfc-74984ad5acb7,73754e74-46d5-4ec6-938f-d9e53b750539,2024-06-11,daily_fail_fee,20.3,EUR,buyer,paid,"Daily fail fee: 116,936.63 × 1.74 bps",2024-06-11T15:32:00
+c3a7390b-ffd9-43ea-95f3-7ff4cf9d232a,73754e74-46d5-4ec6-938f-d9e53b750539,2024-06-12,daily_fail_fee,50.55,EUR,buyer,paid,"Daily fail fee: 116,936.63 × 4.32 bps",2024-06-12T17:44:00
+96778731-4098-4a88-bb35-a89ed57d1780,73754e74-46d5-4ec6-938f-d9e53b750539,2024-06-13,daily_fail_fee,43.86,EUR,buyer,paid,"Daily fail fee: 116,936.63 × 3.75 bps",2024-06-13T14:05:00
+cfa1a1bb-c05d-42d1-bab6-5b811494d695,155b1958-5d89-46e5-a150-b74afb0aaf57,2024-02-17,daily_fail_fee,5.64,USD,intermediary,waived,"Daily fail fee: 11,760.51 × 4.80 bps",2024-02-17T13:10:00
+f27e75cc-e739-461e-a0ed-72d01c258b46,155b1958-5d89-46e5-a150-b74afb0aaf57,2024-02-18,daily_fail_fee,2.06,USD,intermediary,disputed,"Daily fail fee: 11,760.51 × 1.75 bps",2024-02-18T17:43:00
+f3280373-99ef-47ea-a166-e719aea577eb,badf3130-8ca8-4731-803d-6fadeba2a602,2024-08-20,daily_fail_fee,24906.02,USD,seller,paid,"Daily fail fee: 54,523,256.93 × 4.57 bps",2024-08-20T17:00:00
+9cfb513a-b129-4afa-8be0-fffa88b75e2a,badf3130-8ca8-4731-803d-6fadeba2a602,2024-08-21,daily_fail_fee,15567.47,USD,seller,paid,"Daily fail fee: 54,523,256.93 × 2.86 bps",2024-08-21T11:51:00
+f042ebd7-564e-4593-866a-fca2a1d818c8,badf3130-8ca8-4731-803d-6fadeba2a602,2024-08-22,daily_fail_fee,12387.49,USD,seller,paid,"Daily fail fee: 54,523,256.93 × 2.27 bps",2024-08-22T10:20:00
+191b0f64-becd-451d-a12c-4a4bfaf9f0b1,5d3c22ad-62c0-4037-8490-1d6a18da6c5e,2024-07-13,daily_fail_fee,73.31,USD,seller,paid,"Daily fail fee: 210,060.18 × 3.49 bps",2024-07-13T10:27:00
+051ecf7c-352b-4085-b80f-06b3c40b961d,5d3c22ad-62c0-4037-8490-1d6a18da6c5e,2024-07-14,daily_fail_fee,48.12,USD,seller,paid,"Daily fail fee: 210,060.18 × 2.29 bps",2024-07-14T15:24:00
+5b05b502-ce61-40b1-b6fe-fb3816e3a16f,5d3c22ad-62c0-4037-8490-1d6a18da6c5e,2024-07-15,daily_fail_fee,45.91,USD,seller,paid,"Daily fail fee: 210,060.18 × 2.19 bps",2024-07-15T11:58:00
+b60f916f-86c3-4d83-b538-98f025d0bcf5,5d3c22ad-62c0-4037-8490-1d6a18da6c5e,2024-07-16,daily_fail_fee,67.81,USD,seller,waived,"Daily fail fee: 210,060.18 × 3.23 bps",2024-07-16T16:01:00
+1fc2ba21-23ed-414a-87c9-21782cf8e1a9,5d3c22ad-62c0-4037-8490-1d6a18da6c5e,2024-07-17,daily_fail_fee,47.65,USD,seller,disputed,"Daily fail fee: 210,060.18 × 2.27 bps",2024-07-17T12:07:00
+48e13aa4-a71f-4a28-b4e7-6c0b4cb0d3d0,5d3c22ad-62c0-4037-8490-1d6a18da6c5e,2024-07-18,daily_fail_fee,85.97,USD,seller,paid,"Daily fail fee: 210,060.18 × 4.09 bps",2024-07-18T14:21:00
+026860d0-7a7f-4f64-9f5e-aa66adb54784,5d3c22ad-62c0-4037-8490-1d6a18da6c5e,2024-07-19,daily_fail_fee,61.58,USD,seller,paid,"Daily fail fee: 210,060.18 × 2.93 bps",2024-07-19T17:04:00
+5b60f19b-5532-464e-a30f-3535f7091d85,5d3c22ad-62c0-4037-8490-1d6a18da6c5e,2024-07-20,daily_fail_fee,101.11,USD,seller,paid,"Daily fail fee: 210,060.18 × 4.81 bps",2024-07-20T13:55:00
+b02d7d80-564f-42b8-ac62-dfa923f5b109,5d3c22ad-62c0-4037-8490-1d6a18da6c5e,2024-07-21,daily_fail_fee,54.32,USD,seller,paid,"Daily fail fee: 210,060.18 × 2.59 bps",2024-07-21T16:34:00
+b1a69d3d-6c90-4c80-94a0-062ed3097761,5d3c22ad-62c0-4037-8490-1d6a18da6c5e,2024-07-22,daily_fail_fee,58.09,USD,seller,paid,"Daily fail fee: 210,060.18 × 2.77 bps",2024-07-22T12:33:00
+78739585-df88-4b87-8307-327755e78dac,5d3c22ad-62c0-4037-8490-1d6a18da6c5e,2024-07-14,interest_charge,188.72,USD,seller,paid,"Interest charge: 210,060.18 × 8.98 bps",2024-07-14T08:00:00
+1ad8b86a-8a69-4bdf-b6c7-d524117d7704,5d3c22ad-62c0-4037-8490-1d6a18da6c5e,2024-07-18,interest_charge,86.02,USD,seller,paid,"Interest charge: 210,060.18 × 4.10 bps",2024-07-18T18:11:00
+1a2ca05a-290d-4c87-8e8c-c1ff5d1cd106,5d3c22ad-62c0-4037-8490-1d6a18da6c5e,2024-07-27,interest_charge,136.32,USD,seller,disputed,"Interest charge: 210,060.18 × 6.49 bps",2024-07-27T13:40:00
+6b941191-e233-4aa3-b1ff-1197c71f2ecb,7a63bd13-2b92-4b6a-b370-16aab8b1f860,2024-05-24,daily_fail_fee,784.66,JPY,seller,paid,"Daily fail fee: 1,578,906.47 × 4.97 bps",2024-05-24T18:01:00
+49462e8b-5d82-420e-9d67-2a734213c805,7a63bd13-2b92-4b6a-b370-16aab8b1f860,2024-05-25,daily_fail_fee,646.68,JPY,seller,paid,"Daily fail fee: 1,578,906.47 × 4.10 bps",2024-05-25T08:07:00
+810ad2c1-27f3-4a83-80db-65d568d33e4d,7a63bd13-2b92-4b6a-b370-16aab8b1f860,2024-05-26,daily_fail_fee,222.11,JPY,seller,paid,"Daily fail fee: 1,578,906.47 × 1.41 bps",2024-05-26T13:40:00
+d9b33178-4325-4287-991e-88809634e035,7a63bd13-2b92-4b6a-b370-16aab8b1f860,2024-05-27,daily_fail_fee,166.22,JPY,seller,paid,"Daily fail fee: 1,578,906.47 × 1.05 bps",2024-05-27T14:53:00
+faec74e6-54f7-43b5-92a9-1e13afec1f83,7a63bd13-2b92-4b6a-b370-16aab8b1f860,2024-05-28,daily_fail_fee,552.97,JPY,seller,paid,"Daily fail fee: 1,578,906.47 × 3.50 bps",2024-05-28T10:36:00
+89e21e21-807c-426a-bc38-b32bdcd38662,7a63bd13-2b92-4b6a-b370-16aab8b1f860,2024-05-29,daily_fail_fee,634.24,JPY,seller,pending,"Daily fail fee: 1,578,906.47 × 4.02 bps",2024-05-29T18:41:00
+5cfb901c-14d5-400f-83c3-c45f7bd9e4d0,7a63bd13-2b92-4b6a-b370-16aab8b1f860,2024-05-30,daily_fail_fee,537.29,JPY,seller,pending,"Daily fail fee: 1,578,906.47 × 3.40 bps",2024-05-30T10:10:00
+6967f9a0-f17b-4cd8-841b-790975c126c5,7a63bd13-2b92-4b6a-b370-16aab8b1f860,2024-05-31,daily_fail_fee,301.29,JPY,seller,pending,"Daily fail fee: 1,578,906.47 × 1.91 bps",2024-05-31T17:13:00
+829c8443-ff31-43da-825a-eb2169033366,7a63bd13-2b92-4b6a-b370-16aab8b1f860,2024-06-01,daily_fail_fee,676.3,JPY,seller,paid,"Daily fail fee: 1,578,906.47 × 4.28 bps",2024-06-01T08:24:00
+80685efe-2e94-44de-a0db-d0cd77087ae3,7a63bd13-2b92-4b6a-b370-16aab8b1f860,2024-05-26,interest_charge,1435.46,JPY,seller,pending,"Interest charge: 1,578,906.47 × 9.09 bps",2024-05-26T15:40:00
+4ff87e88-8f52-49f9-80b1-364834467497,7a63bd13-2b92-4b6a-b370-16aab8b1f860,2024-05-27,interest_charge,340.81,JPY,seller,pending,"Interest charge: 1,578,906.47 × 2.16 bps",2024-05-27T12:50:00
+63be4552-a706-4d9f-b301-fcbeff933e99,0e1d5e2a-ca10-4283-aa0b-1e3402b3d1ed,2024-05-10,daily_fail_fee,2.18,GBP,intermediary,paid,"Daily fail fee: 4,728.08 × 4.62 bps",2024-05-10T14:08:00
+a58ad43b-5302-4424-8204-b6e2e5099d95,0e1d5e2a-ca10-4283-aa0b-1e3402b3d1ed,2024-05-11,daily_fail_fee,0.96,GBP,intermediary,paid,"Daily fail fee: 4,728.08 × 2.04 bps",2024-05-11T15:23:00
+6e333dd3-3358-4651-aa3f-db8fde11effa,0e1d5e2a-ca10-4283-aa0b-1e3402b3d1ed,2024-05-12,daily_fail_fee,0.93,GBP,intermediary,disputed,"Daily fail fee: 4,728.08 × 1.96 bps",2024-05-12T18:18:00
+6e57db52-e751-4f56-ad2f-283a7308c988,0e1d5e2a-ca10-4283-aa0b-1e3402b3d1ed,2024-05-13,daily_fail_fee,2.35,GBP,intermediary,paid,"Daily fail fee: 4,728.08 × 4.98 bps",2024-05-13T13:31:00
+25dd5f7e-404a-4da6-a5fa-d6ea73941086,0e1d5e2a-ca10-4283-aa0b-1e3402b3d1ed,2024-05-14,daily_fail_fee,2.14,GBP,intermediary,paid,"Daily fail fee: 4,728.08 × 4.54 bps",2024-05-14T18:48:00
+d4f9da68-b44a-420c-9566-4eb24a18ddf2,0e1d5e2a-ca10-4283-aa0b-1e3402b3d1ed,2024-05-12,interest_charge,2.1,GBP,intermediary,disputed,"Interest charge: 4,728.08 × 4.44 bps",2024-05-12T17:23:00
+89d0187a-9fd3-4678-bfb1-6adac3f5defd,169c1995-3ae8-4b50-9e70-265d60c3509e,2024-07-13,daily_fail_fee,22.79,USD,buyer,paid,"Daily fail fee: 49,490.98 × 4.61 bps",2024-07-13T15:16:00
+ae0407a1-c811-4c70-b89c-8ac86ed81228,169c1995-3ae8-4b50-9e70-265d60c3509e,2024-07-14,daily_fail_fee,5.93,USD,buyer,pending,"Daily fail fee: 49,490.98 × 1.20 bps",2024-07-14T15:50:00
+fabc3bb0-d841-423c-b020-60828905987c,169c1995-3ae8-4b50-9e70-265d60c3509e,2024-07-15,daily_fail_fee,9.07,USD,buyer,paid,"Daily fail fee: 49,490.98 × 1.83 bps",2024-07-15T12:23:00
+0981dfca-fbdb-4704-9a69-3718d7d29741,13adb700-0091-472b-b558-5c9d2238acd0,2024-05-30,daily_fail_fee,15.72,USD,seller,paid,"Daily fail fee: 77,936.58 × 2.02 bps",2024-05-30T12:24:00
+1cb0ba5b-b017-43eb-8b5f-b0b119b68064,13adb700-0091-472b-b558-5c9d2238acd0,2024-05-31,daily_fail_fee,28.22,USD,seller,paid,"Daily fail fee: 77,936.58 × 3.62 bps",2024-05-31T16:42:00
+d291c35c-9346-4dcf-b948-b23b542620f6,13adb700-0091-472b-b558-5c9d2238acd0,2024-06-01,daily_fail_fee,33.44,USD,seller,pending,"Daily fail fee: 77,936.58 × 4.29 bps",2024-06-01T16:12:00
+9bd76627-2051-4e26-9cc5-3800240e10d4,13adb700-0091-472b-b558-5c9d2238acd0,2024-06-02,daily_fail_fee,28.56,USD,seller,paid,"Daily fail fee: 77,936.58 × 3.67 bps",2024-06-02T16:12:00
+c0092076-814c-4e1f-be3c-44ad1e45791b,13adb700-0091-472b-b558-5c9d2238acd0,2024-06-03,daily_fail_fee,32.31,USD,seller,paid,"Daily fail fee: 77,936.58 × 4.15 bps",2024-06-03T11:42:00
+239f48a7-6674-40e9-9df5-9d02cf4f0aac,13adb700-0091-472b-b558-5c9d2238acd0,2024-06-04,daily_fail_fee,37.09,USD,seller,pending,"Daily fail fee: 77,936.58 × 4.76 bps",2024-06-04T16:27:00
+691444f3-b8d1-4873-8847-2a1cf0c8caf9,13adb700-0091-472b-b558-5c9d2238acd0,2024-06-05,daily_fail_fee,27.43,USD,seller,paid,"Daily fail fee: 77,936.58 × 3.52 bps",2024-06-05T15:13:00
+e01d7b57-8180-486c-9cdf-c2cee1f4fb45,13adb700-0091-472b-b558-5c9d2238acd0,2024-06-06,daily_fail_fee,21.33,USD,seller,pending,"Daily fail fee: 77,936.58 × 2.74 bps",2024-06-06T12:33:00
+656dce95-3536-4b6c-8a59-9f018256ff22,13adb700-0091-472b-b558-5c9d2238acd0,2024-06-07,daily_fail_fee,17.56,USD,seller,pending,"Daily fail fee: 77,936.58 × 2.25 bps",2024-06-07T18:51:00
+b7e29525-1c7f-4073-b205-ad54a13a5e73,13adb700-0091-472b-b558-5c9d2238acd0,2024-06-08,daily_fail_fee,22.16,USD,seller,pending,"Daily fail fee: 77,936.58 × 2.84 bps",2024-06-08T15:00:00
+d5803dec-28a5-4e8b-9c40-791810278e31,13adb700-0091-472b-b558-5c9d2238acd0,2024-06-17,interest_charge,30.78,USD,seller,paid,"Interest charge: 77,936.58 × 3.95 bps",2024-06-17T18:26:00
+6f3092d0-6ade-44c7-8a73-c24fc834fedf,13adb700-0091-472b-b558-5c9d2238acd0,2024-06-12,interest_charge,56.54,USD,seller,paid,"Interest charge: 77,936.58 × 7.26 bps",2024-06-12T12:15:00
+5e26849b-7e41-4679-9e48-55a3cb841621,13adb700-0091-472b-b558-5c9d2238acd0,2024-07-07,interest_charge,58.64,USD,seller,paid,"Interest charge: 77,936.58 × 7.52 bps",2024-07-07T08:22:00
+a331dc61-cc52-4d44-b74a-0e3bfff98f14,1e44b9a9-5c3a-4160-bacc-997889b9d433,2024-12-11,daily_fail_fee,27.53,USD,seller,paid,"Daily fail fee: 251,424.92 × 1.10 bps",2024-12-11T12:20:00
+75e3523e-a9c8-4316-ae65-dd91a87f8127,1e44b9a9-5c3a-4160-bacc-997889b9d433,2024-12-12,daily_fail_fee,105.57,USD,seller,pending,"Daily fail fee: 251,424.92 × 4.20 bps",2024-12-12T08:38:00
+105621f2-ec9f-484d-9416-699f6739f4a1,1e44b9a9-5c3a-4160-bacc-997889b9d433,2024-12-13,daily_fail_fee,42.73,USD,seller,pending,"Daily fail fee: 251,424.92 × 1.70 bps",2024-12-13T15:10:00
+8e76d7fe-94b8-4c59-b7e8-4dde384dfa4e,989786c8-6518-4e46-a4d8-45abc5c6caa2,2024-04-03,daily_fail_fee,136.9,USD,seller,paid,"Daily fail fee: 348,245.55 × 3.93 bps",2024-04-03T15:12:00
+398677ea-9ff5-4454-bddd-a03b6296e006,989786c8-6518-4e46-a4d8-45abc5c6caa2,2024-04-04,daily_fail_fee,73.88,USD,seller,disputed,"Daily fail fee: 348,245.55 × 2.12 bps",2024-04-04T17:48:00
+dad0826c-5b48-4e89-9371-79d249008fe0,989786c8-6518-4e46-a4d8-45abc5c6caa2,2024-04-05,daily_fail_fee,62.15,USD,seller,paid,"Daily fail fee: 348,245.55 × 1.78 bps",2024-04-05T15:28:00
+a6aa2f6c-c97f-408d-8370-8366ea007e2f,eb264232-997c-4c04-bd28-a19243fcd02b,2024-03-26,daily_fail_fee,32.49,GBP,buyer,paid,"Daily fail fee: 69,744.34 × 4.66 bps",2024-03-26T10:54:00
+cc72d0c6-b522-491e-92f9-8cc664a30fb5,eb264232-997c-4c04-bd28-a19243fcd02b,2024-03-27,daily_fail_fee,34.09,GBP,buyer,paid,"Daily fail fee: 69,744.34 × 4.89 bps",2024-03-27T18:50:00
+dc8895ca-55e9-4521-b50c-fcecba416561,eb264232-997c-4c04-bd28-a19243fcd02b,2024-03-28,daily_fail_fee,32.7,GBP,buyer,paid,"Daily fail fee: 69,744.34 × 4.69 bps",2024-03-28T18:00:00
+7107e768-9d4d-43ac-81e3-2b29d35b7cb7,eb264232-997c-4c04-bd28-a19243fcd02b,2024-03-29,daily_fail_fee,13.72,GBP,buyer,disputed,"Daily fail fee: 69,744.34 × 1.97 bps",2024-03-29T09:26:00
+5b8d0e30-7354-4ecc-8628-cf8be96aff8d,eb264232-997c-4c04-bd28-a19243fcd02b,2024-03-30,daily_fail_fee,10.82,GBP,buyer,paid,"Daily fail fee: 69,744.34 × 1.55 bps",2024-03-30T13:07:00
+33e398ee-5267-447f-b0d4-98bba4de06ec,eb264232-997c-4c04-bd28-a19243fcd02b,2024-03-31,daily_fail_fee,16.86,GBP,buyer,paid,"Daily fail fee: 69,744.34 × 2.42 bps",2024-03-31T18:00:00
+33bdf0b2-b252-47ca-ac23-d44f482f4d51,eb264232-997c-4c04-bd28-a19243fcd02b,2024-04-01,daily_fail_fee,15.34,GBP,buyer,paid,"Daily fail fee: 69,744.34 × 2.20 bps",2024-04-01T18:11:00
+5114377b-67c5-4028-8d81-9655feb88e4c,eb264232-997c-4c04-bd28-a19243fcd02b,2024-04-02,daily_fail_fee,33.74,GBP,buyer,paid,"Daily fail fee: 69,744.34 × 4.84 bps",2024-04-02T11:21:00
+0d7b5550-4b52-4f30-b885-f28e3dbb04b9,eb264232-997c-4c04-bd28-a19243fcd02b,2024-04-03,daily_fail_fee,13.31,GBP,buyer,paid,"Daily fail fee: 69,744.34 × 1.91 bps",2024-04-03T15:38:00
+30aad935-c5e8-4f39-888f-ebc4c1d30a99,eb264232-997c-4c04-bd28-a19243fcd02b,2024-04-04,daily_fail_fee,14.36,GBP,buyer,paid,"Daily fail fee: 69,744.34 × 2.06 bps",2024-04-04T18:43:00
+402f0d1d-185e-4732-922c-5b54a9cec7a3,eb264232-997c-4c04-bd28-a19243fcd02b,2024-04-04,administrative_fee,150.71,GBP,buyer,paid,Administrative processing fee for aged fail,2024-04-04T13:12:00
+85708997-2eb2-478a-b11f-711ee7663d0a,eb264232-997c-4c04-bd28-a19243fcd02b,2024-04-04,administrative_fee,374.7,GBP,buyer,disputed,Administrative processing fee for aged fail,2024-04-04T09:09:00
+ab308f25-f8d3-4505-8a33-78c0bc73d600,8760b645-4c5a-468e-b77d-f31926a34211,2024-06-28,daily_fail_fee,248.11,JPY,seller,pending,"Daily fail fee: 1,268,476.90 × 1.96 bps",2024-06-28T08:17:00
+39e1b827-40e6-40c7-8943-f745222a5304,8760b645-4c5a-468e-b77d-f31926a34211,2024-06-29,daily_fail_fee,631.07,JPY,seller,pending,"Daily fail fee: 1,268,476.90 × 4.98 bps",2024-06-29T13:11:00
+1c651174-2c95-45b3-811a-09048eb849f6,8760b645-4c5a-468e-b77d-f31926a34211,2024-06-30,daily_fail_fee,575.85,JPY,seller,paid,"Daily fail fee: 1,268,476.90 × 4.54 bps",2024-06-30T10:35:00
+c332d443-9d9a-4054-be15-ebb4cf18dbc0,6ab8c5ac-4d5a-4c06-bf8a-107fb90b58f0,2024-07-19,daily_fail_fee,5.26,GBP,buyer,paid,"Daily fail fee: 19,210.95 × 2.74 bps",2024-07-19T10:51:00
+3a1ca051-26cf-4234-b2c9-88664eb25e6f,6ab8c5ac-4d5a-4c06-bf8a-107fb90b58f0,2024-07-20,daily_fail_fee,7.05,GBP,buyer,paid,"Daily fail fee: 19,210.95 × 3.67 bps",2024-07-20T08:33:00
+369a9229-76ef-4aa7-98d5-bf5583808f0f,6ab8c5ac-4d5a-4c06-bf8a-107fb90b58f0,2024-07-21,daily_fail_fee,4.71,GBP,buyer,paid,"Daily fail fee: 19,210.95 × 2.45 bps",2024-07-21T11:35:00
+7a17a49f-f874-4f2d-acbd-526ee266b8cb,03314b54-b8c1-4096-a0cd-5bdb75d425ad,2024-11-21,daily_fail_fee,1061.67,CHF,seller,paid,"Daily fail fee: 2,750,682.55 × 3.86 bps",2024-11-21T12:21:00
+9581506b-bb56-42b5-87c3-efa94ccc1c2b,03314b54-b8c1-4096-a0cd-5bdb75d425ad,2024-11-22,daily_fail_fee,1325.34,CHF,seller,paid,"Daily fail fee: 2,750,682.55 × 4.82 bps",2024-11-22T14:02:00
+7ccb07c2-cbb2-445f-a57a-9edb0a18e097,de44f95c-cc9e-44fd-abee-09d477268250,2024-08-21,daily_fail_fee,134.38,JPY,buyer,paid,"Daily fail fee: 320,504.26 × 4.19 bps",2024-08-21T18:05:00
+c9d55c77-d66b-44cb-94ca-da1216aedfa1,de44f95c-cc9e-44fd-abee-09d477268250,2024-08-22,daily_fail_fee,107.0,JPY,buyer,pending,"Daily fail fee: 320,504.26 × 3.34 bps",2024-08-22T09:30:00
+afb43c37-f0c7-4317-b8e0-60d7b4dabc58,de44f95c-cc9e-44fd-abee-09d477268250,2024-08-23,daily_fail_fee,117.38,JPY,buyer,disputed,"Daily fail fee: 320,504.26 × 3.66 bps",2024-08-23T13:53:00
+2e4f3c7a-4ed3-427c-83b9-99b6e90a58a1,d3049c11-8d83-47c5-aa93-782a91617e3e,2024-11-14,daily_fail_fee,16.36,USD,buyer,paid,"Daily fail fee: 72,686.92 × 2.25 bps",2024-11-14T15:44:00
+8695ab1b-ddb1-4fa7-a3b0-13440050288f,d3049c11-8d83-47c5-aa93-782a91617e3e,2024-11-15,daily_fail_fee,8.18,USD,buyer,paid,"Daily fail fee: 72,686.92 × 1.13 bps",2024-11-15T10:30:00
+2e93676a-5f37-4f7a-9780-c6722d61ebe7,d3049c11-8d83-47c5-aa93-782a91617e3e,2024-11-16,daily_fail_fee,12.69,USD,buyer,paid,"Daily fail fee: 72,686.92 × 1.75 bps",2024-11-16T14:29:00
+9b55a4fb-ffbd-4126-b6f9-671c586d0e78,d3049c11-8d83-47c5-aa93-782a91617e3e,2024-11-17,daily_fail_fee,13.08,USD,buyer,paid,"Daily fail fee: 72,686.92 × 1.80 bps",2024-11-17T14:06:00
+cb6693c6-9f97-4324-9883-5c17b40e7316,d3049c11-8d83-47c5-aa93-782a91617e3e,2024-11-18,daily_fail_fee,36.28,USD,buyer,paid,"Daily fail fee: 72,686.92 × 4.99 bps",2024-11-18T09:42:00
+cfe591d1-005e-450c-b17e-7441c0a2841b,d3049c11-8d83-47c5-aa93-782a91617e3e,2024-11-19,daily_fail_fee,16.5,USD,buyer,paid,"Daily fail fee: 72,686.92 × 2.27 bps",2024-11-19T14:46:00
+3c474dfa-58f9-4540-ac89-dca38db60460,d3049c11-8d83-47c5-aa93-782a91617e3e,2024-11-20,daily_fail_fee,28.26,USD,buyer,disputed,"Daily fail fee: 72,686.92 × 3.89 bps",2024-11-20T10:48:00
+a8ebb99b-97f9-4284-8588-68fe8e8fd4c0,d3049c11-8d83-47c5-aa93-782a91617e3e,2024-11-21,daily_fail_fee,19.64,USD,buyer,disputed,"Daily fail fee: 72,686.92 × 2.70 bps",2024-11-21T10:48:00
+1867ae5f-14ac-41f9-aa5e-64ea6f94c89c,d3049c11-8d83-47c5-aa93-782a91617e3e,2024-11-22,daily_fail_fee,19.61,USD,buyer,paid,"Daily fail fee: 72,686.92 × 2.70 bps",2024-11-22T16:07:00
+ccca1226-686d-446e-870a-33aa5ef207e5,d3049c11-8d83-47c5-aa93-782a91617e3e,2024-11-23,daily_fail_fee,22.13,USD,buyer,paid,"Daily fail fee: 72,686.92 × 3.04 bps",2024-11-23T15:25:00
+e8c008bd-a00c-4497-9b92-eb7165f9ef85,d3049c11-8d83-47c5-aa93-782a91617e3e,2024-11-23,administrative_fee,315.12,USD,buyer,disputed,Administrative processing fee for aged fail,2024-11-23T14:36:00
+b51c44dd-a01e-418c-ae07-1b7eebb5aef9,d3049c11-8d83-47c5-aa93-782a91617e3e,2024-11-23,administrative_fee,321.58,USD,buyer,paid,Administrative processing fee for aged fail,2024-11-23T08:50:00
+32594317-c7db-4b99-a7c8-cb3f5af4c475,d3049c11-8d83-47c5-aa93-782a91617e3e,2024-12-03,interest_charge,49.29,USD,buyer,disputed,"Interest charge: 72,686.92 × 6.78 bps",2024-12-03T14:47:00
+d7a59ea1-357a-43f7-b8f1-1a3dcc210678,ab0e4312-68c7-4f78-884e-6f142d1fb86f,2024-01-20,daily_fail_fee,108.72,USD,seller,pending,"Daily fail fee: 228,197.13 × 4.76 bps",2024-01-20T08:45:00
+1bce5f04-dd99-40b8-aa4d-9edd11f6ea8f,ab0e4312-68c7-4f78-884e-6f142d1fb86f,2024-01-21,daily_fail_fee,52.94,USD,seller,paid,"Daily fail fee: 228,197.13 × 2.32 bps",2024-01-21T17:34:00
+d32887bb-ab4c-48d6-a46a-a38316b27b41,ab0e4312-68c7-4f78-884e-6f142d1fb86f,2024-01-22,daily_fail_fee,35.86,USD,seller,paid,"Daily fail fee: 228,197.13 × 1.57 bps",2024-01-22T18:45:00
+0221d246-929e-44d7-afbc-fd5f65773162,ab0e4312-68c7-4f78-884e-6f142d1fb86f,2024-01-23,daily_fail_fee,88.87,USD,seller,paid,"Daily fail fee: 228,197.13 × 3.89 bps",2024-01-23T18:51:00
+7dd69a6d-b8f8-42d7-b5da-0df8a9c6cf6d,ab0e4312-68c7-4f78-884e-6f142d1fb86f,2024-01-24,daily_fail_fee,31.94,USD,seller,pending,"Daily fail fee: 228,197.13 × 1.40 bps",2024-01-24T11:17:00
+30da90da-b075-4b04-8b23-7e72360f818f,ab0e4312-68c7-4f78-884e-6f142d1fb86f,2024-01-25,daily_fail_fee,94.17,USD,seller,paid,"Daily fail fee: 228,197.13 × 4.13 bps",2024-01-25T16:58:00
+408a4170-a180-4f9c-8169-29a41f6a99a1,ab0e4312-68c7-4f78-884e-6f142d1fb86f,2024-01-26,daily_fail_fee,73.58,USD,seller,disputed,"Daily fail fee: 228,197.13 × 3.22 bps",2024-01-26T12:32:00
+a607d09a-7866-4c52-84a2-dfd356712bc4,ab0e4312-68c7-4f78-884e-6f142d1fb86f,2024-01-27,daily_fail_fee,54.23,USD,seller,disputed,"Daily fail fee: 228,197.13 × 2.38 bps",2024-01-27T18:18:00
+89f83836-0404-47c7-ad47-9ad8a3cb33a2,ab0e4312-68c7-4f78-884e-6f142d1fb86f,2024-01-28,daily_fail_fee,82.17,USD,seller,pending,"Daily fail fee: 228,197.13 × 3.60 bps",2024-01-28T13:38:00
+861a7e24-f4b5-4ff6-a5a6-cbc7e94a2d81,ab0e4312-68c7-4f78-884e-6f142d1fb86f,2024-01-23,interest_charge,118.8,USD,seller,pending,"Interest charge: 228,197.13 × 5.21 bps",2024-01-23T18:09:00
+5ccddb39-0564-46dc-b291-5bbbb7639165,ab0e4312-68c7-4f78-884e-6f142d1fb86f,2024-01-28,interest_charge,77.72,USD,seller,paid,"Interest charge: 228,197.13 × 3.41 bps",2024-01-28T09:15:00
+de88d873-e1e3-45dc-aa12-e5e8c91dad43,750d9040-d50e-4ed3-9996-dd94a2bb6801,2024-10-26,daily_fail_fee,65.11,USD,seller,paid,"Daily fail fee: 322,109.06 × 2.02 bps",2024-10-26T13:28:00
+822e81a8-0853-4376-ad72-a20f20f0ebcc,750d9040-d50e-4ed3-9996-dd94a2bb6801,2024-10-27,daily_fail_fee,80.99,USD,seller,paid,"Daily fail fee: 322,109.06 × 2.51 bps",2024-10-27T17:04:00
+d78d2a02-3c6a-4c38-8f7b-5d3d6ec0ce9d,750d9040-d50e-4ed3-9996-dd94a2bb6801,2024-10-28,daily_fail_fee,46.41,USD,seller,paid,"Daily fail fee: 322,109.06 × 1.44 bps",2024-10-28T17:01:00
+5bba3ed3-a39e-4de0-a338-25c7796f9faf,882ccb72-86a1-4436-8b9b-cb325591970e,2024-08-02,daily_fail_fee,73.77,USD,seller,paid,"Daily fail fee: 184,700.98 × 3.99 bps",2024-08-02T11:57:00
+bb45e70d-3afc-4428-ac4a-8e0cd33d180a,882ccb72-86a1-4436-8b9b-cb325591970e,2024-08-03,daily_fail_fee,24.76,USD,seller,disputed,"Daily fail fee: 184,700.98 × 1.34 bps",2024-08-03T11:41:00
+e0671cfd-d530-4703-9a71-dbf18be774b8,882ccb72-86a1-4436-8b9b-cb325591970e,2024-08-04,daily_fail_fee,40.57,USD,seller,paid,"Daily fail fee: 184,700.98 × 2.20 bps",2024-08-04T17:23:00
+cf8730d4-0c46-4626-aba0-2a9e91f45b98,57d6cd58-ceb6-40f2-b0cc-bc98f7aeea8d,2024-07-25,daily_fail_fee,69.25,JPY,seller,paid,"Daily fail fee: 364,433.16 × 1.90 bps",2024-07-25T08:43:00
+859614b9-f9a3-4896-9e4e-b9a6d0e2f6f8,2da9adf8-2b9b-433d-9e2e-c887087aa085,2024-06-12,daily_fail_fee,0.82,USD,seller,paid,"Daily fail fee: 1,845.66 × 4.42 bps",2024-06-12T17:30:00
+360f50eb-b937-40b8-93a9-b8ad50ad8459,2da9adf8-2b9b-433d-9e2e-c887087aa085,2024-06-13,daily_fail_fee,0.54,USD,seller,paid,"Daily fail fee: 1,845.66 × 2.93 bps",2024-06-13T09:20:00
+e8acd9a4-58e4-4467-a307-459cf39a6985,2da9adf8-2b9b-433d-9e2e-c887087aa085,2024-06-14,daily_fail_fee,0.2,USD,seller,pending,"Daily fail fee: 1,845.66 × 1.06 bps",2024-06-14T17:07:00
+822dd4fa-6144-47d0-9204-d49f1e2dfeae,2da9adf8-2b9b-433d-9e2e-c887087aa085,2024-06-15,daily_fail_fee,0.88,USD,seller,disputed,"Daily fail fee: 1,845.66 × 4.79 bps",2024-06-15T17:08:00
+a7761217-749e-4703-8545-8e2d2ca23b22,2da9adf8-2b9b-433d-9e2e-c887087aa085,2024-06-16,daily_fail_fee,0.47,USD,seller,paid,"Daily fail fee: 1,845.66 × 2.56 bps",2024-06-16T13:51:00
+80bc2390-78e5-4e47-92b9-ac60d0432f47,2da9adf8-2b9b-433d-9e2e-c887087aa085,2024-06-12,interest_charge,1.71,USD,seller,pending,"Interest charge: 1,845.66 × 9.28 bps",2024-06-12T10:32:00
+c6614115-28b9-482c-98ec-6537ffc65981,2da9adf8-2b9b-433d-9e2e-c887087aa085,2024-06-12,interest_charge,1.61,USD,seller,pending,"Interest charge: 1,845.66 × 8.73 bps",2024-06-12T17:05:00
+8b34332a-e973-4ae2-83ad-48eb4b4783a0,2da9adf8-2b9b-433d-9e2e-c887087aa085,2024-06-12,interest_charge,1.45,USD,seller,paid,"Interest charge: 1,845.66 × 7.85 bps",2024-06-12T17:09:00
+c6d5dc4c-a67a-4b84-b2fc-480bf5331018,43ab8a64-2837-49af-b3f8-13e1ec0a0e80,2024-06-27,daily_fail_fee,1809.35,CHF,seller,paid,"Daily fail fee: 13,000,042.72 × 1.39 bps",2024-06-27T14:36:00
+c6a58926-b618-490c-9ebf-fb59111de8a5,43ab8a64-2837-49af-b3f8-13e1ec0a0e80,2024-06-28,daily_fail_fee,5979.46,CHF,seller,paid,"Daily fail fee: 13,000,042.72 × 4.60 bps",2024-06-28T15:13:00
+0f098bfa-3df2-4432-8050-b81df87a8344,43ab8a64-2837-49af-b3f8-13e1ec0a0e80,2024-06-29,daily_fail_fee,4832.88,CHF,seller,paid,"Daily fail fee: 13,000,042.72 × 3.72 bps",2024-06-29T15:07:00
+11b1888a-a0ca-4016-b84c-6e98916cd021,43ab8a64-2837-49af-b3f8-13e1ec0a0e80,2024-06-30,daily_fail_fee,5318.97,CHF,seller,paid,"Daily fail fee: 13,000,042.72 × 4.09 bps",2024-06-30T17:32:00
+6b916885-61bf-475b-ad64-6bcbf9d18e02,43ab8a64-2837-49af-b3f8-13e1ec0a0e80,2024-07-01,daily_fail_fee,4848.73,CHF,seller,paid,"Daily fail fee: 13,000,042.72 × 3.73 bps",2024-07-01T15:41:00
+5e988684-dfa1-4fb1-8965-b77dc273c91b,43ab8a64-2837-49af-b3f8-13e1ec0a0e80,2024-07-02,daily_fail_fee,2818.5,CHF,seller,disputed,"Daily fail fee: 13,000,042.72 × 2.17 bps",2024-07-02T17:53:00
+5809d555-9110-4af5-b4cc-dab93799a491,43ab8a64-2837-49af-b3f8-13e1ec0a0e80,2024-07-03,daily_fail_fee,5090.79,CHF,seller,paid,"Daily fail fee: 13,000,042.72 × 3.92 bps",2024-07-03T11:03:00
+c5bb5643-7a6d-4371-95ff-401727cfb72e,43ab8a64-2837-49af-b3f8-13e1ec0a0e80,2024-07-04,daily_fail_fee,2622.35,CHF,seller,paid,"Daily fail fee: 13,000,042.72 × 2.02 bps",2024-07-04T08:51:00
+e274ed12-cf9c-4907-aecf-cc6cab72f507,43ab8a64-2837-49af-b3f8-13e1ec0a0e80,2024-06-29,interest_charge,2661.14,CHF,seller,paid,"Interest charge: 13,000,042.72 × 2.05 bps",2024-06-29T14:47:00
+0df0dc84-04f9-403f-b083-8003cc78dcc0,83087020-a6f2-4ff8-8975-2cb94632e25c,2024-01-05,daily_fail_fee,52081.72,USD,seller,paid,"Daily fail fee: 123,192,599.29 × 4.23 bps",2024-01-05T15:35:00
+014a1995-149a-4bf8-a5e7-7c6c982c606a,83087020-a6f2-4ff8-8975-2cb94632e25c,2024-01-06,daily_fail_fee,42522.04,USD,seller,disputed,"Daily fail fee: 123,192,599.29 × 3.45 bps",2024-01-06T12:40:00
+da092849-9b04-441d-9d0a-80850d954f72,d760c9f9-d180-4431-baac-1e6e08002a38,2024-12-06,daily_fail_fee,3359.04,USD,buyer,paid,"Daily fail fee: 14,084,746.67 × 2.38 bps",2024-12-06T17:20:00
+dc361b3a-21bf-416a-9fb6-9df98a44c43d,d760c9f9-d180-4431-baac-1e6e08002a38,2024-12-07,daily_fail_fee,4242.32,USD,buyer,paid,"Daily fail fee: 14,084,746.67 × 3.01 bps",2024-12-07T14:03:00
+c52ab105-039e-4a28-bbdb-8cd54bfaeb3d,d760c9f9-d180-4431-baac-1e6e08002a38,2024-12-08,daily_fail_fee,2747.88,USD,buyer,paid,"Daily fail fee: 14,084,746.67 × 1.95 bps",2024-12-08T12:00:00
+0d3dd941-a051-498b-a4d6-6d74356e9423,f403fc65-6615-44d8-97b2-d72cdfed0b78,2024-08-08,daily_fail_fee,7.27,USD,intermediary,paid,"Daily fail fee: 17,621.31 × 4.12 bps",2024-08-08T12:26:00
+2e7e26d1-46ed-420a-ab8f-bcb0cdbc66f5,f403fc65-6615-44d8-97b2-d72cdfed0b78,2024-08-09,daily_fail_fee,6.59,USD,intermediary,paid,"Daily fail fee: 17,621.31 × 3.74 bps",2024-08-09T13:19:00
+d8430163-e12e-4faf-8a31-b91302694c2e,f403fc65-6615-44d8-97b2-d72cdfed0b78,2024-08-10,daily_fail_fee,6.17,USD,intermediary,paid,"Daily fail fee: 17,621.31 × 3.50 bps",2024-08-10T10:15:00
+cbdd0643-2623-44ca-bb40-5ee834ca2c8b,f403fc65-6615-44d8-97b2-d72cdfed0b78,2024-08-11,daily_fail_fee,7.32,USD,intermediary,paid,"Daily fail fee: 17,621.31 × 4.16 bps",2024-08-11T09:02:00
+dd7dabbf-31fd-498e-83a5-c4dea68aafb3,f403fc65-6615-44d8-97b2-d72cdfed0b78,2024-08-12,daily_fail_fee,2.29,USD,intermediary,pending,"Daily fail fee: 17,621.31 × 1.30 bps",2024-08-12T16:42:00
+b4f2f334-2cb8-4721-b825-ce3ca3205bb1,f403fc65-6615-44d8-97b2-d72cdfed0b78,2024-08-09,interest_charge,9.82,USD,intermediary,pending,"Interest charge: 17,621.31 × 5.57 bps",2024-08-09T13:06:00
+89eebfbb-8696-498c-a3d1-bac973ef8457,f403fc65-6615-44d8-97b2-d72cdfed0b78,2024-08-09,interest_charge,6.97,USD,intermediary,pending,"Interest charge: 17,621.31 × 3.96 bps",2024-08-09T09:34:00
+9c38d030-ea9a-41c1-ad14-51aff15cb8cf,f403fc65-6615-44d8-97b2-d72cdfed0b78,2024-08-10,interest_charge,5.78,USD,intermediary,pending,"Interest charge: 17,621.31 × 3.28 bps",2024-08-10T11:34:00
+ec3ef2fe-b695-48c3-99f9-0a3a30f2602c,8b1530ef-036c-41c3-a9cd-f50ee687560a,2024-11-26,daily_fail_fee,36.96,USD,seller,paid,"Daily fail fee: 101,816.83 × 3.63 bps",2024-11-26T11:11:00
+c97ebd9c-6b4d-4902-a52a-eab095357de7,8b1530ef-036c-41c3-a9cd-f50ee687560a,2024-11-27,daily_fail_fee,11.47,USD,seller,paid,"Daily fail fee: 101,816.83 × 1.13 bps",2024-11-27T11:43:00
+847c7d3a-cef9-43d0-ba82-c978935dcf19,3c791e6a-219f-4207-9d37-542ea251d585,2024-09-05,daily_fail_fee,144841.33,JPY,seller,paid,"Daily fail fee: 1,108,036,280.44 × 1.31 bps",2024-09-05T14:33:00
+cba994f2-bb70-4cd7-88af-3ae41d3ef31a,3c791e6a-219f-4207-9d37-542ea251d585,2024-09-06,daily_fail_fee,164680.11,JPY,seller,paid,"Daily fail fee: 1,108,036,280.44 × 1.49 bps",2024-09-06T14:14:00
+5877d870-5005-4b5b-909a-54efcf4a02b7,3c791e6a-219f-4207-9d37-542ea251d585,2024-09-07,daily_fail_fee,294886.54,JPY,seller,pending,"Daily fail fee: 1,108,036,280.44 × 2.66 bps",2024-09-07T16:36:00
+57f5e0b1-3619-4daf-82c2-30c867bc5404,3c791e6a-219f-4207-9d37-542ea251d585,2024-09-08,daily_fail_fee,410743.21,JPY,seller,paid,"Daily fail fee: 1,108,036,280.44 × 3.71 bps",2024-09-08T18:44:00
+28d05515-5590-4e8c-bd18-26ab8165751e,3c791e6a-219f-4207-9d37-542ea251d585,2024-09-09,daily_fail_fee,323052.02,JPY,seller,pending,"Daily fail fee: 1,108,036,280.44 × 2.92 bps",2024-09-09T14:38:00
+d5cb795c-8676-4192-9c9c-fe7404393b90,3c791e6a-219f-4207-9d37-542ea251d585,2024-09-10,daily_fail_fee,116401.59,JPY,seller,paid,"Daily fail fee: 1,108,036,280.44 × 1.05 bps",2024-09-10T17:45:00
+cbb8c715-f3d6-4cc1-9313-4c26221e6051,3c791e6a-219f-4207-9d37-542ea251d585,2024-09-11,daily_fail_fee,246540.97,JPY,seller,paid,"Daily fail fee: 1,108,036,280.44 × 2.23 bps",2024-09-11T15:11:00
+70233403-1a09-43cb-892d-8e6b137f4d3f,3c791e6a-219f-4207-9d37-542ea251d585,2024-09-12,daily_fail_fee,131268.16,JPY,seller,pending,"Daily fail fee: 1,108,036,280.44 × 1.18 bps",2024-09-12T10:05:00
+9f9319b5-0ea0-4c8d-9412-d50b580f8e16,3c791e6a-219f-4207-9d37-542ea251d585,2024-09-06,interest_charge,913503.52,JPY,seller,disputed,"Interest charge: 1,108,036,280.44 × 8.24 bps",2024-09-06T08:29:00
+d86579d0-b55f-4c20-b416-8b9742150c93,3c791e6a-219f-4207-9d37-542ea251d585,2024-09-12,regulatory_fine,3420.95,JPY,seller,pending,Regulatory fine for threshold breach,2024-09-12T08:50:00
+ee4ed4f1-4072-44f4-a97d-5147b400439a,3c791e6a-219f-4207-9d37-542ea251d585,2024-09-10,interest_charge,313972.77,JPY,seller,pending,"Interest charge: 1,108,036,280.44 × 2.83 bps",2024-09-10T08:33:00
+1a500bab-2d14-40ed-b8d3-d4ffac996115,3c791e6a-219f-4207-9d37-542ea251d585,2024-09-06,interest_charge,1003572.8,JPY,seller,paid,"Interest charge: 1,108,036,280.44 × 9.06 bps",2024-09-06T09:39:00
+aea3d100-49f3-466a-8d3c-2cc9508395bb,9d2e1438-b4e4-438e-ab43-2044c385cf85,2024-04-20,daily_fail_fee,614.4,JPY,buyer,pending,"Daily fail fee: 1,464,878.55 × 4.19 bps",2024-04-20T12:59:00
+ec35237a-2b1e-4cce-a8ba-ad3e166053ad,9d2e1438-b4e4-438e-ab43-2044c385cf85,2024-04-21,daily_fail_fee,359.4,JPY,buyer,paid,"Daily fail fee: 1,464,878.55 × 2.45 bps",2024-04-21T10:39:00
+07f12355-6898-48d1-a592-11f5f042c12e,9d2e1438-b4e4-438e-ab43-2044c385cf85,2024-04-22,daily_fail_fee,378.19,JPY,buyer,pending,"Daily fail fee: 1,464,878.55 × 2.58 bps",2024-04-22T09:38:00
+13f549a3-191a-4d7b-9f96-383c2f5f0cb9,9d2e1438-b4e4-438e-ab43-2044c385cf85,2024-04-23,daily_fail_fee,255.51,JPY,buyer,paid,"Daily fail fee: 1,464,878.55 × 1.74 bps",2024-04-23T09:15:00
+86b646d5-f82f-4202-a7f5-67904d123100,9d2e1438-b4e4-438e-ab43-2044c385cf85,2024-04-24,daily_fail_fee,403.83,JPY,buyer,paid,"Daily fail fee: 1,464,878.55 × 2.76 bps",2024-04-24T09:44:00
+73530960-0682-4630-ba6f-abc07759795a,9d2e1438-b4e4-438e-ab43-2044c385cf85,2024-04-25,daily_fail_fee,589.03,JPY,buyer,paid,"Daily fail fee: 1,464,878.55 × 4.02 bps",2024-04-25T14:48:00
+d14d6793-5a37-40e5-8ff3-8b3b56fdb923,9d2e1438-b4e4-438e-ab43-2044c385cf85,2024-04-26,daily_fail_fee,229.32,JPY,buyer,paid,"Daily fail fee: 1,464,878.55 × 1.57 bps",2024-04-26T17:22:00
+4ab23747-1a88-4999-85f5-82e2556e9f55,9d2e1438-b4e4-438e-ab43-2044c385cf85,2024-04-27,daily_fail_fee,381.33,JPY,buyer,pending,"Daily fail fee: 1,464,878.55 × 2.60 bps",2024-04-27T14:48:00
+0b03addb-dff2-403e-b8c2-4f3aa96cef7d,9d2e1438-b4e4-438e-ab43-2044c385cf85,2024-04-28,daily_fail_fee,632.35,JPY,buyer,disputed,"Daily fail fee: 1,464,878.55 × 4.32 bps",2024-04-28T15:34:00
+aeeb323f-3989-4c8b-be59-0bb308108864,9d2e1438-b4e4-438e-ab43-2044c385cf85,2024-04-29,daily_fail_fee,274.67,JPY,buyer,pending,"Daily fail fee: 1,464,878.55 × 1.88 bps",2024-04-29T13:31:00
+f556af96-d17f-44db-b566-301f7cdd3523,9d2e1438-b4e4-438e-ab43-2044c385cf85,2024-04-29,administrative_fee,94.3,JPY,buyer,paid,Administrative processing fee for aged fail,2024-04-29T16:30:00
+bfad67f2-dcc3-40a3-8941-4e15f7610a00,9d2e1438-b4e4-438e-ab43-2044c385cf85,2024-04-21,interest_charge,487.36,JPY,buyer,pending,"Interest charge: 1,464,878.55 × 3.33 bps",2024-04-21T18:41:00
+54140c9e-b358-4ba0-9155-b5802eac9b30,9d2e1438-b4e4-438e-ab43-2044c385cf85,2024-04-29,interest_charge,1074.89,JPY,buyer,disputed,"Interest charge: 1,464,878.55 × 7.34 bps",2024-04-29T12:19:00
+dc9902a8-f9fc-4a52-be39-536656ee5673,00d8d0f6-afcd-48cb-9ed3-117f04e7eddf,2024-02-17,daily_fail_fee,100.02,USD,seller,disputed,"Daily fail fee: 241,024.38 × 4.15 bps",2024-02-17T10:31:00
+318deb58-d62c-4c2a-a12b-18add518a062,5d403a75-7fdb-40c3-9508-175c262a1fcb,2024-12-28,daily_fail_fee,28.18,USD,intermediary,paid,"Daily fail fee: 104,471.46 × 2.70 bps",2024-12-28T08:18:00
+5fe0bacb-c43d-4a8f-9efa-c500facb556e,5d403a75-7fdb-40c3-9508-175c262a1fcb,2024-12-29,daily_fail_fee,50.21,USD,intermediary,paid,"Daily fail fee: 104,471.46 × 4.81 bps",2024-12-29T15:26:00
+8b970b14-cca6-4037-8ed2-78c107adefcf,5d403a75-7fdb-40c3-9508-175c262a1fcb,2024-12-30,daily_fail_fee,43.01,USD,intermediary,paid,"Daily fail fee: 104,471.46 × 4.12 bps",2024-12-30T10:40:00
+6038488d-bc04-4b81-9fd9-0f8476364b4a,2be8b2cf-3841-4d45-bc9e-1ee1383d542f,2024-06-26,daily_fail_fee,37.87,USD,buyer,paid,"Daily fail fee: 102,801.28 × 3.68 bps",2024-06-26T12:32:00
+2bd9cf0c-38c4-4a3c-b6c5-4a69801228f8,2be8b2cf-3841-4d45-bc9e-1ee1383d542f,2024-06-27,daily_fail_fee,19.6,USD,buyer,paid,"Daily fail fee: 102,801.28 × 1.91 bps",2024-06-27T16:47:00
+00051893-797f-4947-bce2-991e4d57f99c,2be8b2cf-3841-4d45-bc9e-1ee1383d542f,2024-06-28,daily_fail_fee,27.61,USD,buyer,disputed,"Daily fail fee: 102,801.28 × 2.69 bps",2024-06-28T14:16:00
+c773c764-11fd-4ae9-800e-92ab2b9687af,b410e107-43d3-4c91-a233-506196abbc56,2024-05-31,daily_fail_fee,368.85,JPY,seller,pending,"Daily fail fee: 3,326,442.47 × 1.11 bps",2024-05-31T13:24:00
+3cf60a72-ec87-4e6c-90ae-c7bd56ebc21e,b410e107-43d3-4c91-a233-506196abbc56,2024-06-01,daily_fail_fee,1049.36,JPY,seller,paid,"Daily fail fee: 3,326,442.47 × 3.15 bps",2024-06-01T17:32:00
+1dd15236-42de-48bb-8033-0fbb6d301f37,b410e107-43d3-4c91-a233-506196abbc56,2024-06-02,daily_fail_fee,1533.35,JPY,seller,disputed,"Daily fail fee: 3,326,442.47 × 4.61 bps",2024-06-02T11:24:00
+e40afc19-9f4e-45a4-83b1-736d5117d8bd,b410e107-43d3-4c91-a233-506196abbc56,2024-06-03,daily_fail_fee,1066.07,JPY,seller,paid,"Daily fail fee: 3,326,442.47 × 3.20 bps",2024-06-03T11:00:00
+d2d7bc91-a0de-4e8a-a24e-e3b1ad7d8568,b410e107-43d3-4c91-a233-506196abbc56,2024-06-04,daily_fail_fee,370.31,JPY,seller,paid,"Daily fail fee: 3,326,442.47 × 1.11 bps",2024-06-04T15:43:00
+95601d03-575b-490a-8284-5f62e9ab9e8b,b410e107-43d3-4c91-a233-506196abbc56,2024-06-05,daily_fail_fee,1135.45,JPY,seller,paid,"Daily fail fee: 3,326,442.47 × 3.41 bps",2024-06-05T14:46:00
+35f2da6b-8026-4974-9e87-3412161df51a,b410e107-43d3-4c91-a233-506196abbc56,2024-06-06,daily_fail_fee,634.7,JPY,seller,paid,"Daily fail fee: 3,326,442.47 × 1.91 bps",2024-06-06T13:36:00
+3ac2f108-1f2a-4a79-9bd5-25344d2dc5c2,b410e107-43d3-4c91-a233-506196abbc56,2024-06-07,daily_fail_fee,1630.66,JPY,seller,paid,"Daily fail fee: 3,326,442.47 × 4.90 bps",2024-06-07T10:49:00
+2983461f-6a17-4c62-9218-048d296ca892,b410e107-43d3-4c91-a233-506196abbc56,2024-06-01,interest_charge,2425.16,JPY,seller,pending,"Interest charge: 3,326,442.47 × 7.29 bps",2024-06-01T08:24:00
+ace5129d-02a8-499c-bc37-6c2a473f8945,b410e107-43d3-4c91-a233-506196abbc56,2024-06-05,interest_charge,2257.48,JPY,seller,pending,"Interest charge: 3,326,442.47 × 6.79 bps",2024-06-05T08:58:00
+09c39921-05eb-424f-86b7-3bcfd4eb2709,d8229271-cdad-4f98-84fb-b5013acbd203,2024-12-17,daily_fail_fee,14.79,USD,buyer,pending,"Daily fail fee: 71,911.11 × 2.06 bps",2024-12-17T18:09:00
+fe49e2c4-82ff-4ef2-a9ac-99073664a7fc,d8229271-cdad-4f98-84fb-b5013acbd203,2024-12-18,daily_fail_fee,23.85,USD,buyer,pending,"Daily fail fee: 71,911.11 × 3.32 bps",2024-12-18T15:10:00
+4a0f77d8-6d6c-4ffc-a718-289ae55ed632,d8229271-cdad-4f98-84fb-b5013acbd203,2024-12-19,daily_fail_fee,10.88,USD,buyer,pending,"Daily fail fee: 71,911.11 × 1.51 bps",2024-12-19T15:07:00
+6770ed08-87f8-47c6-9676-e5bc8ea37877,9ca7514b-4170-43b8-a313-72312bdcf858,2024-12-06,daily_fail_fee,31.83,USD,buyer,paid,"Daily fail fee: 179,804.19 × 1.77 bps",2024-12-06T09:28:00
+e61085cb-389f-4981-a175-382b4dcffbc1,9ca7514b-4170-43b8-a313-72312bdcf858,2024-12-07,daily_fail_fee,68.08,USD,buyer,paid,"Daily fail fee: 179,804.19 × 3.79 bps",2024-12-07T14:41:00
+eea19488-1c26-46d3-9b5b-d5ea7df1ad56,9ca7514b-4170-43b8-a313-72312bdcf858,2024-12-08,daily_fail_fee,21.82,USD,buyer,paid,"Daily fail fee: 179,804.19 × 1.21 bps",2024-12-08T13:43:00
+b5ac87d2-1c91-4343-9791-0626c1500665,9ca7514b-4170-43b8-a313-72312bdcf858,2024-12-09,daily_fail_fee,50.22,USD,buyer,paid,"Daily fail fee: 179,804.19 × 2.79 bps",2024-12-09T16:41:00
+392b3882-ed43-4605-b241-3575b8a6c6d7,9ca7514b-4170-43b8-a313-72312bdcf858,2024-12-10,daily_fail_fee,36.11,USD,buyer,paid,"Daily fail fee: 179,804.19 × 2.01 bps",2024-12-10T12:37:00
+b83ab594-360e-4226-a9e7-f31093505aed,9ca7514b-4170-43b8-a313-72312bdcf858,2024-12-11,daily_fail_fee,62.16,USD,buyer,paid,"Daily fail fee: 179,804.19 × 3.46 bps",2024-12-11T08:20:00
+00d2993b-97f0-45d5-b3fd-0dc98c3933cc,9ca7514b-4170-43b8-a313-72312bdcf858,2024-12-07,interest_charge,169.71,USD,buyer,paid,"Interest charge: 179,804.19 × 9.44 bps",2024-12-07T15:07:00
+7c806224-9023-4ff0-9e8d-53071acbfbdc,9ca7514b-4170-43b8-a313-72312bdcf858,2024-12-06,interest_charge,76.12,USD,buyer,disputed,"Interest charge: 179,804.19 × 4.23 bps",2024-12-06T13:26:00
+bca2f413-86ab-4b8d-9990-f56fb4fa50a6,9ca7514b-4170-43b8-a313-72312bdcf858,2024-12-08,interest_charge,110.3,USD,buyer,paid,"Interest charge: 179,804.19 × 6.13 bps",2024-12-08T17:34:00
+8d854e07-557c-45b3-acd7-e3520c8eb5c8,a397d461-0910-4095-9bdc-4dee61d8c9e7,2024-12-21,daily_fail_fee,1751.75,JPY,buyer,disputed,"Daily fail fee: 4,797,171.62 × 3.65 bps",2024-12-21T08:27:00
+c5aa15fe-36e9-4fd0-8039-780a101a7de3,a397d461-0910-4095-9bdc-4dee61d8c9e7,2024-12-22,daily_fail_fee,627.41,JPY,buyer,pending,"Daily fail fee: 4,797,171.62 × 1.31 bps",2024-12-22T18:54:00
+5d224a0a-b3d0-4e84-803d-346a2bd56f7e,a397d461-0910-4095-9bdc-4dee61d8c9e7,2024-12-23,daily_fail_fee,2317.17,JPY,buyer,paid,"Daily fail fee: 4,797,171.62 × 4.83 bps",2024-12-23T14:55:00
+dd2d91f9-f451-45ea-85d9-39d0969e1467,a397d461-0910-4095-9bdc-4dee61d8c9e7,2024-12-24,daily_fail_fee,946.49,JPY,buyer,disputed,"Daily fail fee: 4,797,171.62 × 1.97 bps",2024-12-24T11:53:00
+b4ca34d8-acae-4c3e-bebe-95be5272c10f,dcfa286e-c7ee-476f-b54a-5358e1cda026,2024-12-17,daily_fail_fee,4.14,USD,seller,paid,"Daily fail fee: 30,064.08 × 1.38 bps",2024-12-17T13:53:00
+205923bf-932a-47ef-9d5c-2b5aa3bb9e71,dcfa286e-c7ee-476f-b54a-5358e1cda026,2024-12-18,daily_fail_fee,7.24,USD,seller,paid,"Daily fail fee: 30,064.08 × 2.41 bps",2024-12-18T14:06:00
+c8f00089-f482-4475-a240-8db553f2c3a0,75cb5a2b-a9c7-4570-ba36-b6487c43e34b,2024-12-24,daily_fail_fee,40.65,USD,seller,paid,"Daily fail fee: 152,025.09 × 2.67 bps",2024-12-24T14:13:00
+28ad2087-784e-4501-95e9-b4a066078a86,715ca508-25c2-46e8-8885-8e74506b97cb,2024-03-05,daily_fail_fee,27.14,USD,seller,paid,"Daily fail fee: 58,286.93 × 4.66 bps",2024-03-05T09:36:00
+ff7f46a7-d21f-4087-9a3e-11e57dfbeb3d,715ca508-25c2-46e8-8885-8e74506b97cb,2024-03-06,daily_fail_fee,25.39,USD,seller,paid,"Daily fail fee: 58,286.93 × 4.36 bps",2024-03-06T17:41:00
+aabc1446-1029-42e1-998d-4b226456fbb4,715ca508-25c2-46e8-8885-8e74506b97cb,2024-03-07,daily_fail_fee,19.37,USD,seller,paid,"Daily fail fee: 58,286.93 × 3.32 bps",2024-03-07T14:33:00
+a3dd8587-cddf-42f6-ae12-36541084b6f0,715ca508-25c2-46e8-8885-8e74506b97cb,2024-03-08,daily_fail_fee,28.63,USD,seller,paid,"Daily fail fee: 58,286.93 × 4.91 bps",2024-03-08T08:07:00
+341fc27c-a7e3-4855-9d55-b46531c222ea,715ca508-25c2-46e8-8885-8e74506b97cb,2024-03-09,daily_fail_fee,23.63,USD,seller,paid,"Daily fail fee: 58,286.93 × 4.05 bps",2024-03-09T08:31:00
+fb4ad2dd-ed01-4b24-8949-5bbcb2e5940e,715ca508-25c2-46e8-8885-8e74506b97cb,2024-03-10,daily_fail_fee,7.62,USD,seller,waived,"Daily fail fee: 58,286.93 × 1.31 bps",2024-03-10T13:12:00
+18b39ea0-e5ed-4a0b-97c5-7c4486b40b7b,715ca508-25c2-46e8-8885-8e74506b97cb,2024-03-10,interest_charge,44.09,USD,seller,paid,"Interest charge: 58,286.93 × 7.56 bps",2024-03-10T11:51:00
+c89b6501-fdf5-4207-8972-063d223345d1,715ca508-25c2-46e8-8885-8e74506b97cb,2024-03-10,interest_charge,20.73,USD,seller,disputed,"Interest charge: 58,286.93 × 3.56 bps",2024-03-10T11:04:00
+e2548591-2c30-46ef-8c6b-fd8cb72eb641,50cabaf6-5b2b-4566-8b99-be34983afdd0,2024-12-19,daily_fail_fee,247.57,JPY,seller,paid,"Daily fail fee: 716,404.27 × 3.46 bps",2024-12-19T12:37:00
+f11480fc-38b0-494b-973b-cb39024d5df7,50cabaf6-5b2b-4566-8b99-be34983afdd0,2024-12-20,daily_fail_fee,82.14,JPY,seller,paid,"Daily fail fee: 716,404.27 × 1.15 bps",2024-12-20T12:44:00
+e596633c-e851-4adf-8782-18d55692b1d1,50cabaf6-5b2b-4566-8b99-be34983afdd0,2024-12-21,daily_fail_fee,244.17,JPY,seller,paid,"Daily fail fee: 716,404.27 × 3.41 bps",2024-12-21T15:43:00
+329a708e-4d6d-49e4-b2ef-7edf25d2f39d,50cabaf6-5b2b-4566-8b99-be34983afdd0,2024-12-22,daily_fail_fee,118.45,JPY,seller,paid,"Daily fail fee: 716,404.27 × 1.65 bps",2024-12-22T12:23:00
+7109fb6d-1da8-4fbd-bc3c-7632aae64514,50cabaf6-5b2b-4566-8b99-be34983afdd0,2024-12-23,daily_fail_fee,219.47,JPY,seller,paid,"Daily fail fee: 716,404.27 × 3.06 bps",2024-12-23T11:21:00
+f7f4b97e-bd16-41c4-b93e-962e1231d218,50cabaf6-5b2b-4566-8b99-be34983afdd0,2024-12-24,daily_fail_fee,270.76,JPY,seller,disputed,"Daily fail fee: 716,404.27 × 3.78 bps",2024-12-24T11:43:00
+27fce245-9121-4ead-ba7b-6b896125d737,50cabaf6-5b2b-4566-8b99-be34983afdd0,2024-12-25,daily_fail_fee,242.92,JPY,seller,paid,"Daily fail fee: 716,404.27 × 3.39 bps",2024-12-25T09:09:00
+d0b41da6-6f5a-4f4d-a5f8-2f0cc8d0f1ae,50cabaf6-5b2b-4566-8b99-be34983afdd0,2024-12-26,daily_fail_fee,209.71,JPY,seller,paid,"Daily fail fee: 716,404.27 × 2.93 bps",2024-12-26T11:38:00
+ad4ccf49-37de-4d55-a6b0-55f65c8e1f28,50cabaf6-5b2b-4566-8b99-be34983afdd0,2024-12-27,daily_fail_fee,252.78,JPY,seller,paid,"Daily fail fee: 716,404.27 × 3.53 bps",2024-12-27T13:49:00
+77156170-667c-4e8d-97f3-0bf44bc1641f,50cabaf6-5b2b-4566-8b99-be34983afdd0,2024-12-28,daily_fail_fee,347.05,JPY,seller,paid,"Daily fail fee: 716,404.27 × 4.84 bps",2024-12-28T15:51:00
+7fb49297-ea10-4cde-88be-985801e7021c,50cabaf6-5b2b-4566-8b99-be34983afdd0,2024-12-28,administrative_fee,425.13,JPY,seller,paid,Administrative processing fee for aged fail,2024-12-28T10:20:00
+aeccef82-f7ee-4afa-8b77-63b53433a33b,50cabaf6-5b2b-4566-8b99-be34983afdd0,2025-02-13,interest_charge,181.55,JPY,seller,paid,"Interest charge: 716,404.27 × 2.53 bps",2025-02-13T12:53:00
+3aaabcc2-af2e-400d-87b5-4f63d17efed7,50cabaf6-5b2b-4566-8b99-be34983afdd0,2025-01-14,interest_charge,657.96,JPY,seller,disputed,"Interest charge: 716,404.27 × 9.18 bps",2025-01-14T09:52:00
+ac83517f-169b-4214-bdd0-2901444f5e4a,3f789623-7979-48b4-bdbd-e10908beab1b,2024-05-24,daily_fail_fee,3495.88,USD,seller,paid,"Daily fail fee: 9,168,643.67 × 3.81 bps",2024-05-24T11:25:00
+687ac17f-895e-4253-bcbf-a1c8450a2e9f,3f789623-7979-48b4-bdbd-e10908beab1b,2024-05-25,daily_fail_fee,3891.53,USD,seller,paid,"Daily fail fee: 9,168,643.67 × 4.24 bps",2024-05-25T16:25:00
+9bba7684-9a14-4040-bbe8-638c64c8ccfa,9c6a5da4-dcd5-4823-8ebe-3ebe2c3318ff,2024-02-22,daily_fail_fee,46.64,USD,intermediary,paid,"Daily fail fee: 141,944.00 × 3.29 bps",2024-02-22T12:06:00
+ba61973f-9b11-441f-b301-5df16fb9f1dc,9c6a5da4-dcd5-4823-8ebe-3ebe2c3318ff,2024-02-23,daily_fail_fee,61.03,USD,intermediary,paid,"Daily fail fee: 141,944.00 × 4.30 bps",2024-02-23T16:16:00
+e839e2fd-7523-4a67-a7a3-a1672143d108,9c6a5da4-dcd5-4823-8ebe-3ebe2c3318ff,2024-02-24,daily_fail_fee,32.27,USD,intermediary,paid,"Daily fail fee: 141,944.00 × 2.27 bps",2024-02-24T14:13:00
+2c9e96e7-514f-4d6e-8eb6-1b681ed2046b,9c6a5da4-dcd5-4823-8ebe-3ebe2c3318ff,2024-02-25,daily_fail_fee,58.25,USD,intermediary,paid,"Daily fail fee: 141,944.00 × 4.10 bps",2024-02-25T08:57:00
+d9e3fd33-acc7-4d90-b6a0-dfa123c98a0c,9c6a5da4-dcd5-4823-8ebe-3ebe2c3318ff,2024-02-26,daily_fail_fee,58.02,USD,intermediary,paid,"Daily fail fee: 141,944.00 × 4.09 bps",2024-02-26T14:33:00
+9d423459-0d7f-459b-8e2e-4970f972f863,9c6a5da4-dcd5-4823-8ebe-3ebe2c3318ff,2024-02-27,daily_fail_fee,51.75,USD,intermediary,paid,"Daily fail fee: 141,944.00 × 3.65 bps",2024-02-27T17:02:00
+8182e01c-b53b-47a0-92df-f6bfafbdf1de,9c6a5da4-dcd5-4823-8ebe-3ebe2c3318ff,2024-02-28,daily_fail_fee,51.13,USD,intermediary,paid,"Daily fail fee: 141,944.00 × 3.60 bps",2024-02-28T18:19:00
+4b5ca0a3-fc55-45df-81f1-98fc03f6e162,9c6a5da4-dcd5-4823-8ebe-3ebe2c3318ff,2024-02-29,daily_fail_fee,34.77,USD,intermediary,paid,"Daily fail fee: 141,944.00 × 2.45 bps",2024-02-29T16:29:00
+fc758dc7-339e-47c4-a56f-2d937881d057,9c6a5da4-dcd5-4823-8ebe-3ebe2c3318ff,2024-03-01,daily_fail_fee,21.89,USD,intermediary,paid,"Daily fail fee: 141,944.00 × 1.54 bps",2024-03-01T08:35:00
+6b34faad-185f-437f-8f17-5ac84a41d4c7,9c6a5da4-dcd5-4823-8ebe-3ebe2c3318ff,2024-03-02,daily_fail_fee,70.14,USD,intermediary,paid,"Daily fail fee: 141,944.00 × 4.94 bps",2024-03-02T10:44:00
+300a6551-e693-4213-be16-b74b0ed58271,9c6a5da4-dcd5-4823-8ebe-3ebe2c3318ff,2024-03-02,administrative_fee,267.55,USD,intermediary,paid,Administrative processing fee for aged fail,2024-03-02T11:21:00
+d2a80d35-17a4-4ad8-83c4-5a2285a2f003,9c6a5da4-dcd5-4823-8ebe-3ebe2c3318ff,2024-03-05,interest_charge,133.51,USD,intermediary,paid,"Interest charge: 141,944.00 × 9.41 bps",2024-03-05T16:04:00
+96453083-e6c4-4acc-9975-ea1c8bb8af00,f2898fb4-277c-4b42-90f0-4c3c0a004c40,2024-10-26,daily_fail_fee,78.49,USD,buyer,pending,"Daily fail fee: 174,056.18 × 4.51 bps",2024-10-26T17:30:00
+030aa117-5c20-48dd-bb5f-35dd2016857f,f2898fb4-277c-4b42-90f0-4c3c0a004c40,2024-10-27,daily_fail_fee,30.78,USD,buyer,paid,"Daily fail fee: 174,056.18 × 1.77 bps",2024-10-27T08:30:00
+b4d0d3c8-5ef8-4e3b-a925-21ccd556afbc,f2898fb4-277c-4b42-90f0-4c3c0a004c40,2024-10-28,daily_fail_fee,65.61,USD,buyer,pending,"Daily fail fee: 174,056.18 × 3.77 bps",2024-10-28T18:14:00
+01431c13-66ff-415e-bc5c-c4703d325229,f2898fb4-277c-4b42-90f0-4c3c0a004c40,2024-10-29,daily_fail_fee,66.6,USD,buyer,disputed,"Daily fail fee: 174,056.18 × 3.83 bps",2024-10-29T10:19:00
+c8886f41-378c-4c2c-a5e1-b10698e5f50d,f2898fb4-277c-4b42-90f0-4c3c0a004c40,2024-10-30,daily_fail_fee,26.64,USD,buyer,pending,"Daily fail fee: 174,056.18 × 1.53 bps",2024-10-30T10:47:00
+af5d374c-521c-4373-ad42-c1e4a433ff4c,f2898fb4-277c-4b42-90f0-4c3c0a004c40,2024-10-31,daily_fail_fee,76.65,USD,buyer,pending,"Daily fail fee: 174,056.18 × 4.40 bps",2024-10-31T17:33:00
+d0473653-044a-40a8-8636-d40a2c13e0a3,f2898fb4-277c-4b42-90f0-4c3c0a004c40,2024-11-01,daily_fail_fee,78.64,USD,buyer,paid,"Daily fail fee: 174,056.18 × 4.52 bps",2024-11-01T11:51:00
+72dd6c3b-70c3-4794-b35d-94f4481911d4,f2898fb4-277c-4b42-90f0-4c3c0a004c40,2024-11-02,daily_fail_fee,73.76,USD,buyer,paid,"Daily fail fee: 174,056.18 × 4.24 bps",2024-11-02T11:11:00
+f2749188-4a5b-40ab-85d6-6c57b04d6241,f2898fb4-277c-4b42-90f0-4c3c0a004c40,2024-11-03,daily_fail_fee,68.48,USD,buyer,paid,"Daily fail fee: 174,056.18 × 3.93 bps",2024-11-03T12:57:00
+b2cb8242-a8c0-477e-b47a-a18486fde341,f2898fb4-277c-4b42-90f0-4c3c0a004c40,2024-11-04,daily_fail_fee,18.41,USD,buyer,paid,"Daily fail fee: 174,056.18 × 1.06 bps",2024-11-04T09:41:00
+8aae3af3-1fae-4a6b-8bbf-1b65937ccdbc,f2898fb4-277c-4b42-90f0-4c3c0a004c40,2024-11-13,interest_charge,72.19,USD,buyer,pending,"Interest charge: 174,056.18 × 4.15 bps",2024-11-13T16:55:00
+fadaaada-0f5f-4caf-b83f-0edb9eb4868a,f2898fb4-277c-4b42-90f0-4c3c0a004c40,2024-11-04,interest_charge,128.02,USD,buyer,paid,"Interest charge: 174,056.18 × 7.36 bps",2024-11-04T10:44:00
+e5dc4b23-4748-481d-a194-e18cddfb961a,22e4e82e-6875-41c4-bafd-4f2ab10ed950,2024-09-25,daily_fail_fee,0.78,USD,seller,paid,"Daily fail fee: 3,963.78 × 1.98 bps",2024-09-25T13:00:00
+df7fc08c-679b-4036-a1f2-874c2b396aa1,22e4e82e-6875-41c4-bafd-4f2ab10ed950,2024-09-26,daily_fail_fee,1.5,USD,seller,pending,"Daily fail fee: 3,963.78 × 3.79 bps",2024-09-26T14:22:00
+aa1afa87-0d5e-4557-a7f7-ecb4ea6300a0,22e4e82e-6875-41c4-bafd-4f2ab10ed950,2024-09-27,daily_fail_fee,1.51,USD,seller,disputed,"Daily fail fee: 3,963.78 × 3.81 bps",2024-09-27T09:42:00
+d7af21ea-f733-427d-9fef-9700d1318c40,22e4e82e-6875-41c4-bafd-4f2ab10ed950,2024-09-28,daily_fail_fee,1.56,USD,seller,paid,"Daily fail fee: 3,963.78 × 3.94 bps",2024-09-28T09:21:00
+160ea75b-82d1-42b9-bfc7-56ae45ceeb20,22e4e82e-6875-41c4-bafd-4f2ab10ed950,2024-09-29,daily_fail_fee,1.06,USD,seller,pending,"Daily fail fee: 3,963.78 × 2.67 bps",2024-09-29T17:51:00
+ec9a5f0e-0b4d-49b1-8ffb-cd1af1406b01,22e4e82e-6875-41c4-bafd-4f2ab10ed950,2024-09-30,daily_fail_fee,1.31,USD,seller,pending,"Daily fail fee: 3,963.78 × 3.30 bps",2024-09-30T15:22:00
+cf0813fa-f0fa-4648-8aa1-57c519687488,22e4e82e-6875-41c4-bafd-4f2ab10ed950,2024-10-01,daily_fail_fee,0.7,USD,seller,paid,"Daily fail fee: 3,963.78 × 1.77 bps",2024-10-01T09:57:00
+49656d89-e7de-43f1-920d-a3288893f6af,22e4e82e-6875-41c4-bafd-4f2ab10ed950,2024-10-02,daily_fail_fee,0.7,USD,seller,pending,"Daily fail fee: 3,963.78 × 1.77 bps",2024-10-02T12:53:00
+1148a8bb-b579-4721-931a-21949db824df,22e4e82e-6875-41c4-bafd-4f2ab10ed950,2024-10-03,daily_fail_fee,1.41,USD,seller,pending,"Daily fail fee: 3,963.78 × 3.55 bps",2024-10-03T13:05:00
+5942cd40-f9a8-4688-bcd0-4a529e236792,22e4e82e-6875-41c4-bafd-4f2ab10ed950,2024-10-04,daily_fail_fee,1.48,USD,seller,paid,"Daily fail fee: 3,963.78 × 3.74 bps",2024-10-04T16:58:00
+2e74f4ad-9584-418a-a3c4-47e6d550093c,22e4e82e-6875-41c4-bafd-4f2ab10ed950,2024-10-01,interest_charge,3.52,USD,seller,paid,"Interest charge: 3,963.78 × 8.88 bps",2024-10-01T09:01:00
+9ad4e67c-40b5-4413-8c65-a88f004f2011,22e4e82e-6875-41c4-bafd-4f2ab10ed950,2024-09-30,interest_charge,2.01,USD,seller,paid,"Interest charge: 3,963.78 × 5.07 bps",2024-09-30T10:47:00
+3e4bcee5-f09b-454e-8b13-3aafed5605ad,22e4e82e-6875-41c4-bafd-4f2ab10ed950,2024-09-27,interest_charge,0.9,USD,seller,disputed,"Interest charge: 3,963.78 × 2.28 bps",2024-09-27T11:30:00
+f954da1c-1fcc-441c-b1e3-b47766419d1b,df732c9e-3cde-42b8-941d-0a9b022cd368,2024-12-25,daily_fail_fee,454.64,JPY,buyer,paid,"Daily fail fee: 1,182,581.00 × 3.84 bps",2024-12-25T18:59:00
+06d42bea-fed3-4365-8e51-cb53f8c0e0e0,df732c9e-3cde-42b8-941d-0a9b022cd368,2024-12-26,daily_fail_fee,590.81,JPY,buyer,paid,"Daily fail fee: 1,182,581.00 × 5.00 bps",2024-12-26T10:36:00
+24bc636a-e3e9-4f03-9fde-bd3599a68064,df732c9e-3cde-42b8-941d-0a9b022cd368,2024-12-27,daily_fail_fee,282.39,JPY,buyer,pending,"Daily fail fee: 1,182,581.00 × 2.39 bps",2024-12-27T14:05:00
+5dee59ab-28cb-40ee-a856-892749f8db6f,df732c9e-3cde-42b8-941d-0a9b022cd368,2024-12-28,daily_fail_fee,387.26,JPY,buyer,pending,"Daily fail fee: 1,182,581.00 × 3.27 bps",2024-12-28T09:40:00
+d70f144c-20b7-4c79-a814-9832e35716e5,df732c9e-3cde-42b8-941d-0a9b022cd368,2024-12-29,daily_fail_fee,507.43,JPY,buyer,paid,"Daily fail fee: 1,182,581.00 × 4.29 bps",2024-12-29T11:38:00
+702ac873-a1c9-471d-8dc1-ee3fee331754,df732c9e-3cde-42b8-941d-0a9b022cd368,2024-12-30,daily_fail_fee,438.41,JPY,buyer,paid,"Daily fail fee: 1,182,581.00 × 3.71 bps",2024-12-30T11:50:00
+5487b7d2-e847-454c-83e3-f47e4ae37c3a,df732c9e-3cde-42b8-941d-0a9b022cd368,2024-12-31,daily_fail_fee,493.84,JPY,buyer,pending,"Daily fail fee: 1,182,581.00 × 4.18 bps",2024-12-31T18:40:00
+21396020-a961-4595-829e-b7119689ff57,df732c9e-3cde-42b8-941d-0a9b022cd368,2025-01-01,daily_fail_fee,524.43,JPY,buyer,pending,"Daily fail fee: 1,182,581.00 × 4.43 bps",2025-01-01T14:27:00
+c39243d5-5a3c-4960-8d05-5b64564cc50d,df732c9e-3cde-42b8-941d-0a9b022cd368,2025-01-02,daily_fail_fee,436.77,JPY,buyer,paid,"Daily fail fee: 1,182,581.00 × 3.69 bps",2025-01-02T11:17:00
+9be399ca-c88a-456f-980d-0bbdd2b2309e,df732c9e-3cde-42b8-941d-0a9b022cd368,2025-01-03,daily_fail_fee,312.25,JPY,buyer,pending,"Daily fail fee: 1,182,581.00 × 2.64 bps",2025-01-03T12:43:00
+746efbfd-cf75-4ec4-bcd2-47f588a6d236,df732c9e-3cde-42b8-941d-0a9b022cd368,2025-01-03,interest_charge,454.18,JPY,buyer,pending,"Interest charge: 1,182,581.00 × 3.84 bps",2025-01-03T11:30:00
+3dc6712c-f371-487e-a7ff-8d0e390039fe,df732c9e-3cde-42b8-941d-0a9b022cd368,2025-01-02,interest_charge,597.2,JPY,buyer,disputed,"Interest charge: 1,182,581.00 × 5.05 bps",2025-01-02T12:46:00
+57a89f12-0298-45ce-9e8f-57dfb3d5a10c,df732c9e-3cde-42b8-941d-0a9b022cd368,2025-01-03,administrative_fee,245.6,JPY,buyer,paid,Administrative processing fee for aged fail,2025-01-03T12:11:00
+34d89259-3995-43a2-93a6-ef6eeb4d3fae,572ee0bc-9342-4bb3-bd52-666f7d8176da,2024-07-02,daily_fail_fee,36.36,USD,buyer,paid,"Daily fail fee: 182,120.55 × 2.00 bps",2024-07-02T14:39:00
+b6636606-42c5-4904-91b5-aaaf0132916e,572ee0bc-9342-4bb3-bd52-666f7d8176da,2024-07-03,daily_fail_fee,87.03,USD,buyer,paid,"Daily fail fee: 182,120.55 × 4.78 bps",2024-07-03T13:01:00
+91ad7ed3-c789-45be-a1a6-bc334fbe6a7f,572ee0bc-9342-4bb3-bd52-666f7d8176da,2024-07-04,daily_fail_fee,50.98,USD,buyer,pending,"Daily fail fee: 182,120.55 × 2.80 bps",2024-07-04T08:36:00
+eaef64b0-0c5d-4cc0-9b1d-ec3c4bd853df,572ee0bc-9342-4bb3-bd52-666f7d8176da,2024-07-05,daily_fail_fee,81.0,USD,buyer,pending,"Daily fail fee: 182,120.55 × 4.45 bps",2024-07-05T16:40:00
+acd5d5f7-5fe1-44f8-be06-75a75132fec8,572ee0bc-9342-4bb3-bd52-666f7d8176da,2024-07-06,daily_fail_fee,84.02,USD,buyer,paid,"Daily fail fee: 182,120.55 × 4.61 bps",2024-07-06T17:23:00
+8f430eac-54e4-4eb5-9400-9a9a0b879b77,572ee0bc-9342-4bb3-bd52-666f7d8176da,2024-07-07,daily_fail_fee,62.56,USD,buyer,paid,"Daily fail fee: 182,120.55 × 3.44 bps",2024-07-07T15:53:00
+22ed1277-7f52-4dc0-8e38-d8912585c0d3,572ee0bc-9342-4bb3-bd52-666f7d8176da,2024-07-08,daily_fail_fee,64.22,USD,buyer,pending,"Daily fail fee: 182,120.55 × 3.53 bps",2024-07-08T17:27:00
+89ac1d3c-9522-47c2-918f-2dd4bfcb2a18,572ee0bc-9342-4bb3-bd52-666f7d8176da,2024-07-09,daily_fail_fee,76.98,USD,buyer,paid,"Daily fail fee: 182,120.55 × 4.23 bps",2024-07-09T14:18:00
+2f78a5d3-a14c-4d0e-bde3-f305a040ca12,572ee0bc-9342-4bb3-bd52-666f7d8176da,2024-07-10,daily_fail_fee,42.02,USD,buyer,pending,"Daily fail fee: 182,120.55 × 2.31 bps",2024-07-10T09:53:00
+18d204bb-f840-4c1a-b96a-df3e642c6b54,572ee0bc-9342-4bb3-bd52-666f7d8176da,2024-07-11,daily_fail_fee,81.0,USD,buyer,paid,"Daily fail fee: 182,120.55 × 4.45 bps",2024-07-11T08:16:00
+9106c573-ac46-46a6-af46-0a68cc21fe33,572ee0bc-9342-4bb3-bd52-666f7d8176da,2024-07-14,interest_charge,116.48,USD,buyer,pending,"Interest charge: 182,120.55 × 6.40 bps",2024-07-14T08:48:00
+5c6f0b9e-9599-48e4-be4a-ca9ba8352eb6,572ee0bc-9342-4bb3-bd52-666f7d8176da,2024-07-11,interest_charge,85.99,USD,buyer,pending,"Interest charge: 182,120.55 × 4.72 bps",2024-07-11T16:29:00
+0722f149-64ea-42c8-b15b-abac0ea90cf2,572ee0bc-9342-4bb3-bd52-666f7d8176da,2024-07-11,administrative_fee,173.65,USD,buyer,pending,Administrative processing fee for aged fail,2024-07-11T17:41:00
+f437c0d7-2c05-42f3-bb51-438f07306706,d6486912-150a-4f4e-b04d-bf4e34effc7b,2024-02-29,daily_fail_fee,7.34,USD,seller,pending,"Daily fail fee: 28,153.61 × 2.61 bps",2024-02-29T14:27:00
+f4ccba5c-3901-423e-b765-0b4a25f985cf,d6486912-150a-4f4e-b04d-bf4e34effc7b,2024-03-01,daily_fail_fee,7.88,USD,seller,paid,"Daily fail fee: 28,153.61 × 2.80 bps",2024-03-01T17:16:00
+565abfa5-8be2-4d9e-a32f-7dfa38fea216,0955982c-4f31-49a9-9767-430695568d09,2024-10-05,daily_fail_fee,17342.2,GBP,buyer,paid,"Daily fail fee: 61,324,471.67 × 2.83 bps",2024-10-05T09:29:00
+e017375a-eea2-4bfa-9aa9-e87539b6b47a,0955982c-4f31-49a9-9767-430695568d09,2024-10-06,daily_fail_fee,23310.17,GBP,buyer,paid,"Daily fail fee: 61,324,471.67 × 3.80 bps",2024-10-06T08:55:00
+87487fd3-6cc9-4a50-b4f1-60e92a075375,0955982c-4f31-49a9-9767-430695568d09,2024-10-07,daily_fail_fee,27308.78,GBP,buyer,paid,"Daily fail fee: 61,324,471.67 × 4.45 bps",2024-10-07T17:03:00
+148d181c-e4b1-4676-a056-36a87eb304b4,0955982c-4f31-49a9-9767-430695568d09,2024-10-08,daily_fail_fee,8217.57,GBP,buyer,pending,"Daily fail fee: 61,324,471.67 × 1.34 bps",2024-10-08T15:58:00
+210625b9-53c0-4389-ac1d-d9e7fc1372db,7e2e1714-9c7c-42ab-87d0-e91775d78212,2024-04-16,daily_fail_fee,4.59,USD,seller,disputed,"Daily fail fee: 34,654.75 × 1.32 bps",2024-04-16T11:51:00
+81d86a45-e5ab-4357-82e4-347aa7daacd2,7e2e1714-9c7c-42ab-87d0-e91775d78212,2024-04-17,daily_fail_fee,10.72,USD,seller,paid,"Daily fail fee: 34,654.75 × 3.09 bps",2024-04-17T15:06:00
+09108849-d63e-4931-8f1b-e9e3a5f5794d,7e2e1714-9c7c-42ab-87d0-e91775d78212,2024-04-18,daily_fail_fee,8.13,USD,seller,paid,"Daily fail fee: 34,654.75 × 2.35 bps",2024-04-18T13:26:00
+61417dbd-1843-4d8b-be30-150cbb0770f7,7e2e1714-9c7c-42ab-87d0-e91775d78212,2024-04-19,daily_fail_fee,9.46,USD,seller,pending,"Daily fail fee: 34,654.75 × 2.73 bps",2024-04-19T18:21:00
+42e88f8a-0ab2-4536-95ed-ebd75626f67d,7e2e1714-9c7c-42ab-87d0-e91775d78212,2024-04-20,daily_fail_fee,4.53,USD,seller,paid,"Daily fail fee: 34,654.75 × 1.31 bps",2024-04-20T14:01:00
+aa9dbc1d-18c4-45b4-ba6c-1a3c2fa9daf0,7e2e1714-9c7c-42ab-87d0-e91775d78212,2024-04-21,daily_fail_fee,12.98,USD,seller,pending,"Daily fail fee: 34,654.75 × 3.74 bps",2024-04-21T18:18:00
+3c88dbd2-0f3f-4287-9a4b-80860073bace,7e2e1714-9c7c-42ab-87d0-e91775d78212,2024-04-22,daily_fail_fee,7.08,USD,seller,paid,"Daily fail fee: 34,654.75 × 2.04 bps",2024-04-22T18:11:00
+ded28e5f-16e4-4d86-868a-c5b9d638e44e,7e2e1714-9c7c-42ab-87d0-e91775d78212,2024-04-23,daily_fail_fee,6.3,USD,seller,paid,"Daily fail fee: 34,654.75 × 1.82 bps",2024-04-23T13:39:00
+f2cd773f-3981-4150-acc7-649fac8429da,7e2e1714-9c7c-42ab-87d0-e91775d78212,2024-04-24,daily_fail_fee,15.77,USD,seller,disputed,"Daily fail fee: 34,654.75 × 4.55 bps",2024-04-24T17:33:00
+f57ab92b-ad85-4693-955d-cd1449c11b21,7e2e1714-9c7c-42ab-87d0-e91775d78212,2024-04-25,daily_fail_fee,8.01,USD,seller,paid,"Daily fail fee: 34,654.75 × 2.31 bps",2024-04-25T12:20:00
+4883d4b3-066e-4002-8c1b-62c5a8a4a4aa,7e2e1714-9c7c-42ab-87d0-e91775d78212,2024-04-16,interest_charge,24.83,USD,seller,paid,"Interest charge: 34,654.75 × 7.17 bps",2024-04-16T14:54:00
+2e9c719f-148c-45fe-83c1-58d109a06030,7e2e1714-9c7c-42ab-87d0-e91775d78212,2024-04-19,interest_charge,20.36,USD,seller,pending,"Interest charge: 34,654.75 × 5.88 bps",2024-04-19T10:52:00
+8472b55f-2b96-4b91-a27a-cf2a180974bd,f50a15ff-483b-4d43-871c-18b738285929,2024-08-01,daily_fail_fee,6.73,GBP,seller,disputed,"Daily fail fee: 17,491.12 × 3.85 bps",2024-08-01T10:50:00
+53c3f1c2-7012-4cd2-8a2e-c0ed1592c6d8,f50a15ff-483b-4d43-871c-18b738285929,2024-08-02,daily_fail_fee,5.67,GBP,seller,pending,"Daily fail fee: 17,491.12 × 3.24 bps",2024-08-02T16:37:00
+a30f3ae6-7e01-4ac3-96c0-83ec301a53a8,f50a15ff-483b-4d43-871c-18b738285929,2024-08-03,daily_fail_fee,2.92,GBP,seller,pending,"Daily fail fee: 17,491.12 × 1.67 bps",2024-08-03T15:07:00
+b54bd4a0-cf52-4c1f-b67c-65f3130f039b,5b03ace2-926d-4c3e-95ee-ed2d212bbdc8,2024-01-16,daily_fail_fee,26.0,EUR,seller,paid,"Daily fail fee: 53,765.75 × 4.84 bps",2024-01-16T13:03:00
+f2bdb36f-93e8-40f3-80b7-703985f27f50,5b03ace2-926d-4c3e-95ee-ed2d212bbdc8,2024-01-17,daily_fail_fee,26.46,EUR,seller,paid,"Daily fail fee: 53,765.75 × 4.92 bps",2024-01-17T11:34:00
+46a588b5-803f-41d7-8f0f-88a793b95ca5,5b03ace2-926d-4c3e-95ee-ed2d212bbdc8,2024-01-18,daily_fail_fee,12.34,EUR,seller,paid,"Daily fail fee: 53,765.75 × 2.29 bps",2024-01-18T15:27:00
+0abec94a-f072-4b78-b302-e6f91cb26f72,5b03ace2-926d-4c3e-95ee-ed2d212bbdc8,2024-01-19,daily_fail_fee,21.39,EUR,seller,paid,"Daily fail fee: 53,765.75 × 3.98 bps",2024-01-19T12:32:00
+4f5b37e6-0d8c-4c68-8611-5671a3cc0d3a,5b03ace2-926d-4c3e-95ee-ed2d212bbdc8,2024-01-20,daily_fail_fee,26.73,EUR,seller,paid,"Daily fail fee: 53,765.75 × 4.97 bps",2024-01-20T14:48:00
+c05efe7a-f937-4804-b833-3a110ed9dd87,5b03ace2-926d-4c3e-95ee-ed2d212bbdc8,2024-01-21,daily_fail_fee,21.63,EUR,seller,paid,"Daily fail fee: 53,765.75 × 4.02 bps",2024-01-21T12:36:00
+7ddbd9a6-084c-42aa-b605-d5c339d28b37,5b03ace2-926d-4c3e-95ee-ed2d212bbdc8,2024-01-22,daily_fail_fee,10.63,EUR,seller,paid,"Daily fail fee: 53,765.75 × 1.98 bps",2024-01-22T16:55:00
+53535337-48c6-4799-8d9f-9061be12eacb,5b03ace2-926d-4c3e-95ee-ed2d212bbdc8,2024-01-23,daily_fail_fee,6.49,EUR,seller,paid,"Daily fail fee: 53,765.75 × 1.21 bps",2024-01-23T13:32:00
+9772ceca-7fa9-401f-b6cc-7df4e1be9403,5b03ace2-926d-4c3e-95ee-ed2d212bbdc8,2024-01-24,daily_fail_fee,12.92,EUR,seller,paid,"Daily fail fee: 53,765.75 × 2.40 bps",2024-01-24T09:01:00
+7d81a0c6-eec9-4d1c-95b0-6f4645598437,5b03ace2-926d-4c3e-95ee-ed2d212bbdc8,2024-01-17,interest_charge,47.32,EUR,seller,paid,"Interest charge: 53,765.75 × 8.80 bps",2024-01-17T16:36:00
+b8e612dc-94be-4cb7-bfc0-273aab9f79f7,5b03ace2-926d-4c3e-95ee-ed2d212bbdc8,2024-01-22,interest_charge,36.61,EUR,seller,paid,"Interest charge: 53,765.75 × 6.81 bps",2024-01-22T17:41:00
+a44f8a12-fcc7-4904-9a00-8310379c8682,ac980da0-f656-4253-b45d-00b664210a18,2024-12-27,daily_fail_fee,16.81,USD,buyer,paid,"Daily fail fee: 91,665.81 × 1.83 bps",2024-12-27T18:58:00
+7b14ebf9-36c8-43bc-9794-bf9515bfb151,ac980da0-f656-4253-b45d-00b664210a18,2024-12-28,daily_fail_fee,27.64,USD,buyer,pending,"Daily fail fee: 91,665.81 × 3.01 bps",2024-12-28T15:29:00
+498a8b33-e872-4919-a869-0828de4d69de,ac980da0-f656-4253-b45d-00b664210a18,2024-12-29,daily_fail_fee,22.01,USD,buyer,pending,"Daily fail fee: 91,665.81 × 2.40 bps",2024-12-29T15:03:00
+643f3b75-4c56-444f-a7fd-4e88fead6f42,1bd6d678-9e9c-4b60-be85-c9ac4b605bf4,2024-01-13,daily_fail_fee,79.26,USD,seller,paid,"Daily fail fee: 310,931.83 × 2.55 bps",2024-01-13T08:12:00
+4fec861f-0640-42cc-8751-7ec26f6edc75,1bd6d678-9e9c-4b60-be85-c9ac4b605bf4,2024-01-14,daily_fail_fee,124.04,USD,seller,pending,"Daily fail fee: 310,931.83 × 3.99 bps",2024-01-14T12:43:00
+2f7f3a8c-97d0-461a-88f3-fae0287fc93f,1bd6d678-9e9c-4b60-be85-c9ac4b605bf4,2024-01-15,daily_fail_fee,66.07,USD,seller,paid,"Daily fail fee: 310,931.83 × 2.13 bps",2024-01-15T12:25:00
+7139dff1-87f1-41fe-bf5c-d6378577deea,1bd6d678-9e9c-4b60-be85-c9ac4b605bf4,2024-01-16,daily_fail_fee,94.36,USD,seller,paid,"Daily fail fee: 310,931.83 × 3.03 bps",2024-01-16T11:14:00
+1bc2788c-615c-461b-bea2-a6bd89524c1e,1bd6d678-9e9c-4b60-be85-c9ac4b605bf4,2024-01-17,daily_fail_fee,44.15,USD,seller,pending,"Daily fail fee: 310,931.83 × 1.42 bps",2024-01-17T10:12:00
+f5252abf-e332-4667-99b7-29cad72b7711,1bd6d678-9e9c-4b60-be85-c9ac4b605bf4,2024-01-18,daily_fail_fee,58.75,USD,seller,paid,"Daily fail fee: 310,931.83 × 1.89 bps",2024-01-18T14:05:00
+2a12078a-319a-4196-911a-c0544fe59e5e,1bd6d678-9e9c-4b60-be85-c9ac4b605bf4,2024-01-19,daily_fail_fee,90.39,USD,seller,paid,"Daily fail fee: 310,931.83 × 2.91 bps",2024-01-19T08:28:00
+a072a9d4-2738-4557-9013-34308547358b,1bd6d678-9e9c-4b60-be85-c9ac4b605bf4,2024-01-20,daily_fail_fee,140.89,USD,seller,paid,"Daily fail fee: 310,931.83 × 4.53 bps",2024-01-20T15:19:00
+68f65730-8571-4dea-8d61-0006548385fd,1bd6d678-9e9c-4b60-be85-c9ac4b605bf4,2024-01-17,interest_charge,277.7,USD,seller,paid,"Interest charge: 310,931.83 × 8.93 bps",2024-01-17T14:11:00
+9085596c-f47c-414a-aaeb-4e1b5b4d5e6d,0ecb30ea-b43c-4924-976c-a5b196dd34c2,2024-11-07,daily_fail_fee,1675.74,JPY,seller,disputed,"Daily fail fee: 4,528,045.19 × 3.70 bps",2024-11-07T14:15:00
+779fecee-1b15-4623-9832-96aaaaf6af8f,cb13786a-46f5-41bf-962d-0b952ae1706f,2024-10-15,daily_fail_fee,6560.45,EUR,seller,paid,"Daily fail fee: 13,745,475.01 × 4.77 bps",2024-10-15T13:44:00
+3fb59bae-7ccc-4566-9a6b-6a96530383e2,cb13786a-46f5-41bf-962d-0b952ae1706f,2024-10-16,daily_fail_fee,1600.74,EUR,seller,paid,"Daily fail fee: 13,745,475.01 × 1.16 bps",2024-10-16T16:58:00
+aeab4b53-1636-4828-ab01-9f60e0917c41,9b707f1d-719d-4cfb-91d3-fd96d87d891c,2024-10-26,daily_fail_fee,46.31,USD,seller,paid,"Daily fail fee: 156,794.40 × 2.95 bps",2024-10-26T15:49:00
+e7dda45a-307b-4653-9a1b-79bc24a2e1f6,9b707f1d-719d-4cfb-91d3-fd96d87d891c,2024-10-27,daily_fail_fee,69.53,USD,seller,paid,"Daily fail fee: 156,794.40 × 4.43 bps",2024-10-27T18:18:00
+f54243f6-4efe-408f-9f37-f542b89b0875,9b707f1d-719d-4cfb-91d3-fd96d87d891c,2024-10-28,daily_fail_fee,56.45,USD,seller,disputed,"Daily fail fee: 156,794.40 × 3.60 bps",2024-10-28T16:45:00
+7c86d4c0-e1f1-48de-b061-eb713b4174b4,9b707f1d-719d-4cfb-91d3-fd96d87d891c,2024-10-29,daily_fail_fee,36.64,USD,seller,paid,"Daily fail fee: 156,794.40 × 2.34 bps",2024-10-29T11:28:00
+e2e25bf8-b98b-4c0c-abf2-2952f6da59f5,9b707f1d-719d-4cfb-91d3-fd96d87d891c,2024-10-30,daily_fail_fee,62.71,USD,seller,paid,"Daily fail fee: 156,794.40 × 4.00 bps",2024-10-30T08:48:00
+b2dcbc64-d289-4475-9246-c9c215bc5371,9b707f1d-719d-4cfb-91d3-fd96d87d891c,2024-10-27,interest_charge,91.09,USD,seller,paid,"Interest charge: 156,794.40 × 5.81 bps",2024-10-27T16:30:00
+9a9e9f1a-4dac-4bb0-b584-3bf6bf55a2ad,9b707f1d-719d-4cfb-91d3-fd96d87d891c,2024-10-28,interest_charge,34.5,USD,seller,disputed,"Interest charge: 156,794.40 × 2.20 bps",2024-10-28T08:55:00
+3d0ba737-5ef4-4120-85c4-7dd3aadf9063,9b707f1d-719d-4cfb-91d3-fd96d87d891c,2024-10-29,interest_charge,84.2,USD,seller,paid,"Interest charge: 156,794.40 × 5.37 bps",2024-10-29T12:38:00
+f1cd45af-7312-4bb8-8f2a-c994d2c33d49,8ca2f02e-ead2-431a-823b-dd51c98bd602,2024-12-13,daily_fail_fee,78.96,JPY,seller,paid,"Daily fail fee: 283,969.53 × 2.78 bps",2024-12-13T09:04:00
+c94ed2bb-f581-4f8a-ba2b-2fc3fcb32a3f,8ca2f02e-ead2-431a-823b-dd51c98bd602,2024-12-14,daily_fail_fee,64.41,JPY,seller,paid,"Daily fail fee: 283,969.53 × 2.27 bps",2024-12-14T11:41:00
+de7529fc-c22c-42fd-9afd-b73cf178153e,8ca2f02e-ead2-431a-823b-dd51c98bd602,2024-12-15,daily_fail_fee,116.65,JPY,seller,paid,"Daily fail fee: 283,969.53 × 4.11 bps",2024-12-15T17:03:00
+0979d58a-4755-4eb1-a279-733a7efaf03c,d7c1bb1f-29df-4fd9-9912-862cc5fdf749,2024-09-28,daily_fail_fee,19.22,USD,buyer,paid,"Daily fail fee: 53,795.67 × 3.57 bps",2024-09-28T12:47:00
+f86840d4-5b31-4320-9a77-f8a37985cba0,d7c1bb1f-29df-4fd9-9912-862cc5fdf749,2024-09-29,daily_fail_fee,6.1,USD,buyer,paid,"Daily fail fee: 53,795.67 × 1.13 bps",2024-09-29T14:22:00
+1ee27773-c3b1-4863-982a-b11af88fc58d,d7c1bb1f-29df-4fd9-9912-862cc5fdf749,2024-09-30,daily_fail_fee,21.0,USD,buyer,paid,"Daily fail fee: 53,795.67 × 3.90 bps",2024-09-30T12:46:00
+d06bd708-c365-4c8c-8ede-77e64193e6df,d7c1bb1f-29df-4fd9-9912-862cc5fdf749,2024-10-01,daily_fail_fee,11.05,USD,buyer,paid,"Daily fail fee: 53,795.67 × 2.05 bps",2024-10-01T13:41:00
+eb72dba7-c7fc-4b8b-9994-dd59bd5a916e,d7c1bb1f-29df-4fd9-9912-862cc5fdf749,2024-10-02,daily_fail_fee,19.52,USD,buyer,paid,"Daily fail fee: 53,795.67 × 3.63 bps",2024-10-02T13:11:00
+62b2521c-d8a6-4f2e-9153-4a54ce277b4c,d7c1bb1f-29df-4fd9-9912-862cc5fdf749,2024-10-03,daily_fail_fee,25.04,USD,buyer,disputed,"Daily fail fee: 53,795.67 × 4.66 bps",2024-10-03T10:26:00
+4e034ea2-ba43-4aba-8f3f-bc854f44c16a,d7c1bb1f-29df-4fd9-9912-862cc5fdf749,2024-10-01,interest_charge,53.1,USD,buyer,paid,"Interest charge: 53,795.67 × 9.87 bps",2024-10-01T18:48:00
+d3d32f9b-73a9-4293-b409-4b52de1d7508,4b5f6ca7-c76d-469e-a0dc-d62105ecfd2c,2024-08-03,daily_fail_fee,52.67,USD,seller,paid,"Daily fail fee: 118,444.69 × 4.45 bps",2024-08-03T15:01:00
+c7c15aff-9f2b-437f-b8af-0f8741fd1824,4b5f6ca7-c76d-469e-a0dc-d62105ecfd2c,2024-08-04,daily_fail_fee,52.37,USD,seller,paid,"Daily fail fee: 118,444.69 × 4.42 bps",2024-08-04T09:04:00
+35007731-46b9-475f-a72a-c58674c28da1,4b5f6ca7-c76d-469e-a0dc-d62105ecfd2c,2024-08-05,daily_fail_fee,14.68,USD,seller,paid,"Daily fail fee: 118,444.69 × 1.24 bps",2024-08-05T12:37:00
+739d88b1-33c5-428e-a2c1-06a3cedaf6fb,4b5f6ca7-c76d-469e-a0dc-d62105ecfd2c,2024-08-06,daily_fail_fee,58.73,USD,seller,paid,"Daily fail fee: 118,444.69 × 4.96 bps",2024-08-06T14:04:00
+41ba167c-a871-4cfc-9c94-172f961fcf0b,4b5f6ca7-c76d-469e-a0dc-d62105ecfd2c,2024-08-07,daily_fail_fee,15.57,USD,seller,paid,"Daily fail fee: 118,444.69 × 1.31 bps",2024-08-07T17:32:00
+83b8e648-6608-4960-b8db-cace451cf301,4b5f6ca7-c76d-469e-a0dc-d62105ecfd2c,2024-08-08,daily_fail_fee,38.74,USD,seller,paid,"Daily fail fee: 118,444.69 × 3.27 bps",2024-08-08T13:05:00
+0e96f90c-dd23-41dd-a78c-2366a6888a00,4b5f6ca7-c76d-469e-a0dc-d62105ecfd2c,2024-08-09,daily_fail_fee,15.96,USD,seller,paid,"Daily fail fee: 118,444.69 × 1.35 bps",2024-08-09T13:32:00
+80317a07-0604-418c-94ff-1ce1217a8369,4b5f6ca7-c76d-469e-a0dc-d62105ecfd2c,2024-08-10,daily_fail_fee,22.03,USD,seller,waived,"Daily fail fee: 118,444.69 × 1.86 bps",2024-08-10T12:25:00
+cfe3b63c-a1b8-4a11-a366-b91e08d929f1,4b5f6ca7-c76d-469e-a0dc-d62105ecfd2c,2024-08-09,interest_charge,30.94,USD,seller,paid,"Interest charge: 118,444.69 × 2.61 bps",2024-08-09T15:28:00
+fd5c81ba-2b01-4b63-872b-4aa4e0df018d,a41c7677-c862-44b8-9aef-56f5457cd524,2024-02-20,daily_fail_fee,1805.79,JPY,seller,pending,"Daily fail fee: 6,687,605.00 × 2.70 bps",2024-02-20T18:48:00
+0e9221aa-2639-4eb3-9bcd-6821e98d17c2,ac373983-1d3c-48a2-9f20-0276279d2835,2024-01-11,daily_fail_fee,32.65,USD,buyer,paid,"Daily fail fee: 90,909.83 × 3.59 bps",2024-01-11T18:00:00
+33377167-eb87-4d83-b23c-115c0f970983,82361c12-5eba-4caa-97e2-a2cd863bd7c9,2024-01-24,daily_fail_fee,328.19,JPY,seller,paid,"Daily fail fee: 1,546,118.49 × 2.12 bps",2024-01-24T17:26:00
+e14480df-62e1-404f-8134-3f8f7b58a647,82361c12-5eba-4caa-97e2-a2cd863bd7c9,2024-01-25,daily_fail_fee,401.93,JPY,seller,paid,"Daily fail fee: 1,546,118.49 × 2.60 bps",2024-01-25T14:35:00
+83f0dd52-b571-496d-a6b6-8524821c8a1d,df7e6a6a-0c2f-4e92-9aa3-7e7c658eda0f,2024-10-23,daily_fail_fee,35.23,EUR,seller,pending,"Daily fail fee: 91,920.15 × 3.83 bps",2024-10-23T13:45:00
+18e28898-2856-4a49-9c07-9ae59991d2f4,df7e6a6a-0c2f-4e92-9aa3-7e7c658eda0f,2024-10-24,daily_fail_fee,14.09,EUR,seller,paid,"Daily fail fee: 91,920.15 × 1.53 bps",2024-10-24T17:37:00
+0f1f0aa9-9be7-4200-a0b2-3d663ee75674,df7e6a6a-0c2f-4e92-9aa3-7e7c658eda0f,2024-10-25,daily_fail_fee,22.98,EUR,seller,paid,"Daily fail fee: 91,920.15 × 2.50 bps",2024-10-25T17:04:00
+8041b68a-7a13-4201-ac86-c61271b8dcc0,df7e6a6a-0c2f-4e92-9aa3-7e7c658eda0f,2024-10-26,daily_fail_fee,19.35,EUR,seller,pending,"Daily fail fee: 91,920.15 × 2.10 bps",2024-10-26T11:44:00
+20bce7f1-75d8-4788-9f12-bf66dac43f8b,df7e6a6a-0c2f-4e92-9aa3-7e7c658eda0f,2024-10-27,daily_fail_fee,17.71,EUR,seller,paid,"Daily fail fee: 91,920.15 × 1.93 bps",2024-10-27T17:45:00
+3d50b3a7-3a36-43ea-8453-3c1d84e8f5cb,df7e6a6a-0c2f-4e92-9aa3-7e7c658eda0f,2024-10-28,daily_fail_fee,16.03,EUR,seller,paid,"Daily fail fee: 91,920.15 × 1.74 bps",2024-10-28T12:54:00
+0ff080d4-e329-4ca8-bdb6-aaa873b86921,df7e6a6a-0c2f-4e92-9aa3-7e7c658eda0f,2024-10-29,daily_fail_fee,9.83,EUR,seller,pending,"Daily fail fee: 91,920.15 × 1.07 bps",2024-10-29T15:43:00
+307140cf-f95b-47db-9904-1ea0da0f21df,df7e6a6a-0c2f-4e92-9aa3-7e7c658eda0f,2024-10-24,interest_charge,64.21,EUR,seller,paid,"Interest charge: 91,920.15 × 6.99 bps",2024-10-24T10:04:00
+248d8fc8-6921-4444-ab93-fee52bf3597a,c32188c6-868d-4cac-abc5-27db9a8b0595,2024-01-25,daily_fail_fee,3.92,USD,buyer,paid,"Daily fail fee: 32,187.69 × 1.22 bps",2024-01-25T09:34:00
+5ada54d2-ff1a-472b-86c0-985247ebe0ef,c32188c6-868d-4cac-abc5-27db9a8b0595,2024-01-26,daily_fail_fee,8.22,USD,buyer,paid,"Daily fail fee: 32,187.69 × 2.55 bps",2024-01-26T15:19:00
+e1d41e23-e0e0-4632-bfa9-ac17eba4a850,c32188c6-868d-4cac-abc5-27db9a8b0595,2024-01-27,daily_fail_fee,9.03,USD,buyer,paid,"Daily fail fee: 32,187.69 × 2.80 bps",2024-01-27T16:37:00
+29af71b9-479b-4c79-b293-aa93c0f8673f,c32188c6-868d-4cac-abc5-27db9a8b0595,2024-01-28,daily_fail_fee,14.01,USD,buyer,paid,"Daily fail fee: 32,187.69 × 4.35 bps",2024-01-28T16:21:00
+f1474135-1d6b-40d4-97b8-a6b287342c77,c32188c6-868d-4cac-abc5-27db9a8b0595,2024-01-29,daily_fail_fee,5.38,USD,buyer,paid,"Daily fail fee: 32,187.69 × 1.67 bps",2024-01-29T12:52:00
+216c8985-9837-44ee-a56d-2b3a2971ae6e,c32188c6-868d-4cac-abc5-27db9a8b0595,2024-01-30,daily_fail_fee,4.87,USD,buyer,paid,"Daily fail fee: 32,187.69 × 1.51 bps",2024-01-30T17:16:00
+3936f042-fbd3-41e5-becb-7ac8ee1f6f85,c32188c6-868d-4cac-abc5-27db9a8b0595,2024-01-31,daily_fail_fee,6.85,USD,buyer,paid,"Daily fail fee: 32,187.69 × 2.13 bps",2024-01-31T18:10:00
+071da5a9-ff19-4b20-94a8-dbec67b4d07f,c32188c6-868d-4cac-abc5-27db9a8b0595,2024-02-01,daily_fail_fee,15.02,USD,buyer,paid,"Daily fail fee: 32,187.69 × 4.67 bps",2024-02-01T16:30:00
+d59df4d0-a1c1-4e87-ba3a-9bdf9d2ccc96,c32188c6-868d-4cac-abc5-27db9a8b0595,2024-02-02,daily_fail_fee,11.52,USD,buyer,paid,"Daily fail fee: 32,187.69 × 3.58 bps",2024-02-02T09:34:00
+d41378ed-fb0d-47b6-8866-20e825f804bb,c32188c6-868d-4cac-abc5-27db9a8b0595,2024-02-03,daily_fail_fee,15.01,USD,buyer,paid,"Daily fail fee: 32,187.69 × 4.66 bps",2024-02-03T14:26:00
+6fee8ee8-4b35-4df5-81e3-4f4d7699301b,c32188c6-868d-4cac-abc5-27db9a8b0595,2024-02-09,interest_charge,18.77,USD,buyer,paid,"Interest charge: 32,187.69 × 5.83 bps",2024-02-09T09:13:00
+6f669de1-1fc4-4c58-ab94-38f6e084b103,c32188c6-868d-4cac-abc5-27db9a8b0595,2024-01-27,interest_charge,19.45,USD,buyer,paid,"Interest charge: 32,187.69 × 6.04 bps",2024-01-27T10:22:00
+0fff28ac-9047-4dc7-8b8d-e4c46a1f9390,c32188c6-868d-4cac-abc5-27db9a8b0595,2024-01-31,interest_charge,13.33,USD,buyer,disputed,"Interest charge: 32,187.69 × 4.14 bps",2024-01-31T14:49:00
+ccc54f01-093d-458f-98eb-9f793a1833db,e8206119-6867-4053-94a2-a46035cabc60,2024-05-01,daily_fail_fee,117.01,JPY,seller,pending,"Daily fail fee: 372,865.25 × 3.14 bps",2024-05-01T11:39:00
+cd6137a2-76b8-4d3f-b61f-cf1dc04f33ff,e8206119-6867-4053-94a2-a46035cabc60,2024-05-02,daily_fail_fee,176.84,JPY,seller,paid,"Daily fail fee: 372,865.25 × 4.74 bps",2024-05-02T13:40:00
+2a27822e-2b74-451c-8ec7-876b362f4ae4,e8206119-6867-4053-94a2-a46035cabc60,2024-05-03,daily_fail_fee,62.31,JPY,seller,pending,"Daily fail fee: 372,865.25 × 1.67 bps",2024-05-03T16:38:00
+a68a1d34-9992-4cf2-9c2e-8376f10334f4,e8206119-6867-4053-94a2-a46035cabc60,2024-05-04,daily_fail_fee,86.19,JPY,seller,paid,"Daily fail fee: 372,865.25 × 2.31 bps",2024-05-04T17:03:00
+a35eb787-4119-457f-a28a-c1ccf79e26fe,e8206119-6867-4053-94a2-a46035cabc60,2024-05-05,daily_fail_fee,157.92,JPY,seller,paid,"Daily fail fee: 372,865.25 × 4.24 bps",2024-05-05T18:50:00
+52b85217-898c-4db6-bd55-1d8288b7164c,e8206119-6867-4053-94a2-a46035cabc60,2024-05-06,daily_fail_fee,182.48,JPY,seller,disputed,"Daily fail fee: 372,865.25 × 4.89 bps",2024-05-06T16:24:00
+3b3f736c-16f7-4b88-b542-585e60f56d66,e8206119-6867-4053-94a2-a46035cabc60,2024-05-07,daily_fail_fee,86.55,JPY,seller,paid,"Daily fail fee: 372,865.25 × 2.32 bps",2024-05-07T09:24:00
+95b5907d-b1a4-4c53-b951-ef06fc78cd3e,e8206119-6867-4053-94a2-a46035cabc60,2024-05-08,daily_fail_fee,106.0,JPY,seller,paid,"Daily fail fee: 372,865.25 × 2.84 bps",2024-05-08T10:13:00
+14389bcb-6af4-4bd3-a890-12669f65a260,e8206119-6867-4053-94a2-a46035cabc60,2024-05-09,daily_fail_fee,117.53,JPY,seller,disputed,"Daily fail fee: 372,865.25 × 3.15 bps",2024-05-09T09:37:00
+33347d93-5cbd-41d5-9f9c-daddf6e4c920,e8206119-6867-4053-94a2-a46035cabc60,2024-05-10,daily_fail_fee,70.15,JPY,seller,paid,"Daily fail fee: 372,865.25 × 1.88 bps",2024-05-10T17:05:00
+26c6c620-8681-4742-bf2a-262db0426b5f,e8206119-6867-4053-94a2-a46035cabc60,2024-05-02,interest_charge,293.02,JPY,seller,disputed,"Interest charge: 372,865.25 × 7.86 bps",2024-05-02T16:04:00
+fb83eca8-4f10-4bcf-b822-6ce928199db7,e8206119-6867-4053-94a2-a46035cabc60,2024-05-07,interest_charge,151.87,JPY,seller,paid,"Interest charge: 372,865.25 × 4.07 bps",2024-05-07T10:19:00
+fe4f7280-db82-432c-aead-911b76e8923e,e8206119-6867-4053-94a2-a46035cabc60,2024-05-10,administrative_fee,323.72,JPY,seller,pending,Administrative processing fee for aged fail,2024-05-10T15:47:00
+53210f3b-05bd-4850-836e-6e5e713f6e96,e8206119-6867-4053-94a2-a46035cabc60,2024-05-28,interest_charge,90.09,JPY,seller,paid,"Interest charge: 372,865.25 × 2.42 bps",2024-05-28T09:11:00
+411d8e5c-7a4c-4475-b7b4-5b4169048194,f3d17bbe-999e-4ed7-b26d-4f985b15f088,2024-01-20,daily_fail_fee,74.16,USD,buyer,pending,"Daily fail fee: 242,338.99 × 3.06 bps",2024-01-20T11:18:00
+034507ff-2786-444b-88ad-d70a6a73208c,f3d17bbe-999e-4ed7-b26d-4f985b15f088,2024-01-21,daily_fail_fee,33.02,USD,buyer,pending,"Daily fail fee: 242,338.99 × 1.36 bps",2024-01-21T14:05:00
+e39376b2-be4c-449c-9b70-8f823fcb33f0,f3d17bbe-999e-4ed7-b26d-4f985b15f088,2024-01-22,daily_fail_fee,43.3,USD,buyer,pending,"Daily fail fee: 242,338.99 × 1.79 bps",2024-01-22T18:22:00
+e356fa7f-f4d5-420b-aff0-c84e628ac850,f3d17bbe-999e-4ed7-b26d-4f985b15f088,2024-01-23,daily_fail_fee,59.37,USD,buyer,paid,"Daily fail fee: 242,338.99 × 2.45 bps",2024-01-23T09:20:00
+facc5313-29b8-45f6-a22e-0353f39f934a,f3d17bbe-999e-4ed7-b26d-4f985b15f088,2024-01-24,daily_fail_fee,45.89,USD,buyer,pending,"Daily fail fee: 242,338.99 × 1.89 bps",2024-01-24T12:18:00
+5ff290f5-60ba-41ba-be5d-d8c13f12eaad,f3d17bbe-999e-4ed7-b26d-4f985b15f088,2024-01-25,daily_fail_fee,25.23,USD,buyer,paid,"Daily fail fee: 242,338.99 × 1.04 bps",2024-01-25T09:42:00
+b0272d3c-529d-45fd-a3fb-f97080a1f7af,f3d17bbe-999e-4ed7-b26d-4f985b15f088,2024-01-26,daily_fail_fee,93.27,USD,buyer,paid,"Daily fail fee: 242,338.99 × 3.85 bps",2024-01-26T17:56:00
+ff015917-1ba1-4607-a15e-a78e70273d5a,f3d17bbe-999e-4ed7-b26d-4f985b15f088,2024-01-27,daily_fail_fee,96.01,USD,buyer,pending,"Daily fail fee: 242,338.99 × 3.96 bps",2024-01-27T16:19:00
+861dba6e-f87d-43b6-96f3-dbdf12999ab2,f3d17bbe-999e-4ed7-b26d-4f985b15f088,2024-01-28,daily_fail_fee,88.56,USD,buyer,pending,"Daily fail fee: 242,338.99 × 3.65 bps",2024-01-28T15:26:00
+085da933-f87c-4a8c-b47b-f2f0017dc5d9,f3d17bbe-999e-4ed7-b26d-4f985b15f088,2024-01-29,daily_fail_fee,96.1,USD,buyer,paid,"Daily fail fee: 242,338.99 × 3.97 bps",2024-01-29T11:47:00
+9667177c-76aa-45ab-9bbe-06dc59427d85,f3d17bbe-999e-4ed7-b26d-4f985b15f088,2024-01-25,interest_charge,240.0,USD,buyer,pending,"Interest charge: 242,338.99 × 9.90 bps",2024-01-25T16:47:00
+20801c39-0f73-461e-8d88-bccc74719355,f3d17bbe-999e-4ed7-b26d-4f985b15f088,2024-01-29,interest_charge,163.05,USD,buyer,pending,"Interest charge: 242,338.99 × 6.73 bps",2024-01-29T17:54:00
+dc202a7e-9362-41ca-a238-0b6b9df1dfd2,12442e84-ad6c-4182-b290-bb52b771a723,2024-10-03,daily_fail_fee,156.86,USD,buyer,paid,"Daily fail fee: 339,574.92 × 4.62 bps",2024-10-03T10:03:00
+c130f013-babb-43b3-8ae5-9f3f1f94a3f5,a4e6b1ed-f65c-4f66-b1d0-3593fb2e96c2,2024-04-17,daily_fail_fee,48.13,USD,seller,paid,"Daily fail fee: 180,392.99 × 2.67 bps",2024-04-17T17:58:00
+77824bd2-df97-476c-9b9e-4f8cbbaafd7c,fd21fcbe-058d-415e-b289-09548b3ab235,2024-09-12,daily_fail_fee,28.98,EUR,seller,pending,"Daily fail fee: 73,653.75 × 3.93 bps",2024-09-12T14:06:00
+b8e5d35b-920f-4596-82c0-dcae921eba75,fd21fcbe-058d-415e-b289-09548b3ab235,2024-09-13,daily_fail_fee,34.4,EUR,seller,paid,"Daily fail fee: 73,653.75 × 4.67 bps",2024-09-13T18:24:00
+f6749649-ae24-404a-9919-53279c58b0df,2bd18d5e-10a6-4c08-8f3f-0586744d18cf,2024-05-08,daily_fail_fee,447519.88,JPY,intermediary,pending,"Daily fail fee: 1,292,126,185.45 × 3.46 bps",2024-05-08T16:40:00
+53dd1882-7785-4eae-98d7-75a6911cc73e,2bd18d5e-10a6-4c08-8f3f-0586744d18cf,2024-05-09,daily_fail_fee,197651.24,JPY,intermediary,paid,"Daily fail fee: 1,292,126,185.45 × 1.53 bps",2024-05-09T10:51:00
+69c7757c-2290-4495-9296-b6066d77370c,2bd18d5e-10a6-4c08-8f3f-0586744d18cf,2024-05-10,daily_fail_fee,511709.58,JPY,intermediary,paid,"Daily fail fee: 1,292,126,185.45 × 3.96 bps",2024-05-10T10:26:00
+699b08b7-6a4f-4e81-92c5-a86fb61fee82,2bd18d5e-10a6-4c08-8f3f-0586744d18cf,2024-05-11,daily_fail_fee,555214.65,JPY,intermediary,disputed,"Daily fail fee: 1,292,126,185.45 × 4.30 bps",2024-05-11T10:43:00
+6cf2b8d4-45ef-459b-bbe3-6802e09531e2,2bd18d5e-10a6-4c08-8f3f-0586744d18cf,2024-05-12,daily_fail_fee,172482.66,JPY,intermediary,paid,"Daily fail fee: 1,292,126,185.45 × 1.33 bps",2024-05-12T13:59:00
+00444f8a-c140-4620-9974-91851dc814b3,2bd18d5e-10a6-4c08-8f3f-0586744d18cf,2024-05-09,interest_charge,930727.27,JPY,intermediary,pending,"Interest charge: 1,292,126,185.45 × 7.20 bps",2024-05-09T17:36:00
+e6649c10-863b-4313-8b14-38f71c5705c5,2bd18d5e-10a6-4c08-8f3f-0586744d18cf,2024-05-09,interest_charge,289929.33,JPY,intermediary,pending,"Interest charge: 1,292,126,185.45 × 2.24 bps",2024-05-09T12:31:00
+0dd1df3d-6918-49aa-9989-6c4bb07b0a91,2bd18d5e-10a6-4c08-8f3f-0586744d18cf,2024-05-08,interest_charge,1029313.21,JPY,intermediary,pending,"Interest charge: 1,292,126,185.45 × 7.97 bps",2024-05-08T17:14:00
+73da5edc-fbf1-401e-998f-8c8b40e392bc,2bd18d5e-10a6-4c08-8f3f-0586744d18cf,2024-05-22,regulatory_fine,6700.17,JPY,intermediary,disputed,Regulatory fine for threshold breach,2024-05-22T18:22:00
+d127f387-4722-4c7d-a8d6-aa0fe8db89ac,3d24d316-17f7-4c47-a02c-f777707d517b,2024-11-12,daily_fail_fee,7.49,USD,buyer,paid,"Daily fail fee: 25,220.30 × 2.97 bps",2024-11-12T16:40:00
+726ca830-776f-4c4b-9f37-6a236fb3c6ff,3d24d316-17f7-4c47-a02c-f777707d517b,2024-11-13,daily_fail_fee,7.12,USD,buyer,paid,"Daily fail fee: 25,220.30 × 2.82 bps",2024-11-13T10:09:00
+674c5800-4799-4af1-839b-55741c7b8b89,3d24d316-17f7-4c47-a02c-f777707d517b,2024-11-14,daily_fail_fee,2.83,USD,buyer,waived,"Daily fail fee: 25,220.30 × 1.12 bps",2024-11-14T18:29:00
+cd8d9fc7-866a-45d1-9061-e6f121c4bb07,b96b1d99-7a7e-447c-a4dd-95307990d7f1,2024-11-02,daily_fail_fee,46.06,USD,buyer,paid,"Daily fail fee: 99,025.87 × 4.65 bps",2024-11-02T13:39:00
+754193a9-2130-4bb0-92e4-7946c4a62721,b96b1d99-7a7e-447c-a4dd-95307990d7f1,2024-11-03,daily_fail_fee,29.44,USD,buyer,paid,"Daily fail fee: 99,025.87 × 2.97 bps",2024-11-03T11:35:00
+a4a9020d-86a3-44ea-8f2e-71af8d4a3ea8,b96b1d99-7a7e-447c-a4dd-95307990d7f1,2024-11-04,daily_fail_fee,28.25,USD,buyer,paid,"Daily fail fee: 99,025.87 × 2.85 bps",2024-11-04T17:22:00
+3dc77b3e-3274-4559-bed9-78f38cf21d9d,3b14c448-dcfd-4759-9aca-c55a0d8dfc01,2024-07-12,daily_fail_fee,28378.64,USD,buyer,paid,"Daily fail fee: 130,119,577.38 × 2.18 bps",2024-07-12T08:21:00
+1afac9ff-7c8e-4522-a860-850e8cf63a8d,3b14c448-dcfd-4759-9aca-c55a0d8dfc01,2024-07-13,daily_fail_fee,48242.69,USD,buyer,paid,"Daily fail fee: 130,119,577.38 × 3.71 bps",2024-07-13T18:01:00
+b67227f2-9aae-4f23-834f-69682509558d,3b14c448-dcfd-4759-9aca-c55a0d8dfc01,2024-07-14,daily_fail_fee,49783.6,USD,buyer,paid,"Daily fail fee: 130,119,577.38 × 3.83 bps",2024-07-14T18:33:00
+113164e5-32b6-46ba-b36f-6bfefa683597,3b14c448-dcfd-4759-9aca-c55a0d8dfc01,2024-07-15,daily_fail_fee,33801.61,USD,buyer,paid,"Daily fail fee: 130,119,577.38 × 2.60 bps",2024-07-15T08:18:00
+f1028603-d571-4198-a343-0bc9b26d29e4,3b14c448-dcfd-4759-9aca-c55a0d8dfc01,2024-07-16,daily_fail_fee,41764.12,USD,buyer,paid,"Daily fail fee: 130,119,577.38 × 3.21 bps",2024-07-16T10:16:00
+b78bf831-dc20-49ba-9f1c-06a4b3a1af3e,3b14c448-dcfd-4759-9aca-c55a0d8dfc01,2024-07-12,interest_charge,69588.89,USD,buyer,paid,"Interest charge: 130,119,577.38 × 5.35 bps",2024-07-12T12:56:00
+8a620656-7a70-44b0-9125-4c6e59d782b1,58b22d3b-4ef0-4523-bca3-8f22688af183,2024-05-14,daily_fail_fee,18.93,USD,intermediary,disputed,"Daily fail fee: 92,163.59 × 2.05 bps",2024-05-14T14:44:00
+28f8723a-49ec-4a43-aecf-22e84666cbf5,58b22d3b-4ef0-4523-bca3-8f22688af183,2024-05-15,daily_fail_fee,45.33,USD,intermediary,disputed,"Daily fail fee: 92,163.59 × 4.92 bps",2024-05-15T08:45:00
+14f0927e-380c-4eb2-b2a4-d9229824060e,58b22d3b-4ef0-4523-bca3-8f22688af183,2024-05-16,daily_fail_fee,30.58,USD,intermediary,pending,"Daily fail fee: 92,163.59 × 3.32 bps",2024-05-16T09:40:00
+480a15f9-aff6-45ba-867e-33ff63008f76,58b22d3b-4ef0-4523-bca3-8f22688af183,2024-05-17,daily_fail_fee,27.75,USD,intermediary,paid,"Daily fail fee: 92,163.59 × 3.01 bps",2024-05-17T16:21:00
+1829e157-0e78-4c7b-adba-2c0391797a04,58b22d3b-4ef0-4523-bca3-8f22688af183,2024-05-18,daily_fail_fee,25.28,USD,intermediary,disputed,"Daily fail fee: 92,163.59 × 2.74 bps",2024-05-18T12:13:00
+82cd5278-18c3-4f37-8093-2b568146de94,58b22d3b-4ef0-4523-bca3-8f22688af183,2024-05-19,daily_fail_fee,10.52,USD,intermediary,disputed,"Daily fail fee: 92,163.59 × 1.14 bps",2024-05-19T13:40:00
+c6caa52d-45cb-4f88-b500-8b18cc1886c2,58b22d3b-4ef0-4523-bca3-8f22688af183,2024-05-16,interest_charge,50.24,USD,intermediary,pending,"Interest charge: 92,163.59 × 5.45 bps",2024-05-16T16:35:00
+9ddd18f4-8647-4532-9d5b-bdbce1fb1018,58b22d3b-4ef0-4523-bca3-8f22688af183,2024-05-17,interest_charge,57.57,USD,intermediary,disputed,"Interest charge: 92,163.59 × 6.25 bps",2024-05-17T15:46:00
+65d04797-8638-484a-8e08-ab69bf8af5e8,9afea6b7-7e80-408e-a7b8-a45e1f2a3512,2024-03-27,daily_fail_fee,12490.85,EUR,buyer,pending,"Daily fail fee: 27,632,821.47 × 4.52 bps",2024-03-27T17:39:00
+b5cd0f26-2f04-4ca7-a392-b5402df2987c,9afea6b7-7e80-408e-a7b8-a45e1f2a3512,2024-03-28,daily_fail_fee,11932.82,EUR,buyer,pending,"Daily fail fee: 27,632,821.47 × 4.32 bps",2024-03-28T14:42:00
+6063238f-6f7c-4eb4-bcc0-1a3e8de3382c,9afea6b7-7e80-408e-a7b8-a45e1f2a3512,2024-03-29,daily_fail_fee,13363.03,EUR,buyer,paid,"Daily fail fee: 27,632,821.47 × 4.84 bps",2024-03-29T10:56:00
+6778d67c-86f9-4ae6-b106-8b461e3d3543,84aae72c-273b-42ae-9533-942217bcfbcf,2024-03-06,daily_fail_fee,7.85,EUR,buyer,paid,"Daily fail fee: 16,671.71 × 4.71 bps",2024-03-06T08:56:00
+54baa4ca-844a-48eb-ab54-211da783b82d,900b8500-304f-4872-a0e2-840407ef865c,2024-04-04,daily_fail_fee,978.95,USD,buyer,pending,"Daily fail fee: 7,236,816.59 × 1.35 bps",2024-04-04T11:35:00
+aa8859a3-857c-4f8d-ad1c-d19d8bb175e4,feb32323-1f9f-48cd-9ea1-61a506ee226a,2024-05-10,daily_fail_fee,169.48,JPY,seller,disputed,"Daily fail fee: 670,203.54 × 2.53 bps",2024-05-10T15:53:00
+a111f469-bd57-4299-9fd6-f5e33282eb9a,139a6275-4c81-4f27-966c-a86c21f9b44e,2024-03-21,daily_fail_fee,10024.07,USD,buyer,paid,"Daily fail fee: 29,864,767.20 × 3.36 bps",2024-03-21T15:57:00
+711f0da7-9882-472f-be9c-a2ae4a399701,833ef5a5-c8e4-4b23-a47a-e130205f2e30,2024-06-25,daily_fail_fee,47.83,USD,seller,paid,"Daily fail fee: 119,138.17 × 4.01 bps",2024-06-25T11:32:00
+5f935d01-4dfe-497a-bf70-2ff62b7fa8c7,833ef5a5-c8e4-4b23-a47a-e130205f2e30,2024-06-26,daily_fail_fee,12.71,USD,seller,paid,"Daily fail fee: 119,138.17 × 1.07 bps",2024-06-26T12:54:00
+b8db25ea-c1f9-481e-af82-757ecbc90b0e,833ef5a5-c8e4-4b23-a47a-e130205f2e30,2024-06-27,daily_fail_fee,59.32,USD,seller,paid,"Daily fail fee: 119,138.17 × 4.98 bps",2024-06-27T13:46:00
+1965efcd-f162-4ae1-b5b0-82809edabb6e,833ef5a5-c8e4-4b23-a47a-e130205f2e30,2024-06-28,daily_fail_fee,23.63,USD,seller,paid,"Daily fail fee: 119,138.17 × 1.98 bps",2024-06-28T17:18:00
+29f37d6f-27c4-476e-a82f-e1f7f54a73f0,833ef5a5-c8e4-4b23-a47a-e130205f2e30,2024-06-29,daily_fail_fee,26.59,USD,seller,paid,"Daily fail fee: 119,138.17 × 2.23 bps",2024-06-29T09:16:00
+22f967ca-1379-49f3-810e-18bdb5c6c621,833ef5a5-c8e4-4b23-a47a-e130205f2e30,2024-06-30,daily_fail_fee,33.82,USD,seller,paid,"Daily fail fee: 119,138.17 × 2.84 bps",2024-06-30T08:23:00
+e4a85eed-50b0-4e71-84b7-ad120d2b8e8f,833ef5a5-c8e4-4b23-a47a-e130205f2e30,2024-07-01,daily_fail_fee,23.03,USD,seller,paid,"Daily fail fee: 119,138.17 × 1.93 bps",2024-07-01T16:15:00
+22d0e50d-d801-4ef4-9710-209d8cfafd16,833ef5a5-c8e4-4b23-a47a-e130205f2e30,2024-07-02,daily_fail_fee,39.96,USD,seller,disputed,"Daily fail fee: 119,138.17 × 3.35 bps",2024-07-02T14:30:00
+5e79658b-37ec-485d-be46-1bae587d3110,833ef5a5-c8e4-4b23-a47a-e130205f2e30,2024-06-28,interest_charge,84.79,USD,seller,paid,"Interest charge: 119,138.17 × 7.12 bps",2024-06-28T13:46:00
+3cf6d2ee-3d1f-45d1-b58d-c6fd6e3a0bd5,c6c96a0a-f4f9-46db-9de4-a79d5d05f6c2,2024-02-23,daily_fail_fee,8252.76,USD,seller,paid,"Daily fail fee: 43,798,650.60 × 1.88 bps",2024-02-23T14:31:00
+4aa7f1e8-63e3-41bb-b4d0-595996c49b3c,8758d0a4-57ed-4337-b5e6-4f3de6e8285c,2024-05-09,daily_fail_fee,137.21,USD,seller,pending,"Daily fail fee: 324,277.94 × 4.23 bps",2024-05-09T16:48:00
+37e6e670-bbf2-4847-951c-0ebdd1b396d8,8758d0a4-57ed-4337-b5e6-4f3de6e8285c,2024-05-10,daily_fail_fee,99.5,USD,seller,paid,"Daily fail fee: 324,277.94 × 3.07 bps",2024-05-10T16:47:00
+d890ee9f-9c7f-4333-a6c6-0441c7953c52,8758d0a4-57ed-4337-b5e6-4f3de6e8285c,2024-05-11,daily_fail_fee,132.33,USD,seller,paid,"Daily fail fee: 324,277.94 × 4.08 bps",2024-05-11T13:24:00
+a18791e2-274b-4716-ab65-5e06e2def7c4,8758d0a4-57ed-4337-b5e6-4f3de6e8285c,2024-05-12,daily_fail_fee,121.77,USD,seller,pending,"Daily fail fee: 324,277.94 × 3.76 bps",2024-05-12T10:23:00
+c9c33481-346a-460d-a671-af45a3c13da8,8758d0a4-57ed-4337-b5e6-4f3de6e8285c,2024-05-13,daily_fail_fee,132.86,USD,seller,disputed,"Daily fail fee: 324,277.94 × 4.10 bps",2024-05-13T16:42:00
+d517dc70-609a-43f2-a4d7-d993a3bd13fc,8758d0a4-57ed-4337-b5e6-4f3de6e8285c,2024-05-14,daily_fail_fee,56.5,USD,seller,paid,"Daily fail fee: 324,277.94 × 1.74 bps",2024-05-14T16:57:00
+75bbb2d6-49f4-44f7-af8c-103b404ba272,8758d0a4-57ed-4337-b5e6-4f3de6e8285c,2024-05-15,daily_fail_fee,53.8,USD,seller,paid,"Daily fail fee: 324,277.94 × 1.66 bps",2024-05-15T08:48:00
+e2bc1d9d-fa4c-49bc-9874-623b4179e7b2,8758d0a4-57ed-4337-b5e6-4f3de6e8285c,2024-05-16,daily_fail_fee,131.52,USD,seller,paid,"Daily fail fee: 324,277.94 × 4.06 bps",2024-05-16T10:15:00
+4184fafe-65a9-488d-851c-750ef0fb49a1,8758d0a4-57ed-4337-b5e6-4f3de6e8285c,2024-05-17,daily_fail_fee,80.88,USD,seller,pending,"Daily fail fee: 324,277.94 × 2.49 bps",2024-05-17T16:32:00
+19329928-4a07-4d38-852a-82cfbb041c31,8758d0a4-57ed-4337-b5e6-4f3de6e8285c,2024-05-18,daily_fail_fee,76.9,USD,seller,paid,"Daily fail fee: 324,277.94 × 2.37 bps",2024-05-18T12:43:00
+26019bd6-cdd9-4c39-96e0-b4b1e4670256,8758d0a4-57ed-4337-b5e6-4f3de6e8285c,2024-05-22,interest_charge,190.66,USD,seller,paid,"Interest charge: 324,277.94 × 5.88 bps",2024-05-22T15:32:00
+07479943-e693-4d75-8e86-2da2ca0c187e,8758d0a4-57ed-4337-b5e6-4f3de6e8285c,2024-05-18,administrative_fee,477.09,USD,seller,pending,Administrative processing fee for aged fail,2024-05-18T16:14:00
+ec6a2c5b-1c3e-47de-aa83-7cdf60c90de8,303a044b-82ab-479c-99f2-b7c0bf5fe02d,2024-11-06,daily_fail_fee,117.93,USD,seller,paid,"Daily fail fee: 240,964.18 × 4.89 bps",2024-11-06T17:20:00
+5e913f81-4448-42a6-9b67-707530ddede9,303a044b-82ab-479c-99f2-b7c0bf5fe02d,2024-11-07,daily_fail_fee,104.19,USD,seller,paid,"Daily fail fee: 240,964.18 × 4.32 bps",2024-11-07T10:05:00
+42732f2a-1746-4f59-87f0-f28069f79877,303a044b-82ab-479c-99f2-b7c0bf5fe02d,2024-11-08,daily_fail_fee,46.37,USD,seller,paid,"Daily fail fee: 240,964.18 × 1.92 bps",2024-11-08T09:30:00
+da799964-0b7b-4f37-9e9b-32e12359d02a,303a044b-82ab-479c-99f2-b7c0bf5fe02d,2024-11-09,daily_fail_fee,55.17,USD,seller,pending,"Daily fail fee: 240,964.18 × 2.29 bps",2024-11-09T13:38:00
+418f666c-8299-4b3d-b871-1247ae0768b2,303a044b-82ab-479c-99f2-b7c0bf5fe02d,2024-11-10,daily_fail_fee,84.68,USD,seller,disputed,"Daily fail fee: 240,964.18 × 3.51 bps",2024-11-10T17:31:00
+4c59f93e-0bb6-46a4-a25b-9a5c71eedaaa,303a044b-82ab-479c-99f2-b7c0bf5fe02d,2024-11-11,daily_fail_fee,50.56,USD,seller,paid,"Daily fail fee: 240,964.18 × 2.10 bps",2024-11-11T12:05:00
+fef21597-05aa-4c83-936d-64d2b918c9cb,303a044b-82ab-479c-99f2-b7c0bf5fe02d,2024-11-12,daily_fail_fee,117.3,USD,seller,pending,"Daily fail fee: 240,964.18 × 4.87 bps",2024-11-12T18:18:00
+d65a8df0-258e-4b23-824f-ed56b3244d14,303a044b-82ab-479c-99f2-b7c0bf5fe02d,2024-11-13,daily_fail_fee,117.66,USD,seller,pending,"Daily fail fee: 240,964.18 × 4.88 bps",2024-11-13T10:27:00
+802fedcc-ed3a-4fbc-aeaf-5556b23f1936,303a044b-82ab-479c-99f2-b7c0bf5fe02d,2024-11-14,daily_fail_fee,66.87,USD,seller,paid,"Daily fail fee: 240,964.18 × 2.78 bps",2024-11-14T18:07:00
+398b8004-12c3-45b2-b4e0-bab859fbcae0,303a044b-82ab-479c-99f2-b7c0bf5fe02d,2024-11-15,daily_fail_fee,100.23,USD,seller,paid,"Daily fail fee: 240,964.18 × 4.16 bps",2024-11-15T14:16:00
+926b4a18-be71-4da2-8636-071591f339a8,303a044b-82ab-479c-99f2-b7c0bf5fe02d,2024-11-10,interest_charge,166.39,USD,seller,pending,"Interest charge: 240,964.18 × 6.91 bps",2024-11-10T13:04:00
+f920b90e-9a4f-4a9c-9f05-99c9e48489a4,303a044b-82ab-479c-99f2-b7c0bf5fe02d,2024-11-12,interest_charge,108.08,USD,seller,pending,"Interest charge: 240,964.18 × 4.49 bps",2024-11-12T14:28:00
+5845f68b-4cdd-4125-8a17-55a6ef742929,303a044b-82ab-479c-99f2-b7c0bf5fe02d,2024-11-12,interest_charge,93.99,USD,seller,paid,"Interest charge: 240,964.18 × 3.90 bps",2024-11-12T08:36:00
+8f27f293-8b48-4908-9eeb-10a874c41b8f,163ecd31-475b-4045-a029-5f13d433d9c5,2024-08-01,daily_fail_fee,20.39,USD,buyer,paid,"Daily fail fee: 84,832.82 × 2.40 bps",2024-08-01T10:03:00
+962e752a-4fbc-41fc-9b6c-728c019bbda7,163ecd31-475b-4045-a029-5f13d433d9c5,2024-08-02,daily_fail_fee,36.82,USD,buyer,pending,"Daily fail fee: 84,832.82 × 4.34 bps",2024-08-02T11:53:00
+11abab37-5f31-43c0-9eb3-0df2ad8fbab5,163ecd31-475b-4045-a029-5f13d433d9c5,2024-08-03,daily_fail_fee,9.76,USD,buyer,paid,"Daily fail fee: 84,832.82 × 1.15 bps",2024-08-03T13:36:00
+a2a04a86-13f0-49eb-bcf6-8ee95eaae6e9,163ecd31-475b-4045-a029-5f13d433d9c5,2024-08-04,daily_fail_fee,24.62,USD,buyer,paid,"Daily fail fee: 84,832.82 × 2.90 bps",2024-08-04T10:59:00
+28f4f8b2-ed93-4efd-b5ca-30c0fa1efaa5,163ecd31-475b-4045-a029-5f13d433d9c5,2024-08-05,daily_fail_fee,18.01,USD,buyer,pending,"Daily fail fee: 84,832.82 × 2.12 bps",2024-08-05T12:48:00
+fc4d9b4a-1556-445d-a109-fd43f5e9fcbc,163ecd31-475b-4045-a029-5f13d433d9c5,2024-08-06,daily_fail_fee,26.86,USD,buyer,paid,"Daily fail fee: 84,832.82 × 3.17 bps",2024-08-06T12:49:00
+b736cce3-25f6-4e97-a82f-8a2f20be6f85,163ecd31-475b-4045-a029-5f13d433d9c5,2024-08-07,daily_fail_fee,30.97,USD,buyer,pending,"Daily fail fee: 84,832.82 × 3.65 bps",2024-08-07T14:26:00
+ca245865-7c3c-4ebe-a889-032bc48a2dbc,163ecd31-475b-4045-a029-5f13d433d9c5,2024-08-08,daily_fail_fee,27.26,USD,buyer,paid,"Daily fail fee: 84,832.82 × 3.21 bps",2024-08-08T16:49:00
+e5eb661e-b8da-409a-92b3-8c271ea51cc7,163ecd31-475b-4045-a029-5f13d433d9c5,2024-08-09,daily_fail_fee,17.1,USD,buyer,paid,"Daily fail fee: 84,832.82 × 2.02 bps",2024-08-09T08:05:00
+a4a6695b-f845-4ccd-9d8e-c33faf2fb392,163ecd31-475b-4045-a029-5f13d433d9c5,2024-08-10,daily_fail_fee,35.78,USD,buyer,paid,"Daily fail fee: 84,832.82 × 4.22 bps",2024-08-10T08:17:00
+9b63f95f-b459-4e66-8d41-953f3a618066,163ecd31-475b-4045-a029-5f13d433d9c5,2024-08-10,administrative_fee,141.79,USD,buyer,disputed,Administrative processing fee for aged fail,2024-08-10T16:00:00
+52a72b9b-9eac-479d-9c58-ffca66c209e3,163ecd31-475b-4045-a029-5f13d433d9c5,2024-08-10,administrative_fee,434.45,USD,buyer,paid,Administrative processing fee for aged fail,2024-08-10T15:47:00
+975e33c5-30f0-4fb3-b970-bdeede7ff357,12cbf28e-2383-438e-8c12-6333bac87c62,2024-11-08,daily_fail_fee,3656.4,EUR,seller,paid,"Daily fail fee: 14,631,980.38 × 2.50 bps",2024-11-08T14:25:00
+49d27c82-81ca-4aad-aadc-88b9794f215f,12cbf28e-2383-438e-8c12-6333bac87c62,2024-11-09,daily_fail_fee,7238.53,EUR,seller,paid,"Daily fail fee: 14,631,980.38 × 4.95 bps",2024-11-09T13:20:00
+cd439155-be56-47cc-ba04-47ad4fb568e1,12cbf28e-2383-438e-8c12-6333bac87c62,2024-11-10,daily_fail_fee,2992.03,EUR,seller,paid,"Daily fail fee: 14,631,980.38 × 2.04 bps",2024-11-10T08:22:00
+a214a1f7-2d4b-4ea4-a574-271a5176752b,12cbf28e-2383-438e-8c12-6333bac87c62,2024-11-11,daily_fail_fee,2897.42,EUR,seller,pending,"Daily fail fee: 14,631,980.38 × 1.98 bps",2024-11-11T14:02:00
+5fcce3eb-03ab-438a-b334-a063cd5149ac,12cbf28e-2383-438e-8c12-6333bac87c62,2024-11-12,daily_fail_fee,5062.98,EUR,seller,paid,"Daily fail fee: 14,631,980.38 × 3.46 bps",2024-11-12T12:59:00
+9f7dfd2f-d3e4-4b21-a8c2-58abe0534028,12cbf28e-2383-438e-8c12-6333bac87c62,2024-11-13,daily_fail_fee,5839.56,EUR,seller,disputed,"Daily fail fee: 14,631,980.38 × 3.99 bps",2024-11-13T18:44:00
+9b72ff9d-dc00-4daa-9976-04dea769d156,12cbf28e-2383-438e-8c12-6333bac87c62,2024-11-14,daily_fail_fee,2269.63,EUR,seller,pending,"Daily fail fee: 14,631,980.38 × 1.55 bps",2024-11-14T18:21:00
+362f3a9c-db3e-48f8-99a1-7ae0a0d56d30,12cbf28e-2383-438e-8c12-6333bac87c62,2024-11-15,daily_fail_fee,5849.2,EUR,seller,pending,"Daily fail fee: 14,631,980.38 × 4.00 bps",2024-11-15T12:39:00
+fb891329-7b1b-4525-8a10-b177386a65c1,12cbf28e-2383-438e-8c12-6333bac87c62,2024-11-16,daily_fail_fee,4819.1,EUR,seller,pending,"Daily fail fee: 14,631,980.38 × 3.29 bps",2024-11-16T10:45:00
+00fde82e-99c0-4e44-a5c3-d0ca5601fce5,12cbf28e-2383-438e-8c12-6333bac87c62,2024-11-17,daily_fail_fee,4569.37,EUR,seller,disputed,"Daily fail fee: 14,631,980.38 × 3.12 bps",2024-11-17T14:28:00
+31082a92-e52f-46bc-9df2-66d87d03f5a3,12cbf28e-2383-438e-8c12-6333bac87c62,2024-11-17,interest_charge,12326.21,EUR,seller,pending,"Interest charge: 14,631,980.38 × 8.42 bps",2024-11-17T08:10:00
+e9dc1553-0059-45d7-ad73-9f33dbb74dd8,12cbf28e-2383-438e-8c12-6333bac87c62,2024-11-30,interest_charge,14279.06,EUR,seller,paid,"Interest charge: 14,631,980.38 × 9.76 bps",2024-11-30T18:53:00
+efe149ee-47bf-4786-a5ac-aa8590f89163,12cbf28e-2383-438e-8c12-6333bac87c62,2024-11-09,interest_charge,10811.02,EUR,seller,paid,"Interest charge: 14,631,980.38 × 7.39 bps",2024-11-09T13:35:00
+d8fdb76f-fe75-406f-b262-a30e80ced4bf,abcd3458-17e8-4568-b9b0-45cce012b54b,2024-05-01,daily_fail_fee,22.92,EUR,seller,disputed,"Daily fail fee: 147,383.67 × 1.56 bps",2024-05-01T14:11:00
+66078eda-4352-4a96-bd47-0a61f4931c9d,abcd3458-17e8-4568-b9b0-45cce012b54b,2024-05-02,daily_fail_fee,39.31,EUR,seller,paid,"Daily fail fee: 147,383.67 × 2.67 bps",2024-05-02T17:23:00
+b57ce49e-f239-4262-8147-a609a723a998,abcd3458-17e8-4568-b9b0-45cce012b54b,2024-05-03,daily_fail_fee,38.18,EUR,seller,paid,"Daily fail fee: 147,383.67 × 2.59 bps",2024-05-03T12:18:00
+effea176-1848-4bae-91cd-6444a8790a44,4a5f9882-84cb-4825-86d2-cfd6f95e9be9,2024-04-11,daily_fail_fee,42.54,USD,seller,pending,"Daily fail fee: 106,521.20 × 3.99 bps",2024-04-11T16:39:00
+0117d89c-a2be-4daf-937d-3b0a2e4cd8aa,c311a31b-63f8-4888-b1eb-9b00a0f153c1,2024-05-31,daily_fail_fee,30.07,EUR,buyer,paid,"Daily fail fee: 73,221.46 × 4.11 bps",2024-05-31T15:53:00
+39021fbe-545d-4f47-96cd-b652ddce958d,c311a31b-63f8-4888-b1eb-9b00a0f153c1,2024-06-01,daily_fail_fee,17.38,EUR,buyer,paid,"Daily fail fee: 73,221.46 × 2.37 bps",2024-06-01T17:44:00
+d7bf0789-639a-4f87-8023-8520953efcf1,c311a31b-63f8-4888-b1eb-9b00a0f153c1,2024-06-02,daily_fail_fee,24.0,EUR,buyer,paid,"Daily fail fee: 73,221.46 × 3.28 bps",2024-06-02T16:04:00
+e41e2556-50a6-490d-bb59-01eab3c2958f,d9c4b430-8c74-4a4e-9921-842b21fefc8c,2024-09-17,daily_fail_fee,34.13,USD,seller,paid,"Daily fail fee: 120,826.44 × 2.82 bps",2024-09-17T09:09:00
+d2aa55d8-08e5-4ca9-8c35-5245d5eab0df,d9c4b430-8c74-4a4e-9921-842b21fefc8c,2024-09-18,daily_fail_fee,39.76,USD,seller,paid,"Daily fail fee: 120,826.44 × 3.29 bps",2024-09-18T12:06:00
+f2b89fad-62d6-46ef-91af-aef513ec8c56,d9c4b430-8c74-4a4e-9921-842b21fefc8c,2024-09-19,daily_fail_fee,50.43,USD,seller,paid,"Daily fail fee: 120,826.44 × 4.17 bps",2024-09-19T10:21:00
+b425c203-935f-46df-b6f8-23588170545a,1724908c-b59c-4cd1-bf8f-5aa83373568d,2024-01-10,daily_fail_fee,70.37,USD,seller,paid,"Daily fail fee: 190,780.16 × 3.69 bps",2024-01-10T12:39:00
+501f0641-49e7-40fd-a027-bafd8b012247,1724908c-b59c-4cd1-bf8f-5aa83373568d,2024-01-11,daily_fail_fee,60.4,USD,seller,paid,"Daily fail fee: 190,780.16 × 3.17 bps",2024-01-11T18:48:00
+e72bf067-4c60-43bc-a509-52fb58347019,1724908c-b59c-4cd1-bf8f-5aa83373568d,2024-01-12,daily_fail_fee,37.74,USD,seller,paid,"Daily fail fee: 190,780.16 × 1.98 bps",2024-01-12T13:42:00
+bdac4433-1050-4574-a2b7-011a38cb3454,1724908c-b59c-4cd1-bf8f-5aa83373568d,2024-01-13,daily_fail_fee,62.6,USD,seller,paid,"Daily fail fee: 190,780.16 × 3.28 bps",2024-01-13T15:27:00
+e6739c55-6c3b-40ba-8705-ac4a7c8b0bee,1724908c-b59c-4cd1-bf8f-5aa83373568d,2024-01-14,daily_fail_fee,45.83,USD,seller,paid,"Daily fail fee: 190,780.16 × 2.40 bps",2024-01-14T17:57:00
+c07fd126-4bc4-4fc5-a440-c5f1408f2e88,1724908c-b59c-4cd1-bf8f-5aa83373568d,2024-01-15,daily_fail_fee,21.88,USD,seller,paid,"Daily fail fee: 190,780.16 × 1.15 bps",2024-01-15T13:19:00
+879ba5b0-f316-4bf6-a808-d857dd698dbb,1724908c-b59c-4cd1-bf8f-5aa83373568d,2024-01-16,daily_fail_fee,74.43,USD,seller,paid,"Daily fail fee: 190,780.16 × 3.90 bps",2024-01-16T11:40:00
+a1ec4433-a422-4ed5-a908-a4b0d7cfa397,1724908c-b59c-4cd1-bf8f-5aa83373568d,2024-01-16,interest_charge,84.85,USD,seller,waived,"Interest charge: 190,780.16 × 4.45 bps",2024-01-16T14:34:00
+ecfe0e32-112a-4df9-a1ca-ed815e16a2fa,905b14b2-f261-4968-a84c-0b30fba7f0ad,2024-05-28,daily_fail_fee,599.52,JPY,buyer,paid,"Daily fail fee: 1,652,030.98 × 3.63 bps",2024-05-28T14:51:00
+fbd389c3-4b61-4d8d-8e3f-110cd09164a3,905b14b2-f261-4968-a84c-0b30fba7f0ad,2024-05-29,daily_fail_fee,537.69,JPY,buyer,waived,"Daily fail fee: 1,652,030.98 × 3.25 bps",2024-05-29T08:53:00
+5b4a62a3-1b79-4b9a-b3db-d5ba3fabf4b3,905b14b2-f261-4968-a84c-0b30fba7f0ad,2024-05-30,daily_fail_fee,549.97,JPY,buyer,paid,"Daily fail fee: 1,652,030.98 × 3.33 bps",2024-05-30T08:31:00
+58bec073-d075-4ad7-a83f-2ca631d7c601,905b14b2-f261-4968-a84c-0b30fba7f0ad,2024-05-31,daily_fail_fee,432.78,JPY,buyer,disputed,"Daily fail fee: 1,652,030.98 × 2.62 bps",2024-05-31T11:19:00
+c629defa-047a-4929-9bf2-40cd0c640741,905b14b2-f261-4968-a84c-0b30fba7f0ad,2024-06-01,daily_fail_fee,736.89,JPY,buyer,paid,"Daily fail fee: 1,652,030.98 × 4.46 bps",2024-06-01T13:37:00
+9159cc70-8e9a-468d-ac66-4748a63c1416,905b14b2-f261-4968-a84c-0b30fba7f0ad,2024-06-02,daily_fail_fee,471.7,JPY,buyer,paid,"Daily fail fee: 1,652,030.98 × 2.86 bps",2024-06-02T08:42:00
+91d62489-cb99-4c47-a4cd-6e0c5ccf83dc,905b14b2-f261-4968-a84c-0b30fba7f0ad,2024-06-03,daily_fail_fee,196.75,JPY,buyer,paid,"Daily fail fee: 1,652,030.98 × 1.19 bps",2024-06-03T13:41:00
+18b790bb-7ebd-4703-9f3b-617499f338b9,905b14b2-f261-4968-a84c-0b30fba7f0ad,2024-06-04,daily_fail_fee,331.9,JPY,buyer,paid,"Daily fail fee: 1,652,030.98 × 2.01 bps",2024-06-04T11:49:00
+13804fbc-7696-4051-83da-4deb5e177c53,905b14b2-f261-4968-a84c-0b30fba7f0ad,2024-06-01,interest_charge,1142.63,JPY,buyer,paid,"Interest charge: 1,652,030.98 × 6.92 bps",2024-06-01T18:04:00
+c9837b23-d46f-4243-9293-1a8de10f314a,905b14b2-f261-4968-a84c-0b30fba7f0ad,2024-06-01,interest_charge,1247.92,JPY,buyer,paid,"Interest charge: 1,652,030.98 × 7.55 bps",2024-06-01T10:22:00
+43797974-be2b-4b03-a659-aa8c7656d5e8,0a16ea47-632d-48bc-8239-6c1bca7afcec,2024-08-17,daily_fail_fee,36.68,CHF,buyer,paid,"Daily fail fee: 76,885.52 × 4.77 bps",2024-08-17T16:21:00
+ddcaf222-f7ba-489c-be62-a4400051c0d9,0a16ea47-632d-48bc-8239-6c1bca7afcec,2024-08-18,daily_fail_fee,20.03,CHF,buyer,paid,"Daily fail fee: 76,885.52 × 2.61 bps",2024-08-18T13:17:00
+438fcf8c-246e-41ac-9ce6-6a28bf30a27d,60e036a1-2045-43bd-9174-1fa5f8db855a,2024-11-08,daily_fail_fee,25.26,EUR,seller,paid,"Daily fail fee: 51,922.68 × 4.87 bps",2024-11-08T12:06:00
+55941ee3-96af-4175-b4de-6c9abcafef9e,60e036a1-2045-43bd-9174-1fa5f8db855a,2024-11-09,daily_fail_fee,13.37,EUR,seller,pending,"Daily fail fee: 51,922.68 × 2.57 bps",2024-11-09T18:23:00
+02c3c775-e712-4161-9a99-b5b0243bc075,60e036a1-2045-43bd-9174-1fa5f8db855a,2024-11-10,daily_fail_fee,14.9,EUR,seller,paid,"Daily fail fee: 51,922.68 × 2.87 bps",2024-11-10T13:09:00
+f59e03e0-424d-436e-baa5-8348e8cee37f,60e036a1-2045-43bd-9174-1fa5f8db855a,2024-11-11,daily_fail_fee,10.13,EUR,seller,pending,"Daily fail fee: 51,922.68 × 1.95 bps",2024-11-11T13:23:00
+2d2bb468-b93a-4917-84fb-90d15ce2b2c8,60e036a1-2045-43bd-9174-1fa5f8db855a,2024-11-12,daily_fail_fee,12.45,EUR,seller,pending,"Daily fail fee: 51,922.68 × 2.40 bps",2024-11-12T18:47:00
+d7b23d8c-e530-49ca-91fa-cd877c1643e5,60e036a1-2045-43bd-9174-1fa5f8db855a,2024-11-13,daily_fail_fee,17.28,EUR,seller,disputed,"Daily fail fee: 51,922.68 × 3.33 bps",2024-11-13T13:31:00
+107eb279-422f-4180-828d-214a588e03f0,60e036a1-2045-43bd-9174-1fa5f8db855a,2024-11-14,daily_fail_fee,20.7,EUR,seller,pending,"Daily fail fee: 51,922.68 × 3.99 bps",2024-11-14T15:23:00
+ae388bc7-6d3f-4f81-aa8c-7c7724c3c5c1,60e036a1-2045-43bd-9174-1fa5f8db855a,2024-11-15,daily_fail_fee,24.47,EUR,seller,pending,"Daily fail fee: 51,922.68 × 4.71 bps",2024-11-15T14:25:00
+c1b06387-3f3e-4ea1-a1b5-6a072e89e9d1,60e036a1-2045-43bd-9174-1fa5f8db855a,2024-11-16,daily_fail_fee,6.11,EUR,seller,paid,"Daily fail fee: 51,922.68 × 1.18 bps",2024-11-16T16:49:00
+88ca53c1-9c4a-419d-89e6-72c10c922766,60e036a1-2045-43bd-9174-1fa5f8db855a,2024-11-17,daily_fail_fee,24.07,EUR,seller,paid,"Daily fail fee: 51,922.68 × 4.64 bps",2024-11-17T09:49:00
+8afd9b4c-05f1-4d42-9dbc-3c186dffd90e,60e036a1-2045-43bd-9174-1fa5f8db855a,2024-11-17,administrative_fee,125.44,EUR,seller,pending,Administrative processing fee for aged fail,2024-11-17T18:50:00
+d6974e13-1875-481a-8f26-31dab620f317,60e036a1-2045-43bd-9174-1fa5f8db855a,2024-11-12,interest_charge,28.83,EUR,seller,pending,"Interest charge: 51,922.68 × 5.55 bps",2024-11-12T15:06:00
+d64a55bc-ff51-4eb9-b1e5-149e174bcf9b,60e036a1-2045-43bd-9174-1fa5f8db855a,2024-11-17,administrative_fee,413.09,EUR,seller,disputed,Administrative processing fee for aged fail,2024-11-17T15:40:00
+0922da45-e5ad-4824-a1c0-029c23077843,60e036a1-2045-43bd-9174-1fa5f8db855a,2024-11-12,interest_charge,40.69,EUR,seller,paid,"Interest charge: 51,922.68 × 7.84 bps",2024-11-12T17:31:00
+e6fad71a-8a42-4e1c-9457-131cc13a39ee,a8622f8a-afc3-46ed-b8e2-9f9f55091452,2024-12-17,daily_fail_fee,42.87,USD,seller,paid,"Daily fail fee: 110,460.14 × 3.88 bps",2024-12-17T11:18:00
+22eb8501-c358-4e17-9a4b-95e9b8d22e8c,a8622f8a-afc3-46ed-b8e2-9f9f55091452,2024-12-18,daily_fail_fee,16.55,USD,seller,paid,"Daily fail fee: 110,460.14 × 1.50 bps",2024-12-18T13:36:00
+71a047e9-4ecd-4a11-8138-69d782ef8ad1,b059beb2-b431-4508-aaec-5089ba05cc31,2024-02-13,daily_fail_fee,23584.09,USD,seller,paid,"Daily fail fee: 99,924,846.47 × 2.36 bps",2024-02-13T11:31:00
+e8108d5c-21bf-4b0d-b306-a769d84daec8,15788a39-a648-4f80-9f82-36331eb98d42,2024-03-14,daily_fail_fee,5691.07,GBP,seller,pending,"Daily fail fee: 11,967,795.50 × 4.76 bps",2024-03-14T14:02:00
+f46214c5-9875-408c-b8c5-d0ac9d093430,15788a39-a648-4f80-9f82-36331eb98d42,2024-03-15,daily_fail_fee,1783.97,GBP,seller,pending,"Daily fail fee: 11,967,795.50 × 1.49 bps",2024-03-15T17:52:00
+e05b734c-e784-4fe6-a2fb-905cdb69e54a,15788a39-a648-4f80-9f82-36331eb98d42,2024-03-16,daily_fail_fee,3055.64,GBP,seller,pending,"Daily fail fee: 11,967,795.50 × 2.55 bps",2024-03-16T15:22:00
+ec4e82f3-2c41-4fcd-9414-b0c67229c52f,15788a39-a648-4f80-9f82-36331eb98d42,2024-03-17,daily_fail_fee,4144.57,GBP,seller,pending,"Daily fail fee: 11,967,795.50 × 3.46 bps",2024-03-17T08:48:00
+aa8187d8-952b-47b8-a9ce-51d781c7876e,032674c1-7fe4-4afb-b06c-6dce96e1d1a4,2024-04-10,daily_fail_fee,80.17,JPY,buyer,paid,"Daily fail fee: 291,178.00 × 2.75 bps",2024-04-10T14:29:00
+d6263924-a75a-44c9-85ed-6f26abe295d1,032674c1-7fe4-4afb-b06c-6dce96e1d1a4,2024-04-11,daily_fail_fee,95.83,JPY,buyer,paid,"Daily fail fee: 291,178.00 × 3.29 bps",2024-04-11T17:02:00
+3df2739c-f284-492d-892b-f01aa1e10e80,032674c1-7fe4-4afb-b06c-6dce96e1d1a4,2024-04-12,daily_fail_fee,86.06,JPY,buyer,paid,"Daily fail fee: 291,178.00 × 2.96 bps",2024-04-12T17:11:00
+c6398583-ecd9-4099-9945-6846e954fbd2,032674c1-7fe4-4afb-b06c-6dce96e1d1a4,2024-04-13,daily_fail_fee,139.09,JPY,buyer,paid,"Daily fail fee: 291,178.00 × 4.78 bps",2024-04-13T18:06:00
+b0f9682e-ff1a-427f-a219-704ac55bc80f,032674c1-7fe4-4afb-b06c-6dce96e1d1a4,2024-04-14,daily_fail_fee,75.46,JPY,buyer,paid,"Daily fail fee: 291,178.00 × 2.59 bps",2024-04-14T09:47:00
+c746c707-847b-428b-bf53-69b6443063b2,032674c1-7fe4-4afb-b06c-6dce96e1d1a4,2024-04-15,daily_fail_fee,122.08,JPY,buyer,paid,"Daily fail fee: 291,178.00 × 4.19 bps",2024-04-15T11:42:00
+c4ce68d8-b543-4f47-95d8-8af7d0dc963b,032674c1-7fe4-4afb-b06c-6dce96e1d1a4,2024-04-16,daily_fail_fee,93.14,JPY,buyer,paid,"Daily fail fee: 291,178.00 × 3.20 bps",2024-04-16T17:27:00
+850e4a60-9ab8-4351-8e37-8c78df9337c3,032674c1-7fe4-4afb-b06c-6dce96e1d1a4,2024-04-17,daily_fail_fee,80.97,JPY,buyer,paid,"Daily fail fee: 291,178.00 × 2.78 bps",2024-04-17T13:12:00
+86656083-6e94-4ff9-8976-59e42b7ca02d,032674c1-7fe4-4afb-b06c-6dce96e1d1a4,2024-04-18,daily_fail_fee,121.2,JPY,buyer,paid,"Daily fail fee: 291,178.00 × 4.16 bps",2024-04-18T11:23:00
+cdd1fcab-ef04-4c1b-b30c-56867ec6c26f,032674c1-7fe4-4afb-b06c-6dce96e1d1a4,2024-04-19,daily_fail_fee,131.52,JPY,buyer,paid,"Daily fail fee: 291,178.00 × 4.52 bps",2024-04-19T16:38:00
+b404a59e-113c-4625-8f46-7da3f7bd51e8,032674c1-7fe4-4afb-b06c-6dce96e1d1a4,2024-04-17,interest_charge,71.7,JPY,buyer,paid,"Interest charge: 291,178.00 × 2.46 bps",2024-04-17T16:34:00
+75ffe2e9-8e2b-4a3b-9f84-83e2edb8d930,032674c1-7fe4-4afb-b06c-6dce96e1d1a4,2024-04-19,administrative_fee,400.59,JPY,buyer,waived,Administrative processing fee for aged fail,2024-04-19T11:51:00
+336473a0-1a0d-4da9-9d3c-3cdb49a847f7,b4eb3e95-7845-4418-9f91-8848cec16ab6,2024-06-19,daily_fail_fee,1.39,USD,seller,pending,"Daily fail fee: 5,836.65 × 2.38 bps",2024-06-19T11:39:00
+b5720f94-69cd-4555-9ff3-6b3c1a2cc9b6,b4eb3e95-7845-4418-9f91-8848cec16ab6,2024-06-20,daily_fail_fee,0.6,USD,seller,pending,"Daily fail fee: 5,836.65 × 1.03 bps",2024-06-20T08:38:00
+a2eb383e-a86b-4f83-a499-ab607ecca15f,b4eb3e95-7845-4418-9f91-8848cec16ab6,2024-06-21,daily_fail_fee,1.68,USD,seller,paid,"Daily fail fee: 5,836.65 × 2.87 bps",2024-06-21T10:31:00
+fbffcef1-2b7e-48b7-80a1-615df96702b4,b52caaf4-def1-4a5f-8a37-36d102d4fc07,2024-12-27,daily_fail_fee,30.55,USD,intermediary,paid,"Daily fail fee: 136,464.06 × 2.24 bps",2024-12-27T14:25:00
+4a117244-0300-4c41-adf0-d199ae3fc3b8,b52caaf4-def1-4a5f-8a37-36d102d4fc07,2024-12-28,daily_fail_fee,60.1,USD,intermediary,disputed,"Daily fail fee: 136,464.06 × 4.40 bps",2024-12-28T13:30:00
+fb7e1827-1e76-4033-a6b7-957f7460a922,b52caaf4-def1-4a5f-8a37-36d102d4fc07,2024-12-29,daily_fail_fee,52.53,USD,intermediary,paid,"Daily fail fee: 136,464.06 × 3.85 bps",2024-12-29T14:28:00
+e1f73527-d700-4c24-824a-fc5e009d5eb4,b52caaf4-def1-4a5f-8a37-36d102d4fc07,2024-12-30,daily_fail_fee,55.6,USD,intermediary,paid,"Daily fail fee: 136,464.06 × 4.07 bps",2024-12-30T12:33:00
+3db8a27a-d498-41b3-9e9a-4155b5ef767f,b52caaf4-def1-4a5f-8a37-36d102d4fc07,2024-12-31,daily_fail_fee,66.23,USD,intermediary,pending,"Daily fail fee: 136,464.06 × 4.85 bps",2024-12-31T18:00:00
+4ae332c0-b89a-4102-9047-34c1d4b07881,b52caaf4-def1-4a5f-8a37-36d102d4fc07,2025-01-01,daily_fail_fee,49.9,USD,intermediary,disputed,"Daily fail fee: 136,464.06 × 3.66 bps",2025-01-01T18:46:00
+636dd7dd-f1ae-45b5-9bb2-e7af3fb8ffdc,b52caaf4-def1-4a5f-8a37-36d102d4fc07,2025-01-02,daily_fail_fee,26.11,USD,intermediary,pending,"Daily fail fee: 136,464.06 × 1.91 bps",2025-01-02T18:27:00
+e8492364-f369-4af9-b80e-92f8c5455519,b52caaf4-def1-4a5f-8a37-36d102d4fc07,2025-01-03,daily_fail_fee,59.69,USD,intermediary,paid,"Daily fail fee: 136,464.06 × 4.37 bps",2025-01-03T10:24:00
+e80fdda9-e9f4-4d5a-8e78-a1712af0eedc,b52caaf4-def1-4a5f-8a37-36d102d4fc07,2025-01-04,daily_fail_fee,58.64,USD,intermediary,paid,"Daily fail fee: 136,464.06 × 4.30 bps",2025-01-04T13:11:00
+e7de7cca-cfb4-49e7-b5a0-497679b2ee43,b52caaf4-def1-4a5f-8a37-36d102d4fc07,2025-01-05,daily_fail_fee,65.43,USD,intermediary,paid,"Daily fail fee: 136,464.06 × 4.79 bps",2025-01-05T11:57:00
+8f990e31-aa4f-4647-b526-0953b38922ed,b52caaf4-def1-4a5f-8a37-36d102d4fc07,2025-01-14,interest_charge,130.57,USD,intermediary,paid,"Interest charge: 136,464.06 × 9.57 bps",2025-01-14T09:09:00
+acd643ec-07b2-4948-adbe-73bf139cd2f9,b52caaf4-def1-4a5f-8a37-36d102d4fc07,2025-01-12,interest_charge,69.91,USD,intermediary,disputed,"Interest charge: 136,464.06 × 5.12 bps",2025-01-12T09:05:00
+f336a608-18a1-4c78-b199-f1ccb4bccf3c,b52caaf4-def1-4a5f-8a37-36d102d4fc07,2024-12-31,interest_charge,131.76,USD,intermediary,paid,"Interest charge: 136,464.06 × 9.66 bps",2024-12-31T10:04:00
+fd652caf-27e1-4e83-b418-ca5494d69a82,b52caaf4-def1-4a5f-8a37-36d102d4fc07,2025-01-05,administrative_fee,345.95,USD,intermediary,pending,Administrative processing fee for aged fail,2025-01-05T10:51:00
+6727621b-ca22-4e3c-9b3d-7906c8e613e2,a4385f93-fb67-4428-a568-30a7b8322ece,2024-11-19,daily_fail_fee,46.36,USD,seller,disputed,"Daily fail fee: 184,674.83 × 2.51 bps",2024-11-19T17:31:00
+0f089cb7-0463-4a15-a0fa-13351371084a,a4385f93-fb67-4428-a568-30a7b8322ece,2024-11-20,daily_fail_fee,76.8,USD,seller,paid,"Daily fail fee: 184,674.83 × 4.16 bps",2024-11-20T10:53:00
+5493f2cd-e0b3-4938-9076-bec3188b05ea,a4385f93-fb67-4428-a568-30a7b8322ece,2024-11-21,daily_fail_fee,43.08,USD,seller,paid,"Daily fail fee: 184,674.83 × 2.33 bps",2024-11-21T12:25:00
+afd46693-d85f-4a3c-9f65-0c071533ce3e,a4385f93-fb67-4428-a568-30a7b8322ece,2024-11-22,daily_fail_fee,90.62,USD,seller,paid,"Daily fail fee: 184,674.83 × 4.91 bps",2024-11-22T15:16:00
+9e422bf2-216c-4aaf-b718-8c6db056910a,ff2a701e-3240-4b9f-8da1-e44e85def55c,2024-01-19,daily_fail_fee,49.58,USD,seller,paid,"Daily fail fee: 140,990.81 × 3.52 bps",2024-01-19T13:44:00
+75bc7c06-4831-4581-b3c4-293d40501d19,ff2a701e-3240-4b9f-8da1-e44e85def55c,2024-01-20,daily_fail_fee,26.21,USD,seller,paid,"Daily fail fee: 140,990.81 × 1.86 bps",2024-01-20T13:17:00
+915f473f-ccc6-4763-9a3f-7f750bb0fc97,ff2a701e-3240-4b9f-8da1-e44e85def55c,2024-01-21,daily_fail_fee,30.25,USD,seller,paid,"Daily fail fee: 140,990.81 × 2.15 bps",2024-01-21T16:06:00
+1f605dd4-cf96-4d97-be9e-38fd51b30b59,ff2a701e-3240-4b9f-8da1-e44e85def55c,2024-01-22,daily_fail_fee,59.06,USD,seller,paid,"Daily fail fee: 140,990.81 × 4.19 bps",2024-01-22T18:54:00
+061e6608-201e-464c-8c20-6646de1518ef,ff2a701e-3240-4b9f-8da1-e44e85def55c,2024-01-23,daily_fail_fee,57.21,USD,seller,paid,"Daily fail fee: 140,990.81 × 4.06 bps",2024-01-23T09:13:00
+922c8213-6a5f-4a8c-8c5d-1162661ea603,ff2a701e-3240-4b9f-8da1-e44e85def55c,2024-01-24,daily_fail_fee,35.65,USD,seller,paid,"Daily fail fee: 140,990.81 × 2.53 bps",2024-01-24T16:01:00
+0719deed-2d40-4815-bef4-865debc1b779,ff2a701e-3240-4b9f-8da1-e44e85def55c,2024-01-25,daily_fail_fee,52.85,USD,seller,paid,"Daily fail fee: 140,990.81 × 3.75 bps",2024-01-25T11:35:00
+cdfaaa1f-20bc-4e25-ac88-2e03a6e17d14,ff2a701e-3240-4b9f-8da1-e44e85def55c,2024-01-26,daily_fail_fee,60.66,USD,seller,paid,"Daily fail fee: 140,990.81 × 4.30 bps",2024-01-26T09:44:00
+542f0890-c129-4bf3-bcd8-9f3708cfa815,ff2a701e-3240-4b9f-8da1-e44e85def55c,2024-01-27,daily_fail_fee,47.55,USD,seller,paid,"Daily fail fee: 140,990.81 × 3.37 bps",2024-01-27T14:32:00
+4f458709-1434-412c-9abe-ca09dcb55aeb,ff2a701e-3240-4b9f-8da1-e44e85def55c,2024-01-28,daily_fail_fee,31.07,USD,seller,paid,"Daily fail fee: 140,990.81 × 2.20 bps",2024-01-28T12:55:00
+6001a9ba-0340-4870-b504-26a0d5cc0ce6,ff2a701e-3240-4b9f-8da1-e44e85def55c,2024-01-20,interest_charge,57.54,USD,seller,paid,"Interest charge: 140,990.81 × 4.08 bps",2024-01-20T10:01:00
+00755b83-c39d-4716-acdc-b634d1c2969f,ff2a701e-3240-4b9f-8da1-e44e85def55c,2024-01-23,interest_charge,102.85,USD,seller,paid,"Interest charge: 140,990.81 × 7.30 bps",2024-01-23T11:20:00
+a59dd87a-554f-45b2-a5ac-7bace6b8221f,ff2a701e-3240-4b9f-8da1-e44e85def55c,2024-01-28,administrative_fee,76.85,USD,seller,paid,Administrative processing fee for aged fail,2024-01-28T10:28:00
+a73175de-ed78-431d-811e-03253f3ec37d,ff2a701e-3240-4b9f-8da1-e44e85def55c,2024-01-28,administrative_fee,143.18,USD,seller,paid,Administrative processing fee for aged fail,2024-01-28T11:00:00
+677e5a58-9987-4584-9845-44680c8c43fb,f4601e0f-afdf-4d98-9ad6-491057bd853a,2024-06-04,daily_fail_fee,744.96,JPY,seller,disputed,"Daily fail fee: 2,456,482.32 × 3.03 bps",2024-06-04T14:58:00
+77bb25d6-be99-43a8-9e3c-f2453fc481c4,f4601e0f-afdf-4d98-9ad6-491057bd853a,2024-06-05,daily_fail_fee,531.66,JPY,seller,disputed,"Daily fail fee: 2,456,482.32 × 2.16 bps",2024-06-05T08:46:00
+86e1e3ee-b934-43ef-8f80-9b11efc030de,d9914ca4-d95d-4ed2-a838-03dc6be00d2e,2024-12-28,daily_fail_fee,9.84,JPY,seller,paid,"Daily fail fee: 94,393.17 × 1.04 bps",2024-12-28T18:30:00
+0881dd8b-3484-4cc9-99d0-5b82f125cbde,d9914ca4-d95d-4ed2-a838-03dc6be00d2e,2024-12-29,daily_fail_fee,25.88,JPY,seller,disputed,"Daily fail fee: 94,393.17 × 2.74 bps",2024-12-29T11:49:00
+9db4d245-0c17-4653-b484-adc814b3c843,d9914ca4-d95d-4ed2-a838-03dc6be00d2e,2024-12-30,daily_fail_fee,27.0,JPY,seller,pending,"Daily fail fee: 94,393.17 × 2.86 bps",2024-12-30T17:23:00
+aab3d132-d35b-46fe-bf75-0a949c9ca001,d9914ca4-d95d-4ed2-a838-03dc6be00d2e,2024-12-31,daily_fail_fee,9.54,JPY,seller,paid,"Daily fail fee: 94,393.17 × 1.01 bps",2024-12-31T15:44:00
+73a15325-b2bf-40d1-99e6-21623d86350d,d9914ca4-d95d-4ed2-a838-03dc6be00d2e,2025-01-01,daily_fail_fee,41.09,JPY,seller,paid,"Daily fail fee: 94,393.17 × 4.35 bps",2025-01-01T10:06:00
+37725a6c-8119-4454-afce-c2ca2661de01,d9914ca4-d95d-4ed2-a838-03dc6be00d2e,2025-01-02,daily_fail_fee,28.28,JPY,seller,pending,"Daily fail fee: 94,393.17 × 3.00 bps",2025-01-02T16:33:00
+a6dd9b91-f99e-46e3-9c30-757e95be3ac5,d9914ca4-d95d-4ed2-a838-03dc6be00d2e,2025-01-03,daily_fail_fee,41.37,JPY,seller,pending,"Daily fail fee: 94,393.17 × 4.38 bps",2025-01-03T08:42:00
+58b9cc7a-eab7-4dd3-aacb-ca3ec3b965b7,d9914ca4-d95d-4ed2-a838-03dc6be00d2e,2025-01-04,daily_fail_fee,20.76,JPY,seller,paid,"Daily fail fee: 94,393.17 × 2.20 bps",2025-01-04T17:14:00
+7230d555-2b1d-45aa-b11e-9bd15c40c3b8,d9914ca4-d95d-4ed2-a838-03dc6be00d2e,2025-01-05,daily_fail_fee,11.13,JPY,seller,paid,"Daily fail fee: 94,393.17 × 1.18 bps",2025-01-05T18:10:00
+50902679-f226-454e-b00b-47fed4e85573,d9914ca4-d95d-4ed2-a838-03dc6be00d2e,2025-01-03,interest_charge,82.68,JPY,seller,paid,"Interest charge: 94,393.17 × 8.76 bps",2025-01-03T14:16:00
+fbd1c813-8c76-4d2d-9641-cab7cce51436,d9914ca4-d95d-4ed2-a838-03dc6be00d2e,2025-01-03,interest_charge,54.16,JPY,seller,pending,"Interest charge: 94,393.17 × 5.74 bps",2025-01-03T17:05:00
+90bb0290-6b43-41ad-975a-9074993933bd,d9914ca4-d95d-4ed2-a838-03dc6be00d2e,2025-01-03,interest_charge,21.67,JPY,seller,paid,"Interest charge: 94,393.17 × 2.30 bps",2025-01-03T18:48:00
+5fdb9202-98f9-436a-a408-42b753282330,c42729c7-1e67-4e5a-9d81-e5cb4c6f6f11,2024-05-16,daily_fail_fee,92.38,USD,seller,paid,"Daily fail fee: 268,796.75 × 3.44 bps",2024-05-16T12:50:00
+383cd81d-731b-4b15-a703-921f16ce4138,c42729c7-1e67-4e5a-9d81-e5cb4c6f6f11,2024-05-17,daily_fail_fee,112.64,USD,seller,paid,"Daily fail fee: 268,796.75 × 4.19 bps",2024-05-17T17:46:00
+80d9ac1c-73a9-42bd-b5a9-13bfeee91f0a,c42729c7-1e67-4e5a-9d81-e5cb4c6f6f11,2024-05-18,daily_fail_fee,103.18,USD,seller,paid,"Daily fail fee: 268,796.75 × 3.84 bps",2024-05-18T08:14:00
+d1daf1b5-0ca5-45dc-9dfc-3be9af277fa8,c42729c7-1e67-4e5a-9d81-e5cb4c6f6f11,2024-05-19,daily_fail_fee,58.96,USD,seller,paid,"Daily fail fee: 268,796.75 × 2.19 bps",2024-05-19T18:07:00
+e8154ee7-1c00-489c-81db-fdf8052c766e,c42729c7-1e67-4e5a-9d81-e5cb4c6f6f11,2024-05-20,daily_fail_fee,102.7,USD,seller,paid,"Daily fail fee: 268,796.75 × 3.82 bps",2024-05-20T18:03:00
+4850b872-21f8-43e2-b342-cf90777852f5,c42729c7-1e67-4e5a-9d81-e5cb4c6f6f11,2024-05-16,interest_charge,172.53,USD,seller,paid,"Interest charge: 268,796.75 × 6.42 bps",2024-05-16T13:35:00
+eab7caca-d8bb-4c2a-83c8-770be0d9416a,dff12ac8-5a4b-44f8-8a3f-34ea2ec82772,2024-01-11,daily_fail_fee,76.03,USD,buyer,paid,"Daily fail fee: 230,716.30 × 3.30 bps",2024-01-11T16:09:00
+9c44333a-0bd2-4a45-a729-b10b754f2694,dff12ac8-5a4b-44f8-8a3f-34ea2ec82772,2024-01-12,daily_fail_fee,76.56,USD,buyer,paid,"Daily fail fee: 230,716.30 × 3.32 bps",2024-01-12T08:29:00
+b9587e0f-6b60-4e9a-b0aa-46d6b4fb6073,bd2d163b-4095-4be0-8f62-35e7ea6631a1,2024-05-24,daily_fail_fee,760.08,JPY,seller,pending,"Daily fail fee: 3,603,851.88 × 2.11 bps",2024-05-24T13:59:00
+59a6832e-eb0c-4a05-86b5-d6cfab79b936,bd2d163b-4095-4be0-8f62-35e7ea6631a1,2024-05-25,daily_fail_fee,715.87,JPY,seller,paid,"Daily fail fee: 3,603,851.88 × 1.99 bps",2024-05-25T18:57:00
+e0699fc3-1fb0-42b7-93ab-ebc49c18447d,4e09d69e-bc3a-4e65-a106-7916e68da3f8,2024-05-30,daily_fail_fee,52.06,USD,seller,paid,"Daily fail fee: 200,848.59 × 2.59 bps",2024-05-30T13:10:00
+07dd740d-2409-4e54-b39a-86bb2674b2a6,32a57319-6778-48bc-9f75-64e5ec1611f3,2024-04-23,daily_fail_fee,5.82,USD,buyer,pending,"Daily fail fee: 22,327.29 × 2.61 bps",2024-04-23T10:07:00
+c57cbfe2-ca70-47e2-ad91-5a709eed7eba,32a57319-6778-48bc-9f75-64e5ec1611f3,2024-04-24,daily_fail_fee,6.01,USD,buyer,paid,"Daily fail fee: 22,327.29 × 2.69 bps",2024-04-24T08:35:00
+dcf71ae3-e613-4937-ac0d-88a0e31a549e,32a57319-6778-48bc-9f75-64e5ec1611f3,2024-04-25,daily_fail_fee,8.55,USD,buyer,paid,"Daily fail fee: 22,327.29 × 3.83 bps",2024-04-25T12:32:00
+b87f7876-4193-401b-8341-dae8e3ea9c61,ed347d88-77e5-42b8-bf0e-195559198d74,2024-12-07,daily_fail_fee,18.55,USD,seller,disputed,"Daily fail fee: 178,062.51 × 1.04 bps",2024-12-07T17:14:00
+e5b12cf0-bf16-4319-9f62-be29c0990b34,e04015fd-35ff-473c-9c73-5abc3ae2b2df,2024-03-28,daily_fail_fee,3.65,GBP,intermediary,disputed,"Daily fail fee: 20,317.71 × 1.80 bps",2024-03-28T16:14:00
+0e0f082a-6c3c-4f66-9eff-416ac348afc1,0a409221-8ad2-48a1-bbd6-6c92af4f114b,2024-03-28,daily_fail_fee,29.31,CHF,seller,paid,"Daily fail fee: 72,826.46 × 4.02 bps",2024-03-28T11:43:00
+7fae1912-f23a-4176-96dc-7c3ba7da24a3,0a409221-8ad2-48a1-bbd6-6c92af4f114b,2024-03-29,daily_fail_fee,31.73,CHF,seller,paid,"Daily fail fee: 72,826.46 × 4.36 bps",2024-03-29T08:26:00
+026ea2b2-9524-4eec-8f98-49ea068cc583,a0dc7bdc-2a5e-421c-b2c6-6557c565b043,2024-05-14,daily_fail_fee,1.36,USD,buyer,paid,"Daily fail fee: 4,869.25 × 2.79 bps",2024-05-14T13:54:00
+12c0cdc1-0770-4d46-a0c1-c8b5aeac82a5,a0dc7bdc-2a5e-421c-b2c6-6557c565b043,2024-05-15,daily_fail_fee,0.65,USD,buyer,pending,"Daily fail fee: 4,869.25 × 1.34 bps",2024-05-15T12:24:00
+8424bf11-cc2d-4eff-a6bd-eee2a95a3244,a0dc7bdc-2a5e-421c-b2c6-6557c565b043,2024-05-16,daily_fail_fee,1.6,USD,buyer,paid,"Daily fail fee: 4,869.25 × 3.30 bps",2024-05-16T13:07:00
+fc88ac68-7769-46ff-9b63-2628645ddfb2,a0dc7bdc-2a5e-421c-b2c6-6557c565b043,2024-05-17,daily_fail_fee,0.54,USD,buyer,pending,"Daily fail fee: 4,869.25 × 1.10 bps",2024-05-17T09:19:00
+13e3b4de-9eee-462e-a343-90b73dcdfedc,a0dc7bdc-2a5e-421c-b2c6-6557c565b043,2024-05-18,daily_fail_fee,0.58,USD,buyer,paid,"Daily fail fee: 4,869.25 × 1.19 bps",2024-05-18T09:09:00
+5c2921d8-c655-477b-bcf3-cd63e4f35475,a0dc7bdc-2a5e-421c-b2c6-6557c565b043,2024-05-19,daily_fail_fee,2.26,USD,buyer,pending,"Daily fail fee: 4,869.25 × 4.64 bps",2024-05-19T09:36:00
+fc64b782-0caf-40e7-8bc6-bf60b5e4c608,a0dc7bdc-2a5e-421c-b2c6-6557c565b043,2024-05-20,daily_fail_fee,1.13,USD,buyer,paid,"Daily fail fee: 4,869.25 × 2.32 bps",2024-05-20T18:37:00
+d3bf3aa4-0148-4bf5-8aea-6bda2dfb163d,a0dc7bdc-2a5e-421c-b2c6-6557c565b043,2024-05-21,daily_fail_fee,1.86,USD,buyer,paid,"Daily fail fee: 4,869.25 × 3.83 bps",2024-05-21T08:59:00
+8caea563-6c23-4d04-8ef4-04cfa704539e,a0dc7bdc-2a5e-421c-b2c6-6557c565b043,2024-05-22,daily_fail_fee,0.92,USD,buyer,paid,"Daily fail fee: 4,869.25 × 1.88 bps",2024-05-22T17:29:00
+eda876f5-73ad-4e92-86f7-51a2eeb7bc58,a0dc7bdc-2a5e-421c-b2c6-6557c565b043,2024-05-23,daily_fail_fee,0.68,USD,buyer,disputed,"Daily fail fee: 4,869.25 × 1.40 bps",2024-05-23T09:54:00
+6ad38b0b-8c58-490b-bab2-a04a3e14ae16,a0dc7bdc-2a5e-421c-b2c6-6557c565b043,2024-06-03,buy_in_cost,53.92,USD,buyer,pending,Buy-in cost: Market price impact 1.11%,2024-06-03T14:32:00
+e7954eb5-c175-46ba-8da3-a74890258369,a0dc7bdc-2a5e-421c-b2c6-6557c565b043,2024-06-03,buy_in_cost,59.79,USD,buyer,paid,Buy-in cost: Market price impact 1.23%,2024-06-03T09:08:00
+345bdba8-6f1c-4861-bd78-5d8d58a4e436,a0dc7bdc-2a5e-421c-b2c6-6557c565b043,2024-06-03,buy_in_cost,230.39,USD,buyer,pending,Buy-in cost: Market price impact 4.73%,2024-06-03T13:05:00
+00e5a82b-2fca-4aae-984c-d76160fea98c,a0dc7bdc-2a5e-421c-b2c6-6557c565b043,2024-05-23,administrative_fee,414.12,USD,buyer,paid,Administrative processing fee for aged fail,2024-05-23T18:35:00
+f0e9b668-3ee4-4d18-84b9-92247e2e431a,5e011733-9da3-471d-96fe-24fdb5b4ddc6,2024-09-04,daily_fail_fee,232.17,JPY,buyer,paid,"Daily fail fee: 690,491.89 × 3.36 bps",2024-09-04T15:24:00
+d3f400b1-cda5-4060-bfb4-78c47800b36d,5e011733-9da3-471d-96fe-24fdb5b4ddc6,2024-09-05,daily_fail_fee,223.34,JPY,buyer,paid,"Daily fail fee: 690,491.89 × 3.23 bps",2024-09-05T16:29:00
+bc07b16d-fe85-410a-9668-1716e4179a42,5e011733-9da3-471d-96fe-24fdb5b4ddc6,2024-09-06,daily_fail_fee,280.05,JPY,buyer,paid,"Daily fail fee: 690,491.89 × 4.06 bps",2024-09-06T15:55:00
+89c2a116-b0fc-41e4-88b2-16ca92bb79e6,5e011733-9da3-471d-96fe-24fdb5b4ddc6,2024-09-07,daily_fail_fee,253.34,JPY,buyer,disputed,"Daily fail fee: 690,491.89 × 3.67 bps",2024-09-07T08:24:00
+d07c46c2-7880-4969-ad1a-d731e18e9279,f85d0749-13dc-4d47-8ec2-64486d3c0907,2024-05-23,daily_fail_fee,0.72,EUR,buyer,paid,"Daily fail fee: 3,387.07 × 2.12 bps",2024-05-23T18:53:00
+876b6108-35ac-4241-9656-dfed1688df78,f85d0749-13dc-4d47-8ec2-64486d3c0907,2024-05-24,daily_fail_fee,1.31,EUR,buyer,paid,"Daily fail fee: 3,387.07 × 3.86 bps",2024-05-24T15:43:00
+207cb8bc-6edb-43cd-9740-4e808cab798c,c856e65b-f8bd-4194-84fa-b47f82323768,2024-05-24,daily_fail_fee,3542.56,USD,seller,paid,"Daily fail fee: 10,006,985.70 × 3.54 bps",2024-05-24T09:40:00
+8ac00232-a691-486a-b0d2-d624690a2166,c856e65b-f8bd-4194-84fa-b47f82323768,2024-05-25,daily_fail_fee,4053.06,USD,seller,paid,"Daily fail fee: 10,006,985.70 × 4.05 bps",2024-05-25T08:14:00
+1e361467-f7c7-4808-bf61-4109ecd8f994,c856e65b-f8bd-4194-84fa-b47f82323768,2024-05-26,daily_fail_fee,1904.52,USD,seller,pending,"Daily fail fee: 10,006,985.70 × 1.90 bps",2024-05-26T14:47:00
+5a5369b0-0653-451a-9eb7-f1f957a5ce6c,c856e65b-f8bd-4194-84fa-b47f82323768,2024-05-27,daily_fail_fee,4317.88,USD,seller,paid,"Daily fail fee: 10,006,985.70 × 4.31 bps",2024-05-27T13:58:00
+1f905c84-5809-49d3-ad70-c9e7dda02950,e05cecc3-15e1-4722-896d-622c0999880a,2024-01-10,daily_fail_fee,12.21,USD,seller,paid,"Daily fail fee: 30,368.18 × 4.02 bps",2024-01-10T12:55:00
+a2949a11-9036-492b-811f-1c74720cdd99,e05cecc3-15e1-4722-896d-622c0999880a,2024-01-11,daily_fail_fee,7.17,USD,seller,paid,"Daily fail fee: 30,368.18 × 2.36 bps",2024-01-11T12:34:00
+88fe3886-eab8-425c-abc2-bed7a7a268a6,e05cecc3-15e1-4722-896d-622c0999880a,2024-01-12,daily_fail_fee,6.45,USD,seller,paid,"Daily fail fee: 30,368.18 × 2.12 bps",2024-01-12T08:37:00
+88690c04-1b31-4f35-aeaf-eeb9b93cc2eb,b08c3d4b-2c04-4736-a737-b08765153962,2024-03-12,daily_fail_fee,23.42,USD,buyer,disputed,"Daily fail fee: 105,772.07 × 2.21 bps",2024-03-12T15:46:00
+16deaefb-93ab-4b76-8f17-d795be85ba85,38f6e73c-f359-4b4e-8b64-2f588cf878c3,2024-04-18,daily_fail_fee,52.78,USD,seller,paid,"Daily fail fee: 125,426.52 × 4.21 bps",2024-04-18T16:05:00
+6a03b90b-d65f-4e58-9f41-d3dd7001f412,517e0431-6072-4aad-82f3-6a1662647920,2024-10-24,daily_fail_fee,18179.05,USD,buyer,disputed,"Daily fail fee: 71,344,480.33 × 2.55 bps",2024-10-24T12:10:00
+41f93d0f-90f6-4761-b2cc-cb345e3f8691,517e0431-6072-4aad-82f3-6a1662647920,2024-10-25,daily_fail_fee,20936.72,USD,buyer,paid,"Daily fail fee: 71,344,480.33 × 2.93 bps",2024-10-25T17:57:00
+9242270e-3901-409c-9f72-9cac22dac94f,517e0431-6072-4aad-82f3-6a1662647920,2024-10-26,daily_fail_fee,33939.92,USD,buyer,paid,"Daily fail fee: 71,344,480.33 × 4.76 bps",2024-10-26T12:51:00
+9cc5352b-578f-4fc3-9ed4-c1010735b906,517e0431-6072-4aad-82f3-6a1662647920,2024-10-27,daily_fail_fee,20756.08,USD,buyer,paid,"Daily fail fee: 71,344,480.33 × 2.91 bps",2024-10-27T09:06:00
+95162b7d-a802-4d2f-b9a8-770bc3dfa34b,517e0431-6072-4aad-82f3-6a1662647920,2024-10-28,daily_fail_fee,8596.3,USD,buyer,waived,"Daily fail fee: 71,344,480.33 × 1.20 bps",2024-10-28T17:30:00
+b99c48c1-9d98-4c9c-ae81-bd0a400db638,517e0431-6072-4aad-82f3-6a1662647920,2024-10-29,daily_fail_fee,18327.1,USD,buyer,disputed,"Daily fail fee: 71,344,480.33 × 2.57 bps",2024-10-29T13:18:00
+57636a06-3203-420c-91b8-6ebef47cf27f,517e0431-6072-4aad-82f3-6a1662647920,2024-10-30,daily_fail_fee,26357.82,USD,buyer,paid,"Daily fail fee: 71,344,480.33 × 3.69 bps",2024-10-30T13:29:00
+1ed8ed02-52e2-4348-bd98-563b58dae10d,517e0431-6072-4aad-82f3-6a1662647920,2024-10-31,daily_fail_fee,11411.07,USD,buyer,paid,"Daily fail fee: 71,344,480.33 × 1.60 bps",2024-10-31T15:09:00
+f454be7d-47ff-4d31-bd8b-03ef9d90b148,517e0431-6072-4aad-82f3-6a1662647920,2024-11-01,daily_fail_fee,11883.69,USD,buyer,paid,"Daily fail fee: 71,344,480.33 × 1.67 bps",2024-11-01T11:18:00
+4ddfbc6c-933f-4b18-b44f-1c66ebd895b6,517e0431-6072-4aad-82f3-6a1662647920,2024-11-02,daily_fail_fee,21600.54,USD,buyer,paid,"Daily fail fee: 71,344,480.33 × 3.03 bps",2024-11-02T18:01:00
+61e99529-55ef-430f-bb33-87b657166989,517e0431-6072-4aad-82f3-6a1662647920,2024-11-02,interest_charge,14863.43,USD,buyer,paid,"Interest charge: 71,344,480.33 × 2.08 bps",2024-11-02T18:24:00
+848527b0-c573-4373-a603-010d39029b50,517e0431-6072-4aad-82f3-6a1662647920,2024-10-29,interest_charge,56598.6,USD,buyer,paid,"Interest charge: 71,344,480.33 × 7.93 bps",2024-10-29T14:24:00
+33d8753a-79c4-4d1d-bcab-f4c7aae4c4d4,517e0431-6072-4aad-82f3-6a1662647920,2024-11-02,interest_charge,24656.44,USD,buyer,disputed,"Interest charge: 71,344,480.33 × 3.46 bps",2024-11-02T18:45:00
+0894a588-a4ff-4c68-a4a3-ad3da614e8a4,32754e63-4de5-4e9e-8ed9-c5548b860f1e,2024-08-31,daily_fail_fee,24.39,USD,seller,pending,"Daily fail fee: 54,795.36 × 4.45 bps",2024-08-31T16:08:00
+3098aedd-a267-4a0c-a1ba-22b3e07e4517,32754e63-4de5-4e9e-8ed9-c5548b860f1e,2024-09-01,daily_fail_fee,25.9,USD,seller,paid,"Daily fail fee: 54,795.36 × 4.73 bps",2024-09-01T15:02:00
+75fa143f-817c-4881-8c8a-937f8edb9304,da3c39b5-1024-4d8d-8aec-293049d1b7dc,2024-07-11,daily_fail_fee,3.63,EUR,buyer,paid,"Daily fail fee: 8,912.84 × 4.07 bps",2024-07-11T15:56:00
+77ab1fa4-fc7a-4bc7-8f12-3ade29cb730b,da3c39b5-1024-4d8d-8aec-293049d1b7dc,2024-07-12,daily_fail_fee,2.52,EUR,buyer,paid,"Daily fail fee: 8,912.84 × 2.82 bps",2024-07-12T15:02:00
+946a78f4-db43-4b11-a4f5-d1c782ad872a,da3c39b5-1024-4d8d-8aec-293049d1b7dc,2024-07-13,daily_fail_fee,3.59,EUR,buyer,pending,"Daily fail fee: 8,912.84 × 4.03 bps",2024-07-13T17:57:00
+f006789d-4811-48c3-89c7-3c287853e79f,da3c39b5-1024-4d8d-8aec-293049d1b7dc,2024-07-14,daily_fail_fee,3.83,EUR,buyer,pending,"Daily fail fee: 8,912.84 × 4.30 bps",2024-07-14T11:31:00
+14a48846-194c-4622-9fe7-0795d70a15d3,da3c39b5-1024-4d8d-8aec-293049d1b7dc,2024-07-15,daily_fail_fee,2.56,EUR,buyer,pending,"Daily fail fee: 8,912.84 × 2.87 bps",2024-07-15T15:04:00
+9c669237-6074-4307-9252-3d6883cfcf38,da3c39b5-1024-4d8d-8aec-293049d1b7dc,2024-07-16,daily_fail_fee,3.28,EUR,buyer,pending,"Daily fail fee: 8,912.84 × 3.68 bps",2024-07-16T15:48:00
+81149d8c-2347-4292-83a9-0e8bf5839db1,da3c39b5-1024-4d8d-8aec-293049d1b7dc,2024-07-12,interest_charge,8.83,EUR,buyer,pending,"Interest charge: 8,912.84 × 9.91 bps",2024-07-12T16:38:00
+49cdeb87-6b7e-44e4-8598-2ead63864b6a,da3c39b5-1024-4d8d-8aec-293049d1b7dc,2024-07-14,interest_charge,3.01,EUR,buyer,paid,"Interest charge: 8,912.84 × 3.38 bps",2024-07-14T08:26:00
+d2f1b7ea-c1a1-4904-80f7-4391e13ae44c,da3c39b5-1024-4d8d-8aec-293049d1b7dc,2024-07-15,interest_charge,8.68,EUR,buyer,paid,"Interest charge: 8,912.84 × 9.73 bps",2024-07-15T10:18:00
+22b94989-dcd9-4b9c-9867-9af3d944d81a,847e9d52-a3a8-4726-9057-677fd385148b,2024-08-07,daily_fail_fee,12.12,GBP,buyer,paid,"Daily fail fee: 67,098.62 × 1.81 bps",2024-08-07T18:49:00
+482a9855-ca71-4f80-b144-37c999dfabb9,847e9d52-a3a8-4726-9057-677fd385148b,2024-08-08,daily_fail_fee,13.2,GBP,buyer,paid,"Daily fail fee: 67,098.62 × 1.97 bps",2024-08-08T11:39:00
+8c3629fd-a53c-4430-b5a2-366b033d851b,847e9d52-a3a8-4726-9057-677fd385148b,2024-08-09,daily_fail_fee,22.53,GBP,buyer,paid,"Daily fail fee: 67,098.62 × 3.36 bps",2024-08-09T12:24:00
+ae246409-4a4a-40f6-b5e1-96c6227da427,cfc9698e-4d7a-486c-83a8-9f7488e58e80,2024-01-17,daily_fail_fee,67.03,USD,buyer,paid,"Daily fail fee: 161,521.60 × 4.15 bps",2024-01-17T08:53:00
+d86d305d-d707-4c82-b013-7bccf169ac10,cfc9698e-4d7a-486c-83a8-9f7488e58e80,2024-01-18,daily_fail_fee,70.95,USD,buyer,disputed,"Daily fail fee: 161,521.60 × 4.39 bps",2024-01-18T17:16:00
+a02f5d05-744f-4a4c-8f2e-4378344cef68,cfc9698e-4d7a-486c-83a8-9f7488e58e80,2024-01-19,daily_fail_fee,61.88,USD,buyer,paid,"Daily fail fee: 161,521.60 × 3.83 bps",2024-01-19T08:25:00
+66e508d8-0544-4bcb-96be-94cb332d0938,cfc9698e-4d7a-486c-83a8-9f7488e58e80,2024-01-20,daily_fail_fee,55.69,USD,buyer,paid,"Daily fail fee: 161,521.60 × 3.45 bps",2024-01-20T11:21:00
+3e3d118f-e4e0-403a-9ef6-c12703fffe6a,cfc9698e-4d7a-486c-83a8-9f7488e58e80,2024-01-21,daily_fail_fee,44.43,USD,buyer,disputed,"Daily fail fee: 161,521.60 × 2.75 bps",2024-01-21T13:49:00
+d3379d4e-4eb7-43ec-a4ef-b8db5ea8d8a4,cfc9698e-4d7a-486c-83a8-9f7488e58e80,2024-01-22,daily_fail_fee,25.23,USD,buyer,paid,"Daily fail fee: 161,521.60 × 1.56 bps",2024-01-22T10:32:00
+eecdac23-3c22-4707-a4bc-83fc1840d980,cfc9698e-4d7a-486c-83a8-9f7488e58e80,2024-01-23,daily_fail_fee,38.35,USD,buyer,paid,"Daily fail fee: 161,521.60 × 2.37 bps",2024-01-23T08:02:00
+4a5e535e-51d6-4467-98ea-35b8cd656f3c,cfc9698e-4d7a-486c-83a8-9f7488e58e80,2024-01-24,daily_fail_fee,66.9,USD,buyer,disputed,"Daily fail fee: 161,521.60 × 4.14 bps",2024-01-24T12:16:00
+bfd73912-e395-4b21-9f18-496a11791740,cfc9698e-4d7a-486c-83a8-9f7488e58e80,2024-01-25,daily_fail_fee,50.46,USD,buyer,paid,"Daily fail fee: 161,521.60 × 3.12 bps",2024-01-25T13:18:00
+6877370b-8d01-44b6-8942-2e18b7dcd60f,cfc9698e-4d7a-486c-83a8-9f7488e58e80,2024-01-26,daily_fail_fee,50.51,USD,buyer,paid,"Daily fail fee: 161,521.60 × 3.13 bps",2024-01-26T13:15:00
+1bebb022-2b6e-43eb-97f9-af4240d0eee8,cfc9698e-4d7a-486c-83a8-9f7488e58e80,2024-01-26,administrative_fee,482.83,USD,buyer,paid,Administrative processing fee for aged fail,2024-01-26T16:50:00
+13245a80-163f-4ca2-b02f-e4d7827dc322,cfc9698e-4d7a-486c-83a8-9f7488e58e80,2024-01-26,administrative_fee,125.02,USD,buyer,paid,Administrative processing fee for aged fail,2024-01-26T12:57:00
+350e3235-a317-4644-8058-41e503b6c4be,17deb07b-ed2f-4ca1-b1a4-7f1419003eab,2024-09-19,daily_fail_fee,77.84,JPY,seller,paid,"Daily fail fee: 494,978.66 × 1.57 bps",2024-09-19T13:15:00
+42225c56-46a4-457e-a9bd-f3af8b15c0b0,17deb07b-ed2f-4ca1-b1a4-7f1419003eab,2024-09-20,daily_fail_fee,242.43,JPY,seller,paid,"Daily fail fee: 494,978.66 × 4.90 bps",2024-09-20T12:08:00
+9dbb2f81-4540-4d91-9ea5-e925ec21891e,17deb07b-ed2f-4ca1-b1a4-7f1419003eab,2024-09-21,daily_fail_fee,121.8,JPY,seller,paid,"Daily fail fee: 494,978.66 × 2.46 bps",2024-09-21T15:35:00
+b3f31a15-c8c8-408d-b4d2-a2aa0c3e92a5,163dbe35-bc10-4571-845c-fc6743f6d1ce,2024-05-31,daily_fail_fee,52.78,USD,intermediary,disputed,"Daily fail fee: 118,913.13 × 4.44 bps",2024-05-31T16:33:00
+09e911c9-aeca-42b2-bd91-d2fd53693d49,163dbe35-bc10-4571-845c-fc6743f6d1ce,2024-06-01,daily_fail_fee,42.22,USD,intermediary,paid,"Daily fail fee: 118,913.13 × 3.55 bps",2024-06-01T14:01:00
+f5d77082-2299-43df-b289-8af1b161d1db,d162ad57-519e-45d1-b023-ce019c22c19c,2024-06-26,daily_fail_fee,3.06,USD,buyer,paid,"Daily fail fee: 17,771.26 × 1.72 bps",2024-06-26T17:08:00
+60d79dd5-c51c-494f-8730-77e68bcbede4,d162ad57-519e-45d1-b023-ce019c22c19c,2024-06-27,daily_fail_fee,2.98,USD,buyer,paid,"Daily fail fee: 17,771.26 × 1.68 bps",2024-06-27T09:58:00
+69a63955-467a-4030-a05c-5437bac8339b,d162ad57-519e-45d1-b023-ce019c22c19c,2024-06-28,daily_fail_fee,5.19,USD,buyer,disputed,"Daily fail fee: 17,771.26 × 2.92 bps",2024-06-28T09:39:00
+0c90a11b-0d75-4180-bf6b-9ae3a87ef916,d162ad57-519e-45d1-b023-ce019c22c19c,2024-06-29,daily_fail_fee,8.66,USD,buyer,disputed,"Daily fail fee: 17,771.26 × 4.88 bps",2024-06-29T16:25:00
+ca215189-fc02-4c2f-9256-9e68b0ca4e91,d162ad57-519e-45d1-b023-ce019c22c19c,2024-06-30,daily_fail_fee,8.63,USD,buyer,disputed,"Daily fail fee: 17,771.26 × 4.86 bps",2024-06-30T17:49:00
+cefd46e4-40d6-4d05-9508-044ac634a2fa,d162ad57-519e-45d1-b023-ce019c22c19c,2024-07-01,daily_fail_fee,5.88,USD,buyer,paid,"Daily fail fee: 17,771.26 × 3.31 bps",2024-07-01T15:36:00
+9b7a4e70-3e8f-4232-a37d-554341c43f77,d162ad57-519e-45d1-b023-ce019c22c19c,2024-07-02,daily_fail_fee,5.51,USD,buyer,paid,"Daily fail fee: 17,771.26 × 3.10 bps",2024-07-02T16:31:00
+7ef0475e-5075-4a3b-9d5d-89951a987c5a,d162ad57-519e-45d1-b023-ce019c22c19c,2024-07-03,daily_fail_fee,3.22,USD,buyer,paid,"Daily fail fee: 17,771.26 × 1.81 bps",2024-07-03T09:16:00
+45f0924f-e07f-4b14-9046-c4a9fd473718,d162ad57-519e-45d1-b023-ce019c22c19c,2024-07-04,daily_fail_fee,7.47,USD,buyer,paid,"Daily fail fee: 17,771.26 × 4.21 bps",2024-07-04T17:23:00
+0acafd5f-2c12-423e-8833-623fff5b03d3,d162ad57-519e-45d1-b023-ce019c22c19c,2024-07-05,daily_fail_fee,7.44,USD,buyer,paid,"Daily fail fee: 17,771.26 × 4.19 bps",2024-07-05T09:30:00
+b56094cc-910f-45a1-b289-7007a34eb05f,d162ad57-519e-45d1-b023-ce019c22c19c,2024-07-08,interest_charge,7.96,USD,buyer,paid,"Interest charge: 17,771.26 × 4.48 bps",2024-07-08T08:15:00
+1e845053-e39f-4825-a007-99c6c764ff5c,d162ad57-519e-45d1-b023-ce019c22c19c,2024-07-05,administrative_fee,132.24,USD,buyer,paid,Administrative processing fee for aged fail,2024-07-05T08:30:00
+9f7a2116-cab9-4190-aed7-8f675b8e5afa,d162ad57-519e-45d1-b023-ce019c22c19c,2024-07-05,administrative_fee,195.88,USD,buyer,paid,Administrative processing fee for aged fail,2024-07-05T10:33:00
+8b72630a-5313-4b16-8b18-7dbe6a4c76f4,d162ad57-519e-45d1-b023-ce019c22c19c,2024-07-06,interest_charge,13.29,USD,buyer,paid,"Interest charge: 17,771.26 × 7.48 bps",2024-07-06T08:09:00
+8f82013f-4e32-421b-a49f-8b5e7596ac19,70d32a94-fda9-414b-a370-f570b887a294,2024-04-05,daily_fail_fee,97.25,USD,buyer,paid,"Daily fail fee: 261,106.48 × 3.72 bps",2024-04-05T18:48:00
+4344aa41-3593-4f87-beb8-098e1957fe11,70d32a94-fda9-414b-a370-f570b887a294,2024-04-06,daily_fail_fee,26.49,USD,buyer,paid,"Daily fail fee: 261,106.48 × 1.01 bps",2024-04-06T15:23:00
+3e3aec60-f316-4e63-a340-bea320a6dfd6,c78530c5-de4c-4809-ad74-acc51d94f726,2024-05-17,daily_fail_fee,1756.84,JPY,buyer,pending,"Daily fail fee: 7,123,377.51 × 2.47 bps",2024-05-17T14:17:00
+7658897d-d4c8-4238-864b-1e89038612e0,c78530c5-de4c-4809-ad74-acc51d94f726,2024-05-18,daily_fail_fee,2222.0,JPY,buyer,paid,"Daily fail fee: 7,123,377.51 × 3.12 bps",2024-05-18T18:55:00
+641784f6-efbb-4834-83ca-9420c888f0b6,c78530c5-de4c-4809-ad74-acc51d94f726,2024-05-19,daily_fail_fee,2695.99,JPY,buyer,pending,"Daily fail fee: 7,123,377.51 × 3.78 bps",2024-05-19T12:25:00
+49358ca1-7236-4427-a014-de7575e1620b,c78530c5-de4c-4809-ad74-acc51d94f726,2024-05-20,daily_fail_fee,1894.97,JPY,buyer,paid,"Daily fail fee: 7,123,377.51 × 2.66 bps",2024-05-20T13:41:00
+2d4cd4d7-58ff-4a49-bbe0-c67de4e33268,c78530c5-de4c-4809-ad74-acc51d94f726,2024-05-21,daily_fail_fee,2820.06,JPY,buyer,paid,"Daily fail fee: 7,123,377.51 × 3.96 bps",2024-05-21T13:10:00
+fa81ff1c-2b01-4a0c-b428-87f5170f55da,c78530c5-de4c-4809-ad74-acc51d94f726,2024-05-22,daily_fail_fee,1868.47,JPY,buyer,paid,"Daily fail fee: 7,123,377.51 × 2.62 bps",2024-05-22T15:16:00
+381774a8-9d40-42dc-9f6e-58f8773d7cdb,c78530c5-de4c-4809-ad74-acc51d94f726,2024-05-23,daily_fail_fee,1498.12,JPY,buyer,paid,"Daily fail fee: 7,123,377.51 × 2.10 bps",2024-05-23T11:55:00
+6308c774-0094-472b-9b1e-e85f3cd8621a,c78530c5-de4c-4809-ad74-acc51d94f726,2024-05-24,daily_fail_fee,2767.6,JPY,buyer,pending,"Daily fail fee: 7,123,377.51 × 3.89 bps",2024-05-24T16:58:00
+08a523ce-5323-47e1-a152-1d201ba86763,c78530c5-de4c-4809-ad74-acc51d94f726,2024-05-22,interest_charge,3090.72,JPY,buyer,paid,"Interest charge: 7,123,377.51 × 4.34 bps",2024-05-22T11:12:00
+cef9c0d9-345b-430c-a867-465326872556,c78530c5-de4c-4809-ad74-acc51d94f726,2024-05-17,interest_charge,4689.26,JPY,buyer,pending,"Interest charge: 7,123,377.51 × 6.58 bps",2024-05-17T15:09:00
+4a041198-8e90-4679-babd-a29865eb554b,76db5d99-8b10-45f8-a808-8133a04628f4,2024-10-04,daily_fail_fee,12.93,USD,buyer,pending,"Daily fail fee: 34,423.90 × 3.76 bps",2024-10-04T16:45:00
+11f07a3a-54de-47e0-8afd-2fab8ab8f86e,76db5d99-8b10-45f8-a808-8133a04628f4,2024-10-05,daily_fail_fee,12.31,USD,buyer,paid,"Daily fail fee: 34,423.90 × 3.58 bps",2024-10-05T09:55:00
+549215d5-0d28-4c59-870f-ca589a801d12,76db5d99-8b10-45f8-a808-8133a04628f4,2024-10-06,daily_fail_fee,7.02,USD,buyer,paid,"Daily fail fee: 34,423.90 × 2.04 bps",2024-10-06T17:09:00
+afe9f00c-ce98-4f5b-8008-910c083f6949,76db5d99-8b10-45f8-a808-8133a04628f4,2024-10-07,daily_fail_fee,6.6,USD,buyer,paid,"Daily fail fee: 34,423.90 × 1.92 bps",2024-10-07T09:17:00
+2b36c219-a154-402c-b4c2-65434a5e5746,76db5d99-8b10-45f8-a808-8133a04628f4,2024-10-08,daily_fail_fee,13.65,USD,buyer,paid,"Daily fail fee: 34,423.90 × 3.97 bps",2024-10-08T16:45:00
+0bdc4f37-b8d5-4253-aa7a-9fb0a6238f22,76db5d99-8b10-45f8-a808-8133a04628f4,2024-10-04,interest_charge,23.99,USD,buyer,paid,"Interest charge: 34,423.90 × 6.97 bps",2024-10-04T09:23:00
+69db6f6c-f0cb-4690-b9d0-6b3bd2f56ad1,1c145712-8447-40c5-ade4-02c5f48e839a,2024-04-13,daily_fail_fee,7.18,USD,seller,paid,"Daily fail fee: 60,971.79 × 1.18 bps",2024-04-13T14:31:00
+18a2b207-78fc-49df-83e9-4e15805c17d8,20abaf93-46f1-4059-aa45-11e4729b2a89,2024-11-06,daily_fail_fee,24.35,USD,buyer,paid,"Daily fail fee: 70,849.30 × 3.44 bps",2024-11-06T15:42:00
+3670cd6d-2847-4a99-8549-52c7d754ceef,d803fc83-22bd-415b-bfb2-ca6fce60a369,2024-06-26,daily_fail_fee,71.24,JPY,seller,pending,"Daily fail fee: 641,337.50 × 1.11 bps",2024-06-26T09:36:00
+efe89756-eae7-4bb3-905c-e8989f196c8a,d803fc83-22bd-415b-bfb2-ca6fce60a369,2024-06-27,daily_fail_fee,97.66,JPY,seller,pending,"Daily fail fee: 641,337.50 × 1.52 bps",2024-06-27T16:09:00
+0ae36586-bd0d-4e4f-bef7-2c11625828b8,d803fc83-22bd-415b-bfb2-ca6fce60a369,2024-06-28,daily_fail_fee,205.15,JPY,seller,paid,"Daily fail fee: 641,337.50 × 3.20 bps",2024-06-28T10:15:00
+0da90257-14b1-46c6-a91f-29b695c6c864,d803fc83-22bd-415b-bfb2-ca6fce60a369,2024-06-29,daily_fail_fee,122.33,JPY,seller,pending,"Daily fail fee: 641,337.50 × 1.91 bps",2024-06-29T17:28:00
+6495f3b3-0ba8-426a-acec-6992e37b3054,d803fc83-22bd-415b-bfb2-ca6fce60a369,2024-06-30,daily_fail_fee,280.08,JPY,seller,paid,"Daily fail fee: 641,337.50 × 4.37 bps",2024-06-30T17:41:00
+85e9813c-dc95-4862-9379-ed5cc38276b3,d803fc83-22bd-415b-bfb2-ca6fce60a369,2024-07-01,daily_fail_fee,282.44,JPY,seller,paid,"Daily fail fee: 641,337.50 × 4.40 bps",2024-07-01T17:21:00
+923ca03f-0a85-400b-987e-2dda10609e99,d803fc83-22bd-415b-bfb2-ca6fce60a369,2024-07-02,daily_fail_fee,193.82,JPY,seller,paid,"Daily fail fee: 641,337.50 × 3.02 bps",2024-07-02T09:21:00
+bcbc2bb9-d3ec-438c-9b5b-d9960828b1e7,d803fc83-22bd-415b-bfb2-ca6fce60a369,2024-07-03,daily_fail_fee,201.51,JPY,seller,disputed,"Daily fail fee: 641,337.50 × 3.14 bps",2024-07-03T13:58:00
+697ab84b-838f-4822-9490-57876cdd0d24,d803fc83-22bd-415b-bfb2-ca6fce60a369,2024-07-04,daily_fail_fee,146.92,JPY,seller,pending,"Daily fail fee: 641,337.50 × 2.29 bps",2024-07-04T14:53:00
+104ed4aa-a78e-405f-8c05-44af4286dbac,d803fc83-22bd-415b-bfb2-ca6fce60a369,2024-07-05,daily_fail_fee,118.27,JPY,seller,paid,"Daily fail fee: 641,337.50 × 1.84 bps",2024-07-05T15:05:00
+9c2bad14-adb5-40ba-8c6f-4b2573787ff8,d803fc83-22bd-415b-bfb2-ca6fce60a369,2024-07-05,administrative_fee,124.19,JPY,seller,pending,Administrative processing fee for aged fail,2024-07-05T15:21:00
+33ab9bf4-e1b0-4964-a624-2d4e51d3382b,d803fc83-22bd-415b-bfb2-ca6fce60a369,2024-07-03,interest_charge,283.58,JPY,seller,paid,"Interest charge: 641,337.50 × 4.42 bps",2024-07-03T12:58:00
+177fb2e1-72e3-4ccb-8e37-d73bc09ba06f,c74bca86-933d-42f7-886f-cd8a1f808480,2024-07-25,daily_fail_fee,25.68,USD,seller,paid,"Daily fail fee: 116,920.59 × 2.20 bps",2024-07-25T11:37:00
+117e65b2-a48d-4a97-b72d-b6c5d81f267a,c74bca86-933d-42f7-886f-cd8a1f808480,2024-07-26,daily_fail_fee,30.96,USD,seller,pending,"Daily fail fee: 116,920.59 × 2.65 bps",2024-07-26T13:38:00
+99c970ea-cf2e-4169-a38e-30b6122e3f67,c74bca86-933d-42f7-886f-cd8a1f808480,2024-07-27,daily_fail_fee,15.42,USD,seller,disputed,"Daily fail fee: 116,920.59 × 1.32 bps",2024-07-27T11:44:00
+8a6c0f4b-3eef-4502-ad1c-ef8d30585440,c74bca86-933d-42f7-886f-cd8a1f808480,2024-07-28,daily_fail_fee,14.97,USD,seller,pending,"Daily fail fee: 116,920.59 × 1.28 bps",2024-07-28T17:50:00
+e7bb898d-eaee-422b-a417-50b777e97aab,c74bca86-933d-42f7-886f-cd8a1f808480,2024-07-29,daily_fail_fee,54.48,USD,seller,paid,"Daily fail fee: 116,920.59 × 4.66 bps",2024-07-29T11:48:00
+ded291d4-269a-4737-b557-2c0103709032,c74bca86-933d-42f7-886f-cd8a1f808480,2024-07-30,daily_fail_fee,54.91,USD,seller,paid,"Daily fail fee: 116,920.59 × 4.70 bps",2024-07-30T15:30:00
+19a99447-4036-4ce6-8b70-1a28ce97062a,c74bca86-933d-42f7-886f-cd8a1f808480,2024-07-31,daily_fail_fee,19.73,USD,seller,paid,"Daily fail fee: 116,920.59 × 1.69 bps",2024-07-31T12:12:00
+05be38b2-e1f3-4a92-b06f-5d81cbba611d,c74bca86-933d-42f7-886f-cd8a1f808480,2024-07-30,interest_charge,51.98,USD,seller,paid,"Interest charge: 116,920.59 × 4.45 bps",2024-07-30T13:55:00
+4d62cb21-9668-4f6f-908a-3fe9297569d2,a90fb4c6-61c5-4aa8-91b9-c03bc8329dce,2024-06-04,daily_fail_fee,196.95,JPY,seller,disputed,"Daily fail fee: 888,265.66 × 2.22 bps",2024-06-04T16:31:00
+39b5bbe8-7c45-452a-84dc-c448046e0fd7,397d280f-f98c-49c2-bd7c-ce861645f8df,2024-09-12,daily_fail_fee,81.1,USD,seller,disputed,"Daily fail fee: 237,524.82 × 3.41 bps",2024-09-12T13:30:00
+3205c14e-f864-4df9-b0d0-6203e1e28591,397d280f-f98c-49c2-bd7c-ce861645f8df,2024-09-13,daily_fail_fee,34.23,USD,seller,disputed,"Daily fail fee: 237,524.82 × 1.44 bps",2024-09-13T12:14:00
+210f8629-d990-465f-93c8-35be67857031,397d280f-f98c-49c2-bd7c-ce861645f8df,2024-09-14,daily_fail_fee,108.72,USD,seller,disputed,"Daily fail fee: 237,524.82 × 4.58 bps",2024-09-14T18:02:00
+f38bc896-85b3-4279-a915-2698f417a22c,397d280f-f98c-49c2-bd7c-ce861645f8df,2024-09-15,daily_fail_fee,103.08,USD,seller,paid,"Daily fail fee: 237,524.82 × 4.34 bps",2024-09-15T17:03:00
+b1751411-02db-4cdb-8c7c-f63e0abbee9e,397d280f-f98c-49c2-bd7c-ce861645f8df,2024-09-16,daily_fail_fee,96.24,USD,seller,paid,"Daily fail fee: 237,524.82 × 4.05 bps",2024-09-16T16:41:00
+80539b60-dc59-428c-afa2-2a3cb17bd9fb,397d280f-f98c-49c2-bd7c-ce861645f8df,2024-09-17,daily_fail_fee,25.54,USD,seller,paid,"Daily fail fee: 237,524.82 × 1.08 bps",2024-09-17T12:30:00
+432b457a-fea3-49dc-95dc-5c27913a49a2,397d280f-f98c-49c2-bd7c-ce861645f8df,2024-09-18,daily_fail_fee,78.97,USD,seller,paid,"Daily fail fee: 237,524.82 × 3.32 bps",2024-09-18T08:40:00
+88ab9378-ab17-4c3d-b283-e4a117efdcc7,397d280f-f98c-49c2-bd7c-ce861645f8df,2024-09-19,daily_fail_fee,26.66,USD,seller,paid,"Daily fail fee: 237,524.82 × 1.12 bps",2024-09-19T12:00:00
+41cbefeb-a82d-4f40-8e32-5fd914354f2f,397d280f-f98c-49c2-bd7c-ce861645f8df,2024-09-20,daily_fail_fee,80.89,USD,seller,paid,"Daily fail fee: 237,524.82 × 3.41 bps",2024-09-20T13:30:00
+f07d8fa7-90cb-4d64-b29d-ec2d3b88e27b,397d280f-f98c-49c2-bd7c-ce861645f8df,2024-09-15,interest_charge,138.31,USD,seller,paid,"Interest charge: 237,524.82 × 5.82 bps",2024-09-15T10:25:00

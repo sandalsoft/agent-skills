@@ -1,0 +1,58 @@
+{
+  "skill_name": "skill-creator",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I want to create a skill that helps me write commit messages following conventional commits format. It should know the types (feat, fix, chore, etc), understand scope, and produce the right format from a plain English description of what changed.",
+      "expected_output": "A skill directory with SKILL.md containing: YAML frontmatter with name and description, description that includes trigger phrases for commit message scenarios, structured body under 500 lines with examples of input/output transformations, and proposed test cases.",
+      "files": [],
+      "expectations": [
+        "SKILL.md is created with valid YAML frontmatter containing name and description fields",
+        "The description field includes trigger phrases and 'Use when...' language",
+        "The body contains at least 2 input/output examples showing plain English to conventional commit transformation",
+        "SKILL.md body is under 500 lines",
+        "Test cases are proposed to the user before running"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "I have a skill at ./test-skill/ that's supposed to help with database migrations but it only triggers about half the time. Can you fix the description and run the optimization loop?",
+      "expected_output": "The skill's description is analyzed, trigger eval queries are generated and reviewed, the optimization loop runs, and a before/after comparison of descriptions with scores is presented.",
+      "files": [],
+      "expectations": [
+        "The current description is read and analyzed for triggering weaknesses",
+        "Trigger eval queries are generated with a mix of should-trigger and should-not-trigger cases",
+        "Eval queries are realistic and detailed, not generic one-liners",
+        "The optimization loop is run via scripts/run_loop.py",
+        "Before/after descriptions and scores are presented to the user"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Run evals on my chart-builder skill at ./chart-builder/. It has 3 test cases in evals/evals.json already. I want to see how it compares to baseline.",
+      "expected_output": "Parallel subagent runs are spawned (with-skill and baseline) for all test cases, assertions are drafted, results are graded, benchmark.json is generated, and the eval viewer is launched for human review.",
+      "files": [],
+      "expectations": [
+        "Both with-skill and baseline runs are spawned for each test case",
+        "Runs are spawned in parallel, not sequentially",
+        "Assertions are drafted while runs are in progress",
+        "Timing data is captured from task completion notifications",
+        "benchmark.json is generated via scripts/aggregate_benchmark.py",
+        "The eval viewer is launched via eval-viewer/generate_review.py before any skill revision"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "We just spent the last hour building a workflow where we fetch data from our API, transform it into a specific CSV format, and upload it to S3. Can you turn what we just did into a reusable skill?",
+      "expected_output": "The conversation history is analyzed to extract the workflow steps, tools used, corrections made, and input/output formats. A SKILL.md is drafted capturing the workflow, and test cases are proposed.",
+      "files": [],
+      "expectations": [
+        "The conversation context is analyzed for workflow steps, not just the final state",
+        "User corrections from the conversation are incorporated into the skill instructions",
+        "The SKILL.md includes a description with trigger phrases for data pipeline scenarios",
+        "Any scripts written during the conversation are considered for bundling in scripts/",
+        "Test cases are proposed that cover the main workflow path"
+      ]
+    }
+  ]
+}

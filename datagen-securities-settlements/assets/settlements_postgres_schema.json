@@ -1,0 +1,575 @@
+{
+  "schema_version": "1.0",
+  "description": "Securities settlements PostgreSQL schema - core settlement data (fails moved to MongoDB)",
+  "tables": {
+    "broker_dealers": {
+      "description": "Broker-dealer firms executing and settling trades",
+      "columns": {
+        "broker_dealer_id": {
+          "type": "uuid",
+          "primary_key": true
+        },
+        "firm_name": {
+          "type": "varchar(255)",
+          "nullable": false,
+          "generator": "broker_firm_name"
+        },
+        "dtc_participant_number": {
+          "type": "char(4)",
+          "nullable": true,
+          "unique": true,
+          "description": "DTC participant number for US settlements"
+        },
+        "broker_type": {
+          "type": "varchar(30)",
+          "nullable": false,
+          "values": ["buy_side", "sell_side", "market_maker", "prime_broker"],
+          "distribution": {
+            "buy_side": 0.30,
+            "sell_side": 0.35,
+            "market_maker": 0.20,
+            "prime_broker": 0.15
+          }
+        },
+        "primary_market": {
+          "type": "varchar(10)",
+          "nullable": false,
+          "values": ["US", "JP", "EU"],
+          "distribution": {
+            "US": 0.60,
+            "JP": 0.20,
+            "EU": 0.20
+          },
+          "description": "Primary market of operation"
+        },
+        "market_coverage": {
+          "type": "varchar(50)",
+          "nullable": false,
+          "description": "Markets where broker operates (e.g., 'US,EU' or 'US,JP,EU')"
+        },
+        "credit_rating": {
+          "type": "varchar(5)",
+          "nullable": true,
+          "values": ["AAA", "AA+", "AA", "AA-", "A+", "A", "A-", "BBB+"],
+          "distribution": {
+            "AAA": 0.05,
+            "AA+": 0.10,
+            "AA": 0.15,
+            "AA-": 0.20,
+            "A+": 0.20,
+            "A": 0.15,
+            "A-": 0.10,
+            "BBB+": 0.05
+          }
+        },
+        "settlement_efficiency": {
+          "type": "numeric(5,4)",
+          "nullable": false,
+          "description": "Historical settlement success rate (0.8000-0.9900)",
+          "min": 0.8000,
+          "max": 0.9900
+        },
+        "created_at": {
+          "type": "timestamp",
+          "nullable": false,
+          "generator": "timestamp_in_period"
+        }
+      },
+      "row_count": 250
+    },
+    "investors": {
+      "description": "Institutional and retail investors",
+      "columns": {
+        "investor_id": {
+          "type": "uuid",
+          "primary_key": true
+        },
+        "investor_type": {
+          "type": "varchar(30)",
+          "nullable": false,
+          "values": ["institutional", "retail"],
+          "distribution": {
+            "institutional": 0.15,
+            "retail": 0.85
+          }
+        },
+        "investor_name": {
+          "type": "varchar(255)",
+          "nullable": false,
+          "generator": "investor_name",
+          "depends_on": ["investor_type"]
+        },
+        "investor_subtype": {
+          "type": "varchar(50)",
+          "nullable": true,
+          "generator": "investor_subtype",
+          "depends_on": ["investor_type"],
+          "description": "hedge_fund, mutual_fund, pension_fund for institutional; individual for retail"
+        },
+        "country": {
+          "type": "char(2)",
+          "nullable": false,
+          "values": ["US", "JP", "GB", "FR", "DE"],
+          "distribution": {
+            "US": 0.65,
+            "JP": 0.15,
+            "GB": 0.08,
+            "FR": 0.07,
+            "DE": 0.05
+          }
+        },
+        "primary_broker_id": {
+          "type": "uuid",
+          "nullable": false,
+          "foreign_key": "broker_dealers.broker_dealer_id",
+          "description": "Primary executing broker"
+        },
+        "account_number": {
+          "type": "varchar(20)",
+          "nullable": false,
+          "unique": true,
+          "generator": "investor_account_number"
+        },
+        "custodian_bank": {
+          "type": "varchar(255)",
+          "nullable": true,
+          "generator": "custodian_bank_name",
+          "depends_on": ["country", "investor_type"]
+        },
+        "created_at": {
+          "type": "timestamp",
+          "nullable": false,
+          "generator": "timestamp_in_period"
+        }
+      },
+      "row_count": 15000
+    },
+    "securities": {
+      "description": "Equity securities across US, Japan, and European markets",
+      "columns": {
+        "security_id": {
+          "type": "uuid",
+          "primary_key": true
+        },
+        "ticker": {
+          "type": "varchar(10)",
+          "nullable": false,
+          "generator": "stock_ticker",
+          "depends_on": ["market"]
+        },
+        "cusip": {
+          "type": "char(9)",
+          "nullable": true,
+          "unique": true,
+          "generator": "cusip_identifier",
+          "depends_on": ["market"],
+          "description": "CUSIP for US securities only, null for international"
+        },
+        "isin": {
+          "type": "char(12)",
+          "nullable": false,
+          "unique": true,
+          "generator": "isin_identifier",
+          "depends_on": ["market", "cusip"],
+          "description": "ISIN for all securities (US ISINs derived from CUSIP)"
+        },
+        "security_name": {
+          "type": "varchar(255)",
+          "nullable": false,
+          "generator": "company_name",
+          "depends_on": ["market"]
+        },
+        "market": {
+          "type": "varchar(10)",
+          "nullable": false,
+          "values": ["US", "JP", "EU"],
+          "distribution": {
+            "US": 0.60,
+            "JP": 0.20,
+            "EU": 0.20
+          }
+        },
+        "exchange": {
+          "type": "varchar(50)",
+          "nullable": false,
+          "generator": "exchange_for_market",
+          "depends_on": ["market"],
+          "description": "NYSE, NASDAQ for US; TSE for JP; LSE, Euronext, etc for EU"
+        },
+        "currency": {
+          "type": "char(3)",
+          "nullable": false,
+          "generator": "currency_for_market",
+          "depends_on": ["market"]
+        },
+        "sector": {
+          "type": "varchar(50)",
+          "nullable": false,
+          "values": ["Technology", "Financials", "Healthcare", "Consumer", "Industrials", "Energy", "Materials", "Utilities", "Telecommunications"],
+          "distribution": {
+            "Technology": 0.25,
+            "Financials": 0.18,
+            "Healthcare": 0.15,
+            "Consumer": 0.14,
+            "Industrials": 0.12,
+            "Energy": 0.06,
+            "Materials": 0.04,
+            "Utilities": 0.03,
+            "Telecommunications": 0.03
+          }
+        },
+        "market_cap_tier": {
+          "type": "varchar(20)",
+          "nullable": false,
+          "values": ["large_cap", "mid_cap", "small_cap"],
+          "distribution": {
+            "large_cap": 0.30,
+            "mid_cap": 0.40,
+            "small_cap": 0.30
+          }
+        },
+        "liquidity_tier": {
+          "type": "varchar(20)",
+          "nullable": false,
+          "values": ["high", "medium", "low"],
+          "distribution": {
+            "high": 0.35,
+            "medium": 0.45,
+            "low": 0.20
+          },
+          "description": "Liquidity classification affects fail probability"
+        },
+        "average_daily_volume": {
+          "type": "bigint",
+          "nullable": false,
+          "generator": "avg_daily_volume",
+          "depends_on": ["liquidity_tier", "market_cap_tier"]
+        },
+        "current_price": {
+          "type": "numeric(12,4)",
+          "nullable": false,
+          "generator": "stock_price",
+          "depends_on": ["market_cap_tier", "market"]
+        },
+        "created_at": {
+          "type": "timestamp",
+          "nullable": false,
+          "generator": "timestamp_in_period"
+        }
+      },
+      "row_count": 5000
+    },
+    "trades": {
+      "description": "Equity trade executions",
+      "columns": {
+        "trade_id": {
+          "type": "uuid",
+          "primary_key": true
+        },
+        "trade_reference": {
+          "type": "varchar(50)",
+          "nullable": false,
+          "unique": true,
+          "generator": "trade_reference_number"
+        },
+        "security_id": {
+          "type": "uuid",
+          "nullable": false,
+          "foreign_key": "securities.security_id"
+        },
+        "investor_id": {
+          "type": "uuid",
+          "nullable": false,
+          "foreign_key": "investors.investor_id"
+        },
+        "executing_broker_id": {
+          "type": "uuid",
+          "nullable": false,
+          "foreign_key": "broker_dealers.broker_dealer_id"
+        },
+        "counterparty_broker_id": {
+          "type": "uuid",
+          "nullable": false,
+          "foreign_key": "broker_dealers.broker_dealer_id",
+          "description": "Broker on the other side of the trade"
+        },
+        "trade_side": {
+          "type": "varchar(10)",
+          "nullable": false,
+          "values": ["buy", "sell"],
+          "distribution": {
+            "buy": 0.50,
+            "sell": 0.50
+          }
+        },
+        "quantity": {
+          "type": "bigint",
+          "nullable": false,
+          "generator": "trade_quantity",
+          "depends_on": ["investor_id"]
+        },
+        "price": {
+          "type": "numeric(12,4)",
+          "nullable": false,
+          "generator": "execution_price",
+          "depends_on": ["security_id"]
+        },
+        "gross_amount": {
+          "type": "numeric(15,2)",
+          "nullable": false,
+          "generator": "trade_gross_amount",
+          "depends_on": ["quantity", "price"]
+        },
+        "commission": {
+          "type": "numeric(10,2)",
+          "nullable": false,
+          "generator": "trade_commission",
+          "depends_on": ["gross_amount", "investor_id"]
+        },
+        "net_amount": {
+          "type": "numeric(15,2)",
+          "nullable": false,
+          "generator": "trade_net_amount",
+          "depends_on": ["gross_amount", "commission", "trade_side"]
+        },
+        "trade_date": {
+          "type": "date",
+          "nullable": false,
+          "generator": "trade_date_in_period"
+        },
+        "trade_time": {
+          "type": "timestamp",
+          "nullable": false,
+          "generator": "trade_timestamp",
+          "depends_on": ["trade_date", "security_id"]
+        },
+        "settlement_date": {
+          "type": "date",
+          "nullable": false,
+          "generator": "settlement_date_for_trade",
+          "depends_on": ["trade_date", "security_id"],
+          "description": "T+1 for US, T+2 for JP/EU"
+        },
+        "trade_status": {
+          "type": "varchar(20)",
+          "nullable": false,
+          "values": ["executed", "confirmed", "allocated", "cancelled"],
+          "distribution": {
+            "executed": 0.02,
+            "confirmed": 0.95,
+            "allocated": 0.02,
+            "cancelled": 0.01
+          }
+        },
+        "execution_venue": {
+          "type": "varchar(50)",
+          "nullable": false,
+          "generator": "execution_venue",
+          "depends_on": ["security_id"]
+        },
+        "created_at": {
+          "type": "timestamp",
+          "nullable": false,
+          "generator": "trade_time"
+        }
+      },
+      "row_count": 500000
+    },
+    "settlement_instructions": {
+      "description": "Standing Settlement Instructions (SSI) for trade settlements",
+      "columns": {
+        "ssi_id": {
+          "type": "uuid",
+          "primary_key": true
+        },
+        "trade_id": {
+          "type": "uuid",
+          "nullable": false,
+          "foreign_key": "trades.trade_id"
+        },
+        "instruction_type": {
+          "type": "varchar(10)",
+          "nullable": false,
+          "values": ["DVP", "RVP", "FOP"],
+          "distribution": {
+            "DVP": 0.50,
+            "RVP": 0.48,
+            "FOP": 0.02
+          },
+          "description": "DVP=Delivery vs Payment, RVP=Receive vs Payment, FOP=Free of Payment"
+        },
+        "settlement_method": {
+          "type": "varchar(30)",
+          "nullable": false,
+          "generator": "settlement_method",
+          "depends_on": ["security_id"],
+          "description": "DTC, Euroclear, Clearstream, JSCC"
+        },
+        "custodian": {
+          "type": "varchar(255)",
+          "nullable": false,
+          "generator": "custodian_for_investor",
+          "depends_on": ["trade_id"]
+        },
+        "custodian_account": {
+          "type": "varchar(50)",
+          "nullable": false,
+          "generator": "custodian_account_number"
+        },
+        "agent_bank": {
+          "type": "varchar(255)",
+          "nullable": true,
+          "generator": "agent_bank_name",
+          "depends_on": ["security_id"]
+        },
+        "payment_currency": {
+          "type": "char(3)",
+          "nullable": false,
+          "generator": "payment_currency",
+          "depends_on": ["security_id"]
+        },
+        "instruction_status": {
+          "type": "varchar(20)",
+          "nullable": false,
+          "values": ["pending", "affirmed", "matched", "rejected"],
+          "distribution": {
+            "pending": 0.05,
+            "affirmed": 0.10,
+            "matched": 0.83,
+            "rejected": 0.02
+          }
+        },
+        "affirmation_timestamp": {
+          "type": "timestamp",
+          "nullable": true,
+          "generator": "timestamp_after_trade",
+          "depends_on": ["trade_id"],
+          "description": "When investor affirmed the settlement instruction"
+        },
+        "matching_timestamp": {
+          "type": "timestamp",
+          "nullable": true,
+          "generator": "timestamp_after_affirmation",
+          "depends_on": ["affirmation_timestamp", "instruction_status"]
+        },
+        "created_at": {
+          "type": "timestamp",
+          "nullable": false,
+          "generator": "timestamp_after_trade",
+          "depends_on": ["trade_id"]
+        }
+      },
+      "row_count": 500000
+    },
+    "settlements": {
+      "description": "Settlement attempts and outcomes",
+      "columns": {
+        "settlement_id": {
+          "type": "uuid",
+          "primary_key": true
+        },
+        "trade_id": {
+          "type": "uuid",
+          "nullable": false,
+          "foreign_key": "trades.trade_id"
+        },
+        "ssi_id": {
+          "type": "uuid",
+          "nullable": false,
+          "foreign_key": "settlement_instructions.ssi_id"
+        },
+        "settlement_reference": {
+          "type": "varchar(50)",
+          "nullable": false,
+          "unique": true,
+          "generator": "settlement_reference_number"
+        },
+        "scheduled_settlement_date": {
+          "type": "date",
+          "nullable": false,
+          "generator": "scheduled_settlement_date",
+          "depends_on": ["trade_id"]
+        },
+        "actual_settlement_date": {
+          "type": "date",
+          "nullable": true,
+          "generator": "actual_settlement_date",
+          "depends_on": ["scheduled_settlement_date", "settlement_status"]
+        },
+        "settlement_status": {
+          "type": "varchar(20)",
+          "nullable": false,
+          "values": ["settled", "failed", "partial", "pending"],
+          "distribution": {
+            "settled": 0.82,
+            "failed": 0.15,
+            "partial": 0.02,
+            "pending": 0.01
+          },
+          "description": "Failed settlements will be tracked in MongoDB fails_db"
+        },
+        "settlement_amount": {
+          "type": "numeric(15,2)",
+          "nullable": false,
+          "generator": "settlement_amount",
+          "depends_on": ["trade_id"]
+        },
+        "settled_quantity": {
+          "type": "bigint",
+          "nullable": true,
+          "generator": "settled_quantity",
+          "depends_on": ["trade_id", "settlement_status"]
+        },
+        "settlement_location": {
+          "type": "varchar(50)",
+          "nullable": false,
+          "generator": "settlement_location",
+          "depends_on": ["security_id"],
+          "description": "DTC, Euroclear, Clearstream, JSCC"
+        },
+        "value_date": {
+          "type": "date",
+          "nullable": true,
+          "generator": "value_date",
+          "depends_on": ["actual_settlement_date"]
+        },
+        "created_at": {
+          "type": "timestamp",
+          "nullable": false,
+          "generator": "timestamp_on_settlement_date",
+          "depends_on": ["scheduled_settlement_date"]
+        }
+      },
+      "row_count": 500000
+    }
+  },
+  "temporal_constraints": {
+    "settlement_flow": {
+      "description": "Settlement timing constraints",
+      "trade_to_settlement": {
+        "us_t_plus_1": {
+          "business_days": 1,
+          "description": "US markets settle T+1"
+        },
+        "jp_t_plus_2": {
+          "business_days": 2,
+          "description": "Japan market settles T+2"
+        },
+        "eu_t_plus_2": {
+          "business_days": 2,
+          "description": "European markets settle T+2"
+        }
+      },
+      "instruction_affirmation": {
+        "min_minutes": 30,
+        "max_hours": 48,
+        "description": "Time for investor to affirm settlement instructions"
+      }
+    }
+  },
+  "data_generation_period": {
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31",
+    "description": "Generate one year of securities settlement data"
+  }
+}

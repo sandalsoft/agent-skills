@@ -1,0 +1,78 @@
+OLW BOOTSTRAP SKILL - FILE MANIFEST
+====================================
+
+Core Skill Files (4)
+--------------------
+skill.md            - Public skill description and metadata
+prompt.md           - Detailed agent instructions (8.7 KB, 272 lines)
+skill.json          - Machine-readable configuration
+VERSION             - Semantic version number (1.0.0)
+
+Documentation (8)
+-----------------
+README.md           - Comprehensive user guide (4.0 KB, 121 lines)
+EXAMPLES.md         - Five detailed domain examples (6.8 KB, 188 lines)
+QUICK_REFERENCE.md  - Quick reference card (4.2 KB)
+INSTALL.md          - Installation instructions (3.2 KB)
+SHARING.md          - Sharing and distribution guide (9.6 KB)
+TEST.md             - Testing procedures (5.1 KB, 192 lines)
+CHANGELOG.md        - Version history (2.7 KB, 76 lines)
+SUMMARY.txt         - Visual summary (5.2 KB, 147 lines)
+
+Supporting Files (3)
+--------------------
+LICENSE             - MIT License (1.1 KB)
+.gitignore          - Git exclusion patterns
+package.sh          - Packaging script (executable)
+
+Metadata (1)
+------------
+FILES.txt           - This file
+
+Total Files: 16
+Total Lines of Documentation: 1,075+
+Total Size: ~55 KB
+Version: 1.0.0
+
+DIRECTORY STRUCTURE
+-------------------
+~/.claude/skills/olw-bootstrap/
+├── Core/
+│   ├── skill.md
+│   ├── prompt.md
+│   ├── skill.json
+│   └── VERSION
+├── Documentation/
+│   ├── README.md
+│   ├── EXAMPLES.md
+│   ├── QUICK_REFERENCE.md
+│   ├── INSTALL.md
+│   ├── SHARING.md
+│   ├── TEST.md
+│   ├── CHANGELOG.md
+│   └── SUMMARY.txt
+└── Supporting/
+    ├── LICENSE
+    ├── .gitignore
+    ├── package.sh
+    └── FILES.txt
+
+USAGE EXAMPLE
+-------------
+Use the olw-bootstrap skill to create a wiki from globals/metadata/promptql-config.hml
+
+OUTPUT EXAMPLE
+--------------
+Generates 15-25 WikiPage v1 YAML files with:
+- Interconnected wiki:// cross-links
+- Semantic aliases for search
+- Structured sections
+- Business context and calculations
+
+SHARING
+-------
+Run: ./package.sh
+Creates: dist/olw-bootstrap-v1.0.0.tar.gz
+         dist/olw-bootstrap-v1.0.0.zip
+
+See SHARING.md for complete distribution guide.

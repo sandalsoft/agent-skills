@@ -1,0 +1,998 @@
+{
+  "schema_version": "1.0",
+  "description": "US Banking comprehensive services schema - retail banking, loans, wire transfers, bill payments, and wealth management with realistic distributions",
+  "tables": {
+    "customers": {
+      "description": "Bank customers - both retail and commercial",
+      "columns": {
+        "customer_id": {
+          "type": "uuid",
+          "primary_key": true
+        },
+        "customer_type": {
+          "type": "varchar(20)",
+          "nullable": false,
+          "values": ["retail", "commercial", "corporate"],
+          "distribution": {
+            "retail": 0.80,
+            "commercial": 0.18,
+            "corporate": 0.02
+          }
+        },
+        "first_name": {
+          "type": "varchar(100)",
+          "nullable": false,
+          "generator": "realistic_first_name"
+        },
+        "last_name": {
+          "type": "varchar(100)",
+          "nullable": false,
+          "generator": "realistic_last_name"
+        },
+        "email": {
+          "type": "varchar(255)",
+          "nullable": false,
+          "unique": true,
+          "generator": "email_from_name",
+          "depends_on": ["first_name", "last_name"]
+        },
+        "phone": {
+          "type": "varchar(20)",
+          "nullable": true,
+          "generator": "us_phone_number"
+        },
+        "address_line1": {
+          "type": "varchar(255)",
+          "nullable": false,
+          "generator": "us_street_address"
+        },
+        "address_line2": {
+          "type": "varchar(255)",
+          "nullable": true,
+          "null_rate": 0.70
+        },
+        "city": {
+          "type": "varchar(100)",
+          "nullable": false,
+          "generator": "us_city_weighted"
+        },
+        "state": {
+          "type": "varchar(2)",
+          "nullable": false,
+          "generator": "us_state_for_city",
+          "depends_on": ["city"]
+        },
+        "postal_code": {
+          "type": "varchar(10)",
+          "nullable": false,
+          "generator": "zip_for_city",
+          "depends_on": ["city", "state"]
+        },
+        "date_of_birth": {
+          "type": "date",
+          "nullable": true,
+          "generator": "date_of_birth",
+          "min_age": 18,
+          "max_age": 85
+        },
+        "national_id": {
+          "type": "varchar(20)",
+          "nullable": true,
+          "generator": "ssn_last_4"
+        },
+        "customer_segment": {
+          "type": "varchar(30)",
+          "nullable": false,
+          "values": ["standard", "priority", "wealth", "business", "corporate"],
+          "distribution": {
+            "standard": 0.65,
+            "priority": 0.20,
+            "wealth": 0.08,
+            "business": 0.05,
+            "corporate": 0.02
+          }
+        },
+        "created_at": {
+          "type": "timestamp",
+          "nullable": false,
+          "generator": "timestamp_in_period"
+        }
+      },
+      "row_count": 2108
+    },
+    "accounts": {
+      "description": "Bank accounts - checking, savings, and CDs",
+      "columns": {
+        "account_id": {
+          "type": "uuid",
+          "primary_key": true
+        },
+        "customer_id": {
+          "type": "uuid",
+          "nullable": false,
+          "foreign_key": "customers.customer_id"
+        },
+        "account_number": {
+          "type": "varchar(20)",
+          "nullable": false,
+          "unique": true,
+          "generator": "account_number"
+        },
+        "account_type": {
+          "type": "varchar(20)",
+          "nullable": false,
+          "values": ["checking", "savings", "certificate_deposit", "money_market"],
+          "distribution": {
+            "checking": 0.50,
+            "savings": 0.35,
+            "certificate_deposit": 0.10,
+            "money_market": 0.05
+          }
+        },
+        "account_status": {
+          "type": "varchar(20)",
+          "nullable": false,
+          "values": ["active", "dormant", "closed"],
+          "default": "active",
+          "distribution": {
+            "active": 0.85,
+            "dormant": 0.10,
+            "closed": 0.05
+          }
+        },
+        "currency": {
+          "type": "char(3)",
+          "nullable": false,
+          "default": "USD"
+        },
+        "balance": {
+          "type": "numeric(15,2)",
+          "nullable": false,
+          "default": "0.00",
+          "generator": "account_balance",
+          "distribution": "lognormal",
+          "mean": 8500,
+          "std": 25000,
+          "min": 0,
+          "max": 500000
+        },
+        "interest_rate": {
+          "type": "numeric(5,4)",
+          "nullable": true,
+          "generator": "account_interest_rate",
+          "depends_on": ["account_type"]
+        },
+        "opened_at": {
+          "type": "timestamp",
+          "nullable": false,
+          "generator": "timestamp_after_customer",
+          "depends_on": ["customer_id"]
+        },
+        "closed_at": {
+          "type": "timestamp",
+          "nullable": true,
+          "generator": "timestamp_after_opened",
+          "depends_on": ["opened_at", "account_status"]
+        }
+      },
+      "row_count": 3000
+    },
+    "loans": {
+      "description": "Retail loans - personal, auto, mortgage, and business loans",
+      "columns": {
+        "loan_id": {
+          "type": "uuid",
+          "primary_key": true
+        },
+        "customer_id": {
+          "type": "uuid",
+          "nullable": false,
+          "foreign_key": "customers.customer_id"
+        },
+        "loan_type": {
+          "type": "varchar(30)",
+          "nullable": false,
+          "values": ["personal", "auto", "mortgage", "business", "education"],
+          "distribution": {
+            "personal": 0.20,
+            "auto": 0.30,
+            "mortgage": 0.30,
+            "business": 0.10,
+            "education": 0.10
+          }
+        },
+        "principal_amount": {
+          "type": "numeric(15,2)",
+          "nullable": false,
+          "generator": "loan_principal",
+          "depends_on": ["loan_type"]
+        },
+        "outstanding_balance": {
+          "type": "numeric(15,2)",
+          "nullable": false,
+          "generator": "loan_outstanding_balance",
+          "depends_on": ["principal_amount", "origination_date", "loan_type"],
+          "education_loan_avg": 81613,
+          "education_loan_bias": "higher"
+        },
+        "interest_rate": {
+          "type": "numeric(5,4)",
+          "nullable": false,
+          "generator": "loan_interest_rate",
+          "depends_on": ["loan_type"]
+        },
+        "loan_term_months": {
+          "type": "integer",
+          "nullable": false,
+          "generator": "loan_term",
+          "depends_on": ["loan_type"]
+        },
+        "monthly_payment": {
+          "type": "numeric(12,2)",
+          "nullable": false,
+          "generator": "loan_monthly_payment",
+          "depends_on": ["principal_amount", "interest_rate", "loan_term_months"]
+        },
+        "loan_status": {
+          "type": "varchar(20)",
+          "nullable": false,
+          "values": ["active", "paid_off", "defaulted", "restructured"],
+          "distribution": {
+            "active": 0.75,
+            "paid_off": 0.20,
+            "defaulted": 0.03,
+            "restructured": 0.02
+          }
+        },
+        "origination_date": {
+          "type": "date",
+          "nullable": false,
+          "generator": "date_in_period"
+        },
+        "maturity_date": {
+          "type": "date",
+          "nullable": false,
+          "generator": "date_after_origination",
+          "depends_on": ["origination_date", "loan_term_months"]
+        },
+        "last_payment_date": {
+          "type": "date",
+          "nullable": true,
+          "generator": "loan_last_payment_date",
+          "depends_on": ["origination_date", "loan_status"]
+        }
+      },
+      "row_count": 2500
+    },
+    "cards": {
+      "description": "Debit and credit cards issued to customers",
+      "columns": {
+        "card_id": {
+          "type": "uuid",
+          "primary_key": true
+        },
+        "customer_id": {
+          "type": "uuid",
+          "nullable": false,
+          "foreign_key": "customers.customer_id"
+        },
+        "account_id": {
+          "type": "uuid",
+          "nullable": true,
+          "foreign_key": "accounts.account_id",
+          "generator": "account_for_customer",
+          "depends_on": ["customer_id"]
+        },
+        "card_number": {
+          "type": "varchar(19)",
+          "nullable": false,
+          "unique": true,
+          "generator": "card_number",
+          "depends_on": ["card_network"]
+        },
+        "card_type": {
+          "type": "varchar(20)",
+          "nullable": false,
+          "values": ["debit", "credit"],
+          "distribution": {
+            "debit": 0.55,
+            "credit": 0.45
+          }
+        },
+        "card_network": {
+          "type": "varchar(20)",
+          "nullable": false,
+          "values": ["Visa", "Mastercard"],
+          "distribution": {
+            "Visa": 0.60,
+            "Mastercard": 0.40
+          }
+        },
+        "expiration_month": {
+          "type": "smallint",
+          "nullable": false,
+          "generator": "random_month"
+        },
+        "expiration_year": {
+          "type": "smallint",
+          "nullable": false,
+          "generator": "future_year",
+          "depends_on": ["issued_at"]
+        },
+        "cvv": {
+          "type": "char(3)",
+          "nullable": false,
+          "generator": "cvv"
+        },
+        "credit_limit": {
+          "type": "numeric(10,2)",
+          "nullable": true,
+          "generator": "credit_limit",
+          "depends_on": ["card_type"]
+        },
+        "status": {
+          "type": "varchar(20)",
+          "nullable": false,
+          "values": ["active", "suspended", "closed"],
+          "default": "active",
+          "distribution": {
+            "active": 0.88,
+            "suspended": 0.05,
+            "closed": 0.07
+          }
+        },
+        "issued_at": {
+          "type": "timestamp",
+          "nullable": false,
+          "generator": "timestamp_in_period"
+        }
+      },
+      "row_count": 2300
+    },
+    "card_transactions": {
+      "description": "Card payment transactions at POS and online",
+      "columns": {
+        "transaction_id": {
+          "type": "uuid",
+          "primary_key": true
+        },
+        "card_id": {
+          "type": "uuid",
+          "nullable": false,
+          "foreign_key": "cards.card_id"
+        },
+        "merchant_name": {
+          "type": "varchar(255)",
+          "nullable": false,
+          "generator": "merchant_name",
+          "depends_on": ["merchant_category", "merchant_country"]
+        },
+        "merchant_category": {
+          "type": "varchar(100)",
+          "nullable": false,
+          "generator": "merchant_category"
+        },
+        "merchant_city": {
+          "type": "varchar(100)",
+          "nullable": false,
+          "generator": "merchant_city",
+          "depends_on": ["merchant_country"]
+        },
+        "merchant_country": {
+          "type": "char(2)",
+          "nullable": false,
+          "default": "US",
+          "generator": "merchant_country",
+          "distribution": {
+            "US": 0.95,
+            "international": 0.05
+          }
+        },
+        "transaction_amount": {
+          "type": "numeric(10,2)",
+          "nullable": false,
+          "generator": "transaction_amount",
+          "depends_on": ["merchant_category"]
+        },
+        "transaction_currency": {
+          "type": "char(3)",
+          "nullable": false,
+          "default": "USD",
+          "generator": "currency_for_country",
+          "depends_on": ["merchant_country"]
+        },
+        "billing_amount": {
+          "type": "numeric(10,2)",
+          "nullable": false,
+          "generator": "billing_amount",
+          "depends_on": ["transaction_amount", "transaction_currency"]
+        },
+        "pos_entry_mode": {
+          "type": "varchar(20)",
+          "nullable": false,
+          "values": ["chip", "swipe", "contactless", "manual", "ecommerce"],
+          "distribution": {
+            "chip": 0.50,
+            "contactless": 0.25,
+            "swipe": 0.10,
+            "ecommerce": 0.12,
+            "manual": 0.03
+          }
+        },
+        "auth_response": {
+          "type": "varchar(20)",
+          "nullable": false,
+          "values": ["approved", "declined"],
+          "distribution": {
+            "approved": 0.88,
+            "declined": 0.12
+          }
+        },
+        "decline_reason": {
+          "type": "varchar(100)",
+          "nullable": true,
+          "generator": "decline_reason",
+          "depends_on": ["auth_response"]
+        },
+        "transaction_date": {
+          "type": "timestamp",
+          "nullable": false,
+          "generator": "timestamp_in_period"
+        }
+      },
+      "row_count": 85000
+    },
+    "wire_transfers": {
+      "description": "Domestic and international wire transfers",
+      "columns": {
+        "transfer_id": {
+          "type": "uuid",
+          "primary_key": true
+        },
+        "from_account_id": {
+          "type": "uuid",
+          "nullable": false,
+          "foreign_key": "accounts.account_id"
+        },
+        "transfer_type": {
+          "type": "varchar(20)",
+          "nullable": false,
+          "values": ["domestic", "international"],
+          "distribution": {
+            "domestic": 0.70,
+            "international": 0.30
+          }
+        },
+        "beneficiary_name": {
+          "type": "varchar(255)",
+          "nullable": false,
+          "generator": "beneficiary_name",
+          "depends_on": ["beneficiary_country"]
+        },
+        "beneficiary_account": {
+          "type": "varchar(50)",
+          "nullable": false,
+          "generator": "beneficiary_account"
+        },
+        "beneficiary_bank": {
+          "type": "varchar(255)",
+          "nullable": false,
+          "generator": "bank_name",
+          "depends_on": ["beneficiary_country"]
+        },
+        "beneficiary_country": {
+          "type": "char(2)",
+          "nullable": false,
+          "generator": "wire_country",
+          "depends_on": ["transfer_type"]
+        },
+        "transfer_amount": {
+          "type": "numeric(15,2)",
+          "nullable": false,
+          "generator": "wire_transfer_amount",
+          "distribution": "lognormal",
+          "mean": 16913,
+          "std": 28000,
+          "min": 100,
+          "max": 500000
+        },
+        "transfer_currency": {
+          "type": "char(3)",
+          "nullable": false,
+          "generator": "currency_for_country",
+          "depends_on": ["beneficiary_country"]
+        },
+        "exchange_rate": {
+          "type": "numeric(10,6)",
+          "nullable": true,
+          "generator": "exchange_rate",
+          "depends_on": ["transfer_currency"]
+        },
+        "transfer_fee": {
+          "type": "numeric(8,2)",
+          "nullable": false,
+          "generator": "wire_transfer_fee",
+          "depends_on": ["transfer_type", "transfer_amount"]
+        },
+        "swift_code": {
+          "type": "varchar(11)",
+          "nullable": true,
+          "generator": "swift_code",
+          "depends_on": ["transfer_type"]
+        },
+        "transfer_purpose": {
+          "type": "varchar(100)",
+          "nullable": true,
+          "generator": "transfer_purpose"
+        },
+        "transfer_status": {
+          "type": "varchar(20)",
+          "nullable": false,
+          "values": ["pending", "processing", "completed", "failed", "cancelled"],
+          "distribution": {
+            "pending": 0.05,
+            "processing": 0.08,
+            "completed": 0.82,
+            "failed": 0.03,
+            "cancelled": 0.02
+          }
+        },
+        "initiated_at": {
+          "type": "timestamp",
+          "nullable": false,
+          "generator": "timestamp_in_period"
+        },
+        "completed_at": {
+          "type": "timestamp",
+          "nullable": true,
+          "generator": "timestamp_after_initiated",
+          "depends_on": ["initiated_at", "transfer_status", "transfer_type"],
+          "min_seconds": 1800,
+          "max_seconds": 259200
+        }
+      },
+      "row_count": 3200
+    },
+    "bill_payments": {
+      "description": "Utility and service bill payments",
+      "columns": {
+        "payment_id": {
+          "type": "uuid",
+          "primary_key": true
+        },
+        "account_id": {
+          "type": "uuid",
+          "nullable": false,
+          "foreign_key": "accounts.account_id"
+        },
+        "biller_name": {
+          "type": "varchar(255)",
+          "nullable": false,
+          "generator": "biller_name",
+          "depends_on": ["bill_type"]
+        },
+        "bill_type": {
+          "type": "varchar(30)",
+          "nullable": false,
+          "values": ["electricity", "water", "telecom", "internet", "insurance", "education", "government"],
+          "distribution": {
+            "electricity": 0.20,
+            "water": 0.15,
+            "telecom": 0.20,
+            "internet": 0.18,
+            "insurance": 0.15,
+            "education": 0.07,
+            "government": 0.05
+          }
+        },
+        "account_number": {
+          "type": "varchar(50)",
+          "nullable": false,
+          "generator": "bill_account_number"
+        },
+        "payment_amount": {
+          "type": "numeric(10,2)",
+          "nullable": false,
+          "generator": "bill_payment_amount",
+          "depends_on": ["bill_type"]
+        },
+        "payment_currency": {
+          "type": "char(3)",
+          "nullable": false,
+          "default": "USD"
+        },
+        "payment_method": {
+          "type": "varchar(20)",
+          "nullable": false,
+          "values": ["online", "branch", "atm", "mobile_app"],
+          "distribution": {
+            "online": 0.45,
+            "mobile_app": 0.40,
+            "branch": 0.10,
+            "atm": 0.05
+          }
+        },
+        "payment_status": {
+          "type": "varchar(20)",
+          "nullable": false,
+          "values": ["pending", "completed", "failed"],
+          "distribution": {
+            "pending": 0.08,
+            "completed": 0.89,
+            "failed": 0.03
+          }
+        },
+        "scheduled_date": {
+          "type": "date",
+          "nullable": true,
+          "generator": "bill_scheduled_date"
+        },
+        "payment_date": {
+          "type": "timestamp",
+          "nullable": false,
+          "generator": "timestamp_near_scheduled",
+          "depends_on": ["scheduled_date"]
+        }
+      },
+      "row_count": 12500
+    },
+    "wealth_management_accounts": {
+      "description": "Investment and wealth management accounts",
+      "columns": {
+        "portfolio_id": {
+          "type": "uuid",
+          "primary_key": true
+        },
+        "customer_id": {
+          "type": "uuid",
+          "nullable": false,
+          "foreign_key": "customers.customer_id"
+        },
+        "portfolio_name": {
+          "type": "varchar(100)",
+          "nullable": false,
+          "generator": "portfolio_name",
+          "depends_on": ["customer_id", "portfolio_type"]
+        },
+        "portfolio_type": {
+          "type": "varchar(30)",
+          "nullable": false,
+          "values": ["balanced", "growth", "conservative", "aggressive", "income"],
+          "distribution": {
+            "balanced": 0.35,
+            "growth": 0.25,
+            "conservative": 0.20,
+            "aggressive": 0.10,
+            "income": 0.10
+          }
+        },
+        "total_value": {
+          "type": "numeric(15,2)",
+          "nullable": false,
+          "generator": "portfolio_value",
+          "distribution": "lognormal",
+          "mean": 367420,
+          "std": 450000,
+          "min": 10000,
+          "max": 5000000,
+          "bias": "higher"
+        },
+        "currency": {
+          "type": "char(3)",
+          "nullable": false,
+          "default": "USD"
+        },
+        "risk_profile": {
+          "type": "varchar(20)",
+          "nullable": false,
+          "values": ["low", "medium", "high"],
+          "generator": "risk_profile_from_type",
+          "depends_on": ["portfolio_type"]
+        },
+        "management_fee_pct": {
+          "type": "numeric(5,4)",
+          "nullable": false,
+          "generator": "management_fee",
+          "min": 0.0025,
+          "max": 0.0150
+        },
+        "advisor_id": {
+          "type": "uuid",
+          "nullable": true,
+          "generator": "advisor_uuid"
+        },
+        "opened_at": {
+          "type": "timestamp",
+          "nullable": false,
+          "generator": "timestamp_in_period"
+        },
+        "last_reviewed_at": {
+          "type": "timestamp",
+          "nullable": true,
+          "generator": "timestamp_after_opened",
+          "depends_on": ["opened_at"]
+        }
+      },
+      "row_count": 850
+    },
+    "investment_transactions": {
+      "description": "Investment buy/sell transactions",
+      "columns": {
+        "investment_tx_id": {
+          "type": "uuid",
+          "primary_key": true
+        },
+        "portfolio_id": {
+          "type": "uuid",
+          "nullable": false,
+          "foreign_key": "wealth_management_accounts.portfolio_id"
+        },
+        "transaction_type": {
+          "type": "varchar(20)",
+          "nullable": false,
+          "values": ["buy", "sell", "dividend", "interest", "fee"],
+          "distribution": {
+            "buy": 0.35,
+            "sell": 0.30,
+            "dividend": 0.20,
+            "interest": 0.10,
+            "fee": 0.05
+          }
+        },
+        "security_name": {
+          "type": "varchar(255)",
+          "nullable": false,
+          "generator": "security_name",
+          "depends_on": ["security_type"]
+        },
+        "security_type": {
+          "type": "varchar(30)",
+          "nullable": false,
+          "values": ["stock", "bond", "mutual_fund", "etf", "real_estate"],
+          "distribution": {
+            "stock": 0.35,
+            "etf": 0.25,
+            "mutual_fund": 0.20,
+            "bond": 0.15,
+            "real_estate": 0.05
+          }
+        },
+        "quantity": {
+          "type": "numeric(15,4)",
+          "nullable": true,
+          "generator": "investment_quantity",
+          "depends_on": ["transaction_type", "security_type"]
+        },
+        "price_per_unit": {
+          "type": "numeric(12,4)",
+          "nullable": true,
+          "generator": "security_price",
+          "depends_on": ["security_type", "transaction_type"]
+        },
+        "transaction_amount": {
+          "type": "numeric(15,2)",
+          "nullable": false,
+          "generator": "investment_amount",
+          "depends_on": ["transaction_type", "quantity", "price_per_unit"]
+        },
+        "transaction_fee": {
+          "type": "numeric(10,2)",
+          "nullable": false,
+          "default": "0.00",
+          "generator": "investment_fee",
+          "depends_on": ["transaction_type", "transaction_amount"]
+        },
+        "transaction_currency": {
+          "type": "char(3)",
+          "nullable": false,
+          "default": "USD"
+        },
+        "settlement_status": {
+          "type": "varchar(20)",
+          "nullable": false,
+          "values": ["pending", "settled", "cancelled"],
+          "distribution": {
+            "pending": 0.08,
+            "settled": 0.90,
+            "cancelled": 0.02
+          }
+        },
+        "transaction_date": {
+          "type": "timestamp",
+          "nullable": false,
+          "generator": "timestamp_in_period"
+        },
+        "settlement_date": {
+          "type": "timestamp",
+          "nullable": true,
+          "generator": "timestamp_after_transaction",
+          "depends_on": ["transaction_date", "settlement_status"],
+          "min_seconds": 86400,
+          "max_seconds": 259200
+        }
+      },
+      "row_count": 4800
+    },
+    "atm_transactions": {
+      "description": "ATM withdrawals and deposits",
+      "columns": {
+        "atm_tx_id": {
+          "type": "uuid",
+          "primary_key": true
+        },
+        "account_id": {
+          "type": "uuid",
+          "nullable": false,
+          "foreign_key": "accounts.account_id"
+        },
+        "card_id": {
+          "type": "uuid",
+          "nullable": true,
+          "foreign_key": "cards.card_id",
+          "generator": "card_for_account",
+          "depends_on": ["account_id"]
+        },
+        "atm_id": {
+          "type": "varchar(50)",
+          "nullable": false,
+          "generator": "atm_id"
+        },
+        "atm_location": {
+          "type": "varchar(255)",
+          "nullable": false,
+          "generator": "atm_location"
+        },
+        "transaction_type": {
+          "type": "varchar(20)",
+          "nullable": false,
+          "values": ["withdrawal", "deposit", "balance_inquiry", "transfer"],
+          "distribution": {
+            "withdrawal": 0.65,
+            "deposit": 0.20,
+            "balance_inquiry": 0.10,
+            "transfer": 0.05
+          }
+        },
+        "amount": {
+          "type": "numeric(10,2)",
+          "nullable": true,
+          "generator": "atm_amount",
+          "depends_on": ["transaction_type"]
+        },
+        "transaction_fee": {
+          "type": "numeric(6,2)",
+          "nullable": false,
+          "default": "0.00",
+          "generator": "atm_fee",
+          "depends_on": ["atm_network", "transaction_type"]
+        },
+        "atm_network": {
+          "type": "varchar(30)",
+          "nullable": false,
+          "values": ["liberty_national", "partner_bank", "international"],
+          "distribution": {
+            "liberty_national": 0.70,
+            "partner_bank": 0.25,
+            "international": 0.05
+          }
+        },
+        "transaction_status": {
+          "type": "varchar(20)",
+          "nullable": false,
+          "values": ["completed", "failed", "cancelled"],
+          "distribution": {
+            "completed": 0.92,
+            "failed": 0.05,
+            "cancelled": 0.03
+          }
+        },
+        "transaction_date": {
+          "type": "timestamp",
+          "nullable": false,
+          "generator": "timestamp_in_period"
+        }
+      },
+      "row_count": 18000
+    },
+    "loan_payments": {
+      "description": "Loan repayment transactions",
+      "columns": {
+        "payment_id": {
+          "type": "uuid",
+          "primary_key": true
+        },
+        "loan_id": {
+          "type": "uuid",
+          "nullable": false,
+          "foreign_key": "loans.loan_id"
+        },
+        "account_id": {
+          "type": "uuid",
+          "nullable": false,
+          "foreign_key": "accounts.account_id",
+          "generator": "account_for_loan_customer",
+          "depends_on": ["loan_id"]
+        },
+        "payment_amount": {
+          "type": "numeric(12,2)",
+          "nullable": false,
+          "generator": "loan_payment_amount",
+          "depends_on": ["loan_id"]
+        },
+        "principal_paid": {
+          "type": "numeric(12,2)",
+          "nullable": false,
+          "generator": "principal_component",
+          "depends_on": ["payment_amount", "loan_id"]
+        },
+        "interest_paid": {
+          "type": "numeric(12,2)",
+          "nullable": false,
+          "generator": "interest_component",
+          "depends_on": ["payment_amount", "principal_paid"]
+        },
+        "late_fee": {
+          "type": "numeric(8,2)",
+          "nullable": false,
+          "default": "0.00",
+          "generator": "late_fee",
+          "depends_on": ["payment_status"]
+        },
+        "payment_status": {
+          "type": "varchar(20)",
+          "nullable": false,
+          "values": ["on_time", "late", "missed", "partial"],
+          "distribution": {
+            "on_time": 0.85,
+            "late": 0.10,
+            "missed": 0.03,
+            "partial": 0.02
+          }
+        },
+        "payment_method": {
+          "type": "varchar(20)",
+          "nullable": false,
+          "values": ["auto_debit", "online", "branch", "check"],
+          "distribution": {
+            "auto_debit": 0.60,
+            "online": 0.25,
+            "branch": 0.10,
+            "check": 0.05
+          }
+        },
+        "payment_date": {
+          "type": "timestamp",
+          "nullable": false,
+          "generator": "timestamp_in_period"
+        },
+        "due_date": {
+          "type": "date",
+          "nullable": false,
+          "generator": "loan_due_date",
+          "depends_on": ["loan_id", "payment_date"]
+        }
+      },
+      "row_count": 28000
+    }
+  },
+  "temporal_constraints": {
+    "transaction_flow": {
+      "description": "Typical timing between related transactions",
+      "wire_transfer_processing": {
+        "min_seconds": 1800,
+        "max_seconds": 259200,
+        "description": "30 minutes to 3 days"
+      },
+      "investment_settlement": {
+        "min_seconds": 86400,
+        "max_seconds": 259200,
+        "description": "1 to 3 days"
+      }
+    }
+  },
+  "data_generation_period": {
+    "start_date": "2020-01-01",
+    "end_date": "2025-11-14",
+    "description": "Generate data from 2020 to present (November 2025)"
+  }
+}

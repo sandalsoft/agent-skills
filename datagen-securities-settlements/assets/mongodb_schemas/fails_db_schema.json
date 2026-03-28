@@ -1,0 +1,339 @@
+{
+  "database": "fails_db",
+  "description": "MongoDB database for settlement fails and statistics tracking",
+  "collections": {
+    "Fails": {
+      "description": "Settlement fail records with exceptions tracking",
+      "schema": {
+        "_id": {
+          "type": "ObjectId",
+          "description": "MongoDB document ID"
+        },
+        "id": {
+          "type": "string",
+          "description": "Unique fail identifier (hex string)"
+        },
+        "last_update_time": {
+          "type": "ISODate",
+          "description": "Timestamp of last update"
+        },
+        "expiration_time": {
+          "type": "ISODate",
+          "description": "Fail record expiration (9999-01-31 for indefinite)"
+        },
+        "aggregate_id": {
+          "type": "string",
+          "description": "Aggregate/group identifier for related fails"
+        },
+        "state": {
+          "type": "object",
+          "description": "Current state of the fail",
+          "properties": {
+            "trade_id": {
+              "type": "string",
+              "description": "Reference to trade in PostgreSQL (UUID as string)"
+            },
+            "trade_reference": {
+              "type": "string",
+              "description": "Human-readable trade reference"
+            },
+            "trade_date": {
+              "type": "ISODate",
+              "description": "Date trade was executed"
+            },
+            "trade_product": {
+              "type": "string",
+              "enum": ["Receivesecurities", "Deliversecurities"],
+              "description": "Product type for the trade"
+            },
+            "trade_status": {
+              "type": "string",
+              "enum": ["OPEN", "CLOSED", "CANCELLED"],
+              "description": "Current trade status"
+            },
+            "trade_event_type": {
+              "type": "string",
+              "enum": ["OPENED", "UPDATED", "CLOSED"],
+              "description": "Last trade event"
+            },
+            "settlement_system": {
+              "type": "string",
+              "enum": ["NY", "TOKYO", "LONDON", "PARIS"],
+              "description": "Settlement system location code"
+            },
+            "settlement_region": {
+              "type": "string",
+              "enum": ["NORTH_AMERICA", "ASIA_PACIFIC", "EUROPE"],
+              "description": "Settlement region"
+            },
+            "primary_product_type": {
+              "type": "string",
+              "enum": ["SECURITY", "CASH", "DERIVATIVE"],
+              "description": "Primary product type"
+            },
+            "market": {
+              "type": "string",
+              "enum": ["DTC", "JSCC", "Euroclear", "Clearstream"],
+              "description": "Settlement market/clearinghouse"
+            },
+            "fail_id": {
+              "type": "string",
+              "description": "Unique fail identifier (UUID)"
+            },
+            "fail_type": {
+              "type": "string",
+              "enum": ["PENDING", "AGED", "CHRONIC"],
+              "description": "Fail classification by age"
+            },
+            "fail_status": {
+              "type": "string",
+              "enum": ["OPEN", "RESOLVED", "BUY_IN_INITIATED", "CLOSED_OUT"],
+              "description": "Current fail status"
+            },
+            "fail_assessment": {
+              "type": "string",
+              "nullable": true,
+              "description": "Assessment or notes on the fail"
+            },
+            "fail_category": {
+              "type": "string",
+              "enum": ["insufficient_securities", "cash_shortfall", "operational", "custody", "other"],
+              "description": "Fail category/reason"
+            },
+            "fail_reason": {
+              "type": "string",
+              "description": "Detailed fail reason"
+            },
+            "failing_party": {
+              "type": "string",
+              "enum": ["buyer", "seller", "intermediary"],
+              "description": "Which party caused the fail"
+            },
+            "fail_quantity": {
+              "type": "long",
+              "description": "Quantity of securities that failed"
+            },
+            "fail_value": {
+              "type": "decimal",
+              "description": "Dollar value of the fail"
+            },
+            "fail_start_date": {
+              "type": "ISODate",
+              "description": "Date the fail began"
+            },
+            "fail_age_days": {
+              "type": "int",
+              "description": "Number of business days outstanding"
+            },
+            "resolution_method": {
+              "type": "string",
+              "nullable": true,
+              "description": "How the fail was resolved"
+            },
+            "resolution_date": {
+              "type": "ISODate",
+              "nullable": true,
+              "description": "Date the fail was resolved"
+            },
+            "buy_in_date": {
+              "type": "ISODate",
+              "nullable": true,
+              "description": "Date buy-in procedure initiated"
+            },
+            "regulatory_threshold_breach": {
+              "type": "bool",
+              "description": "Whether fail exceeds regulatory threshold"
+            },
+            "total_charges": {
+              "type": "decimal",
+              "description": "Total accumulated charges for this fail"
+            },
+            "expiration_time": {
+              "type": "ISODate",
+              "description": "State expiration time"
+            },
+            "exceptions": {
+              "type": "array",
+              "description": "List of exceptions associated with this fail",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "actionable": {
+                    "type": "bool",
+                    "description": "Whether exception requires action"
+                  },
+                  "exception_type": {
+                    "type": "string",
+                    "nullable": true,
+                    "description": "Type of exception"
+                  },
+                  "exception_status": {
+                    "type": "string",
+                    "enum": ["UNRESOLVED", "RESOLVED", "IN_PROGRESS"],
+                    "description": "Exception resolution status"
+                  },
+                  "exception_reason": {
+                    "type": "string",
+                    "nullable": true,
+                    "description": "Reason for the exception"
+                  },
+                  "exception_user_id": {
+                    "type": "string",
+                    "nullable": true,
+                    "description": "User assigned to exception"
+                  },
+                  "legacy_exception_type": {
+                    "type": "string",
+                    "description": "Legacy exception code (FAI, OMN, etc.)"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "indexes": [
+        {
+          "keys": {"id": 1},
+          "unique": true
+        },
+        {
+          "keys": {"aggregate_id": 1}
+        },
+        {
+          "keys": {"state.trade_id": 1}
+        },
+        {
+          "keys": {"state.fail_id": 1},
+          "unique": true
+        },
+        {
+          "keys": {"state.fail_status": 1}
+        },
+        {
+          "keys": {"state.market": 1}
+        },
+        {
+          "keys": {"state.fail_start_date": 1}
+        },
+        {
+          "keys": {"state.fail_age_days": 1}
+        }
+      ],
+      "sample_document": {
+        "last_update_time": "2025-10-18T11:28:58.812784010Z",
+        "id": "68f24d98e703adb2ac88306d",
+        "expiration_time": "9999-01-31T00:00:00Z",
+        "aggregate_id": "BBC1L7T7H",
+        "state": {
+          "trade_product": "Receivesecurities",
+          "trade_date": "2025-10-16",
+          "trade_status": "OPEN",
+          "trade_id": "BBC1L7T7H",
+          "trade_event_type": "OPENED",
+          "settlement_system": "NY",
+          "settlement_region": "NORTH_AMERICA",
+          "primary_product_type": "SECURITY",
+          "market": "DTC",
+          "fail_type": "PENDING",
+          "fail_status": "OPEN",
+          "fail_id": "840dc593-1acf-4466-b640-05cc61c9297d",
+          "fail_assessment": null,
+          "expiration_time": "9999-01-31T00:00:00Z",
+          "exceptions": [
+            {
+              "actionable": true,
+              "exception_reason": null,
+              "exception_status": "UNRESOLVED",
+              "exception_type": null,
+              "exception_user_id": null,
+              "legacy_exception_type": "FAI"
+            }
+          ]
+        }
+      }
+    },
+    "Statistics": {
+      "description": "Settlement fail statistics and aggregations",
+      "schema": {
+        "_id": {
+          "type": "ObjectId",
+          "description": "MongoDB document ID"
+        },
+        "id": {
+          "type": "string",
+          "description": "Unique statistic identifier"
+        },
+        "cusip": {
+          "type": "string",
+          "description": "CUSIP identifier for the security"
+        },
+        "counter_party_account_number": {
+          "type": "string",
+          "description": "Counterparty account number"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["MS_ACTION", "CP_ACTION", "SYSTEMIC"],
+          "description": "Type of statistical record"
+        },
+        "market": {
+          "type": "string",
+          "enum": ["DTC", "JSCC", "Euroclear", "Clearstream"],
+          "description": "Settlement market"
+        },
+        "settlement_category": {
+          "type": "string",
+          "nullable": true,
+          "description": "Settlement category classification"
+        },
+        "fail_count": {
+          "type": "int",
+          "description": "Number of fails for this combination"
+        },
+        "total_fail_value": {
+          "type": "decimal",
+          "description": "Total value of fails"
+        },
+        "avg_fail_age_days": {
+          "type": "double",
+          "description": "Average age of fails in days"
+        },
+        "last_updated": {
+          "type": "ISODate",
+          "description": "Last update timestamp"
+        }
+      },
+      "indexes": [
+        {
+          "keys": {"id": 1},
+          "unique": true
+        },
+        {
+          "keys": {"cusip": 1}
+        },
+        {
+          "keys": {"market": 1}
+        },
+        {
+          "keys": {"type": 1}
+        },
+        {
+          "keys": {"counter_party_account_number": 1}
+        }
+      ],
+      "sample_document": {
+        "cusip": "917288BK7",
+        "counter_party_account_number": "027333335",
+        "type": "MS_ACTION",
+        "id": "691f6d9e848dóc8080ccd621",
+        "market": "DTC",
+        "settlement_category": null,
+        "fail_count": 5,
+        "total_fail_value": 1250000.00,
+        "avg_fail_age_days": 8.4,
+        "last_updated": "2025-10-18T11:30:00Z"
+      }
+    }
+  }
+}

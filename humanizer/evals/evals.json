@@ -1,0 +1,40 @@
+{
+  "skill_name": "humanizer",
+  "evals": [
+    {
+      "id": 1,
+      "name": "wikipedia-article-dense-patterns",
+      "prompt": "Humanize this text:\n\nNestled in the heart of southern Bavaria, the Zugspitze stands as a testament to Germany's rich natural heritage. At 2,962 meters, it serves as the country's highest peak, offering breathtaking panoramic views that showcase the stunning Alpine landscape. The mountain plays a pivotal role in regional tourism, attracting visitors from around the globe. Additionally, it features three glaciers—highlighting its importance to climate researchers and environmental scientists. Despite facing challenges from climate change, the Zugspitze continues to garner international recognition, underscoring its enduring significance in the evolving landscape of European mountaineering.",
+      "expected_output": "Factual, specific text about the Zugspitze without inflated significance, promotional language, AI vocabulary, or em dash overuse. Should preserve all factual information (height, glaciers, tourism) while removing the puffery.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "marketing-copy-with-soul",
+      "prompt": "Humanize this product description. Keep it persuasive but make it sound like a real person wrote it:\n\nIntroducing our groundbreaking new project management tool — a seamless, intuitive, and powerful platform designed to enhance team collaboration. It's not just a tool; it's a revolution in how teams work together. Our commitment to innovation ensures that every feature has been meticulously crafted to foster productivity and streamline workflows. Industry experts believe this will have a lasting impact on the productivity landscape. Here is a brief overview of our key features. I hope this helps!\n\n- **Task Management:** Effortlessly organize and track tasks with our intuitive interface\n- **Collaboration:** Foster seamless communication across your entire team\n- **Analytics:** Gain valuable insights through our comprehensive dashboard",
+      "expected_output": "Persuasive but honest product copy. Should remove the negative parallelism, rule-of-three, inline-header lists, communication artifacts ('I hope this helps'), and vague expert attributions. Should still sell the product but with specific claims instead of buzzwords.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "personal-essay-voice-preservation",
+      "prompt": "Humanize this blog post intro. It's supposed to be a personal essay but reads like AI:\n\nIn today's rapidly evolving technological landscape, the interplay between artificial intelligence and creative writing presents a fascinating tapestry of possibilities. As someone who has delved deeply into this topic, I believe it is crucial to explore the intricate ways in which AI is reshaping our understanding of creativity. It's not just about automation; it's about reimagining the very fabric of human expression. The implications are profound and far-reaching, setting the stage for a new era of creative collaboration.",
+      "expected_output": "Should sound like an actual person with opinions about AI and writing. Should have a specific perspective rather than vague gestures at importance. The 'I' voice should feel genuine, not performative. AI vocabulary (landscape, interplay, tapestry, delve, intricate, crucial) should be replaced with plain language.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "technical-docs-structure-preserved",
+      "prompt": "Humanize this technical documentation. Keep the structure useful but remove AI patterns:\n\n## Getting Started With The Authentication API\n\nOur authentication API serves as a robust and comprehensive solution for securing your applications. It features a seamless integration process that ensures developers can get up and running quickly.\n\n### Key Features:\n\n- **OAuth 2.0 Support:** Our platform boasts full OAuth 2.0 compliance, showcasing our commitment to industry standards\n- **Token Management:** The API offers sophisticated token lifecycle management, enhancing security across your application\n- **Rate Limiting:** We provide intelligent rate limiting that fosters responsible API usage\n\nAdditionally, it is important to note that all endpoints support both JSON and XML response formats. The API has the ability to handle up to 10,000 requests per second.",
+      "expected_output": "Clean technical docs with useful structure preserved. Title case heading fixed. Inline-header list converted to clearer format. Filler phrases removed. 'Serves as', 'boasts', 'showcasing', 'commitment to', 'enhancing', 'fosters' replaced with direct language. Concrete specs (10k req/s, JSON/XML) kept prominent.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "name": "business-email-desycophant",
+      "prompt": "Humanize this business email:\n\nGreat question! You're absolutely right that this is a complex topic. That's an excellent point about the Q3 timeline.\n\nI wanted to provide a comprehensive overview of our strategic initiatives. Our team has been working diligently to align our objectives with the broader organizational goals. The key takeaways from last week's meeting are:\n\n- **Budget Allocation:** We've secured crucial funding to enhance our capabilities\n- **Timeline:** The pivotal Q3 deadline remains on track, underscoring our team's commitment\n- **Resources:** We're fostering cross-functional collaboration to ensure seamless execution\n\nDespite facing several challenges, the future looks bright. Exciting times lie ahead as we continue our journey toward excellence. Would you like me to elaborate on any of these points?",
+      "expected_output": "Professional, direct email. Sycophantic opener removed. Vague business-speak replaced with specifics. Generic positive conclusion replaced with concrete next steps. Communication artifacts ('Would you like...') removed. Should read like a competent colleague, not a chatbot.",
+      "files": []
+    }
+  ]
+}

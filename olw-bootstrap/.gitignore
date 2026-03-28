@@ -1,0 +1,12 @@
+# Test output directories
+/tmp/
+test-output/
+*.test.hml
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,32 @@
+{
+  "name": "olw-bootstrap",
+  "version": "1.1.0",
+  "description": "Generate comprehensive Operational Language Wiki systems from domain knowledge",
+  "author": "Claude",
+  "tags": ["documentation", "wiki", "knowledge-management", "domain-modeling"],
+  "capabilities": [
+    "Analyzes domain context and institutional knowledge",
+    "Creates interconnected wiki page systems",
+    "Generates WikiPage v1 HML files",
+    "Establishes semantic cross-linking",
+    "Provides comprehensive domain coverage"
+  ],
+  "inputs": {
+    "domain_context": {
+      "description": "Path to config/docs or direct domain description",
+      "required": true,
+      "type": "string"
+    },
+    "output_directory": {
+      "description": "Directory path for wiki HML files",
+      "required": true,
+      "type": "string",
+      "default": "globals/metadata/wiki/"
+    }
+  },
+  "examples": [
+    "Use olw-bootstrap to create a wiki from globals/metadata/promptql-config.hml",
+    "Build a wiki system for our healthcare domain documented in docs/domain-model.md",
+    "Generate OLW pages from the system instructions in config.hml"
+  ]
+}

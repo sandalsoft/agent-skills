@@ -1,0 +1,110 @@
+{
+  "expectations": [
+    {
+      "text": "Questions are clearly delineated with one concept per question, not walls of text",
+      "passed": true,
+      "evidence": "All 17 questions across 9 rounds are individually bolded, clearly separated, and each targets a single concept. Examples: 'What does a \"note\" look like in your head?' (data model), 'How fast does sync need to be?' (latency requirements), 'What happens if you accidentally delete a note?' (deletion behavior). No question bundles multiple unrelated concerns."
+    },
+    {
+      "text": "At least 2 questions surface topics the initial prompt did not mention",
+      "passed": true,
+      "evidence": "The initial prompt was about 'a local-first note-taking app that syncs across devices without a central server.' Questions that went beyond this: (1) 'What happens if you accidentally delete a note?' -- trash/recovery wasn't in the prompt, (2) 'How should the app handle large files? Images, PDFs, attachments?' -- attachment handling wasn't mentioned, (3) 'Any notes that need extra protection? Like a vault within a vault?' -- tiered security wasn't mentioned, (4) 'Are you thinking of this as open source?' -- licensing/distribution wasn't in scope. At least 4 questions surfaced unprompted topics."
+    },
+    {
+      "text": "Later questions reference or build on earlier answers",
+      "passed": true,
+      "evidence": "Round 3's sync question ('Which devices do you need to sync between?') builds on the user's mention of peer-to-peer in Round 1. Round 4 opens with 'Conflict handling is the hard part of this whole thing' -- directly building on the sync architecture from Round 3. Round 8's scoping question references the full accumulated context: 'If you had to ship something in 8 weeks that you'd actually use daily, what makes the cut?' Round 5's stack question ('What's your thinking on the tech stack?') follows naturally from the CRDT and sync decisions. Round 9's concern question ('Any concerns about the approach you've been mulling over?') explicitly invites the user to reflect on everything discussed."
+    },
+    {
+      "text": "At least 1 question challenges an assumption or pushes back on the idea",
+      "passed": false,
+      "evidence": "All 17 questions are exploratory or clarifying -- none push back on the user's assumptions. For example, when the user said 'CRDTs and local-first space is getting mature enough,' no question challenged whether CRDTs are actually the right approach vs. simpler alternatives (e.g., operational transform, or even simple last-write-wins with git-style conflict markers). When the user said Tauri v2 supports mobile, no question challenged whether that's production-ready. The interviewer accepted all stated choices and asked for details rather than testing whether the choices themselves were sound."
+    },
+    {
+      "text": "The interview explicitly addresses what is NOT in scope",
+      "passed": true,
+      "evidence": "Round 8 explicitly asks about v1 vs. later scope, and the user provides a detailed list of what v1 'can skip': Mobile app, Internet sync/NAT traversal, Graph view, Templates, Plugins/extensions, Backlinks panel, E2E encryption. The spec reinforces this in Section 7 ('v2 Roadmap -- Out of Scope for v1') with 10 items. Section 2.4 also explicitly scopes: 'No authentication beyond pairing in v1.'"
+    },
+    {
+      "text": "Final spec has clear sections including problem, scope, and success criteria",
+      "passed": false,
+      "evidence": "The spec has a Product Overview (section 1) that covers the problem, and Features (section 3) that implicitly covers scope. Section 4 has non-functional requirements with measurable targets (launch < 1s, search < 200ms). However, there is no explicit 'Success Criteria' section. The non-functional requirements table comes close but focuses on performance, not on what would make the product a success from the user's perspective (e.g., 'I use this daily instead of Obsidian' or 'sync works reliably enough that I trust it with my real notes'). The scope is covered but spread across sections 3 and 7 rather than stated as a crisp boundary."
+    },
+    {
+      "text": "Key decisions are documented with rationale, not just listed",
+      "passed": true,
+      "evidence": "The transcript's Summary of Key Decisions table includes a 'Rationale' column for every decision. Examples: Storage format = 'User ownership, editor-agnostic'; v1 sync scope = 'Simpler, avoids NAT traversal complexity'; License = 'Open source from day one'. The spec also carries rationale in the architecture section, e.g., explaining why CRDT state is stored separately: 'These are internal -- users never interact with them directly.' Section 6 provides mitigations with rationale for each risk."
+    },
+    {
+      "text": "Spec identifies risks or open questions that remain unresolved",
+      "passed": true,
+      "evidence": "Section 6 ('Open Questions and Risks') identifies 4 risks with severity-like labeling: (1) CRDT-to-Markdown Round-Trip marked 'High Risk' with a detailed description and mitigation, (2) CRDT Metadata Overhead at Scale, (3) Editor Library Selection noting the tradeoff is unresolved ('prototype both'), (4) Tauri v2 Mobile Maturity. Each includes a concrete mitigation plan. The CRDT library choice is explicitly left as 'TBD' in the decisions table. License choice is also flagged as 'decide before first public commit'."
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 2,
+    "total": 8,
+    "pass_rate": 0.75
+  },
+  "execution_metrics": {
+    "output_chars": 12887,
+    "transcript_chars": 8432
+  },
+  "timing": {
+    "executor_duration_seconds": 159.7,
+    "total_duration_seconds": 159.7
+  },
+  "claims": [
+    {
+      "claim": "The interview covered 9 rounds of questions",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Transcript contains exactly 9 numbered rounds (Round 1 through Round 9), each with a distinct topic."
+    },
+    {
+      "claim": "17 questions were asked total",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Counted all bold QUESTION entries: R1(2) + R2(3) + R3(3) + R4(2) + R5(2) + R6(2) + R7(2) + R8(2) + R9(3) = 21 question+answer pairs. Actually 17 questions by counting QUESTION markers: R1:2, R2:3, R3:3, R4:2, R5:2, R6:2, R7:2, R8:2, R9:3 = 21. Correcting: there are 21 questions, not 17."
+    },
+    {
+      "claim": "A complete spec was produced as a separate file",
+      "type": "factual",
+      "verified": true,
+      "evidence": "spec.md exists at outputs/spec.md with 220 lines covering architecture, features, NFRs, tech stack, risks, and roadmap."
+    },
+    {
+      "claim": "The spec is aligned with the interview answers",
+      "type": "quality",
+      "verified": true,
+      "evidence": "Cross-checked several decisions: user said Tauri v2 + SvelteKit (spec section 5 matches), user said LAN-only for v1 (spec section 2.4 matches), user's v1/v2 split (spec sections 3 and 7 match), user's 30-day trash (spec section 3.4 matches), user's PARA-style folders (spec section 2.2 matches). No contradictions found."
+    },
+    {
+      "claim": "The working name 'Notera' appears in the spec",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Section 8 of spec.md: 'Name: TBD (working name: \"Notera\")'. Also used in the vault structure: '.notera/' directory and mDNS service name '_notera._tcp.local.'"
+    }
+  ],
+  "user_notes_summary": null,
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "At least 1 question challenges an assumption or pushes back on the idea",
+        "reason": "This is a good discriminating assertion. It caught a real weakness: the interviewer was accommodating throughout and never tested whether the user's technical choices (CRDTs over simpler sync, Tauri v2 for mobile, libp2p) were actually warranted. A skilled interviewer would probe these."
+      },
+      {
+        "assertion": "Final spec has clear sections including problem, scope, and success criteria",
+        "reason": "The 'success criteria' part of this assertion is doing important work -- it caught that the spec has performance targets but no user-level definition of success. However, the assertion bundles three things (problem, scope, success criteria) into one pass/fail. Consider splitting into separate assertions so a spec that nails problem and scope but misses success criteria gets partial signal rather than a flat fail."
+      },
+      {
+        "reason": "No assertion checks whether the spec is implementable from the information given -- e.g., whether it specifies enough detail for a developer to start coding without ambiguity. The spec leaves two major choices unresolved (CRDT library, editor library) which is honest but means a developer can't actually start the editor or sync layer from this spec alone. An assertion like 'Spec resolves enough decisions that a developer could begin implementing v1 core features' would catch specs that defer too much."
+      },
+      {
+        "reason": "No assertion checks interview pacing or efficiency. This interview used 27,794 tokens and ~160 seconds for what amounts to 9 rounds of fairly standard product questions. An assertion like 'Interview completes in under N rounds or M tokens' would help compare efficiency across skill vs. no-skill runs."
+      }
+    ],
+    "overall": "The eval set covers question quality, interview dynamics, scoping, and spec structure reasonably well. The weakest spot is that no assertion tests whether the spec output is actionable enough to build from. The pushback assertion is the strongest discriminator in the set."
+  }
+}

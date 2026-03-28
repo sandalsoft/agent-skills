@@ -1,0 +1,101 @@
+investor_id,investor_type,investor_name,investor_subtype,country,primary_broker_id,account_number,custodian_bank,created_at
+28b5f756-77cc-4218-b9a8-80de16af0b5c,institutional,Vanguard Asset Management - Portfolio I,mutual_fund,US,f6811af4-b7dd-45ac-8d04-a0b848838bbd,INV399085574,State Street Bank,2024-08-24T07:55:59
+f3c90b20-0cc7-4bf6-9714-8b2e74345ee8,institutional,BlackRock Fund Advisors - Portfolio II,hedge_fund,US,50c074e7-06ce-44bb-9816-81416263e8e5,INV997677788,Northern Trust,2024-01-08T02:59:48
+029101f6-ea50-4819-a149-f8b1159c6869,institutional,State Street Global - Fund B,insurance,GB,6de90c40-f135-4812-adba-2f2325204007,INV329509408,Sumitomo Mitsui Trust Bank,2024-07-24T01:10:24
+a3e8db61-731d-43d9-b661-01c2ea5e9240,institutional,Fidelity Management - Portfolio I,pension_fund,US,1123747e-adef-48b6-9076-c35d0eaea818,INV406284028,Citi Global Custody,2024-08-04T22:46:50
+d952d0e6-44ac-4d53-95d2-6d9b7cffaa49,institutional,T. Rowe Price - Portfolio I,mutual_fund,US,46e50284-1f79-4347-ba2b-6779013e2f0b,INV333754555,JP Morgan Chase Bank,2024-01-30T18:47:34
+3c524f16-eff4-488e-9d3e-e4c7b0a2fe8a,institutional,Wellington Management - Fund C,hedge_fund,US,50c074e7-06ce-44bb-9816-81416263e8e5,INV611947770,Northern Trust,2024-09-14T16:10:03
+06766212-8d34-4490-9962-e96f0d3ccb5c,institutional,Capital Group - Fund A,mutual_fund,DE,9b0ea74e-39f3-4eb9-a49c-f97a6db45a49,INV172972420,Mizuho Trust & Banking,2024-12-11T07:25:07
+5fee9298-f592-4799-93c8-740bd27294bc,institutional,Dimensional Fund Advisors - Portfolio II,mutual_fund,FR,41ecd9b0-b653-4598-b288-32f8ba471a2d,INV142672287,Mizuho Trust & Banking,2024-11-13T02:26:42
+ca985471-2735-4384-b563-9201ff130f56,institutional,Northern Trust - Portfolio II,pension_fund,US,1123747e-adef-48b6-9076-c35d0eaea818,INV319321646,JP Morgan Chase Bank,2024-12-08T22:20:15
+d32cbdcf-ba88-4084-a86c-0edb63fe8be6,institutional,Invesco - Fund B,pension_fund,US,865e541d-1bc8-4767-9dfc-8de2eb91918c,INV907308348,JP Morgan Chase Bank,2024-02-07T00:29:39
+dc09e215-ca5e-4495-85e4-60323e85c63b,institutional,Franklin Templeton - Fund A,hedge_fund,DE,41ecd9b0-b653-4598-b288-32f8ba471a2d,INV643189555,Clearstream Banking,2024-05-15T04:59:22
+306e1a99-9eca-40f0-aed3-640e050e6ebb,institutional,Alliance Bernstein - Fund B,pension_fund,FR,79ec2ccc-beff-411c-b42b-5b9e9c82d8cc,INV570497096,Clearstream Banking,2024-10-05T22:19:39
+287cb7f6-f62c-4a6a-80ca-5ff0f837642e,institutional,Prudential Financial - Portfolio II,hedge_fund,DE,41ecd9b0-b653-4598-b288-32f8ba471a2d,INV812308209,SIX SIS,2024-02-23T04:16:07
+0e2aab8d-9300-4ff4-b9c1-a15d2f4d2c2e,institutional,TIAA-CREF - Portfolio II,mutual_fund,FR,79ec2ccc-beff-411c-b42b-5b9e9c82d8cc,INV749431082,SIX SIS,2024-04-17T22:21:13
+edccfbba-fbba-4fb0-b65c-df5f940078dd,institutional,Principal Financial - Fund C,asset_manager,JP,fe125fc6-48cd-44c0-a96d-40f329e420e0,INV154544899,SIX SIS,2024-02-17T20:27:53
+f796d4b1-d194-419e-b6cd-cd2489f137a9,retail,John Garcia,individual,US,2eb13092-76e2-45d5-9d29-6963b8e57e8e,RTL784095277,,2024-03-23T23:28:35
+005cf9f5-331f-459a-b814-9730e4b268d9,retail,John Johnson,individual,JP,2e9e2433-834b-467f-9663-9731cb4a3b2a,RTL685823118,Clearstream Banking,2024-07-08T18:35:09
+f30e7e87-306c-4615-9c11-508f703b56f2,retail,John Jones,individual,US,cc1a25bd-e091-4a53-9fda-198883c60b11,RTL484194737,BNY Mellon,2024-05-07T21:06:22
+ec9d19c5-da5c-4e75-a54c-e8be16527c17,retail,Robert Williams,individual,JP,3eabb35b-3c03-49d6-83b3-2488c912b1c0,RTL958872154,,2024-07-30T00:11:47
+0ce43015-53d4-442a-a01a-35383a2fb682,retail,Robert Brown,individual,FR,79ec2ccc-beff-411c-b42b-5b9e9c82d8cc,RTL945436943,,2024-07-14T01:54:30
+5b8f6b28-d3ad-4723-8fc9-1007118211c6,retail,Mary Garcia,individual,US,25d1904e-fcf1-4189-8dca-62bc314332d1,RTL339362341,State Street Bank,2024-04-08T12:21:17
+425bed78-b820-4c6d-bcda-fc74e20acd1d,retail,David Garcia,individual,GB,41ecd9b0-b653-4598-b288-32f8ba471a2d,RTL829627019,,2024-10-01T10:01:07
+9a1f3e6d-5111-44ed-ab13-c215bdf1b047,retail,David Williams,individual,GB,41ecd9b0-b653-4598-b288-32f8ba471a2d,RTL141078352,SIX SIS,2024-08-10T11:46:50
+6a2af424-ff15-4c44-adb8-cac87282d813,retail,Jane Miller,individual,US,1123747e-adef-48b6-9076-c35d0eaea818,RTL304095531,Northern Trust,2024-12-28T13:00:33
+8335621c-4c8c-43c0-87bf-7563ec85b446,retail,Sarah Garcia,individual,FR,6de90c40-f135-4812-adba-2f2325204007,RTL813219781,,2024-11-15T10:42:54
+99891f09-b0b7-4b80-897e-647c4665e6f6,retail,David Jones,individual,US,188981e5-f3de-478f-ab1e-6450ca142e7f,RTL450236225,,2024-05-31T17:08:12
+e3be3c59-ac1e-4717-9b5d-277c40ecbdd4,retail,Robert Williams,individual,US,9b2558d6-49eb-4eff-83bc-fa26a134d140,RTL423142470,,2024-01-01T09:18:13
+f44665ec-db32-45c7-b41d-ee5edb85c687,retail,Lisa Davis,individual,US,865e541d-1bc8-4767-9dfc-8de2eb91918c,RTL825449223,Citi Global Custody,2024-08-30T23:10:42
+ac1ea8d0-db05-4552-909f-5f42877e4d03,retail,Lisa Johnson,individual,US,30f2ba30-409a-40bb-8e4a-01bbebce4001,RTL822408848,,2024-04-11T04:01:02
+f999355b-f479-46fe-b32c-4bda5caadd5c,retail,Mary Johnson,individual,US,865e541d-1bc8-4767-9dfc-8de2eb91918c,RTL776205431,,2024-12-22T12:31:25
+9a85a2ee-b716-44c1-a0f9-1d11f7e7952a,retail,John Johnson,individual,US,2eb13092-76e2-45d5-9d29-6963b8e57e8e,RTL334978881,Citi Global Custody,2024-12-22T16:29:03
+a9a3ee60-3491-4d11-bedc-ecd0ff5e136b,retail,Jane Davis,individual,US,08ec4439-4afe-4e8b-b8bf-953e0812b040,RTL816806128,,2024-10-13T19:20:48
+513af642-1013-4214-8dba-1223db4dd835,retail,Robert Davis,individual,FR,d1b6726f-786f-4e8f-ad65-2e422e01ccf5,RTL583258726,Sumitomo Mitsui Trust Bank,2024-05-06T20:17:49
+81919da2-b958-4bd9-abf7-02afedc10856,retail,Mary Brown,individual,JP,bc8de54c-af0d-4dd4-9c3a-b5e34421a5c3,RTL183197117,,2024-04-30T08:21:20
+86cbe465-2cdf-4302-8f59-1c23fc07b265,retail,Jane Williams,individual,FR,d1b6726f-786f-4e8f-ad65-2e422e01ccf5,RTL511281012,,2024-12-27T06:04:26
+2e6ae1e0-5b6a-4abf-9234-deb059697813,retail,Mary Miller,individual,US,50c074e7-06ce-44bb-9816-81416263e8e5,RTL994310083,,2024-10-26T22:01:54
+3eac0280-2d6b-4792-90ec-0e36d7e5b7c8,retail,Robert Davis,individual,FR,9b0ea74e-39f3-4eb9-a49c-f97a6db45a49,RTL420632895,,2024-08-02T17:47:47
+b8e0a8ea-0362-4a6d-a193-8edfd45f93fe,retail,Sarah Davis,individual,US,46e50284-1f79-4347-ba2b-6779013e2f0b,RTL567975319,,2024-07-18T10:42:43
+af0e147b-601f-4113-b386-888a96a99a5a,retail,Michael Davis,individual,JP,3eabb35b-3c03-49d6-83b3-2488c912b1c0,RTL673510887,Mizuho Trust & Banking,2024-07-20T18:36:42
+7b7306e9-52c4-4864-b1e7-60e85ec30ea0,retail,Robert Williams,individual,US,30f2ba30-409a-40bb-8e4a-01bbebce4001,RTL295130056,Citi Global Custody,2024-07-13T10:13:29
+b894fff4-0dd0-45ee-a772-6ef174f12ab4,retail,Robert Jones,individual,US,2eb13092-76e2-45d5-9d29-6963b8e57e8e,RTL370874491,,2024-08-28T00:47:34
+48ab9ca8-5f92-4096-a26a-69862fdebe80,retail,Lisa Brown,individual,US,188981e5-f3de-478f-ab1e-6450ca142e7f,RTL938842599,,2024-01-21T00:15:12
+586ea45f-9af5-4b28-b3e2-b8c4fc95480a,retail,Michael Brown,individual,GB,d1b6726f-786f-4e8f-ad65-2e422e01ccf5,RTL818825964,Sumitomo Mitsui Trust Bank,2024-04-21T14:44:16
+619a5176-6164-4d29-94b9-9453f2170281,retail,Michael Johnson,individual,JP,3eabb35b-3c03-49d6-83b3-2488c912b1c0,RTL216070149,,2024-06-08T18:43:58
+78d55d29-75c9-43cb-8187-8e21be094880,retail,Robert Brown,individual,DE,9b0ea74e-39f3-4eb9-a49c-f97a6db45a49,RTL841541582,,2024-05-04T03:44:49
+b67282bb-5adf-4718-9d37-6a82e69c7fc1,retail,Jane Smith,individual,US,cc1a25bd-e091-4a53-9fda-198883c60b11,RTL559967386,,2024-02-05T16:41:21
+5d8b9b59-0ebf-4527-9556-346f11cf186b,retail,Robert Davis,individual,US,f904b42a-45f0-489c-ae47-494d2e593885,RTL488896443,,2024-08-23T22:09:27
+6e593655-44e5-4548-ad84-77bdbc732130,retail,David Davis,individual,US,865e541d-1bc8-4767-9dfc-8de2eb91918c,RTL986625773,,2024-05-17T10:54:15
+22b377b2-2af0-4c98-ada6-20dafdc6a9c4,retail,Jane Jones,individual,GB,6de90c40-f135-4812-adba-2f2325204007,RTL905817775,,2024-11-08T21:24:21
+3151f20e-e86f-4957-b2ba-010c6ed9b503,retail,Lisa Williams,individual,US,865e541d-1bc8-4767-9dfc-8de2eb91918c,RTL480990401,,2024-06-23T08:56:38
+077ad752-d9fa-48ce-8331-756450ce1ae8,retail,David Smith,individual,JP,1ea13b3a-b518-488c-b749-c28af0130643,RTL191926217,Clearstream Banking,2024-07-27T15:35:48
+c35bd4f0-0284-400f-a2f9-fcc243e833d8,retail,Mary Davis,individual,US,865e541d-1bc8-4767-9dfc-8de2eb91918c,RTL199915275,BNY Mellon,2024-07-26T22:15:19
+8e23f632-2bf5-46e6-8a5e-94ddf93ae54e,retail,Lisa Davis,individual,JP,1ea13b3a-b518-488c-b749-c28af0130643,RTL469106688,,2024-10-08T10:22:44
+abf3d374-75d5-40f4-b027-a5b10d446eff,retail,David Jones,individual,US,46e50284-1f79-4347-ba2b-6779013e2f0b,RTL874473159,BNY Mellon,2024-03-02T23:34:48
+953b5129-1c24-40f9-a763-28c7dffe14aa,retail,Sarah Brown,individual,JP,fe125fc6-48cd-44c0-a96d-40f329e420e0,RTL878017216,,2024-09-25T19:18:06
+aaed6e57-951e-4308-b9d0-eed6611d2749,retail,David Brown,individual,GB,79ec2ccc-beff-411c-b42b-5b9e9c82d8cc,RTL424557359,Clearstream Banking,2024-09-30T04:17:02
+35b6d3d9-3750-40b0-a798-7c5cab5d4af0,retail,David Williams,individual,DE,6de90c40-f135-4812-adba-2f2325204007,RTL113169872,,2024-08-28T15:28:21
+d5a070e3-611f-4f0a-bd24-dd2f837f060b,retail,John Jones,individual,US,30f2ba30-409a-40bb-8e4a-01bbebce4001,RTL222500131,,2024-07-24T15:04:36
+fc606292-9d79-447b-9459-b7b7bd1087ae,retail,John Williams,individual,US,08ec4439-4afe-4e8b-b8bf-953e0812b040,RTL426240903,Northern Trust,2024-05-07T03:35:48
+8c8b409e-21b1-4d21-80bf-5aad9593afb1,retail,Sarah Miller,individual,US,865e541d-1bc8-4767-9dfc-8de2eb91918c,RTL419280490,,2024-08-07T09:36:39
+600b909a-317f-4180-b21e-611f2e905d78,retail,Jane Brown,individual,US,188981e5-f3de-478f-ab1e-6450ca142e7f,RTL384161612,,2024-03-21T07:11:35
+a92acbb3-576f-48d5-a394-ebaf8cd438aa,retail,John Miller,individual,US,865e541d-1bc8-4767-9dfc-8de2eb91918c,RTL604564682,Northern Trust,2024-04-28T09:45:18
+8b5fc02f-e9df-499a-98f5-d1eca076ceaa,retail,Mary Johnson,individual,JP,3eabb35b-3c03-49d6-83b3-2488c912b1c0,RTL945923902,,2024-10-28T21:51:59
+7f59a79a-28f8-4a08-b6a3-5dbc9ac6d3ac,retail,Jane Brown,individual,US,188981e5-f3de-478f-ab1e-6450ca142e7f,RTL385220694,,2024-02-06T01:10:50
+8ec445ac-e261-4e5c-af5e-497374666a4f,retail,David Davis,individual,US,f904b42a-45f0-489c-ae47-494d2e593885,RTL839462365,,2024-07-25T08:32:34
+d209e1f6-3e9a-41dd-9ce3-672d4612b5eb,retail,Jane Smith,individual,US,1123747e-adef-48b6-9076-c35d0eaea818,RTL888699799,,2024-05-08T00:05:14
+217524c9-e83a-45e5-8f8c-da411c831062,retail,John Jones,individual,DE,41ecd9b0-b653-4598-b288-32f8ba471a2d,RTL919382051,,2024-08-28T16:41:28
+efb96544-276d-45cf-9d7c-e1a7295b08db,retail,Michael Miller,individual,FR,6de90c40-f135-4812-adba-2f2325204007,RTL604669821,,2024-06-19T10:42:06
+01c4abac-bbec-4d8e-84fc-eda692528f47,retail,Lisa Miller,individual,GB,6de90c40-f135-4812-adba-2f2325204007,RTL811443654,,2024-10-08T01:29:05
+eaf4c4d4-c92c-474c-9fc7-15e309e2ac76,retail,Lisa Johnson,individual,US,2eb13092-76e2-45d5-9d29-6963b8e57e8e,RTL652543518,,2024-01-01T21:55:34
+bd87a813-4e6c-4547-ab6a-dd596467ccb3,retail,John Brown,individual,US,11d61dc2-b290-4732-868d-f8adb45555e4,RTL768548027,,2024-11-16T14:48:03
+749c0f1c-a661-4a8a-8b1f-25880a0d795a,retail,Michael Jones,individual,US,865e541d-1bc8-4767-9dfc-8de2eb91918c,RTL230380269,Citi Global Custody,2024-11-18T19:51:15
+b89895d6-f151-4445-a2fe-5dfb6bb3a29d,retail,David Smith,individual,JP,1ea13b3a-b518-488c-b749-c28af0130643,RTL200082623,Sumitomo Mitsui Trust Bank,2024-02-28T14:07:41
+d8eeb664-37e4-42c4-b56e-92a0d213ceb4,retail,Mary Jones,individual,GB,41ecd9b0-b653-4598-b288-32f8ba471a2d,RTL546129354,,2024-08-29T07:29:35
+a762a44f-4bbd-40a9-b438-1ad9045f4181,retail,Sarah Williams,individual,US,30f2ba30-409a-40bb-8e4a-01bbebce4001,RTL396618390,,2024-07-31T10:59:50
+e95b0481-0dc3-4fc1-892d-5ab95e0d46c1,retail,John Jones,individual,US,33f5121b-4b6d-46d7-b118-c95e870d0604,RTL999232921,,2024-12-03T15:55:09
+156f9cf7-7296-4fa1-bff6-defcd1a7ac3d,retail,Mary Garcia,individual,US,cc1a25bd-e091-4a53-9fda-198883c60b11,RTL919128302,,2024-08-21T10:55:12
+725ff938-9249-4db0-8d3d-916435d4991d,retail,Sarah Miller,individual,DE,d1b6726f-786f-4e8f-ad65-2e422e01ccf5,RTL146865930,,2024-08-30T22:58:51
+478a4336-d88f-4d3b-98db-1f6b9df7b7eb,retail,Michael Davis,individual,US,50c074e7-06ce-44bb-9816-81416263e8e5,RTL639331014,,2024-06-18T03:55:54
+da569795-e5b6-4f3d-9bf0-0158e508239a,retail,Mary Smith,individual,US,33f5121b-4b6d-46d7-b118-c95e870d0604,RTL540211187,,2024-03-20T02:30:50
+d68ed629-05bb-4a7c-8d99-dde7957a54fd,retail,Lisa Miller,individual,DE,9b0ea74e-39f3-4eb9-a49c-f97a6db45a49,RTL824085842,,2024-07-13T10:40:45
+c70c5aff-a75c-4192-9cd5-89611270bb83,retail,Mary Smith,individual,FR,41ecd9b0-b653-4598-b288-32f8ba471a2d,RTL352082631,,2024-05-27T07:47:05
+153be59c-4802-4f4c-ac93-1fd5a2a2dd7f,retail,Jane Johnson,individual,US,865e541d-1bc8-4767-9dfc-8de2eb91918c,RTL845178074,State Street Bank,2024-01-15T01:20:50
+7f228b67-2d2b-4281-99f2-2d32881d1379,retail,Lisa Garcia,individual,US,f6811af4-b7dd-45ac-8d04-a0b848838bbd,RTL362204999,,2024-10-16T21:50:11
+08988618-7890-48cf-b3c1-b9451c7edb92,retail,Jane Miller,individual,US,9b2558d6-49eb-4eff-83bc-fa26a134d140,RTL634366139,,2024-03-14T07:29:40
+b00e47d6-3813-4e68-bd9d-82d4484c0de5,retail,David Smith,individual,US,1123747e-adef-48b6-9076-c35d0eaea818,RTL408842146,,2024-03-21T02:28:22
+bb4df39d-b96f-41a4-9537-1ce446073ed2,retail,David Miller,individual,DE,79ec2ccc-beff-411c-b42b-5b9e9c82d8cc,RTL424400672,Sumitomo Mitsui Trust Bank,2024-07-15T15:06:15
+de23df79-cc74-488c-af1f-a6d6009dfd43,retail,Lisa Jones,individual,US,33f5121b-4b6d-46d7-b118-c95e870d0604,RTL123557463,,2024-12-03T12:17:00
+80728818-604f-4b08-8618-f59ba20a1cb3,retail,John Davis,individual,US,30f2ba30-409a-40bb-8e4a-01bbebce4001,RTL932945529,,2024-11-06T11:14:40
+1706c3d7-4f40-4196-afce-9c127f234567,retail,David Williams,individual,US,188981e5-f3de-478f-ab1e-6450ca142e7f,RTL773728014,,2024-06-07T14:02:37
+7f1d6bc5-35fa-481f-a4ba-9ca1ae114c99,retail,Michael Johnson,individual,US,1123747e-adef-48b6-9076-c35d0eaea818,RTL450811990,,2024-03-30T06:08:50
+ccd4fe3f-b479-48fe-8cbf-788ab53ff90a,retail,Lisa Jones,individual,US,30f2ba30-409a-40bb-8e4a-01bbebce4001,RTL375919523,,2024-09-03T09:47:55
+afb6928f-7207-47c8-b749-e5e6a975fe68,retail,Jane Davis,individual,US,f904b42a-45f0-489c-ae47-494d2e593885,RTL909763993,,2024-12-12T23:43:25
+e5275de0-e8ea-4fd9-90db-3bf57fc665ec,retail,Lisa Johnson,individual,DE,6de90c40-f135-4812-adba-2f2325204007,RTL383960237,,2024-08-20T11:43:47
+f0341e02-ef77-4dbe-abed-5a089c3592bd,retail,Robert Garcia,individual,JP,2e9e2433-834b-467f-9663-9731cb4a3b2a,RTL606244434,Clearstream Banking,2024-10-14T10:58:39
+577c2234-53b2-48ac-9219-d1638c091180,retail,Jane Davis,individual,US,1123747e-adef-48b6-9076-c35d0eaea818,RTL797115550,,2024-03-12T01:02:19
+f5cfcb94-8c85-4975-bcde-01e519404916,retail,Jane Johnson,individual,DE,d1b6726f-786f-4e8f-ad65-2e422e01ccf5,RTL245668163,,2024-07-08T21:47:44
+d1246f4c-85e5-4d43-b89e-28c02b1a0d47,retail,Robert Williams,individual,FR,6de90c40-f135-4812-adba-2f2325204007,RTL995171130,,2024-07-27T08:02:44
+e346a191-01c0-4066-aecb-1190fb653a06,retail,Mary Davis,individual,US,46e50284-1f79-4347-ba2b-6779013e2f0b,RTL206681214,,2024-07-07T17:57:41
+53769048-2a6b-4878-b110-1ad3876373c9,retail,Robert Jones,individual,US,46e50284-1f79-4347-ba2b-6779013e2f0b,RTL984968439,,2024-12-05T06:41:40

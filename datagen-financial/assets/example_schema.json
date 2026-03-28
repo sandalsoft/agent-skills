@@ -1,0 +1,152 @@
+{
+  "schema_version": "1.0",
+  "description": "Example credit card processing network schema",
+  "tables": {
+    "cardholders": {
+      "description": "Credit card account holders",
+      "columns": {
+        "cardholder_id": {"type": "uuid", "primary_key": true},
+        "customer_type": {"type": "varchar(20)", "nullable": false, "values": ["retail", "corporate"], "description": "Retail (individual) or corporate (business) customer"},
+        "first_name": {"type": "varchar(100)", "nullable": false},
+        "last_name": {"type": "varchar(100)", "nullable": false},
+        "email": {"type": "varchar(255)", "nullable": false, "unique": true},
+        "phone": {"type": "varchar(20)", "nullable": true},
+        "address_line1": {"type": "varchar(255)", "nullable": false},
+        "address_line2": {"type": "varchar(255)", "nullable": true},
+        "city": {"type": "varchar(100)", "nullable": false},
+        "state": {"type": "char(2)", "nullable": false},
+        "zip_code": {"type": "varchar(10)", "nullable": false},
+        "date_of_birth": {"type": "date", "nullable": false, "description": "Age range 18-85 years from current date"},
+        "created_at": {"type": "timestamp", "nullable": false, "default": "now()"}
+      },
+      "row_count": 1000000
+    },
+    "cards": {
+      "description": "Credit cards issued to cardholders",
+      "columns": {
+        "card_id": {"type": "uuid", "primary_key": true},
+        "cardholder_id": {"type": "uuid", "nullable": false, "foreign_key": "cardholders.cardholder_id"},
+        "card_number": {"type": "varchar(19)", "nullable": false, "unique": true},
+        "card_network": {"type": "varchar(20)", "nullable": false, "values": ["Visa", "Mastercard", "Amex", "Discover"]},
+        "expiration_month": {"type": "smallint", "nullable": false},
+        "expiration_year": {"type": "smallint", "nullable": false},
+        "cvv": {"type": "char(3)", "nullable": false},
+        "credit_limit": {"type": "numeric(10,2)", "nullable": false},
+        "status": {"type": "varchar(20)", "nullable": false, "values": ["active", "suspended", "closed"], "default": "active"},
+        "issued_at": {"type": "timestamp", "nullable": false}
+      },
+      "row_count": 2500000
+    },
+    "merchants": {
+      "description": "Merchant locations accepting card payments",
+      "columns": {
+        "merchant_id": {"type": "uuid", "primary_key": true},
+        "merchant_name": {"type": "varchar(255)", "nullable": false},
+        "mcc": {"type": "char(4)", "nullable": false},
+        "category": {"type": "varchar(100)", "nullable": false},
+        "address": {"type": "varchar(255)", "nullable": false},
+        "city": {"type": "varchar(100)", "nullable": false},
+        "state": {"type": "char(2)", "nullable": false},
+        "zip_code": {"type": "varchar(10)", "nullable": false},
+        "latitude": {"type": "numeric(10,7)", "nullable": false},
+        "longitude": {"type": "numeric(10,7)", "nullable": false},
+        "acquirer_id": {"type": "uuid", "nullable": false, "foreign_key": "acquirers.acquirer_id"},
+        "created_at": {"type": "timestamp", "nullable": false}
+      },
+      "row_count": 500000
+    },
+    "acquirers": {
+      "description": "Financial institutions that process merchant transactions",
+      "columns": {
+        "acquirer_id": {"type": "uuid", "primary_key": true},
+        "acquirer_name": {"type": "varchar(255)", "nullable": false},
+        "acquirer_bin": {"type": "char(6)", "nullable": false, "unique": true},
+        "contact_email": {"type": "varchar(255)", "nullable": false},
+        "created_at": {"type": "timestamp", "nullable": false}
+      },
+      "row_count": 50
+    },
+    "issuers": {
+      "description": "Financial institutions that issue credit cards",
+      "columns": {
+        "issuer_id": {"type": "uuid", "primary_key": true},
+        "issuer_name": {"type": "varchar(255)", "nullable": false},
+        "issuer_bin": {"type": "char(6)", "nullable": false, "unique": true},
+        "contact_email": {"type": "varchar(255)", "nullable": false},
+        "created_at": {"type": "timestamp", "nullable": false}
+      },
+      "row_count": 100
+    },
+    "authorization_requests": {
+      "description": "Real-time authorization requests at POS",
+      "columns": {
+        "auth_id": {"type": "uuid", "primary_key": true},
+        "transaction_id": {"type": "uuid", "nullable": false, "unique": true},
+        "card_id": {"type": "uuid", "nullable": false, "foreign_key": "cards.card_id"},
+        "merchant_id": {"type": "uuid", "nullable": false, "foreign_key": "merchants.merchant_id"},
+        "transaction_amount": {"type": "numeric(10,2)", "nullable": false},
+        "transaction_currency": {"type": "char(3)", "nullable": false, "default": "USD"},
+        "transaction_code": {"type": "varchar(10)", "nullable": true, "description": "Missing 0.02% of the time"},
+        "pos_entry_mode": {"type": "varchar(20)", "nullable": false, "values": ["chip", "swipe", "contactless", "manual", "ecommerce"]},
+        "auth_response": {"type": "varchar(20)", "nullable": false, "values": ["approved", "declined", "referral"]},
+        "auth_code": {"type": "varchar(6)", "nullable": true},
+        "decline_reason": {"type": "varchar(100)", "nullable": true},
+        "requested_at": {"type": "timestamp", "nullable": false}
+      },
+      "row_count": 50000000
+    },
+    "clearing_records": {
+      "description": "Transaction clearing between acquirer and issuer",
+      "columns": {
+        "clearing_id": {"type": "uuid", "primary_key": true},
+        "transaction_id": {"type": "uuid", "nullable": false, "foreign_key": "authorization_requests.transaction_id"},
+        "acquirer_id": {"type": "uuid", "nullable": false, "foreign_key": "acquirers.acquirer_id"},
+        "issuer_id": {"type": "uuid", "nullable": false, "foreign_key": "issuers.issuer_id"},
+        "clearing_amount": {"type": "numeric(10,2)", "nullable": false},
+        "interchange_fee": {"type": "numeric(10,2)", "nullable": false},
+        "cleared_at": {"type": "timestamp", "nullable": false}
+      },
+      "row_count": 50000000
+    },
+    "settlement_records": {
+      "description": "Final settlement between parties",
+      "columns": {
+        "settlement_id": {"type": "uuid", "primary_key": true},
+        "transaction_id": {"type": "uuid", "nullable": false, "foreign_key": "authorization_requests.transaction_id"},
+        "clearing_id": {"type": "uuid", "nullable": false, "foreign_key": "clearing_records.clearing_id"},
+        "acquirer_settlement_amount": {"type": "numeric(10,2)", "nullable": false},
+        "issuer_settlement_amount": {"type": "numeric(10,2)", "nullable": false, "description": "MUST be higher than acquirer_settlement_amount"},
+        "network_fee": {"type": "numeric(10,2)", "nullable": false},
+        "settled_at": {"type": "timestamp", "nullable": false}
+      },
+      "row_count": 50000000
+    },
+    "reconciliation_records": {
+      "description": "Daily reconciliation batches",
+      "columns": {
+        "reconciliation_id": {"type": "uuid", "primary_key": true},
+        "batch_date": {"type": "date", "nullable": false},
+        "acquirer_id": {"type": "uuid", "nullable": false, "foreign_key": "acquirers.acquirer_id"},
+        "issuer_id": {"type": "uuid", "nullable": false, "foreign_key": "issuers.issuer_id"},
+        "transaction_count": {"type": "integer", "nullable": false},
+        "total_amount": {"type": "numeric(12,2)", "nullable": false},
+        "total_fees": {"type": "numeric(12,2)", "nullable": false},
+        "reconciled_at": {"type": "timestamp", "nullable": false}
+      },
+      "row_count": 500000
+    }
+  },
+  "temporal_constraints": {
+    "transaction_flow": {
+      "description": "Typical timing between transaction stages",
+      "authorization_to_clearing": {"min_seconds": 3600, "max_seconds": 86400, "description": "1-24 hours"},
+      "clearing_to_settlement": {"min_seconds": 7200, "max_seconds": 172800, "description": "2-48 hours"},
+      "settlement_to_reconciliation": {"min_seconds": 43200, "max_seconds": 259200, "description": "12 hours to 3 days"}
+    }
+  },
+  "data_generation_period": {
+    "start_date": "2023-01-01",
+    "end_date": "2024-12-31",
+    "description": "Generate 2 years of transaction data"
+  }
+}

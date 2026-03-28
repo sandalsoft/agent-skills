@@ -1,0 +1,147 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                          OLW BOOTSTRAP SKILL v1.0.0                          ║
+║                  Operational Language Wiki Generation System                 ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+OVERVIEW
+--------
+Automatically generates comprehensive Operational Language Wiki (OLW) systems
+from domain knowledge and institutional context. Creates interconnected wiki
+pages following WikiPage v1 specification.
+
+QUICK START
+-----------
+Use the olw-bootstrap skill to create a wiki from [source] outputting to [dir]
+
+Example:
+  Use olw-bootstrap to generate a wiki from globals/metadata/promptql-config.hml
+
+WHAT IT CREATES
+---------------
+✓ 15-25 interconnected wiki pages per domain
+✓ WikiPage v1 YAML format
+✓ Cross-linked with wiki:// protocol
+✓ Semantic aliases for AI search
+✓ Structured definitions, details, and sections
+✓ Institutional terminology consistency
+
+COVERAGE AREAS
+--------------
+1. Core Entities (1-2 pages)      - Main organization/system
+2. Classifications (2-5 pages)    - Segments, tiers, types
+3. Products/Services (2-4 pages)  - Offerings, solutions
+4. Metrics (3-6 pages)            - KPIs, calculations, rates
+5. Processes (2-4 pages)          - Operations, workflows
+6. Events/Patterns (1-3 pages)    - Cycles, triggers
+7. Strategic (2-4 pages)          - Initiatives, rules
+8. Data Concepts (2-4 pages)      - Fields, statuses
+
+INPUT OPTIONS
+-------------
+• Config files (YAML, HML, JSON)
+• Documentation (Markdown, text)
+• Direct description
+• Hybrid (file + additional context)
+
+OUTPUT FORMAT
+-------------
+kind: WikiPage
+version: v1
+definition:
+  title: "Concept Name"
+  definition: |
+    Brief definition
+  details: |
+    Expanded info with wiki://cross-links
+  aliases:
+    - "Alternative Name"
+  sections:
+    - title: "Section Name"
+      content: |
+        Detailed content
+
+KEY FEATURES
+------------
+✓ Automatic concept extraction
+✓ Relationship mapping
+✓ Cross-link generation
+✓ Alias suggestions
+✓ Calculation examples
+✓ Business context
+✓ Todo list tracking
+✓ Quality validation
+
+EXAMPLE DOMAINS
+---------------
+✓ Banking (customer segments, rates, products)
+✓ E-commerce (tiers, categories, metrics)
+✓ Healthcare (patient types, billing, care)
+✓ SaaS (subscriptions, features, support)
+✓ Supply Chain (facilities, inventory, shipping)
+
+DOCUMENTATION
+-------------
+• README.md      - Comprehensive user guide
+• EXAMPLES.md    - Five detailed examples
+• TEST.md        - Testing and validation
+• prompt.md      - Agent instructions (core logic)
+• skill.md       - Public description
+• skill.json     - Machine-readable config
+• CHANGELOG.md   - Version history
+
+FILES
+-----
+Total: 10 files
+├── skill.md          (2.0 KB) - Public description
+├── prompt.md         (8.9 KB) - Agent instructions
+├── skill.json        (1.1 KB) - Configuration
+├── README.md         (4.1 KB) - User guide
+├── EXAMPLES.md       (6.9 KB) - Usage examples
+├── TEST.md           (5.6 KB) - Testing guide
+├── CHANGELOG.md      (2.4 KB) - Version history
+├── VERSION           (6 B)    - Version number
+├── .gitignore        (86 B)   - Git exclusions
+└── SUMMARY.txt       (this file)
+
+QUALITY STANDARDS
+-----------------
+Coverage:         90%+ of input concepts
+Interconnection:  3-5 cross-links per page
+Completeness:     100% pages have definition + details
+Structure:        60%+ pages have 2+ sections
+Searchability:    70%+ pages have 2+ aliases
+
+PERFORMANCE
+-----------
+Small (5-10 concepts):    10-15 pages, 2-3 min
+Medium (15-25 concepts):  15-20 pages, 3-5 min
+Large (30+ concepts):     20-25 pages, 5-8 min
+
+INTEGRATION
+-----------
+1. Enable OLW feature in PromptQL settings
+2. Run olw-bootstrap skill to generate pages
+3. Rebuild project to load metadata
+4. Access via Wiki tab in interface
+5. Use semantic search to explore
+
+BEST PRACTICES
+--------------
+1. Provide rich, detailed domain context
+2. Use exact institutional terminology
+3. Include specific numbers and rates
+4. Explain relationships between concepts
+5. Document assumptions and business rules
+
+VERSION
+-------
+v1.0.0 - Initial Release (2025-11-04)
+
+SUPPORT
+-------
+Part of Claude Code skill ecosystem
+Location: ~/.claude/skills/olw-bootstrap/
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                    Ready to build your wiki system!                          ║
+╚══════════════════════════════════════════════════════════════════════════════╝

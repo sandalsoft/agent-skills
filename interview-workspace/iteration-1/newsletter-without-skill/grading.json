@@ -1,0 +1,104 @@
+{
+  "expectations": [
+    {
+      "text": "Questions are clearly delineated with one concept per question, not walls of text",
+      "passed": true,
+      "evidence": "All 14 questions across 7 rounds are short (1-3 sentences each), each targeting a single concept. Examples: Round 1 asks audience identity, then separately asks about their frustration. Round 3 asks target length, then separately asks about media format. No question bundles multiple unrelated concepts."
+    },
+    {
+      "text": "At least 2 questions surface topics the initial prompt did not mention",
+      "passed": true,
+      "evidence": "The initial prompt was just 'I want to start a weekly newsletter about AI tools for non-technical managers.' At least 4 questions surface topics not mentioned: (1) competitive differentiation against existing newsletters like The Neuron, Superhuman, Ben's Bites (Round 2); (2) monetization model (Round 5); (3) growth strategy for first 1,000 subscribers (Round 5); (4) tool discovery pipeline (Round 6)."
+    },
+    {
+      "text": "Later questions reference or build on earlier answers",
+      "passed": true,
+      "evidence": "Round 2, Q2 explicitly builds on the prior answer: 'So the core value prop is actionable, role-specific guidance rather than AI news. Would you cover one tool per issue in depth, or survey several?' -- this synthesizes the Round 2 Q1 answer about differentiation. Round 5 Q2 asks about growth and references 'first 1,000 subscribers' which builds on the business context established earlier. Round 6 Q2 ('What's your realistic time commitment per issue?') builds on the content structure and frequency answers from Round 3."
+    },
+    {
+      "text": "At least 1 question challenges an assumption or pushes back on the idea",
+      "passed": true,
+      "evidence": "Round 2, Q1 directly challenges viability: 'The AI newsletter space is crowded. The Neuron, Superhuman, Ben's Bites (before it wound down), TLDR AI -- there are dozens. What would make someone open yours instead of those?' This names specific competitors and forces the user to justify differentiation, which is a genuine pushback on whether the idea can work."
+    },
+    {
+      "text": "The interview explicitly addresses what is NOT in scope",
+      "passed": true,
+      "evidence": "Several scoping exclusions emerge: (1) 'No video at launch' is explicitly stated in both transcript Round 3 and spec. (2) The spec's Positioning section states 'This newsletter ignores all of that' regarding model releases, funding, benchmarks. (3) Monetization is explicitly deferred: 'Phase 1 (Months 1-6): Free. Focus entirely on audience growth.' (4) 'Not AI news. Not hype.' However, these are answers the user gave rather than the interviewer proactively asking 'what is NOT in scope?' The interviewer did ask about video vs text-only (Round 3 Q2) which surfaced the video exclusion, and the competitive differentiation question (Round 2 Q1) surfaced the news/hype exclusion."
+    },
+    {
+      "text": "Final spec has clear sections including problem, scope, and success criteria",
+      "passed": true,
+      "evidence": "The spec.md has well-structured sections: 'Concept' (captures the problem/purpose), 'Target Audience' (scopes who it's for), 'Positioning and Differentiation' (scopes content approach), 'Content Structure' with a detailed table, and an explicit 'Success Criteria' section with a table of timeframes, metrics, and targets (500 subs at 3mo, 2000 at 6mo, 5000+ at 12mo). The problem is implicit in the Concept and Positioning sections rather than having a dedicated 'Problem' heading, but the substance is there."
+    },
+    {
+      "text": "Key decisions are documented with rationale, not just listed",
+      "passed": false,
+      "evidence": "Most decisions in the spec are stated without rationale. Examples: 'No video at launch' is listed but the reason (production overhead sustainability) is only briefly parenthetical. The monetization phasing says 'Focus entirely on audience growth and content quality' but doesn't explain WHY free-first is the right call. The growth strategy lists tactics without explaining why those channels over others. The content structure table lists sections with descriptions but doesn't explain why this structure was chosen (e.g., why one deep-dive vs. multiple reviews). Compare to the transcript where the user gave rich rationale ('That's how you build trust,' 'I'd rather learn from real readers'). The spec strips most of that reasoning away, leaving declarative statements."
+    },
+    {
+      "text": "Spec identifies risks or open questions that remain unresolved",
+      "passed": false,
+      "evidence": "The spec does not have a risks or open questions section. Several unresolved items exist but are presented as TBDs rather than flagged risks: naming is 'TBD,' email platform is 'TBD,' publishing day is 'TBD based on open rate testing.' Genuine risks that went unaddressed: sustainability beyond 6 months if monetization doesn't materialize, what happens if the 30-40 tool pipeline runs dry, risk of tool companies requesting favorable coverage, whether 4-5 hours/week is realistic alongside a day job, and what happens if open rates fall below target. None of these are surfaced."
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 2,
+    "total": 8,
+    "pass_rate": 0.75
+  },
+  "execution_metrics": {
+    "output_chars": 4982,
+    "transcript_chars": 5425
+  },
+  "timing": {
+    "executor_duration_seconds": 100.3,
+    "total_duration_seconds": 100.3
+  },
+  "claims": [
+    {
+      "claim": "14 questions were asked across 7 rounds",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Counted 14 questions in the transcript: 2 per round across 7 rounds"
+    },
+    {
+      "claim": "Every tool is personally tested on a real task before being covered",
+      "type": "quality",
+      "verified": true,
+      "evidence": "User stated in Round 6: 'My plan is to actually use each tool for a real task before writing about it.' Spec editorial principles include this commitment."
+    },
+    {
+      "claim": "The spec consolidates all interview answers faithfully",
+      "type": "quality",
+      "verified": true,
+      "evidence": "Cross-checked spec sections against transcript answers. All major points from the interview appear in the spec: audience definition, content structure, voice/tone, business model phases, growth tactics, timeline, and success metrics."
+    },
+    {
+      "claim": "The interview covered the topic comprehensively",
+      "type": "quality",
+      "verified": false,
+      "evidence": "Several relevant topics were never raised: legal/compliance (CAN-SPAM, GDPR for email), tooling for authoring the newsletter itself, contingency if weekly cadence proves unsustainable, accessibility considerations, whether the author has relevant credentials or authority in AI."
+    }
+  ],
+  "user_notes_summary": null,
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "At least 2 questions surface topics the initial prompt did not mention",
+        "reason": "This is easy to pass since almost any follow-up question will surface something new from a one-sentence prompt. A stronger version would require questions that surface non-obvious topics -- things a junior interviewer would miss. The competitive landscape question (Round 2) is genuinely probing; the monetization question is obvious for any product interview."
+      },
+      {
+        "assertion": "The interview explicitly addresses what is NOT in scope",
+        "reason": "The out-of-scope items emerged incidentally from answers rather than from a deliberate scoping question. A stricter version would require the interviewer to explicitly ask 'what is NOT in scope?' or 'what should we exclude?' Consider splitting into 'interviewer asks a scoping question' vs 'spec documents exclusions.'"
+      },
+      {
+        "reason": "No assertion checks whether the interviewer asked about the user's qualifications, existing expertise, or right-to-win. This is a standard product interview gap that went uncaught. The interview never asks why this person is the right one to write this newsletter."
+      },
+      {
+        "reason": "No assertion checks the total number of questions or interview depth. 14 questions in 7 rounds is reasonable, but an interview that asked only 4 questions could still pass all current assertions."
+      }
+    ],
+    "overall": "Assertions cover interview mechanics well but lean toward surface-level checks. The two failures (rationale documentation, risks/open questions) correctly identify real gaps in the spec output. Consider adding assertions about interview depth and whether the spec is actionable enough to hand to someone else for execution."
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "skill_name": "skill-auditor",
+  "evals": [
+    {
+      "id": 1,
+      "name": "single-skill-audit-minimal",
+      "prompt": "Audit my humanizer skill at ~/.agents/skills/humanizer/",
+      "expected_output": "A complete audit report following the report template with grades for all 6 dimensions, a scorecard table, detailed findings per dimension with evidence (line counts, quoted description, file listing), and prioritized action items. Should identify specific strengths and gaps.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "portfolio-audit-batch",
+      "prompt": "Audit all my skills and tell me which ones need the most work",
+      "expected_output": "A portfolio summary table showing all discovered skills with grades across all dimensions, portfolio-wide pattern observations, and a recommended improvement order. Should discover skills in ~/.claude/skills/, ~/.agents/skills/, and ~/.claude/repo-template/skills/. Individual reports for each skill should follow the template.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "triggering-focused-audit",
+      "prompt": "I'm worried my skills aren't triggering when they should. Can you audit their descriptions and tell me which ones need better trigger phrases?",
+      "expected_output": "Should focus heavily on Dimension 2 (Description & Triggering) for each skill. Should include example queries that would and wouldn't trigger each skill, specific issues with each description, and rewritten descriptions for any that score below A. Should still cover all 6 dimensions but with extra depth on triggering.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "single-skill-no-evals-no-self-improve",
+      "prompt": "Review the d3js skill at ~/.claude/skills/d3js/ — specifically whether it has proper testing and self-improvement mechanisms",
+      "expected_output": "Should produce a full audit but highlight Dimensions 5 (Evals & Testing) and 6 (Self-Improvement). Should check for evals/ directory, test cases, self-improvement guidance, correction capture, and failure tracking. Improvement plan should include specific test cases to create and self-improvement sections to add.",
+      "files": []
+    }
+  ]
+}

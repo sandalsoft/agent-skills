@@ -1,0 +1,60 @@
+{
+  "skill_name": "qmd",
+  "evals": [
+    {
+      "id": 1,
+      "name": "basic-keyword-search",
+      "prompt": "Search my notes for anything about 'authentication'",
+      "expected_output": "Uses `qmd search 'authentication'` (BM25, not vsearch). Returns results with file paths and relevant snippets. Does not attempt vsearch or query unless keyword search returns nothing useful.",
+      "assertions": [
+        {"text": "Uses qmd search (BM25) as the first attempt", "type": "check"},
+        {"text": "Does not default to vsearch or query", "type": "check"},
+        {"text": "Includes file paths in output", "type": "check"}
+      ]
+    },
+    {
+      "id": 2,
+      "name": "semantic-fallback-when-keywords-fail",
+      "prompt": "I'm looking for notes related to login security, but I'm not sure what keywords I used. Can you find related content in my docs?",
+      "expected_output": "Tries `qmd search` first with likely keywords (login, security, auth). If results are poor or empty, falls back to `qmd vsearch` for semantic search. Warns the user about potential latency before running vsearch.",
+      "assertions": [
+        {"text": "Tries keyword search (qmd search) before semantic search", "type": "check"},
+        {"text": "Falls back to vsearch only if keyword results are insufficient", "type": "check"},
+        {"text": "Warns about potential slowness of vsearch", "type": "check"}
+      ]
+    },
+    {
+      "id": 3,
+      "name": "collection-setup-from-scratch",
+      "prompt": "I have a folder of markdown notes at ~/Documents/notes. How do I set up qmd to search them?",
+      "expected_output": "Provides the full setup: install (bun + sqlite), collection add with --mask, optional context add, embed for vector search. Includes cron schedule for keeping index fresh. Mentions that qmd embed is only needed if they want semantic search.",
+      "assertions": [
+        {"text": "Includes qmd collection add with --mask '**/*.md'", "type": "check"},
+        {"text": "Mentions qmd embed as optional for semantic search", "type": "check"},
+        {"text": "Includes PATH setup for $HOME/.bun/bin", "type": "check"},
+        {"text": "Suggests cron or periodic qmd update for freshness", "type": "check"}
+      ]
+    },
+    {
+      "id": 4,
+      "name": "retrieve-specific-document",
+      "prompt": "I know I have a note called something like 'project-plan' in my collection. Can you pull it up?",
+      "expected_output": "Uses qmd search or qmd get with a glob pattern to find and retrieve the document. Uses --full flag or qmd get to show complete content. If multiple matches, shows options and asks which one.",
+      "assertions": [
+        {"text": "Uses qmd get or qmd search with appropriate flags", "type": "check"},
+        {"text": "Retrieves full document content (--full or qmd get)", "type": "check"}
+      ]
+    },
+    {
+      "id": 5,
+      "name": "troubleshooting-no-results",
+      "prompt": "I ran qmd search but I'm getting no results. What's wrong?",
+      "expected_output": "Suggests running qmd status to check index health. If 0 documents, guides through re-indexing. Checks collection path is correct. Verifies the mask matches the file extensions. Does NOT suggest jumping to vsearch as a fix for empty keyword results from an unindexed collection.",
+      "assertions": [
+        {"text": "Suggests qmd status as first diagnostic step", "type": "check"},
+        {"text": "Checks collection path and mask configuration", "type": "check"},
+        {"text": "Does not suggest vsearch as fix for indexing problems", "type": "check"}
+      ]
+    }
+  ]
+}

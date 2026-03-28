@@ -1,0 +1,29 @@
+{
+  "skill_name": "twilio-communications",
+  "evals": [
+    {
+      "id": 1,
+      "name": "basic-sms-integration",
+      "prompt": "I need to send SMS notifications to users when their order ships. We're using Python with FastAPI. Show me how to set up Twilio for this.",
+      "expected_output": "Complete SMS sending code with E.164 validation, error handling (TwilioRestException with mapped error codes), status callbacks, and environment variable configuration. Should mention A2P 10DLC registration for US numbers. Should NOT hardcode any credentials."
+    },
+    {
+      "id": 2,
+      "name": "phone-verification-signup",
+      "prompt": "Add phone number verification to our signup flow. Users enter their phone, get a code, enter it to verify. Python backend.",
+      "expected_output": "Twilio Verify implementation with send_verification and check_verification. Should use the Verify service (not DIY OTP), handle error codes (20404, 60203), support channel fallback. Should emphasize never storing OTP codes yourself."
+    },
+    {
+      "id": 3,
+      "name": "ivr-phone-tree",
+      "prompt": "Build a simple phone tree for our company: press 1 for sales, press 2 for support, press 0 for operator. We also need voicemail if nobody answers. Python with Flask.",
+      "expected_output": "TwiML-based IVR with Gather for input, request validation decorator (X-Twilio-Signature), routing logic, no-answer fallback to voicemail with Record, and recording callback handler. Should validate all webhook requests."
+    },
+    {
+      "id": 4,
+      "name": "whatsapp-order-updates",
+      "prompt": "How do I send WhatsApp messages through Twilio? We want to send order updates to customers who've opted in.",
+      "expected_output": "WhatsApp messaging via Twilio Messages API with whatsapp: prefix, session window awareness (24-hour rule), template usage for outside-window messages, and opt-in requirements. Should warn about session window limitations."
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "skill_name": "napkin",
+  "evals": [
+    {
+      "id": 1,
+      "name": "session-start-reads-napkin",
+      "prompt": "Fix the bug in src/auth.js where login fails for users with special characters in their password",
+      "expected_output": "Before starting work, reads .claude/napkin.md (or creates it if missing). Applies any relevant napkin entries silently. Does NOT announce 'I read the napkin.' Proceeds to fix the bug with napkin knowledge applied.",
+      "assertions": [
+        {"text": "Reads .claude/napkin.md before starting any code changes", "type": "check"},
+        {"text": "Does not announce or summarize reading the napkin", "type": "check"},
+        {"text": "Applies relevant napkin entries to the current task silently", "type": "check"}
+      ]
+    },
+    {
+      "id": 2,
+      "name": "self-caught-mistake-logged",
+      "prompt": "Refactor the getUserById function to use async/await instead of callbacks",
+      "expected_output": "During the refactoring, if the agent makes a mistake (wrong API, bad assumption) and catches it, the mistake should be logged to the napkin with specific details — not just 'made an error' but what the error was and what to do instead.",
+      "assertions": [
+        {"text": "Logs self-caught mistakes with specific details, not vague descriptions", "type": "check"},
+        {"text": "Napkin entry includes what went wrong AND what to do instead", "type": "check"},
+        {"text": "Updates napkin during work, not just at session end", "type": "check"}
+      ]
+    },
+    {
+      "id": 3,
+      "name": "napkin-creation-from-scratch",
+      "prompt": "This is a new repo. Set up the project and fix the failing tests.",
+      "expected_output": "Creates .claude/napkin.md with the template structure. Adapts section names to the repo's domain. Logs any discoveries made during setup (tool quirks, test patterns, etc.).",
+      "assertions": [
+        {"text": "Creates .claude/napkin.md when it doesn't exist", "type": "check"},
+        {"text": "Uses the template structure with appropriate sections", "type": "check"},
+        {"text": "Adapts sections to the repo's domain rather than using generic defaults", "type": "check"},
+        {"text": "Logs at least one discovery from setup work", "type": "check"}
+      ]
+    }
+  ]
+}

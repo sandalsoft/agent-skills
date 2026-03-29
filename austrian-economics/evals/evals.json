@@ -1,0 +1,71 @@
+{
+  "skill_name": "austrian-economics",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "The Fed just cut interest rates by 50 basis points. My econ professor says this will stimulate the economy. What do you think?",
+      "expected_output": "Should apply ABCT: identify rate cut as pushing market rates below natural rate, trace the boom-bust mechanism (credit expansion → malinvestment → eventual correction), note Cantillon effects (who benefits first), distinguish between short-term stimulus appearance and long-term structural distortion. Should engage with the professor's Keynesian framing respectfully before explaining where it diverges. Should NOT predict timing or magnitude of any correction. Should NOT say the policy is 'bad' — should explain consequences and let the user judge.",
+      "assertions": [
+        {"text": "References Austrian Business Cycle Theory or ABCT", "type": "contains_concept"},
+        {"text": "Identifies malinvestment as a consequence of artificial rate reduction", "type": "contains_concept"},
+        {"text": "Mentions Cantillon effect or uneven distribution of new money", "type": "contains_concept"},
+        {"text": "Does NOT predict specific timing or magnitude of economic outcomes", "type": "absence"},
+        {"text": "Does NOT make a policy recommendation (e.g., 'the Fed should not have cut')", "type": "absence"},
+        {"text": "Engages with the Keynesian stimulus argument before critiquing it", "type": "contains_concept"}
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "My economics professor says government spending has a multiplier effect of 1.5x. Is that right?",
+      "expected_output": "Should steelman the multiplier concept first (explain what it claims and why Keynesians believe it), then critique it using Austrian reasoning: where does the government get the money (taxation, borrowing, printing — each has offsetting effects), Bastiat's broken window fallacy, the unseen opportunity costs of diverted resources. Should explain why there's no constant quantitative multiplier (no constant relations in human action). Should NOT dismiss the professor — should explain the logical gap. Should reference that the multiplier counts the government's spending gain while ignoring the private sector's loss.",
+      "assertions": [
+        {"text": "Explains the multiplier concept before critiquing it", "type": "contains_concept"},
+        {"text": "References Bastiat, broken window, or unseen effects", "type": "contains_concept"},
+        {"text": "Identifies the three funding sources (tax, borrow, print) and their offsetting effects", "type": "contains_concept"},
+        {"text": "Explains why constant quantitative multipliers violate Austrian methodology", "type": "contains_concept"},
+        {"text": "Does NOT dismiss the professor's position without engagement", "type": "absence"}
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Why did socialism fail in the Soviet Union? Was it just corruption, or is there a deeper problem?",
+      "expected_output": "Should center on Mises's economic calculation problem: without private ownership of means of production, there are no genuine markets for capital goods, therefore no prices for capital goods, therefore no rational basis for comparing alternative resource allocations. Should distinguish this from the corruption/incentive argument (which is secondary). Should explain why it's not a computational problem — the information doesn't exist outside the market process. Should reference the Lange-Mises debate. Should note that the USSR's partial use of Western market prices for reference actually confirms the calculation argument.",
+      "assertions": [
+        {"text": "Centers on the economic calculation problem, not just corruption or incentives", "type": "contains_concept"},
+        {"text": "Explains the logical chain: no ownership → no exchange → no prices → no rational calculation", "type": "contains_concept"},
+        {"text": "Explicitly states this is not a computational problem", "type": "contains_concept"},
+        {"text": "References Mises by name", "type": "contains_concept"},
+        {"text": "Distinguishes calculation problem from incentive/corruption problems", "type": "contains_concept"}
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Why is everything so expensive lately? Groceries, rent, gas — it feels like my money doesn't go as far anymore.",
+      "expected_output": "Should trace the purchasing power decline to monetary expansion (money supply growth), applying the Cantillon effect to explain why prices don't rise uniformly. Should explain that 'inflation' in the Austrian sense is the increase in money supply, with rising prices being the consequence. Should identify acting individuals (central bank officials expanding credit, banks lending, government spending). Should NOT just say 'the government is printing too much money' as sloganeering — should trace the causal mechanism. Should be accessible given the casual tone of the question.",
+      "assertions": [
+        {"text": "Connects rising prices to monetary expansion or money supply growth", "type": "contains_concept"},
+        {"text": "Explains Cantillon effect or uneven price distribution", "type": "contains_concept"},
+        {"text": "Identifies specific actors (central bank, commercial banks, government)", "type": "contains_concept"},
+        {"text": "Accessible language appropriate to the casual question", "type": "quality"},
+        {"text": "Does NOT reduce to pure sloganeering without causal reasoning", "type": "absence"}
+      ],
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "Can you explain what praxeology is and why Austrian economists think it's better than using data and statistics?",
+      "expected_output": "Should explain praxeology as the science of human action derived from the action axiom (man acts purposefully). Should explain why this axiom is apodictically certain (denying it is self-contradictory). Should explain why empirical methods fail for economics specifically: no controlled experiments, no constant quantitative relations, data requires prior theory to interpret. Should NOT dismiss empirical data entirely — should explain its proper role as historical illustration. Should distinguish praxeology from both empiricism and mere armchair speculation. Should reference Mises and possibly Hayek's 'pretence of knowledge.'",
+      "assertions": [
+        {"text": "Defines praxeology and the action axiom", "type": "contains_concept"},
+        {"text": "Explains why the action axiom is irrefutable (self-contradiction argument)", "type": "contains_concept"},
+        {"text": "Gives specific reasons empirical methods fail for economics", "type": "contains_concept"},
+        {"text": "Acknowledges a proper role for empirical data (not total dismissal)", "type": "contains_concept"},
+        {"text": "References Mises", "type": "contains_concept"}
+      ],
+      "files": []
+    }
+  ]
+}

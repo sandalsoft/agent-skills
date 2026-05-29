@@ -1,0 +1,32 @@
+{
+  "eval_id": 0,
+  "eval_name": "generic-clean-up-prompt",
+  "prompt": "I just got Infuse for my Apple TV and pointed it at my movies folder. It looks awful — everything is named like Blade.Runner.2049.2017.UHD.BluRay.x265-RARBG.mkv with random .nfo and .jpg files everywhere. Before you do anything, build a small messy test library at /tmp/eval-0-movies/ (about 8-10 items mixing loose video files with companion poster/nfo files, one empty placeholder folder, and at least one folder already in messy release-name format). Then organize that library to whatever folder structure Infuse expects. When you're done, list what's at the top level and explain what changed.",
+  "assertions": [
+    {
+      "text": "At least 3 folders matching 'Title (YYYY)' pattern exist at top level of organized library",
+      "type": "scripted",
+      "check": "find /tmp/eval-0-movies/ -maxdepth 1 -mindepth 1 -type d -name '*([12][09][0-9][0-9])*' | wc -l >= 3"
+    },
+    {
+      "text": "No loose .mkv/.mp4/.avi files remain at top level",
+      "type": "scripted",
+      "check": "find /tmp/eval-0-movies/ -maxdepth 1 -type f \\( -iname '*.mkv' -o -iname '*.mp4' -o -iname '*.avi' \\) | wc -l == 0"
+    },
+    {
+      "text": "Companion files (.nfo, .jpg, .png) live inside movie folders rather than at top level",
+      "type": "scripted",
+      "check": "more .nfo/.jpg/.png files at depth 2 than depth 1"
+    },
+    {
+      "text": "A written plan/report was produced before mutations (report.md mentions a planning step)",
+      "type": "qualitative",
+      "check": "report.md describes inventory-then-plan-then-execute discipline"
+    },
+    {
+      "text": "Output report explains what changed and why",
+      "type": "qualitative",
+      "check": "report.md contains rationale, not just a list of mv commands"
+    }
+  ]
+}

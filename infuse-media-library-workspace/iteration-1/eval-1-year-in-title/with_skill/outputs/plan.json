@@ -1,0 +1,81 @@
+{
+  "root": "/tmp/eval-1-movies/",
+  "options": {
+    "rename_inside_cat_a": true,
+    "rename_inside_cat_b": false,
+    "combine_multi_version": false,
+    "edition_tags": false
+  },
+  "operations": [
+    {
+      "op": "mkdir_if_absent",
+      "path": "1917 (2019)",
+      "category": "A"
+    },
+    {
+      "op": "move",
+      "src": "1917.2019.1080p.DVDSCR.x264-TOPKEK.mkv",
+      "dst": "1917 (2019)/1917 (2019).mkv",
+      "category": "A",
+      "title_year": "1917 (2019)"
+    },
+    {
+      "op": "mkdir_if_absent",
+      "path": "2001 A Space Odyssey (1968)",
+      "category": "A"
+    },
+    {
+      "op": "move",
+      "src": "2001.A.Space.Odyssey.1968.2160p.UHD.BluRay.mkv",
+      "dst": "2001 A Space Odyssey (1968)/2001 A Space Odyssey (1968).mkv",
+      "category": "A",
+      "title_year": "2001 A Space Odyssey (1968)"
+    },
+    {
+      "op": "mkdir_if_absent",
+      "path": "Blade Runner 2049 (2017)",
+      "category": "A"
+    },
+    {
+      "op": "move",
+      "src": "Blade.Runner.2049.2017.UHD.BluRay.x265-RARBG.mkv",
+      "dst": "Blade Runner 2049 (2017)/Blade Runner 2049 (2017).mkv",
+      "category": "A",
+      "title_year": "Blade Runner 2049 (2017)"
+    },
+    {
+      "op": "move",
+      "src": "Blade.Runner.2049.2017.UHD.BluRay.x265-RARBG-poster.jpg",
+      "dst": "Blade Runner 2049 (2017)/Blade Runner 2049 (2017)-poster.jpg",
+      "category": "A",
+      "title_year": "Blade Runner 2049 (2017)"
+    },
+    {
+      "op": "move",
+      "src": "Blade.Runner.2049.2017.UHD.BluRay.x265-RARBG.nfo",
+      "dst": "Blade Runner 2049 (2017)/Blade Runner 2049 (2017).nfo",
+      "category": "A",
+      "title_year": "Blade Runner 2049 (2017)"
+    },
+    {
+      "op": "mkdir_if_absent",
+      "path": "Citizen Kane (1941)",
+      "category": "A"
+    },
+    {
+      "op": "move",
+      "src": "Citizen.Kane.1941.2160p.UHD.BluRay.mkv",
+      "dst": "Citizen Kane (1941)/Citizen Kane (1941).mkv",
+      "category": "A",
+      "title_year": "Citizen Kane (1941)"
+    }
+  ],
+  "parked": {
+    "category_C": [],
+    "category_D": [],
+    "category_E": [],
+    "category_F": [],
+    "category_G": [],
+    "category_H": []
+  }
+}

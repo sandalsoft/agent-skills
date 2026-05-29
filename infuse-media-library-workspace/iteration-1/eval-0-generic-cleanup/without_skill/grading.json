@@ -1,0 +1,38 @@
+{
+  "expectations": [
+    {
+      "text": "At least 3 folders matching 'Title (YYYY)' pattern exist at top level",
+      "passed": true,
+      "evidence": "Found 7 folders: ['Parasite (2019)', 'Dune Part Two (2024)', 'The Matrix (1999)', 'Blade Runner 2049 (2017)', 'Inception (2010)']..."
+    },
+    {
+      "text": "No loose .mkv/.mp4/.avi files remain at top level",
+      "passed": true,
+      "evidence": "None at top level"
+    },
+    {
+      "text": "Companion files (.nfo/.jpg/.png) live inside folders, not at top level",
+      "passed": true,
+      "evidence": "top-level assets: 0, in-folder assets: 7"
+    },
+    {
+      "text": "Report describes inventory\u2192plan\u2192approve\u2192execute discipline",
+      "passed": false,
+      "evidence": "Matched 0 planning-related terms in report (['inventory', 'plan', 'category', 'categor', 'approve', 'before'])"
+    },
+    {
+      "text": "Report explains what changed and why (rationale present)",
+      "passed": true,
+      "evidence": "Matched 2 rationale terms; report length 3643 chars"
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 1,
+    "total": 5,
+    "pass_rate": 0.8
+  },
+  "timing": {
+    "total_duration_seconds": 105.5
+  }
+}

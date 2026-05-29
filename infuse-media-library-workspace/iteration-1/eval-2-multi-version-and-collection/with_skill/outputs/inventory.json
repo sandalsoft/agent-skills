@@ -1,0 +1,73 @@
+{
+  "root": "/tmp/eval-2-movies/",
+  "stats": {
+    "total_entries": 7,
+    "files": 6,
+    "dirs": 1,
+    "actual_dirs": 1,
+    "trickplay_dirs": 0,
+    "loose_videos": 4,
+    "parsed_groups": 3,
+    "multi_version_groups": 1
+  },
+  "category_A_loose_movies": [
+    {
+      "title_year": "Dune Part Two (2024)",
+      "video": "Dune.Part.Two.2024.1080p.WEB-DL.mkv",
+      "video_base": "Dune.Part.Two.2024.1080p.WEB-DL",
+      "companions": [],
+      "nfo": null,
+      "bif": null,
+      "trickplay": null,
+      "existing_target_dir": null
+    },
+    {
+      "title_year": "The Matrix (1999)",
+      "video": "The.Matrix.1999.2160p.UHD.BluRay.mkv",
+      "video_base": "The.Matrix.1999.2160p.UHD.BluRay",
+      "companions": [],
+      "nfo": null,
+      "bif": null,
+      "trickplay": null,
+      "existing_target_dir": null
+    }
+  ],
+  "category_B_folder_renames": [],
+  "category_C_multi_version": [
+    {
+      "title_year": "Ballerina (2025)",
+      "versions": [
+        "Ballerina.2025.1080p.AMZN.WEB-DL-BYNDR.mkv",
+        "Ballerina.2025.2160p.iT.WEB-DL.DV.HDR-BYNDR.mkv"
+      ],
+      "all_files": [
+        "Ballerina.2025.1080p.AMZN.WEB-DL-BYNDR.mkv",
+        "Ballerina.2025.1080p.AMZN.WEB-DL-BYNDR.nfo",
+        "Ballerina.2025.2160p.iT.WEB-DL.DV.HDR-BYNDR.mkv",
+        "Ballerina.2025.2160p.iT.WEB-DL.DV.HDR-BYNDR.nfo"
+      ]
+    }
+  ],
+  "category_D_collections": [
+    {
+      "dir": "James.Bond.Collection.1962-2008",
+      "title": "James Bond Collection 1962",
+      "year": "2008",
+      "title_year": "James Bond Collection 1962 (2008)",
+      "is_clean_name": false,
+      "is_collection_hint": true,
+      "item_count": 3,
+      "is_empty": false,
+      "contents_sample": [
+        "Dr.No.1962.mkv",
+        "From.Russia.with.Love.1963.mkv",
+        "Goldfinger.1964.mkv"
+      ]
+    }
+  ],
+  "category_E_orphan_assets": [],
+  "category_F_conflicts": [],
+  "category_G_empty_dirs": [],
+  "category_H_unparseable_videos": [],
+  "unmatched_trickplay_dirs": []
+}

@@ -1,0 +1,109 @@
+{
+  "root": "/tmp/eval-0-movies/",
+  "stats": {
+    "total_entries": 18,
+    "files": 15,
+    "dirs": 3,
+    "actual_dirs": 3,
+    "trickplay_dirs": 0,
+    "loose_videos": 5,
+    "parsed_groups": 5,
+    "multi_version_groups": 0
+  },
+  "category_A_loose_movies": [
+    {
+      "title_year": "1917 (2019)",
+      "video": "1917.2019.2160p.WEB-DL.x265-NTb.mkv",
+      "video_base": "1917.2019.2160p.WEB-DL.x265-NTb",
+      "companions": [
+        "1917.2019.2160p.WEB-DL.x265-NTb-poster.jpg"
+      ],
+      "nfo": null,
+      "bif": null,
+      "trickplay": null,
+      "existing_target_dir": null
+    },
+    {
+      "title_year": "Blade Runner 2049 (2017)",
+      "video": "Blade.Runner.2049.2017.UHD.BluRay.x265-RARBG.mkv",
+      "video_base": "Blade.Runner.2049.2017.UHD.BluRay.x265-RARBG",
+      "companions": [
+        "Blade.Runner.2049.2017.UHD.BluRay.x265-RARBG-backdrop.jpg",
+        "Blade.Runner.2049.2017.UHD.BluRay.x265-RARBG-poster.jpg"
+      ],
+      "nfo": "Blade.Runner.2049.2017.UHD.BluRay.x265-RARBG.nfo",
+      "bif": null,
+      "trickplay": null,
+      "existing_target_dir": null
+    },
+    {
+      "title_year": "Get Out (2017)",
+      "video": "Get.Out.2017.1080p.BluRay.x264-DRONES.mp4",
+      "video_base": "Get.Out.2017.1080p.BluRay.x264-DRONES",
+      "companions": [
+        "Get.Out.2017.1080p.BluRay.x264-DRONES-poster.jpg"
+      ],
+      "nfo": null,
+      "bif": null,
+      "trickplay": null,
+      "existing_target_dir": null
+    },
+    {
+      "title_year": "Inception (2010)",
+      "video": "Inception.2010.1080p.BluRay.x264-SPARKS.mkv",
+      "video_base": "Inception.2010.1080p.BluRay.x264-SPARKS",
+      "companions": [],
+      "nfo": null,
+      "bif": null,
+      "trickplay": null,
+      "existing_target_dir": null
+    },
+    {
+      "title_year": "The Matrix (1999)",
+      "video": "The.Matrix.1999.1080p.BluRay.x264-AMIABLE.mkv",
+      "video_base": "The.Matrix.1999.1080p.BluRay.x264-AMIABLE",
+      "companions": [
+        "The.Matrix.1999.1080p.BluRay.x264-AMIABLE-poster.jpg"
+      ],
+      "nfo": "The.Matrix.1999.1080p.BluRay.x264-AMIABLE.nfo",
+      "bif": null,
+      "trickplay": null,
+      "existing_target_dir": null
+    }
+  ],
+  "category_B_folder_renames": [
+    {
+      "from": "Arrival.2016.1080p.BluRay.x264-SPARKS",
+      "to": "Arrival (2016)",
+      "item_count": 2
+    },
+    {
+      "from": "Dune.2021.2160p.UHD.BluRay.x265-TERMiNAL",
+      "to": "Dune (2021)",
+      "item_count": 2
+    }
+  ],
+  "category_C_multi_version": [],
+  "category_D_collections": [],
+  "category_E_orphan_assets": [
+    "leftover.nfo",
+    "old-movie-poster.jpg",
+    "random-backdrop.jpg"
+  ],
+  "category_F_conflicts": [],
+  "category_G_empty_dirs": [
+    {
+      "dir": "Empty Placeholder",
+      "title": null,
+      "year": null,
+      "title_year": null,
+      "is_clean_name": false,
+      "is_collection_hint": false,
+      "item_count": 0,
+      "is_empty": true,
+      "contents_sample": []
+    }
+  ],
+  "category_H_unparseable_videos": [],
+  "unmatched_trickplay_dirs": []
+}

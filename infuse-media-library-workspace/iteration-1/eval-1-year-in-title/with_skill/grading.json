@@ -1,0 +1,43 @@
+{
+  "expectations": [
+    {
+      "text": "Folder 'Blade Runner 2049 (2017)' exists",
+      "passed": true,
+      "evidence": "Found: Blade Runner 2049 (2017)"
+    },
+    {
+      "text": "Folder 'Blade Runner (2049)' (the trap year) does NOT exist",
+      "passed": true,
+      "evidence": "Trap correctly avoided"
+    },
+    {
+      "text": "Blade Runner folder contains all 3 companion files (.mkv, .nfo, -poster.jpg)",
+      "passed": true,
+      "evidence": "Files inside: ['Blade Runner 2049 (2017).mkv', 'Blade Runner 2049 (2017).nfo', 'Blade Runner 2049 (2017)-poster.jpg']"
+    },
+    {
+      "text": "'2001 A Space Odyssey (1968)' folder exists (year is 1968, not 2001)",
+      "passed": true,
+      "evidence": "Found: 2001 A Space Odyssey (1968)"
+    },
+    {
+      "text": "'1917 (2019)' folder exists (year is 2019, not 1917)",
+      "passed": true,
+      "evidence": "Found: 1917 (2019)"
+    },
+    {
+      "text": "'Citizen Kane (1941)' folder exists",
+      "passed": true,
+      "evidence": "Found: Citizen Kane (1941)"
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "timing": {
+    "total_duration_seconds": 260.5
+  }
+}

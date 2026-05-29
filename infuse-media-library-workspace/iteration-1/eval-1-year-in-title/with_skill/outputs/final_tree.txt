@@ -1,0 +1,11 @@
+/tmp/eval-1-movies/
+/tmp/eval-1-movies/1917 (2019)
+/tmp/eval-1-movies/1917 (2019)/1917 (2019).mkv
+/tmp/eval-1-movies/2001 A Space Odyssey (1968)
+/tmp/eval-1-movies/2001 A Space Odyssey (1968)/2001 A Space Odyssey (1968).mkv
+/tmp/eval-1-movies/Blade Runner 2049 (2017)
+/tmp/eval-1-movies/Blade Runner 2049 (2017)/Blade Runner 2049 (2017)-poster.jpg
+/tmp/eval-1-movies/Blade Runner 2049 (2017)/Blade Runner 2049 (2017).mkv
+/tmp/eval-1-movies/Blade Runner 2049 (2017)/Blade Runner 2049 (2017).nfo
+/tmp/eval-1-movies/Citizen Kane (1941)
+/tmp/eval-1-movies/Citizen Kane (1941)/Citizen Kane (1941).mkv

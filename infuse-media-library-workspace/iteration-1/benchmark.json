@@ -1,0 +1,355 @@
+{
+  "metadata": {
+    "skill_name": "firecore-media-library",
+    "skill_path": "/Users/eric/.claude/skills/firecore-media-library/",
+    "executor_model": "claude-sonnet-4-5",
+    "analyzer_model": "claude-opus-4-7",
+    "timestamp": "2026-05-21T20:00:00Z",
+    "evals_run": [
+      "eval-0-generic-cleanup",
+      "eval-1-year-in-title",
+      "eval-2-multi-version-and-collection"
+    ],
+    "runs_per_configuration": 1
+  },
+  "runs": [
+    {
+      "eval_id": 0,
+      "eval_name": "eval-0-generic-cleanup",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 151.7,
+        "tokens": 67371,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "At least 3 folders matching 'Title (YYYY)' pattern exist at top level",
+          "passed": true,
+          "evidence": "Found 7 folders: ['1917 (2019)', 'Get Out (2017)', 'The Matrix (1999)', 'Blade Runner 2049 (2017)', 'Inception (2010)']..."
+        },
+        {
+          "text": "No loose .mkv/.mp4/.avi files remain at top level",
+          "passed": true,
+          "evidence": "None at top level"
+        },
+        {
+          "text": "Companion files (.nfo/.jpg/.png) live inside folders, not at top level",
+          "passed": true,
+          "evidence": "top-level assets: 3, in-folder assets: 9"
+        },
+        {
+          "text": "Report describes inventory\u2192plan\u2192approve\u2192execute discipline",
+          "passed": true,
+          "evidence": "Matched 2 planning-related terms in report (['inventory', 'plan', 'category', 'categor', 'approve', 'before'])"
+        },
+        {
+          "text": "Report explains what changed and why (rationale present)",
+          "passed": true,
+          "evidence": "Matched 3 rationale terms; report length 4357 chars"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 0,
+      "eval_name": "eval-0-generic-cleanup",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.8,
+        "passed": 4,
+        "failed": 1,
+        "total": 5,
+        "time_seconds": 105.5,
+        "tokens": 47589,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "At least 3 folders matching 'Title (YYYY)' pattern exist at top level",
+          "passed": true,
+          "evidence": "Found 7 folders: ['Parasite (2019)', 'Dune Part Two (2024)', 'The Matrix (1999)', 'Blade Runner 2049 (2017)', 'Inception (2010)']..."
+        },
+        {
+          "text": "No loose .mkv/.mp4/.avi files remain at top level",
+          "passed": true,
+          "evidence": "None at top level"
+        },
+        {
+          "text": "Companion files (.nfo/.jpg/.png) live inside folders, not at top level",
+          "passed": true,
+          "evidence": "top-level assets: 0, in-folder assets: 7"
+        },
+        {
+          "text": "Report describes inventory\u2192plan\u2192approve\u2192execute discipline",
+          "passed": false,
+          "evidence": "Matched 0 planning-related terms in report (['inventory', 'plan', 'category', 'categor', 'approve', 'before'])"
+        },
+        {
+          "text": "Report explains what changed and why (rationale present)",
+          "passed": true,
+          "evidence": "Matched 2 rationale terms; report length 3643 chars"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "eval-1-year-in-title",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 6,
+        "failed": 0,
+        "total": 6,
+        "time_seconds": 260.5,
+        "tokens": 55670,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Folder 'Blade Runner 2049 (2017)' exists",
+          "passed": true,
+          "evidence": "Found: Blade Runner 2049 (2017)"
+        },
+        {
+          "text": "Folder 'Blade Runner (2049)' (the trap year) does NOT exist",
+          "passed": true,
+          "evidence": "Trap correctly avoided"
+        },
+        {
+          "text": "Blade Runner folder contains all 3 companion files (.mkv, .nfo, -poster.jpg)",
+          "passed": true,
+          "evidence": "Files inside: ['Blade Runner 2049 (2017).mkv', 'Blade Runner 2049 (2017).nfo', 'Blade Runner 2049 (2017)-poster.jpg']"
+        },
+        {
+          "text": "'2001 A Space Odyssey (1968)' folder exists (year is 1968, not 2001)",
+          "passed": true,
+          "evidence": "Found: 2001 A Space Odyssey (1968)"
+        },
+        {
+          "text": "'1917 (2019)' folder exists (year is 2019, not 1917)",
+          "passed": true,
+          "evidence": "Found: 1917 (2019)"
+        },
+        {
+          "text": "'Citizen Kane (1941)' folder exists",
+          "passed": true,
+          "evidence": "Found: Citizen Kane (1941)"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "eval-1-year-in-title",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 6,
+        "failed": 0,
+        "total": 6,
+        "time_seconds": 63.6,
+        "tokens": 43043,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Folder 'Blade Runner 2049 (2017)' exists",
+          "passed": true,
+          "evidence": "Found: Blade Runner 2049 (2017)"
+        },
+        {
+          "text": "Folder 'Blade Runner (2049)' (the trap year) does NOT exist",
+          "passed": true,
+          "evidence": "Trap correctly avoided"
+        },
+        {
+          "text": "Blade Runner folder contains all 3 companion files (.mkv, .nfo, -poster.jpg)",
+          "passed": true,
+          "evidence": "Files inside: ['Blade Runner 2049 (2017).mkv', 'poster.jpg', 'Blade Runner 2049 (2017).nfo']"
+        },
+        {
+          "text": "'2001 A Space Odyssey (1968)' folder exists (year is 1968, not 2001)",
+          "passed": true,
+          "evidence": "Found: 2001 A Space Odyssey (1968)"
+        },
+        {
+          "text": "'1917 (2019)' folder exists (year is 2019, not 1917)",
+          "passed": true,
+          "evidence": "Found: 1917 (2019)"
+        },
+        {
+          "text": "'Citizen Kane (1941)' folder exists",
+          "passed": true,
+          "evidence": "Found: Citizen Kane (1941)"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "eval-2-multi-version-and-collection",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 6,
+        "failed": 0,
+        "total": 6,
+        "time_seconds": 193.7,
+        "tokens": 75488,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Both Ballerina .mkv files live inside one Ballerina (2025) folder",
+          "passed": true,
+          "evidence": "Ballerina (2025) contains 2 .mkv files: ['Ballerina.2025.2160p.iT.WEB-DL.DV.HDR-BYNDR.mkv', 'Ballerina.2025.1080p.AMZN.WEB-DL-BYNDR.mkv']"
+        },
+        {
+          "text": "James Bond Collection handled with care (kept intact OR explicitly split with rationale)",
+          "passed": true,
+          "evidence": "Collection folder exists: False, individual Bond folders: 3, mentioned in report: True"
+        },
+        {
+          "text": "Dune Part Two (2024) and The Matrix (1999) are in their own per-movie folders",
+          "passed": true,
+          "evidence": "Dune Part Two: Dune Part Two (2024), Matrix: The Matrix (1999)"
+        },
+        {
+          "text": "Report explains the multi-version Ballerina decision",
+          "passed": true,
+          "evidence": "Matched 6/6 multi-version terms in report"
+        },
+        {
+          "text": "Report explains the Bond collection-folder decision",
+          "passed": true,
+          "evidence": "Matched 6/6 collection-discussion terms"
+        },
+        {
+          "text": "No data silently deleted from input library",
+          "passed": true,
+          "evidence": "Missing 5 expected files: ['Dr.No.1962.mkv', 'Dune.Part.Two.2024.1080p.WEB-DL.mkv', 'From.Russia.with.Love.1963.mkv']..., deletion acknowledged in report: True"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "eval-2-multi-version-and-collection",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 6,
+        "failed": 0,
+        "total": 6,
+        "time_seconds": 111.4,
+        "tokens": 47907,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Both Ballerina .mkv files live inside one Ballerina (2025) folder",
+          "passed": true,
+          "evidence": "Ballerina (2025) contains 2 .mkv files: ['Ballerina (2025) - 1080p.mkv', 'Ballerina (2025) - 2160p DV HDR.mkv']"
+        },
+        {
+          "text": "James Bond Collection handled with care (kept intact OR explicitly split with rationale)",
+          "passed": true,
+          "evidence": "Collection folder exists: False, individual Bond folders: 3, mentioned in report: True"
+        },
+        {
+          "text": "Dune Part Two (2024) and The Matrix (1999) are in their own per-movie folders",
+          "passed": true,
+          "evidence": "Dune Part Two: Dune Part Two (2024), Matrix: The Matrix (1999)"
+        },
+        {
+          "text": "Report explains the multi-version Ballerina decision",
+          "passed": true,
+          "evidence": "Matched 6/6 multi-version terms in report"
+        },
+        {
+          "text": "Report explains the Bond collection-folder decision",
+          "passed": true,
+          "evidence": "Matched 4/6 collection-discussion terms"
+        },
+        {
+          "text": "No data silently deleted from input library",
+          "passed": true,
+          "evidence": "Missing 7 expected files: ['Ballerina.2025.1080p.AMZN.WEB-DL-BYNDR.mkv', 'Ballerina.2025.2160p.iT.WEB-DL.DV.HDR-BYNDR.mkv', 'Dr.No.1962.mkv']..., deletion acknowledged in report: True"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {
+        "mean": 1.0,
+        "stddev": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "time_seconds": {
+        "mean": 201.967,
+        "stddev": 54.869,
+        "min": 151.7,
+        "max": 260.5
+      },
+      "tokens": {
+        "mean": 66176.333,
+        "stddev": 9962.866,
+        "min": 55670,
+        "max": 75488
+      }
+    },
+    "without_skill": {
+      "pass_rate": {
+        "mean": 0.933,
+        "stddev": 0.115,
+        "min": 0.8,
+        "max": 1.0
+      },
+      "time_seconds": {
+        "mean": 93.5,
+        "stddev": 26.062,
+        "min": 63.6,
+        "max": 111.4
+      },
+      "tokens": {
+        "mean": 46179.667,
+        "stddev": 2721.082,
+        "min": 43043,
+        "max": 47907
+      }
+    },
+    "delta": {
+      "pass_rate": "+0.067",
+      "time_seconds": "+108.467",
+      "tokens": "+19996.666"
+    }
+  },
+  "notes": [
+    "Sonnet/Opus baseline is genuinely competent at this task without the skill \u2014 the year-parser trap (Blade Runner 2049 \u2192 2017) was handled correctly by both configurations. This narrows the assertion-discrimination signal.",
+    "Three independent with-skill agents flagged the same UX issue: dry-run mode in execute.py reports false-positive 'target dir missing' errors because mkdir ops are simulated. Real iteration target.",
+    "With-skill on eval-2 SPLIT the James Bond collection into individual folders despite the skill's instruction to PARK Cat D collections. Strengthen the 'park-and-ask' language for collections.",
+    "With-skill takes longer (mean ~200s) and uses more tokens (mean ~66k) than baseline (mean ~93s, ~46k) \u2014 expected, because with-skill agents run inventory.py and plan.py before executing.",
+    "With-skill produces auditable artifacts (inventory.json, plan.json) that baseline does not \u2014 qualitative value beyond pass-rate."
+  ]
+}

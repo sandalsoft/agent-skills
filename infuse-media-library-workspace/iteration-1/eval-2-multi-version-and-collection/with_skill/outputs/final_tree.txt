@@ -1,0 +1,16 @@
+/tmp/eval-2-movies/
+/tmp/eval-2-movies/Ballerina (2025)
+/tmp/eval-2-movies/Ballerina (2025)/Ballerina.2025.1080p.AMZN.WEB-DL-BYNDR.mkv
+/tmp/eval-2-movies/Ballerina (2025)/Ballerina.2025.1080p.AMZN.WEB-DL-BYNDR.nfo
+/tmp/eval-2-movies/Ballerina (2025)/Ballerina.2025.2160p.iT.WEB-DL.DV.HDR-BYNDR.mkv
+/tmp/eval-2-movies/Ballerina (2025)/Ballerina.2025.2160p.iT.WEB-DL.DV.HDR-BYNDR.nfo
+/tmp/eval-2-movies/Dr. No (1962)
+/tmp/eval-2-movies/Dr. No (1962)/Dr. No (1962).mkv
+/tmp/eval-2-movies/Dune Part Two (2024)
+/tmp/eval-2-movies/Dune Part Two (2024)/Dune Part Two (2024).mkv
+/tmp/eval-2-movies/From Russia with Love (1963)
+/tmp/eval-2-movies/From Russia with Love (1963)/From Russia with Love (1963).mkv
+/tmp/eval-2-movies/Goldfinger (1964)
+/tmp/eval-2-movies/Goldfinger (1964)/Goldfinger (1964).mkv
+/tmp/eval-2-movies/The Matrix (1999)
+/tmp/eval-2-movies/The Matrix (1999)/The Matrix (1999).mkv

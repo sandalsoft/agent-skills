@@ -1,0 +1,26 @@
+{
+  "skill_name": "firecore-media-library",
+  "evals": [
+    {
+      "id": 0,
+      "name": "generic-clean-up-prompt",
+      "prompt": "I just got Infuse for my Apple TV and pointed it at my movies folder. It looks awful — everything is named like Blade.Runner.2049.2017.UHD.BluRay.x265-RARBG.mkv with random .nfo and .jpg files everywhere. Before you do anything, build a small messy test library at /tmp/eval-0-movies/ (about 8-10 items mixing loose video files with companion poster/nfo files, one empty placeholder folder, and at least one folder already in messy release-name format). Then organize that library to whatever folder structure Infuse expects. When you're done, list what's at the top level and explain what changed.",
+      "expected_output": "A /tmp/eval-0-movies/ directory reorganized into per-movie 'Title (YYYY)/' folders, with a written report describing the changes.",
+      "files": []
+    },
+    {
+      "id": 1,
+      "name": "year-in-title-trap",
+      "prompt": "Build a tiny test movie library at /tmp/eval-1-movies/ containing these loose files (you can use `touch` to create empty placeholders since we just want to test the organization, not actually have movie data):\n\n- Blade.Runner.2049.2017.UHD.BluRay.x265-RARBG.mkv\n- Blade.Runner.2049.2017.UHD.BluRay.x265-RARBG.nfo\n- Blade.Runner.2049.2017.UHD.BluRay.x265-RARBG-poster.jpg\n- 2001.A.Space.Odyssey.1968.2160p.UHD.BluRay.mkv\n- 1917.2019.1080p.DVDSCR.x264-TOPKEK.mkv\n- Citizen.Kane.1941.2160p.UHD.BluRay.mkv\n\nThen reorganize the library into per-movie folders the way Infuse expects. Make sure 'Blade Runner 2049' ends up under its correct 2017 release year folder, not under a folder named after the title's year-like number.",
+      "expected_output": "A 'Blade Runner 2049 (2017)/' folder exists with all three Blade Runner files inside. '2001 A Space Odyssey (1968)/', '1917 (2019)/', 'Citizen Kane (1941)/' folders also exist.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "multi-version-and-collection",
+      "prompt": "Build a small test library at /tmp/eval-2-movies/ that includes:\n\n1. Two different rips of the same movie — Ballerina.2025.1080p.AMZN.WEB-DL-BYNDR.mkv and Ballerina.2025.2160p.iT.WEB-DL.DV.HDR-BYNDR.mkv (loose at top level, with matching .nfo for each)\n2. A 'James.Bond.Collection.1962-2008/' folder containing Dr.No.1962.mkv, Goldfinger.1964.mkv, and From.Russia.with.Love.1963.mkv\n3. A couple of normal loose movies — say, Dune.Part.Two.2024.1080p.WEB-DL.mkv and The.Matrix.1999.2160p.UHD.BluRay.mkv\n\nNow organize this for Infuse. I particularly want to know how you handle the multi-version Ballerina situation and the Bond collection folder — explain your reasoning. Don't just bulldoze through; show me what decisions you're making.",
+      "expected_output": "Library organized with per-movie folders. Ballerina (2025) has both versions in one folder OR a clear explanation of why versions were combined/kept separate. James Bond Collection folder is preserved or flagged as a user-decision item with rationale shown.",
+      "files": []
+    }
+  ]
+}

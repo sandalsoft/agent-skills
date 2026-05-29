@@ -1,0 +1,28 @@
+/tmp/eval-0-movies/
+/tmp/eval-0-movies/1917 (2019)
+/tmp/eval-0-movies/1917 (2019)/1917 (2019)-poster.jpg
+/tmp/eval-0-movies/1917 (2019)/1917 (2019).mkv
+/tmp/eval-0-movies/Arrival (2016)
+/tmp/eval-0-movies/Arrival (2016)/Arrival.2016.1080p.BluRay.x264-SPARKS-poster.jpg
+/tmp/eval-0-movies/Arrival (2016)/Arrival.2016.1080p.BluRay.x264-SPARKS.mkv
+/tmp/eval-0-movies/Blade Runner 2049 (2017)
+/tmp/eval-0-movies/Blade Runner 2049 (2017)/Blade Runner 2049 (2017)-backdrop.jpg
+/tmp/eval-0-movies/Blade Runner 2049 (2017)/Blade Runner 2049 (2017)-poster.jpg
+/tmp/eval-0-movies/Blade Runner 2049 (2017)/Blade Runner 2049 (2017).mkv
+/tmp/eval-0-movies/Blade Runner 2049 (2017)/Blade Runner 2049 (2017).nfo
+/tmp/eval-0-movies/Dune (2021)
+/tmp/eval-0-movies/Dune (2021)/Dune.2021.2160p.UHD.BluRay.x265-TERMiNAL.mkv
+/tmp/eval-0-movies/Dune (2021)/Dune.2021.2160p.UHD.BluRay.x265-TERMiNAL.nfo
+/tmp/eval-0-movies/Empty Placeholder
+/tmp/eval-0-movies/Get Out (2017)
+/tmp/eval-0-movies/Get Out (2017)/Get Out (2017)-poster.jpg
+/tmp/eval-0-movies/Get Out (2017)/Get Out (2017).mp4
+/tmp/eval-0-movies/Inception (2010)
+/tmp/eval-0-movies/Inception (2010)/Inception (2010).mkv
+/tmp/eval-0-movies/leftover.nfo
+/tmp/eval-0-movies/old-movie-poster.jpg
+/tmp/eval-0-movies/random-backdrop.jpg
+/tmp/eval-0-movies/The Matrix (1999)
+/tmp/eval-0-movies/The Matrix (1999)/The Matrix (1999)-poster.jpg
+/tmp/eval-0-movies/The Matrix (1999)/The Matrix (1999).mkv
+/tmp/eval-0-movies/The Matrix (1999)/The Matrix (1999).nfo

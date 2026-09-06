@@ -198,7 +198,7 @@ export function useTheme() {
 
 The token names map directly to their visual purpose. This matters because when you're writing a component, you should never need to think about specific colors — just about *what role* this element plays:
 
-- **`background`** / **`foreground`**: The canvas. Page-level background and default text.
+- **`background`** / **`foreground`**: The canvas. Page-level background and default text. The default light value is `#FFFFFF` for product/dashboard UI. Marketing pages should usually tint the canvas (warm paper, cool gray) unless pure white is the committed look — defaulting every landing page to `#FFFFFF` is a vibecode tell.
 - **`card`** / **`card-foreground`**: Elevated surfaces. Cards sit "on top" of the background.
 - **`primary`** / **`primary-foreground`**: The main accent. Used for primary buttons, active states, and emphasis. In light mode it's a dark navy; in dark mode it flips to near-white.
 - **`secondary`**: A softer alternative to primary. Used for secondary buttons and less prominent interactive surfaces.
@@ -208,13 +208,13 @@ The token names map directly to their visual purpose. This matters because when 
 - **`border`** / **`input`**: Structural lines. Usually the same value — borders and input outlines.
 - **`ring`**: Focus indicator. Applied via Tailwind's `ring-*` utilities for keyboard navigation visibility.
 - **`popover`**: Floating surfaces (tooltips, dropdowns, dialogs). Same as card in this system but semantically separate for customization.
-- **`radius`**: The base border-radius. Cards use `lg` (the full value), buttons use `md` (minus 2px), small elements use `sm` (minus 4px).
+- **`radius`**: The base border-radius. Cards use `lg` (the full value), buttons use `md` (minus 2px), small elements use `sm` (minus 4px). Keep this modest (`0.5rem`). Do not soften the whole UI by bumping every surface to `rounded-2xl` / `rounded-3xl`.
 
 ## Color Palette Visual Reference
 
 ### Light Mode
 ```
-Background:  #FFFFFF (pure white)
+Background:  #FFFFFF (pure white — product canvas; tint marketing pages)
 Foreground:  #0F172A (slate-900, near-black navy)
 Primary:     #1E293B (slate-800, dark navy)
 Secondary:   #F1F5F9 (slate-100, pale blue-gray)

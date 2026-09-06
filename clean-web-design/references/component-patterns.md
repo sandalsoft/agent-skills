@@ -2,6 +2,8 @@
 
 Copy-pasteable component code for the clean web design system. These are production-ready primitives that compose together to build complete UIs.
 
+These patterns are for product chrome (dashboards, settings, directories). Lucide icons, `shadow-sm`, and three-column content grids are intentional here. Do not reassemble them into a marketing costume — three icon feature cards, a bento of rounded tiles, checkmark-bullet rows, a colored left stripe, or a fake terminal "demo." See the skill's Frontend Aesthetics and Copy & Trust sections.
+
 ## Table of Contents
 1. Card
 2. Button

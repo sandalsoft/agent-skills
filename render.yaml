@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=https://render.com/schema/render.yaml.json
+# Hosted deploy binds 0.0.0.0:$PORT via `npm start`. Set both Basic Auth
+# secrets in the Render dashboard — an unauthenticated public bind is not
+# the supported hosted configuration.
+services:
+  - type: web
+    name: gods-eye-view
+    runtime: node
+    buildCommand: npm ci
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 24.14.0
+      - key: GEV_BASIC_AUTH_USER
+        sync: false
+      - key: GEV_BASIC_AUTH_PASSWORD
+        sync: false

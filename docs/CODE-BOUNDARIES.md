@@ -78,7 +78,11 @@ owned module list is checked just like browser groups. Browser groups cannot
 use build-only dependency exceptions.
 
 `server/standalone/vite.config.js` loads the root environment and passes selected
-browser keys, host/port and the ordered local provider plugins to this helper.
+browser keys, host/port, an explicit `hosted` flag (from `RENDER`), and the
+ordered local provider plugins to this helper. A non-loopback `host` argument
+also turns on hosted server settings (HMR off, `strictPort`, `allowedHosts:
+true`, and the `gev-hosted-no-hmr` `@vite/client` stub) without the helper
+reading the environment.
 `server/providers/local.js` still owns provider process state, routes and
 credential-store paths. Provider Settings writes to the same root `.env` or
 Pinokio store as before. `vite.config.js` preserves the default configuration and

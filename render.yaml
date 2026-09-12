@@ -1,7 +1,8 @@
 # yaml-language-server: $schema=https://render.com/schema/render.yaml.json
-# Hosted deploy binds 0.0.0.0:$PORT via `npm start`. Set both Basic Auth
-# secrets in the Render dashboard — an unauthenticated public bind is not
-# the supported hosted configuration.
+# Hosted deploy binds 0.0.0.0:$PORT via `npm start`. Vite HMR is off when
+# RENDER=true or HOST is not loopback. Set both Basic Auth secrets in the
+# Render dashboard — an unauthenticated public bind is not the supported
+# hosted configuration.
 services:
   - type: web
     name: gods-eye-view

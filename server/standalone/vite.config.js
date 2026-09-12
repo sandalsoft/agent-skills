@@ -17,5 +17,8 @@ export default defineConfig(({ mode }) => {
     cesiumToken: process.env.CESIUM_ION_TOKEN,
     host: process.env.HOST,
     port: process.env.PORT,
+    // Render sets RENDER=true. A non-loopback HOST (npm start → 0.0.0.0)
+    // also disables HMR inside createBrowserViteConfig.
+    hosted: Boolean(process.env.RENDER),
   });
 });

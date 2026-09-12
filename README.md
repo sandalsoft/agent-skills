@@ -462,13 +462,22 @@ access the key-entry panel.
 
 **Hosted deploys (Render):** `npm start` runs the live Vite server (local
 provider middleware included) bound to `0.0.0.0` and `process.env.PORT`
-(default 4173). That public bind is only supported with HTTP Basic Auth:
-set **both** `GEV_BASIC_AUTH_USER` and `GEV_BASIC_AUTH_PASSWORD`. Every
+(default 4173). On Render (`RENDER=true`) or any non-loopback `HOST`, Vite
+**HMR is disabled** (`server.hmr = false` plus a `/@vite/client` stub with
+no WebSocket). A shared service does not need hot reload, and Vite 6's
+client would otherwise fall back to `wss://localhost:$PORT` behind Render's
+TLS-terminating proxy. Confirm after deploy: the page loads with no
+`[vite] failed to connect to websocket` console error and no websocket
+attempts to `localhost`. That public bind is only supported with HTTP Basic
+Auth: set **both** `GEV_BASIC_AUTH_USER` and `GEV_BASIC_AUTH_PASSWORD`. Every
 route — HTML, static assets, Vite middleware, and `/api` key proxies —
 then requires credentials. Unauthenticated requests receive `401` with
 `WWW-Authenticate: Basic realm="Gods Eye View"`. Build with `npm ci`;
 `engines.node` stays `>=24.14.0`. See `render.yaml`. Do not publish an
 unauthenticated `HOST=0.0.0.0` process as the hosted default.
+
+The browser `GOOGLE_MAPS_API_KEY` must enable **Map Tiles API**, have
+billing on, and allow HTTP referrer `https://gods-eye-view-std.onrender.com/*`.
 
 **Pinokio LAN and Cloudflare sharing remain disabled for this launcher.** Use
 a separately reviewed authentication proxy if remote access is required.

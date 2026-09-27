@@ -1,5 +1,6 @@
 import { governorRequestRender } from '../renderGovernor.js';
 import { markDetectionSourcesChanged } from './detection.js';
+import { toError } from '../standalone/errors.js';
 function cloneLayerParams(value) {
   if (Array.isArray(value)) return value.map(cloneLayerParams);
   if (value && typeof value === 'object') {
@@ -322,7 +323,7 @@ export class DataLayerManager {
       if (result === false) failure = lifecycleRejectedError(layerId, 'refresh');
       if (!failure) failure = refreshFailureFromStats(this._moduleStats(entry), entry.module.name || layerId);
     } catch (error) {
-      failure = error;
+      failure = toError(error, `layer:${layerId}`);
     }
 
     if (signal?.aborted) {

@@ -16,6 +16,7 @@ import {
   placementVariants,
 } from './worldOverlayDraw.js';
 import { WORLD_OVERLAY_STYLE } from './worldOverlayTokens.js';
+import { runGuardedFrame } from '../renderRecovery.js';
 
 /**
  * @module worldOverlay
@@ -88,6 +89,7 @@ export const WORLD_OVERLAY_OCCLUDER_SELECTORS = Object.freeze([
   '#top-center-actions',
   '#traffic-sync-chip',
   '#cctv-sync-chip',
+  '#flight-follow-chip',
   '#left-panel-stack',
   '#right-context-rail',
   '#pp-toggles',
@@ -2143,6 +2145,10 @@ function resetFrameDiagnostics() {
 }
 
 function drawWorldOverlay() {
+  return runGuardedFrame('worldOverlay', drawWorldOverlayUnguarded);
+}
+
+function drawWorldOverlayUnguarded() {
   if (_destroyed || !_viewer || !_canvas || !_ctx) return;
   const timestamp = nowMs();
   if (!overlayHasPaintWork(timestamp)) {

@@ -1480,6 +1480,7 @@ body.ui-clean-view #top-center-actions,
 body.ui-clean-view #global-loading-status,
 body.ui-clean-view #traffic-sync-chip,
 body.ui-clean-view #cctv-sync-chip,
+body.ui-clean-view #flight-follow-chip,
 body.ui-clean-view #pp-toggles,
 body.ui-clean-view #param-slider-panel,
 body.ui-clean-view #control-panel,
@@ -2083,7 +2084,8 @@ body.ui-clean-view #scene-runtime.active {
 }
 
 #traffic-sync-chip,
-#cctv-sync-chip {
+#cctv-sync-chip,
+#flight-follow-chip {
   position: fixed;
   top: 112px;
   left: 50%;
@@ -2115,9 +2117,39 @@ body.ui-clean-view #scene-runtime.active {
 }
 
 #traffic-sync-chip.visible,
-#cctv-sync-chip.visible {
+#cctv-sync-chip.visible,
+#flight-follow-chip.visible {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
+}
+
+#flight-follow-chip {
+  top: 146px;
+  pointer-events: auto;
+  gap: 8px;
+  text-transform: none;
+  letter-spacing: 0.6px;
+}
+
+#flight-follow-chip[hidden] {
+  display: none;
+}
+
+#flight-follow-toggle {
+  appearance: none;
+  border: 1px solid rgba(0, 212, 255, 0.35);
+  background: rgba(0, 40, 56, 0.7);
+  color: rgba(170, 252, 255, 0.95);
+  font: inherit;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#flight-follow-toggle[aria-pressed="true"] {
+  background: rgba(0, 212, 255, 0.22);
 }
 
 #traffic-sync-label,
@@ -3938,7 +3970,7 @@ body.cockpit-mode #view-switcher button {
 }
 .cockpit-help span { color: var(--cockpit-accent); }
 body.cockpit-mode :is(
-  #title-bar, #style-indicator, #top-center-actions, #traffic-sync-chip, #cctv-sync-chip,
+  #title-bar, #style-indicator, #top-center-actions, #traffic-sync-chip, #cctv-sync-chip, #flight-follow-chip,
   #command-dock,
   #military-awareness-panel, #military-awareness-direction-overlay,
   #cockpit-entry
@@ -6874,6 +6906,7 @@ body.recording-mode #top-center-actions,
 body.recording-mode #global-loading-status,
 body.recording-mode #traffic-sync-chip,
 body.recording-mode #cctv-sync-chip,
+body.recording-mode #flight-follow-chip,
 body.recording-mode #pp-toggles,
 body.recording-mode #clean-view-exit,
 body.recording-mode #param-slider-panel,

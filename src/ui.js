@@ -21,6 +21,7 @@ import {
 } from './cockpitTracking.js';
 import { IntelHUD } from './hud.js';
 import { ShareLinkManager } from './sharelink.js';
+import { FlightDeepLinkController } from './data/flightDeepLink.js';
 import {
   isExplicitLayerStateOrigin,
   LayerStateCoordinator,
@@ -288,6 +289,7 @@ const LEFT_STACK_OBSTACLE_SELECTOR = [
   '#top-center-actions',
   '#traffic-sync-chip',
   '#cctv-sync-chip',
+  '#flight-follow-chip',
   '#intel-hud .hud-top-left',
   '#intel-hud .hud-top-right',
   '#intel-hud .hud-bottom-left',
@@ -339,6 +341,7 @@ const RIGHT_STACK_OBSTACLE_SELECTOR = [
   '#top-center-actions',
   '#traffic-sync-chip',
   '#cctv-sync-chip',
+  '#flight-follow-chip',
   '#intel-hud .hud-top-left',
   '#intel-hud .hud-top-right',
   '#intel-hud .hud-bottom-left',
@@ -2644,6 +2647,25 @@ export class StyleManager {
       isNavigationCurrent: (generation) => generation === this._navigationGeneration,
       cancelOwnedNavigation: () => this.viewer.camera.cancelFlight(),
     });
+    this._flightFollowChip = document.getElementById('flight-follow-chip');
+    this._flightFollowChipLabel = document.getElementById('flight-follow-chip-label');
+    this._flightFollowToggle = document.getElementById('flight-follow-toggle');
+    this._flightDeepLink = new FlightDeepLinkController({
+      dataManager: null,
+      flightsLayer,
+      shareLinkManager: this.shareLinkManager,
+      onStatus: (status) => this._renderFlightDeepLinkStatus(status),
+      onFollowChange: (state) => this._renderFlightFollowChip(state),
+    });
+    this.shareLinkManager.setFlightShareProvider(() => this._flightSharePayload());
+    this._flightFollowToggle?.addEventListener('click', () => {
+      const next = !this._flightDeepLink.followEnabled;
+      this._flightDeepLink.setFollowEnabled(next);
+    });
+    flightsLayer.setFollowChangeListener?.((state) => {
+      this._flightDeepLink.syncFollowEnabled(!!state.enabled);
+      this.shareLinkManager?.onLayerStateChange?.();
+    });
     this.shareLinkManager.setPanelStateProvider(() => this._buildSharePanelState());
     this.shareLinkManager.setStyleParamStateProvider((styleName) => {
       const shader = STYLES[styleName];
@@ -4689,6 +4711,60 @@ export class StyleManager {
         this._syncModels3dFromLayerState(this._layerStateCoordinator?.getDurableState());
       });
     }
+    if (this._flightDeepLink) this._flightDeepLink.dataManager = this._dataManager;
+    if (this._initialShareState?.flightRef?.query) {
+      void this._flightDeepLink.start(this._initialShareState.flightRef);
+    }
+  }
+
+  _flightSharePayload() {
+    const deep = this._flightDeepLink?.sharePayload();
+    if (deep?.flight || deep?.icao24) return deep;
+    const tracked = flightsLayer.getTrackedInfo?.();
+    if (!tracked) return null;
+    return {
+      flight: tracked.callsign || null,
+      icao24: tracked.icao24 || null,
+    };
+  }
+
+  _renderFlightDeepLinkStatus(status) {
+    if (!this._flightFollowChip || !this._flightFollowChipLabel) return;
+    if (!status || status.status === 'skipped' || status.status === 'destroyed') {
+      this._flightFollowChip.hidden = true;
+      this._flightFollowChip.classList.remove('visible');
+      return;
+    }
+    this._flightFollowChip.hidden = false;
+    this._flightFollowChip.classList.add('visible');
+    if (status.waiting) {
+      this._flightFollowChipLabel.textContent = status.message || `Waiting for ${status.display}…`;
+    } else if (status.found) {
+      this._flightFollowChipLabel.textContent = status.found.callsign || status.display;
+    }
+    this._renderFlightFollowChip({
+      enabled: this._flightDeepLink?.followEnabled !== false,
+      found: status.found,
+      display: status.display,
+    });
+  }
+
+  _renderFlightFollowChip(state) {
+    if (!this._flightFollowChip || !this._flightFollowToggle) return;
+    const found = state?.found || this._flightDeepLink?.sharePayload();
+    const waiting = this._flightDeepLink?._waiting;
+    if (!found && !waiting && !state?.display) {
+      this._flightFollowChip.hidden = true;
+      this._flightFollowChip.classList.remove('visible');
+      return;
+    }
+    this._flightFollowChip.hidden = false;
+    this._flightFollowChip.classList.add('visible');
+    if (this._flightFollowChipLabel && !waiting && (state?.found?.callsign || state?.display)) {
+      this._flightFollowChipLabel.textContent = state.found?.callsign || state.display;
+    }
+    this._flightFollowToggle.setAttribute('aria-pressed', String(!!state?.enabled));
+    this._flightFollowToggle.textContent = state?.enabled ? 'Following' : 'Follow';
   }
 
   _handleShareTrackingRestoreStatus(result) {
@@ -10323,6 +10399,9 @@ export class StyleManager {
       this.viewer?.canvas?.removeEventListener('wheel', this._initialShareGestureHandler);
       this._initialShareGestureHandler = null;
     }
+    this._flightDeepLink?.destroy();
+    this._flightDeepLink = null;
+    flightsLayer.setFollowChangeListener?.(null);
     this.shareLinkManager?.destroy();
     if (this._awarenessSelectedHandler) {
       window.removeEventListener('gev:awareness-subject-selected', this._awarenessSelectedHandler);

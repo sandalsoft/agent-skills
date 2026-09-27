@@ -28,6 +28,7 @@ import {
   applyTrackedCameraFrame,
   trackedModelScaleForPixelCap,
 } from './trackedCamera.js';
+import { runGuardedFrame } from '../renderRecovery.js';
 import {
   courseBetweenCartesians, limitCourseStep, turnRateFromFixHistory, arcOffsetEnu,
   lerpAngleDeg, speedRamp, courseSlewCapDps, displayedKinematics, staleCoastLimitSeconds,
@@ -1801,6 +1802,10 @@ function _updateTrackedModel() {
  * @returns {void}
  */
 function _fleetTick() {
+  return runGuardedFrame('militaryFlights', _fleetTickUnguarded);
+}
+
+function _fleetTickUnguarded() {
   if (!_viewer || !_billboardCollection || !_billboardCollection.show) return;
   const scene = _viewer.scene;
   const camera = _viewer.camera;

@@ -62,12 +62,7 @@ function serializeThrownReplacer(_key, nested) {
  * @returns {Error}
  */
 export function toError(value, context = '') {
-  if (value instanceof Error) {
-    if (context && !value.message.includes(context)) {
-      value.message = `${context}: ${value.message}`;
-    }
-    return value;
-  }
+  if (value instanceof Error) return value;
   const detail = serializeThrown(value) || 'non-Error throw';
   const prefix = context ? `${context}: ` : '';
   const error = new Error(`${prefix}${detail}`);

@@ -10,6 +10,13 @@ import {
 } from './renderRecovery.js';
 import { resolveViewerMsaaSamples } from './webglCapabilities.js';
 
+test('toError leaves a real Error message untouched', () => {
+  const original = new Error('network rejected');
+  const wrapped = toError(original, 'layer:satellites');
+  assert.equal(wrapped, original);
+  assert.equal(wrapped.message, 'network rejected');
+});
+
 test('root cause: a plain object throw becomes an Error with JSON details', () => {
   // Cesium's default panel does error.toString() + error.stack. A thrown {}
   // therefore renders as "[object Object]" / "undefined" and the scene dies.

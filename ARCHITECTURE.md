@@ -34,3 +34,23 @@ loopback `npm run dev` is unchanged.
 The client `GOOGLE_MAPS_API_KEY` is injected via Vite `define`. In Google Cloud
 it must allow Map Tiles API, have billing enabled, and list referrer
 `https://gods-eye-view-std.onrender.com/*`.
+
+## Render crash recovery
+
+iPhone Safari (WebGL1) used to request `msaaSamples: 4` while `MAX_SAMPLES` is 0.
+A photoreal tile or NaN Cartesian then threw a plain object into Cesium's
+render loop; the default panel printed `[object Object]` / `undefined` and
+stopped the scene. `resolveViewerMsaaSamples()` clamps MSAA. Per-frame
+layer ticks (`flights`, `militaryFlights`, `worldOverlay`) run through
+`runGuardedFrame` / `runGuardedRecord`. `installSceneRenderRecovery()` logs
+the real throw via `toError()` and re-enables `useDefaultRenderLoop`.
+
+## Flight deep links
+
+`#flight=UA4051` / `#flight=UAL4051` / `#icao24=<hex>` parse without camera
+keys. `flightIdentity.js` normalizes IATA→ICAO and United Express regionals.
+`flightResolver.js` scores live rows (configured aliases: UA4051→ASH4051,
+UA700→UAL700). `FlightDeepLinkController` enables the flights layer, waits
+on each refresh, and queries `/api/flight-lookup` (OpenSky worldwide cache,
+then adsb.lol callsign/hex — not the 250 nm viewport fallback). Selected
+or followed flights are written back into the share hash.

@@ -25,3 +25,6 @@ Do not push or open PRs against upstream.
   passes `hosted` from `RENDER`
 - `server/providers/local.js` — provider proxies + `basicAuthGate()`
 - `build/vite.js` — browser Vite config (`HOST`/`PORT`, `allowedHosts`, HMR off when hosted)
+- `src/data/flightIdentity.js` / `flightResolver.js` / `flightDeepLink.js` — `#flight=` / `#icao24=` deep links
+- `src/renderRecovery.js` / `src/webglCapabilities.js` — Cesium renderError recovery + WebGL1 MSAA clamp
+- `GET /api/flight-lookup?callsign=` / `?icao24=` — worldwide OpenSky cache, then adsb.lol hex/callsign

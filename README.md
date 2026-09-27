@@ -68,8 +68,17 @@ Start with the included data sources, then add your own. Each layer is a separat
 - **🎖️ Military HUD:** Tactical heads-up display with intelligence-style telemetry.
 - **🌐 Global Context:** Stage the full situational picture with one switch — and get your exact view back when you leave.
 - **🎥 Scene director:** Capture cinematic camera tours for clips and demos.
-- **🔗 Share Links:** Camera, style, layers, and even one tracked target serialize into a URL — a live target is a handoff, not a bookmark.
+- **🔗 Share Links:** Camera, style, layers, and a live aircraft (`#flight=UA4051` or `#icao24=abc123`) serialize into a URL — a live target is a handoff, not a bookmark. Marketing codes expand to the operating callsign (UA4051 → Mesa ASH4051).
 - **🏠 Reset Globe:** One control — or one sentence — back to the full Earth.
+
+Flight deep links (hash, same as camera/style):
+
+- `#flight=UA4051` — IATA. Also `UAL4051`, `SKW4051`, `ASH4051`.
+- `#flight=UA700` — mainline United expands to `UAL700`.
+- `#icao24=abc123` — 24-bit hex address.
+- Combined: `#lat=33.6757&lon=-117.8682&alt=25000&flight=UA700`
+
+On load the flights layer turns on, a chip says **Waiting for UA4051…** until ADS-B shows it, then the camera follows. Drag the globe to break follow; tap **Follow** to lock on again. OpenSky `/states/all` is worldwide; the map's adsb.lol fallback is 250 nm around the camera. Deep-link lookup uses the OpenSky cache, then adsb.lol callsign/hex globally (`/api/flight-lookup`).
 
 ---
 

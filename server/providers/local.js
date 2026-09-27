@@ -50,7 +50,7 @@ import {
   normalizeRegionalPlace,
   normalizeRegionalWeather,
 } from '../../src/data/regionalBrief.js';
-import { normalizeAdsbLolPointResponse } from '../../src/data/adsbLolFallback.js';
+import { normalizeAdsbLolAircraftState, normalizeAdsbLolPointResponse } from '../../src/data/adsbLolFallback.js';
 import { createAisStreamAdapter, isRecognizedAisEnvelope } from '../../src/data/aisStreamAdapter.js';
 import { parseSilenceTimeoutEnv } from '../../src/data/aisWatchdog.js';
 import { keylessHudSummaryResponse } from '../../src/hudSummaryResponse.js';
@@ -7811,11 +7811,119 @@ export function basicAuthGate() {
   };
 }
 
+function openskyStateToLookupRecord(state) {
+  if (!Array.isArray(state)) return null;
+  const icao24 = String(state[0] || '').toLowerCase();
+  const lat = Number(state[6]);
+  const lon = Number(state[5]);
+  if (!icao24 || !Number.isFinite(lat) || !Number.isFinite(lon)) return null;
+  return {
+    icao24,
+    callsign: String(state[1] || '').trim(),
+    lon,
+    lat,
+    altitude: Number.isFinite(state[7]) ? state[7] : (Number.isFinite(state[13]) ? state[13] : null),
+    geo_altitude: Number.isFinite(state[13]) ? state[13] : null,
+    on_ground: state[8] === true,
+    velocity: Number.isFinite(state[9]) ? state[9] : null,
+    true_track: Number.isFinite(state[10]) ? state[10] : null,
+    last_contact: state[4],
+  };
+}
+
+function searchOpenskyCacheForFlight({ callsign, icao24 }) {
+  if (!_openskyCacheBody) return [];
+  let parsed;
+  try {
+    parsed = JSON.parse(_openskyCacheBody);
+  } catch {
+    return [];
+  }
+  const wantHex = icao24 ? String(icao24).toLowerCase().padStart(6, '0') : null;
+  const wantCs = callsign ? String(callsign).toUpperCase().replace(/[\s._-]+/g, '') : null;
+  const records = [];
+  for (const state of parsed.states || []) {
+    const hex = String(state?.[0] || '').toLowerCase();
+    const cs = String(state?.[1] || '').toUpperCase().replace(/[\s._-]+/g, '');
+    if ((wantHex && hex === wantHex) || (wantCs && cs === wantCs)) {
+      const rec = openskyStateToLookupRecord(state);
+      if (rec) records.push({ ...rec, _source: 'opensky-cache' });
+    }
+  }
+  return records;
+}
+
+async function lookupAdsbLolFlight({ callsign, icao24 }) {
+  const urls = [];
+  if (icao24 && /^[0-9a-f]{1,6}$/i.test(icao24)) {
+    urls.push(`https://api.adsb.lol/v2/hex/${encodeURIComponent(icao24.toLowerCase())}`);
+  }
+  if (callsign) {
+    urls.push(`https://api.adsb.lol/v2/callsign/${encodeURIComponent(String(callsign).toUpperCase())}`);
+  }
+  const now = Math.floor(Date.now() / 1000);
+  const records = [];
+  for (const url of urls) {
+    try {
+      const upstream = await fetch(url, {
+        headers: { Accept: 'application/json', 'User-Agent': 'gods-eye-view-flight-lookup/1.0' },
+        signal: AbortSignal.timeout(8000),
+      });
+      if (!upstream.ok) continue;
+      const payload = await upstream.json();
+      const aircraft = Array.isArray(payload?.ac) ? payload.ac : [];
+      for (const ac of aircraft) {
+        const rec = openskyStateToLookupRecord(normalizeAdsbLolAircraftState(ac, now));
+        if (rec) records.push({ ...rec, _source: 'adsb.lol' });
+      }
+      if (records.length) break;
+    } catch {
+      // try the next identifier
+    }
+  }
+  return records;
+}
+
+function flightLookupProxy() {
+  return {
+    name: 'flight-lookup-proxy',
+    configureServer(server) {
+      server.middlewares.use('/api/flight-lookup', async (req, res) => {
+        const send = (status, obj) => {
+          res.writeHead(status, { 'Content-Type': 'application/json' });
+          res.end(JSON.stringify(obj));
+        };
+        if (req.method !== 'GET') return send(405, { error: 'method' });
+        try {
+          const url = new URL(req.url || '', 'http://localhost');
+          const callsign = String(url.searchParams.get('callsign') || '').trim();
+          const icao24 = String(url.searchParams.get('icao24') || '').trim().toLowerCase();
+          if (!callsign && !/^[0-9a-f]{1,6}$/.test(icao24)) {
+            return send(400, { error: 'callsign or icao24 required' });
+          }
+          let records = searchOpenskyCacheForFlight({ callsign, icao24 });
+          if (!records.length) records = await lookupAdsbLolFlight({ callsign, icao24 });
+          return send(200, {
+            records,
+            source: records[0]?._source || 'none',
+            worldwide: true,
+            note: 'OpenSky /states/all is worldwide. The map fallback to adsb.lol is 250 nm around the camera; this lookup uses the OpenSky cache then adsb.lol callsign/hex globally.',
+          });
+        } catch (error) {
+          console.warn('[flight-lookup]', error?.message || error);
+          return send(500, { error: 'lookup failed' });
+        }
+      });
+    },
+  };
+}
+
 /** Construct the local provider plugins in their established order. */
 export function localProviderPlugins() {
   return [
       basicAuthGate(),
       openSkyProxy(),
+      flightLookupProxy(),
       celestrakProxy(),
       tomtomProxy(),
       firmsProxy(),

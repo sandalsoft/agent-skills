@@ -11,15 +11,68 @@ export function describeError(error) {
     return error.name || 'Initialization error';
   }
   if (typeof error === 'string' && error.trim()) return error.trim();
-  if (typeof error === 'object') {
-    const maybeMessage = String(error.message || error.error || '').trim();
-    if (maybeMessage) return maybeMessage;
+  const serialized = serializeThrown(error);
+  if (serialized) return serialized;
+  return String(error);
+}
+
+/**
+ * JSON/string detail for a thrown value. Cesium's default render panel does
+ * `error.toString()` + `error.stack`, which becomes `[object Object]` /
+ * `undefined` when the throw is a plain object. Always prefer this.
+ * @param {*} value
+ * @returns {string}
+ */
+export function serializeThrown(value) {
+  if (value == null) return '';
+  if (typeof value === 'string') return value.trim();
+  if (value instanceof Error) {
+    const parts = [value.name, value.message].filter((part) => String(part || '').trim());
+    return parts.join(': ') || value.toString();
+  }
+  if (typeof value === 'object') {
+    const maybeMessage = String(value.message || value.error || value.reason || '').trim();
+    if (maybeMessage && maybeMessage !== '[object Object]') return maybeMessage;
     try {
-      const serialized = JSON.stringify(error);
+      const serialized = JSON.stringify(value, serializeThrownReplacer);
       if (serialized && serialized !== '{}') return serialized;
     } catch {
-      // ignore serialization error
+      // cyclic / BigInt — fall through
     }
+    const ctor = value.constructor?.name;
+    if (ctor && ctor !== 'Object') return `${ctor}`;
   }
-  return String(error);
+  const text = String(value);
+  return text === '[object Object]' ? '' : text;
+}
+
+function serializeThrownReplacer(_key, nested) {
+  if (typeof nested === 'bigint') return String(nested);
+  if (nested instanceof Error) {
+    return { name: nested.name, message: nested.message, stack: nested.stack };
+  }
+  return nested;
+}
+
+/**
+ * Coerce any thrown value into a real Error so Cesium's render panel and
+ * `console.error` show a message and stack instead of `[object Object]`.
+ * @param {*} value
+ * @param {string} [context]
+ * @returns {Error}
+ */
+export function toError(value, context = '') {
+  if (value instanceof Error) {
+    if (context && !value.message.includes(context)) {
+      value.message = `${context}: ${value.message}`;
+    }
+    return value;
+  }
+  const detail = serializeThrown(value) || 'non-Error throw';
+  const prefix = context ? `${context}: ` : '';
+  const error = new Error(`${prefix}${detail}`);
+  error.name = 'WrappedThrow';
+  error.cause = value;
+  error.details = detail;
+  return error;
 }

@@ -7,6 +7,7 @@ import { loadPhotorealisticTileset } from '../mapStartup.js';
 import { initLogoGaze } from '../logoGaze.js';
 import { uninstallRenderGovernor } from '../renderGovernor.js';
 import { describeError } from './errors.js';
+import { isolateTilesetErrors } from '../renderRecovery.js';
 
 /** Construct the standalone globe using the caller's local configuration. */
 export async function createStandaloneScene({
@@ -63,6 +64,8 @@ export async function createStandaloneScene({
     // NOTE: Cesium World Terrain intentionally disabled — conflicts with Google 3D Tiles at high zoom.
     // Google Photorealistic 3D Tiles provide their own terrain/elevation.
     viewer.scene.globe.show = false;
+    const removeTileFailed = isolateTilesetErrors(tileset);
+    defer(() => removeTileFailed());
     console.info(`[Init] Google 3D Tiles loaded via ${photoreal.route}.`);
   } else {
     if (photoreal.errors.length) {

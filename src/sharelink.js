@@ -6,6 +6,7 @@ import {
 } from './data/detectionPolicy.js';
 import { clampScopeTerminusPct } from './scopeMask.js';
 import { decodeLayerStateParams, encodeLayerStateParams } from './data/layerState.js';
+import { parseFlightHashParams } from './data/flightIdentity.js';
 
 /**
  * Share Links — URL Hash State Management
@@ -126,6 +127,7 @@ export class ShareLinkManager {
     this._layerStateProvider = null;
     this._panelStateProvider = null;
     this._styleParamStateProvider = null;
+    this._flightShareProvider = null;
     this._initialRestorePending = false;
     this._restoreAuthority = {
       visual: 0,
@@ -158,11 +160,14 @@ export class ShareLinkManager {
     const params = new URLSearchParams(hash);
     const lat = parseFloat(params.get('lat'));
     const lon = parseFloat(params.get('lon'));
+    const flightRef = parseFlightHashParams(params);
+    const hasCoordinates = Number.isFinite(lat) && Number.isFinite(lon);
 
     // Coordinates drive Cartesian conversion, so reject non-finite URL values
     // before marking a share restoration as pending. `parseFloat('Infinity')`
     // is not NaN and would otherwise reach Cesium asynchronously at startup.
-    if (!Number.isFinite(lat) || !Number.isFinite(lon)) return null;
+    // A flight-only link (`#flight=UA4051`) is a valid share without a camera.
+    if (!hasCoordinates && !flightRef.query) return null;
 
     const parseOr = (value, fallback) => {
       const num = parseFloat(value);
@@ -177,8 +182,8 @@ export class ShareLinkManager {
     const style = URL_TO_STYLE[params.get('style')] || 'normal';
     const decodedLayerState = decodeLayerStateParams(params);
     const state = {
-      lat,
-      lon,
+      lat: hasCoordinates ? lat : null,
+      lon: hasCoordinates ? lon : null,
       alt: parseOr(params.get('alt'), 800),
       heading: parseOr(params.get('heading'), 0),
       pitch: parseOr(params.get('pitch'), -35),
@@ -231,6 +236,7 @@ export class ShareLinkManager {
         && decodedLayerState === null,
       panelState: decodePanelStateParams(params),
       sharedAtMs: decodeShareCreatedAtMs(params),
+      flightRef,
     };
     state.restoreAuthority = {
       visual: this._restoreAuthority.visual,
@@ -248,16 +254,19 @@ export class ShareLinkManager {
    */
   async applyState(state, { applyCamera = true, navigationToken = null } = {}) {
     if (this._destroyed || !state) return { succeeded: false, reason: 'unavailable' };
-    const view = {
-      destination: Cesium.Cartesian3.fromDegrees(state.lon, state.lat, state.alt),
-      orientation: {
-        heading: Cesium.Math.toRadians(state.heading),
-        pitch: Cesium.Math.toRadians(state.pitch),
-        roll: Cesium.Math.toRadians(state.roll),
-      },
-    };
-    let cameraPromise = Promise.resolve({ status: applyCamera ? 'superseded' : 'skipped' });
-    if (applyCamera && this._isNavigationCurrent(navigationToken)) {
+    const hasCoordinates = Number.isFinite(state.lat) && Number.isFinite(state.lon);
+    const view = hasCoordinates
+      ? {
+          destination: Cesium.Cartesian3.fromDegrees(state.lon, state.lat, state.alt),
+          orientation: {
+            heading: Cesium.Math.toRadians(state.heading),
+            pitch: Cesium.Math.toRadians(state.pitch),
+            roll: Cesium.Math.toRadians(state.roll),
+          },
+        }
+      : null;
+    let cameraPromise = Promise.resolve({ status: applyCamera && view ? 'superseded' : 'skipped' });
+    if (applyCamera && view && this._isNavigationCurrent(navigationToken)) {
       const restoreGeneration = ++this._restoreGeneration;
       let settleCamera;
       cameraPromise = new Promise((resolve) => { settleCamera = resolve; });
@@ -370,6 +379,11 @@ export class ShareLinkManager {
   /** Install the active visual preset parameter source used by URL generation. */
   setStyleParamStateProvider(provider) {
     this._styleParamStateProvider = typeof provider === 'function' ? provider : null;
+  }
+
+  /** Install the selected/followed flight source used by URL generation. */
+  setFlightShareProvider(provider) {
+    this._flightShareProvider = typeof provider === 'function' ? provider : null;
   }
 
   /** Called only when the durable layer preference model changes. */
@@ -516,6 +530,11 @@ export class ShareLinkManager {
       this._currentStyle,
       this._styleParamStateProvider?.(this._currentStyle),
     );
+    const flightShare = this._flightShareProvider?.();
+    if (flightShare?.flight) params.set('flight', String(flightShare.flight));
+    else params.delete('flight');
+    if (flightShare?.icao24) params.set('icao24', String(flightShare.icao24));
+    else params.delete('icao24');
 
     // Copy-time metadata is intentionally absent here. `copyLink()` adds a
     // fresh timestamp to its ephemeral URL without aging the live address.
@@ -541,6 +560,7 @@ export class ShareLinkManager {
     this._layerStateProvider = null;
     this._panelStateProvider = null;
     this._styleParamStateProvider = null;
+    this._flightShareProvider = null;
     this._onRestore = null;
   }
 }

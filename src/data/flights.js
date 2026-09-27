@@ -94,6 +94,12 @@ import {
 } from './contextStore.js';
 import { CONTACT_MATCH_TIER, contactMatchWins, rankContactMatch } from './contactMatch.js';
 import { holdContinuousRender, releaseContinuousRender } from '../renderGovernor.js';
+import {
+  guardedCallback,
+  isRenderableCartesian,
+  runGuardedFrame,
+  runGuardedRecord,
+} from '../renderRecovery.js';
 
 const FOCUS_EVIDENCE_DEV = import.meta.env?.DEV === true;
 
@@ -355,6 +361,12 @@ let _lastTrackingRefreshOutcome = {
 let _trackedEntity = null;
 /** Disposes the single active tracked-camera framing owner. */
 let _trackedCameraFrameStop = null;
+/** Camera follow is optional: selection can survive after the user drags free. */
+let _followCameraEnabled = true;
+/** @type {((state: {enabled: boolean, icao24: string|null}) => void)|null} */
+let _followChangeListener = null;
+/** @type {Cesium.ScreenSpaceEventHandler|null} */
+let _followInputHandler = null;
 /** @type {Cesium.Model|null} Standalone 3D model for the tracked aircraft. Deliberately NOT a
  *  graphic on _trackedEntity: viewer.trackedEntity derives the follow-camera from the entity's
  *  bounding sphere, and a model graphic reports PENDING until its glTF loads — which stalls (or, on
@@ -380,6 +392,130 @@ let _cockpitModeListener = null;
 function _emitAwarenessEvent(type, detail) {
   if (typeof window === 'undefined' || !window.dispatchEvent || typeof CustomEvent === 'undefined') return;
   window.dispatchEvent(new CustomEvent(type, { detail }));
+}
+
+function _emitFollowChange() {
+  const state = { enabled: _followCameraEnabled, icao24: _trackedIcao };
+  _followChangeListener?.(state);
+  _emitAwarenessEvent('gev:flight-follow-changed', state);
+}
+
+function _releaseFollowCameraOnly() {
+  _trackedCameraFrameStop?.();
+  _trackedCameraFrameStop = null;
+  if (_viewer && _viewer.trackedEntity === _trackedEntity) {
+    _viewer.trackedEntity = undefined;
+  }
+}
+
+function _engageFollowCamera() {
+  if (!_viewer || !_trackedEntity || !_followCameraEnabled) return false;
+  _viewer.camera.cancelFlight();
+  _viewer.trackedEntity = _trackedEntity;
+  _trackedCameraFrameStop?.();
+  _trackedCameraFrameStop = applyTrackedCameraFrame(
+    _viewer,
+    _trackedEntity,
+    _trackedEntity.viewFrom,
+  ) || null;
+  return true;
+}
+
+function _installFollowBreakHandler(viewer) {
+  if (_followInputHandler || !viewer?.scene?.canvas) return;
+  _followInputHandler = new Cesium.ScreenSpaceEventHandler(viewer.scene.canvas);
+  let dragOrigin = null;
+  const beginDrag = (position) => {
+    dragOrigin = position ? Cesium.Cartesian2.clone(position) : new Cesium.Cartesian2();
+  };
+  const maybeBreak = (position) => {
+    if (!_followCameraEnabled || !_trackedIcao || !dragOrigin || !position) return;
+    if (Cesium.Cartesian2.distance(dragOrigin, position) < 8) return;
+    dragOrigin = null;
+    _followCameraEnabled = false;
+    _releaseFollowCameraOnly();
+    _emitFollowChange();
+  };
+  _followInputHandler.setInputAction((event) => beginDrag(event?.position), Cesium.ScreenSpaceEventType.LEFT_DOWN);
+  _followInputHandler.setInputAction((event) => beginDrag(event?.position), Cesium.ScreenSpaceEventType.RIGHT_DOWN);
+  _followInputHandler.setInputAction((event) => beginDrag(event?.position), Cesium.ScreenSpaceEventType.MIDDLE_DOWN);
+  _followInputHandler.setInputAction((movement) => maybeBreak(movement?.endPosition), Cesium.ScreenSpaceEventType.MOUSE_MOVE);
+  _followInputHandler.setInputAction(() => { dragOrigin = null; }, Cesium.ScreenSpaceEventType.LEFT_UP);
+  if (Cesium.ScreenSpaceEventType.PINCH_START != null) {
+    _followInputHandler.setInputAction(() => {
+      if (!_followCameraEnabled || !_trackedIcao) return;
+      _followCameraEnabled = false;
+      _releaseFollowCameraOnly();
+      _emitFollowChange();
+    }, Cesium.ScreenSpaceEventType.PINCH_MOVE);
+  }
+}
+
+function _ingestLookupRecord(record) {
+  const icao24 = _normalizeTrackedIcao(record?.icao24);
+  const lat = Number(record?.lat ?? record?.latitude);
+  const lon = Number(record?.lon ?? record?.longitude);
+  if (!icao24 || !Number.isFinite(lat) || !Number.isFinite(lon) || Math.abs(lat) > 90 || Math.abs(lon) > 180) {
+    return false;
+  }
+  const alt = Number(record.altitude ?? record.geo_altitude ?? record.baro_altitude ?? 10000);
+  const renderAltitudeM = Number.isFinite(alt) ? alt : 10000;
+  const position = Cesium.Cartesian3.fromDegrees(lon, lat, renderAltitudeM);
+  if (!isRenderableCartesian(position)) return false;
+  const prev = _flightData.get(icao24);
+  const velocity = Number(record.velocity ?? record.gs);
+  const track = Number(record.track ?? record.true_track);
+  _flightData.set(icao24, {
+    ...prev,
+    callsign: stickyText(record.callsign ?? record.flight, prev?.callsign),
+    altitude: Number.isFinite(alt) ? alt : (prev?.altitude ?? 10000),
+    renderAltitudeM,
+    velocity: Number.isFinite(velocity) ? velocity : (prev?.velocity || 0),
+    true_track: Number.isFinite(track) ? track : (prev?.true_track || 0),
+    onGround: record.on_ground === true || record.onGround === true,
+    rawLat: lat,
+    rawLon: lon,
+    klass: prev?.klass || 'unknown',
+    route: prev?.route || null,
+    lastContactEpochMs: Date.now(),
+  });
+  if (!_positionHistory.has(icao24)) _positionHistory.set(icao24, []);
+  const history = _positionHistory.get(icao24);
+  if (!history.length) {
+    history.push({
+      time: Cesium.JulianDate.now(),
+      epochMs: Date.now(),
+      position: position.clone(),
+      velocity: _flightData.get(icao24).velocity,
+      track: _flightData.get(icao24).true_track,
+    });
+  }
+  if (!_billboards.has(icao24) && _billboardCollection) {
+    const meta = _flightData.get(icao24);
+    const bb = _billboardCollection.add({
+      position,
+      image: aircraftIcon(_iconKind(icao24, meta?.klass)),
+      width: 20,
+      height: 20,
+      scale: _fleetBillboardScale(icao24, meta?.klass),
+      rotation: 0,
+      alignedAxis: Cesium.Cartesian3.ZERO,
+      color: _fleetBillboardColor(icao24),
+      sizeInMeters: false,
+      scaleByDistance: _normalBillboardScaleByDistance(),
+      disableDepthTestDistance: _groundDepthDistance(),
+      id: icao24,
+      show: icao24 !== _trackedIcao,
+    });
+    _billboards.set(icao24, bb);
+    _applyFleetBillboardPresentation(icao24, bb);
+  } else if (_billboards.has(icao24)) {
+    const bb = _billboards.get(icao24);
+    if (bb && Cesium.Cartesian3.distanceSquared(position, bb.position) > 1) {
+      bb.position = position;
+    }
+  }
+  return true;
 }
 
 function _publishTrackedSelection(icao24, origin = 'programmatic') {
@@ -1209,6 +1345,10 @@ function _deadReckon(icao24, result) {
  * Arc math adapted from skylight (https://github.com/cpaczek/skylight, MIT).
  */
 function _extrapolateFix(fix, info, dt, out, turnRateDps = 0) {
+  if (!isRenderableCartesian(fix?.position)) {
+    _drCourseDeg = null; _drSpeedMps = null; _drCourseHold = false; _drExtrapolating = false;
+    return null;
+  }
   const speed = Number.isFinite(fix.velocity) ? fix.velocity : ((info && info.velocity) || 0);
   const heading = Number.isFinite(fix.track) ? fix.track : ((info && info.true_track) || 0);
   _drSpeedMps = speed;
@@ -2612,6 +2752,10 @@ function _updateTrackedModel() {
 }
 
 function _fleetTick() {
+  return runGuardedFrame('flights', _fleetTickUnguarded);
+}
+
+function _fleetTickUnguarded() {
   if (!_viewer || !_billboardCollection || !_billboardCollection.show) return;
   const scene = _viewer.scene;
   const camera = _viewer.camera;
@@ -2709,7 +2853,13 @@ function _fleetTick() {
 
   for (const [icao24, bb] of _billboards) {
     if (icao24 === _trackedIcao) continue; // tracked entity owns its own motion
+    runGuardedRecord('flights', icao24, () => _fleetTickContact(icao24, bb, {
+      scene, camera, nowMs, occluder, focusTarget, useModels, modelEligible, doRotations, tickDtSec,
+    }));
+  }
+}
 
+function _fleetTickContact(icao24, bb, { scene, camera, nowMs, occluder, focusTarget, useModels, modelEligible, doRotations, tickDtSec }) {
     const info = _flightData.get(icao24);
 
     const dr = _deadReckon(icao24, _scratchFleetPos);
@@ -2742,7 +2892,7 @@ function _fleetTick() {
       // rendering through the hidden globe at its last matrix.
       const m = _models.get(icao24);
       if (m && m.show) m.show = false;
-      continue;
+      return;
     }
 
     // One order-independent write site composes freshness × focus × limb haze
@@ -2840,7 +2990,7 @@ function _fleetTick() {
           });
         },
       );
-      if (ownsVisual) continue; // skip billboard rotation
+      if (ownsVisual) return; // skip billboard rotation
     }
 
     if ((!_cockpitContactMode || isCockpitNear) && (doRotations || revealed)) {
@@ -2849,7 +2999,6 @@ function _fleetTick() {
         bb.rotation = rot;
       }
     }
-  }
 }
 
 /**
@@ -2986,7 +3135,7 @@ function _startTrail(icao24) {
       id: `gev-trail:fl-head-${++_trailHeadSeq}`,
       show: !_cockpitContactMode,
       polyline: {
-        positions: new Cesium.CallbackProperty(() => {
+        positions: new Cesium.CallbackProperty(guardedCallback('flights:trail-head', () => {
           // Need ≥2 accumulated points: the body draws all-but-newest, so the head must
           // start at the last DISPLAYED body point (index n−2). With a single fix that
           // point would be the sole raw fix — which is ~now, AHEAD of the delayed icon —
@@ -3010,7 +3159,7 @@ function _startTrail(icao24) {
           );
           if (!from) return [];
           return [from, Cesium.Cartesian3.clone(head)];
-        }, false),
+        }, () => []), false),
         width: 2.5,
         material: Cesium.Color.fromCssColorString(TRAIL_COLOR).withAlpha(0.9),
         // Round 4: the head must never vanish into the mesh either (dimmed
@@ -3554,9 +3703,10 @@ function _trackFlight(icao24, { origin = 'programmatic' } = {}) {
   const getTrackedPosition = () => _trackedDisplayPosition(icao24) || bb.position;
 
   // Dead-reckoning position property — smooth continuous motion between API updates.
-  const positionProperty = new Cesium.CallbackProperty(() => {
-    return getTrackedPosition();
-  }, false);
+  const positionProperty = new Cesium.CallbackProperty(guardedCallback('flights:tracked-position', () => {
+    const pos = getTrackedPosition();
+    return isRenderableCartesian(pos) ? pos : undefined;
+  }), false);
 
   // Create tracked entity: a 2D billboard when zoomed out, a 3D model when zoomed in past the
   // TRACKED altitude ceiling. That handoff is DEFAULT behaviour — it does NOT wait on the
@@ -3589,9 +3739,9 @@ function _trackFlight(icao24, { origin = 'programmatic' } = {}) {
       scale: CLASS_SCALE_2D[_flightData.get(_trackedIcao)?.klass] || 1,
       // Solid cyan when the billboard is the visual (zoomed out, 3D off, or model still loading);
       // transparent once the STANDALONE tracked model is actually up (ready + shown).
-      color: new Cesium.CallbackProperty(() => (
+      color: new Cesium.CallbackProperty(guardedCallback('flights:tracked-color', () => (
         _modelOwnsVisual(_trackedIcao) ? CYAN_TRANSPARENT : Cesium.Color.CYAN
-      ), false),
+      ), Cesium.Color.CYAN), false),
       sizeInMeters: false,
       scaleByDistance: new Cesium.NearFarScalar(1000, 3.0, 8000000, 0.5),
       alignedAxis: Cesium.Cartesian3.ZERO,
@@ -3602,7 +3752,7 @@ function _trackFlight(icao24, { origin = 'programmatic' } = {}) {
       disableDepthTestDistance: Number.POSITIVE_INFINITY,
       // Screen-projected rotation, evaluated per frame: exact in tracked-orbit
       // mode where camera.heading lives in the entity's reference frame.
-      rotation: new Cesium.CallbackProperty(() => {
+      rotation: new Cesium.CallbackProperty(guardedCallback('flights:tracked-rotation', () => {
         const tracked = _flightData.get(_trackedIcao);
         const pos = getTrackedPosition();
         if (!tracked || !pos || !_viewer) return _lastTrackedRotation;
@@ -3615,7 +3765,7 @@ function _trackFlight(icao24, { origin = 'programmatic' } = {}) {
         const rot = stabilizeScreenRotation(_lastTrackedRotation, projected);
         if (rot !== null) _lastTrackedRotation = rot;
         return _lastTrackedRotation;
-      }, false),
+      }, () => _lastTrackedRotation), false),
     },
   });
   _trackedEntity.gevSelectionOrigin = origin;
@@ -3643,13 +3793,16 @@ function _trackFlight(icao24, { origin = 'programmatic' } = {}) {
   _trackedEntity.gevVisualPosition = _trackedVisualCached;
   refreshTrackedReadout(_trackedEntity);
   _viewer.camera.cancelFlight();
-  // Camera follows the tracked entity
-  _viewer.trackedEntity = _trackedEntity;
-  _trackedCameraFrameStop = applyTrackedCameraFrame(
-    _viewer,
-    _trackedEntity,
-    _trackedEntity.viewFrom,
-  ) || null;
+  if (_followCameraEnabled) {
+    _viewer.trackedEntity = _trackedEntity;
+    _trackedCameraFrameStop = applyTrackedCameraFrame(
+      _viewer,
+      _trackedEntity,
+      _trackedEntity.viewFrom,
+    ) || null;
+  } else {
+    _releaseFollowCameraOnly();
+  }
 
   // Track-history trail (PRD F1): seed from local history + async backfill.
   // Ground traffic draws NO trail (a taxi path is noise, not a track) — if the
@@ -3945,6 +4098,7 @@ const flightsLayer = {
     _enrichAmbientRefillAnchorMs = 0;
 
     _installClickHandler(viewer);
+    _installFollowBreakHandler(viewer);
 
     // React to Military-layer toggles IMMEDIATELY (suppress/restore sweep)
     // instead of waiting out the 30 s poll (M2).
@@ -3975,6 +4129,7 @@ const flightsLayer = {
         .catch(() => { /* geoid grid failed to load — baro path stays un-geoid-corrected until retried */ });
     }
     _installClickHandler(viewer);
+    _installFollowBreakHandler(viewer);
     registerPickOwner('flights', (pickedId) => _billboards.has(pickedId));
     // Force a fresh rotation pass on the first tick after re-enable
     _lastCamPoseSig = '';
@@ -4337,7 +4492,13 @@ const flightsLayer = {
           floorWarmPoints.push({ lat, lon });
         }
 
+        if (!Number.isFinite(lat) || !Number.isFinite(lon)
+            || Math.abs(lat) > 90 || Math.abs(lon) > 180
+            || !Number.isFinite(renderAltitudeM)) {
+          continue;
+        }
         const position = Cesium.Cartesian3.fromDegrees(lon, lat, renderAltitudeM);
+        if (!isRenderableCartesian(position)) continue;
         // Landing/takeoff transition: the on_ground flip restyles IN PLACE.
         const groundFlipped = !!prevMeta && (prevMeta.onGround === true) !== onGround;
         // Either flip direction retires the model's ground snap: a departing plane
@@ -4669,6 +4830,10 @@ const flightsLayer = {
     if (_moveEndRemove) {
       _moveEndRemove();
       _moveEndRemove = null;
+    }
+    if (_followInputHandler) {
+      _followInputHandler.destroy();
+      _followInputHandler = null;
     }
     _releaseModels();
     if (_billboardCollection) {
@@ -5137,6 +5302,42 @@ const flightsLayer = {
 
   cancelPendingTrackingRestore() {
     _cancelPendingTrackingRestore();
+  },
+
+  ingestLookupRecords(records) {
+    if (!Array.isArray(records) || !_billboardCollection) return 0;
+    let accepted = 0;
+    for (const record of records) {
+      const ok = runGuardedRecord(
+        'flights-lookup',
+        record?.icao24 || record?.callsign || 'unknown',
+        () => _ingestLookupRecord(record),
+      );
+      if (ok) accepted += 1;
+    }
+    return accepted;
+  },
+
+  setFollowEnabled(enabled) {
+    _followCameraEnabled = !!enabled;
+    if (_followCameraEnabled && _trackedIcao) _engageFollowCamera();
+    else _releaseFollowCameraOnly();
+    _emitFollowChange();
+    return _followCameraEnabled;
+  },
+
+  releaseFollowCamera() {
+    _followCameraEnabled = false;
+    _releaseFollowCameraOnly();
+    _emitFollowChange();
+  },
+
+  isFollowEnabled() {
+    return _followCameraEnabled;
+  },
+
+  setFollowChangeListener(fn) {
+    _followChangeListener = typeof fn === 'function' ? fn : null;
   },
 
   /**

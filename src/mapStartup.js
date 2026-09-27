@@ -42,7 +42,11 @@ export async function loadPhotorealisticTileset(
       });
       return { tileset, route: attempt.route, errors };
     } catch (error) {
-      errors.push(error instanceof Error ? error : new Error(String(error)));
+      errors.push(error instanceof Error ? error : new Error(
+        error && typeof error === 'object'
+          ? (JSON.stringify(error) || String(error))
+          : String(error),
+      ));
     }
   }
 
